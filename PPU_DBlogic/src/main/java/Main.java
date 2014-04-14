@@ -1,6 +1,8 @@
 import com.PPU.DB.DAO.PpuDao;
 import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.*;
+import com.PPU.DB.workLogic.CLA;
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.math.BigInteger;
@@ -18,6 +20,9 @@ import java.util.zip.CRC32;
 public class Main {
 
     public static void main(String[] args) {
+        ClassInvokeCall cl = new ClassInvokeCall();
+        CLA cla = new CLA();
+        cl.callMethod(cla);
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         PpuDaoInterface ppu = (PpuDaoInterface) context.getBean("dataDao");
 
