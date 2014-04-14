@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.zkoss.zk:zul:6.5.3.FL.20130508">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zul/6.5.3.FL.20130508/zul-6.5.3.FL.20130508.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zul/6.5.3.FL.20130508/zul-6.5.3.FL.20130508-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zul/6.5.3.FL.20130508/zul-6.5.3.FL.20130508-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

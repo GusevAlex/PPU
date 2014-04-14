@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="com.PPU.DB.tables.Providers" />
+        <mapping class="com.PPU.DB.tables.ResourcesMZ" />
+        <mapping class="com.PPU.DB.tables.ResourcesProject" />
+        <mapping class="com.PPU.DB.tables.TypeBudgetService" />
+        <mapping class="com.PPU.DB.tables.TypeServiceMZ" />
+        <mapping class="com.PPU.DB.tables.TypeMU" />
+        <mapping class="com.PPU.DB.tables.ValuesParametrForMZ" />
+        <mapping class="com.PPU.DB.tables.ValuesParametrForProject" />
+
+        <mapping class="com.PPU.DB.tables.ComandMZ" />
+        <mapping class="com.PPU.DB.tables.ComandProject" />
+        <mapping class="com.PPU.DB.tables.CorrectionsMZ" />
+        <mapping class="com.PPU.DB.tables.CorrectionsProject" />
+        <mapping class="com.PPU.DB.tables.DefaultParametrsServiceMZ" />
+        <mapping class="com.PPU.DB.tables.LimitsMZ" />
+        <mapping class="com.PPU.DB.tables.LimitsProject" />
+        <mapping class="com.PPU.DB.tables.MZ" />
+
+        <mapping class="com.PPU.DB.tables.Parametrs" />
+        <mapping class="com.PPU.DB.tables.PartnerCommercialMan" />
+        <mapping class="com.PPU.DB.tables.PartnersMZ" />
+        <mapping class="com.PPU.DB.tables.Program" />
+        <mapping class="com.PPU.DB.tables.Project" />
+
+    </session-factory>
+</hibernate-configuration>
