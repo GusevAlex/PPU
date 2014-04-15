@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
  */
 public class ClassInvokeCall {
 
-    public Object callMethod(Object obj, Object ... listValues)
+    public static Object callMethod(Object obj, String nameFunc, Object ... listValues)
     {
         Object retObj = new Object();
 
@@ -17,10 +17,10 @@ public class ClassInvokeCall {
             Class[] paramTypes = new Class[listValues.length];
 
             for (int i = 0; i < listValues.length; i++) {
-                paramTypes[i] = listValues.getClass();
+                paramTypes[i] = listValues[i].getClass();
             }
 
-            Method method = c.getMethod("getHg", paramTypes);
+            Method method = c.getMethod(nameFunc, paramTypes);
             retObj =  method.invoke(obj, listValues);
         }
         catch (NoSuchMethodException e)
@@ -29,11 +29,11 @@ public class ClassInvokeCall {
         }
         catch (IllegalAccessException e1)
         {
-            throw new IllegalArgumentException("Неверно переданы параметры списка значений в метод ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
         }
         catch (InvocationTargetException e2)
         {
-            throw new IllegalArgumentException("Неверно переданы параметры списка значений в метод ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
         }
 
         return retObj;

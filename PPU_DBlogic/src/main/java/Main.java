@@ -1,11 +1,12 @@
 import com.PPU.DB.DAO.PpuDao;
 import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.*;
-import com.PPU.DB.workLogic.CLA;
 import com.PPU.DB.workLogic.ClassInvokeCall;
+import com.PPU.DB.workLogic.WorkWithMZ;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.math.BigInteger;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -20,48 +21,19 @@ import java.util.zip.CRC32;
 public class Main {
 
     public static void main(String[] args) {
-        ClassInvokeCall cl = new ClassInvokeCall();
-        CLA cla = new CLA();
-        cl.callMethod(cla);
-        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-        PpuDaoInterface ppu = (PpuDaoInterface) context.getBean("dataDao");
 
-        List<MZ> mz = ppu.findMz("id;name","1;dfgfdg");
+        WorkWithMZ workWithMZ = new WorkWithMZ();
 
+        List<MZ> list = workWithMZ.findAndGetAllRow("","");
+        
+        workWithMZ.setRowById(1);
 
-        ComandProject comandProject = ppu.getComandProject(1);
-
-        CorrectionsMZ correctionsMZ = ppu.getCorrectionsMz(1);
-        CorrectionsProject correctionsProject = ppu.getCorrectionsProject(1);
-
-        DefaultParametrsServiceMZ defaultParametrsServiceMZ = ppu.getDefaultParametrsServiceMz(1);
-
-        LimitsMZ limitsMZ = ppu.getLimitsMz(1);
-        LimitsProject limitsProject = ppu.getLimitsProject(1);
-
-        MZ mz1 = ppu.getMz(1);
-
-        Parametrs parametrs = ppu.getParametrs(1);
-
-        PartnerCommercialMan partnerCommercialMan = ppu.getPartnerCommercialMan(1);
-        PartnersMZ partnersMZ = ppu.getPartnersMz(1);
-
-        Program program = ppu.getProgram(1);
-        Project project = ppu.getProject(1);
-
-        Providers providers = ppu.getProviders(1);
-
-        ResourcesProject resourcesProject = ppu.getResourcesProject(1);
-        ResourcesMZ resourcesMZ = ppu.getResourcesMz(1);
-
-        TypeBudgetService typeBudgetService = ppu.getTypeBudgetService(1);
-
-        TypeMU typeMU = ppu.getTypeMu(1);
-
-        TypeServiceMZ typeServiceMZ = ppu.getTypeServiceMz(1);
-
-        ValuesParametrForProject valuesParametrForProject = ppu.getValuesParametrForProject(1);
-        ValuesParametrForMZ valuesParametrForMZ = ppu.getValuesParametrForMz(1);
+        String s = "";
+        try {
+            s = (String) workWithMZ.getColumnValue(WorkWithMZ.COLUMN_NAME);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
         int y = 0;
     }

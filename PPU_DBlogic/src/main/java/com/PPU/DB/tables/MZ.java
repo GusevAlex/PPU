@@ -47,7 +47,7 @@ public class MZ {
     private String description;
     private float budget;
     private int status;
-    private int service_type;
+    private int serviceType;
     private Set<ComandMZ> comandMZ = new HashSet<ComandMZ>(0);
     private Program program;
     private TypeServiceMZ typeServiceMZ;
@@ -151,11 +151,11 @@ public class MZ {
 
     @Column(name="service_type")
     public int getService_type() {
-        return service_type;
+        return serviceType;
     }
 
-    public void setService_type(int service_type) {
-        this.service_type = service_type;
+    public void setService_type(int serviceType) {
+        this.serviceType = serviceType;
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")

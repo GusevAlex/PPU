@@ -1226,6 +1226,9 @@ public class PpuDao implements PpuDaoInterface {
             s += fieldsMas[i] + "='" + fieldValueMas[i] + "'" + ((i+1) == fieldsMas.length ? "" : " and ");
         }
 
+        if (fields.equals(""))
+            return "";
+
         return s;
     }
 
