@@ -43,17 +43,10 @@ public class NewsfeedVM {
 	
 	private boolean mobile;
 	
-	// If mobile, assume started out as "landscape"
-	// Changed when orientation change is detected.
 	private String orient = "landscape";
-	
-	// -------------------------------------------------------
 	
 	private String css;
 
-	/**
-	 * Tablet and desktop may use different set of CSS
-	 */
 	public String getCss() {
 		return css;
 	}
@@ -61,13 +54,9 @@ public class NewsfeedVM {
 	public void setCss(String css) {
 		this.css = css;
 	}
-	// -------------------------------------------------------
-	
+
 	private AuthorBean currentUser;
 	
-	/**
-	 * Currently logged in user
-	 */
 	public AuthorBean getCurrentUser() {
 		return this.currentUser;
 	}
@@ -76,9 +65,6 @@ public class NewsfeedVM {
 	
 	private MenuGroupBean[] menuGroups;
 
-	/**
-	 * Menu items are grouped into categories.
-	 */
 	public MenuGroupBean[] getMenuGroups() {
 		return menuGroups;
 	}
@@ -86,8 +72,6 @@ public class NewsfeedVM {
 	public void setMenuGroups(MenuGroupBean[] menuGroups) {
 		this.menuGroups = menuGroups;
 	}
-
-	// -------------------------------------------------------
 
 	public ListModel<String[]> getToolbarModel() {
 
@@ -105,8 +89,6 @@ public class NewsfeedVM {
 		);
 	}
 	
-	// -------------------------------------------------------
-	
 	private ContactGroupBean[] contactGroups;
 	
 	public ContactGroupBean[] getContactGroups() {
@@ -117,9 +99,6 @@ public class NewsfeedVM {
 
 	private PostBean currentPost = null;
 
-	/**
-	 * Current post that the user is interested in getting feedback
-	 */
 	public PostBean getCurrentPost() {
 		return currentPost;
 	}
@@ -127,13 +106,9 @@ public class NewsfeedVM {
 	public void setCurrentPost(PostBean currentPost) {
 		this.currentPost = currentPost;
 	}
-	// -------------------------------------------------------
-	
+
 	private String currentComment = null;
 
-	/**
-	 * Comment for current post 
-	 */
 	public String getCurrentComment() {
 		return currentComment;
 	}
@@ -141,13 +116,9 @@ public class NewsfeedVM {
 	public void setCurrentComment(String currentComment) {
 		this.currentComment = currentComment;
 	}
-	// -------------------------------------------------------
-	
+
 	private boolean modalShow = false;
 
-	/**
-	 * If true, the modal filter is shown.
-	 */
 	public boolean isModalShow() {
 		return modalShow;
 	}
@@ -155,13 +126,9 @@ public class NewsfeedVM {
 	public void setModalShow(boolean modalShow) {
 		this.modalShow = modalShow;
 	}
-	// -------------------------------------------------------
-	
+
 	private boolean menuOpen = false;
 
-	/**
-	 * If true, the menu panel is opened.
-	 */
 	public boolean isMenuOpen() {
 		return menuOpen;
 	}
@@ -169,14 +136,10 @@ public class NewsfeedVM {
 	public void setMenuOpen(boolean menuOpen) {
 		this.menuOpen = menuOpen;
 	}
-	// -------------------------------------------------------
-	
+
 	private boolean contactOpen = true;
 	private boolean hideContact = false;
 
-	/**
-	 * If true, the contact panel is opened
-	 */
 	public boolean isContactOpen() {
 		return contactOpen;
 	}
@@ -185,13 +148,8 @@ public class NewsfeedVM {
 		this.contactOpen = contactOpen;
 	}
 	
-	// -------------------------------------------------------
-
 	private boolean likeStatus = false;
 
-	/**
-	 * If true, the current post has been liked.
-	 */
 	public boolean isLikeStatus() {
 		return (currentPost == null) ? false : currentPost.getLikeList().contains(currentUser);
 	}
@@ -199,11 +157,7 @@ public class NewsfeedVM {
 	public void setLikeStatus(boolean likeStatus) {
 		this.likeStatus = likeStatus;
 	}
-	// -------------------------------------------------------
 
-	/**
-	 * Generate fake newsfeed posts
-	 */
 	public List<PostBean> getPostModel(){
 		return FakeData.getPosts();
 	}
@@ -212,22 +166,16 @@ public class NewsfeedVM {
 
 	@Init
 	public void init() {
-		// Detect if client is mobile (such as Android or iOS devices)
 		mobile = Servlets.getBrowser(request, "mobile") != null;
 		
-		// Set the default stylesheet
 		if (mobile) {
 			css = "css/tablet.css.dsp";
 		} else {
 			css = "css/desktop.css.dsp";
 		}
 		
-		// -------------------------------------------------------------------------------
-		
 		currentUser = new AuthorBean("ZK Team", "images/avatars/zk.jpg");
 		
-		// -------------------------------------------------------------------------------
-		// For generating categorized Menuitems in the Sidebar
 
 		menuGroups = new MenuGroupBean[] {
 			new MenuGroupBean(

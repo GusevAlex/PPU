@@ -16,13 +16,12 @@ import java.util.List;
  */
 public abstract class WorkWithTable {
 
-    private static ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-    protected static PpuDaoInterface ppuDao = (PpuDaoInterface) context.getBean("dataDao");;
+    private static ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
+    protected static PpuDaoInterface ppuDao = (PpuDaoInterface) context.getBean("dataDao");
 
     public WorkWithTable()
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-        ppuDao = (PpuDaoInterface) context.getBean("dataDao");
+
     }
 
     public abstract List getListRows();

@@ -76,7 +76,7 @@ public class WorkWithMZ extends WorkWithTable{
     @Override
     public void setRowById(int id)
     {
-        mz = ppuDao.getMz(id);    
+        mz = ppuDao.getMz(id);
     }
     
     public MZ getMZ()

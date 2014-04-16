@@ -1,23 +1,12 @@
 <hbox width="100%">
-	<!-- Menu Toggle Button -->
+	<!-- Верхнее меню -->
 	<cell align="left" width="23%">
         <label width="200px" style="font-size: 28px; color: blue;" >ППУ</label>
         <label width="200px" style="margin-left: 10px; font-size: 14px;" >Портал проектного управления</label>
-		<!--<button-->
-			<!--sclass="button touchable"-->
-			<!--style="border: none" -->
-			<!--image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAVCAYAAABc6S4mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAQJJREFUSEvtlE9rwkAQR0XEQw9FPIh4KP0EHsQP78UPMIhIoV5KWgJViYqK/6tUtvOWDVjSUzMnceFlIZA37OS3UyjcyirrQR6VmlLPCQ5cOP0qKpXFcinfl4uzABfO4PYFGvvDyW13RxNw4UwLlGhN9B7LerN3FuAK7cbtT0DPnpWm0lLa/4RvceDCids/qPQQXlZ1zwNiXDh9ARZ/HCl9e8oJDly/UzSdzeXrdHYW4NIClesWNSbJysWfcxNwhW74FvkUSf9VojhxFuDCGdz3FGVS93eKxpNErEYFrkyKhm8j13v5MAFXJkWdrogMImcBrttLETcuHXrMkDykQ87f4h/JqbVzewcBbQAAAABJRU5ErkJggg=="-->
-			<!--onClick='@command("toggleMenu")' />-->
 	</cell>
-	<!--  -->
-	
-	<!-- Push Notifications -->
-	<!-- Friend requests, Instant Messages, Notification Messages -->
 
 	<cell align="center" valign="middle" width="100%">
-        <!--<columnlayout>-->
 
-            <!--<columnchildren width="70%">-->
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Участники системы"/>
         <toolbarbutton label="/"/>
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Программы"/>
@@ -25,20 +14,7 @@
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Проекты"/>
         <toolbarbutton label="/"/>
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
-            <!--</columnchildren>-->
-
-
-
-            <!--<columnchildren width="30%">-->
-                <!--<div sclass="container">-->
-                    <!--<menubar width="120px">-->
-                        <!--<menu label="Васильев Евгений" content="#color=#999999" />-->
-                    <!--</menubar>-->
-                <!--</div>-->
-            <!--</columnchildren>-->
-        <!--</columnlayout>-->
-
-        	</cell>
+    </cell>
 
     <cell align="right" valign="middle" width="100%">
         <div sclass="container">
@@ -47,5 +23,4 @@
             </menubar>
         </div>
     </cell>
-	<!--  -->
 </hbox>
