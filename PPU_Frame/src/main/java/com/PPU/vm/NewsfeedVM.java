@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpSession;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.zkoss.bind.annotation.AfterCompose;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
@@ -24,6 +26,8 @@ import com.PPU.vo.PostBean;
 import org.zkoss.web.fn.ServletFns;
 import org.zkoss.web.servlet.Servlets;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Session;
+import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
@@ -64,6 +68,13 @@ public class NewsfeedVM {
 	// -------------------------------------------------------
 	
 	private MenuGroupBean[] menuGroups;
+
+    public NewsfeedVM()
+    {
+
+    }
+
+
 
 	public MenuGroupBean[] getMenuGroups() {
 		return menuGroups;
@@ -270,6 +281,11 @@ public class NewsfeedVM {
 				)	
 			)
 		};
+
+        Session session = Sessions.getCurrent();
+        session.setAttribute("login",(String) "login");
+
+        int y = 0;
 	}
 	
 	@AfterCompose

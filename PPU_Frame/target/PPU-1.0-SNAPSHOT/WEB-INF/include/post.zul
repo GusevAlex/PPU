@@ -1,6 +1,6 @@
 <vlayout sclass="post">
 
-    <vbox style="margin-left:250px">
+    <vbox >
         <!--<grid width="400px" style="display:none;">-->
             <!--<columns>-->
                 <!--<column label="Категория" width="150px" />-->
@@ -79,35 +79,7 @@
 
         <!--<toolbarbutton label="See More chart..." href="/data/morechart.zul" target="zksandbox"/>-->
 
-        <grid id="demoGrid" height="400px">
-        <columns menupopup="auto">
-            <column sort="auto(Name)" label="Название" width="150px"/>
-            <column sort="auto(TopNutrients)" label="Цели" hflex="1" />
-            <column sort="auto(DailyPercent)" label="Заказчик" hflex="1" align="center"/>
-            <column sort="auto(Calories)" label="Руководитель" hflex="1" align="center"  />
-            <column sort="auto(Quantity)" label="Статус" />
-        </columns>
-        <!-- template for group -->
-
-
-        <!-- template for each element in model -->
-            <rows>
-            <row>
-                <label value="Проект 1" />
-                <label value="Цели" />
-                <label value="Заказчик 1" />
-                <label value="Руководитель 1" />
-                <label value="Выполняется" />
-            </row>
-                <row>
-                    <label value="Проект 2" />
-                    <label value="Цели" />
-                    <label value="Заказчик 1" />
-                    <label value="Руководитель 1" />
-                    <label value="Выполнени" />
-                </row>
-            </rows>
-        </grid>
+        <include src="/WEB-INF/include/pages/reviewListMz.zul" />
     </vbox>
 
 </vlayout>

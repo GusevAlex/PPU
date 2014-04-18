@@ -1,6 +1,6 @@
 <vlayout sclass="post">
 
-    <vbox style="margin-left:250px">
+    <vbox >
         <!--<grid width="400px" style="display:none;">-->
             <!--<columns>-->
                 <!--<column label="Категория" width="150px" />-->
