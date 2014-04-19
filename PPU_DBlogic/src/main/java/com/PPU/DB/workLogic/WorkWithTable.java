@@ -2,8 +2,10 @@ package com.PPU.DB.workLogic;
 
 import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.MZ;
+import com.PPU.DB.tables.Users;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.core.userdetails.User;
 
 import java.util.List;
 
@@ -35,4 +37,9 @@ public abstract class WorkWithTable {
     public abstract Object getColumnValue(String columnName) throws IllegalAccessException;
 
     public abstract Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException;
+
+    public abstract void addEntity(Object obj) throws Exception;
+    public abstract void changeEntity(Object obj) throws Exception;
+    public abstract void deleteEntity(Object obj) throws Exception;
+    public abstract Object getEntity(int id);
 }

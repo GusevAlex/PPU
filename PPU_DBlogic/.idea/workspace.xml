@@ -2,164 +2,557 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da349b13-f9b8-4ba0-b861-44b5c21cc39a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/Contact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/MenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/data/FakeData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vm/NewsfeedVM.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/AuthorBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/ContactBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/ContactGroupBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/MenuGroupBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/MenuItemBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vo/PostBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/composite/Contact.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/composite/MenuItem.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/include/comment.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/include/navigation.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/include/post.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/include/titlebar.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/include/toolbar.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/appengine-api-1.0-sdk-1.8.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/asm-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/asm-attrs-1.5.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.6.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/bcmail-jdk14-1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/bcprov-jdk14-1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/bctsp-jdk14-1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/bsh-2.0b4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/c3p0-0.9.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/castor-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/cglib-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-dbcp-1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-digester-2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-lang-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/commons-pool-1.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/ehcache-1.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/filters-2.0.235.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hamcrest-core-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-3.2.1.ga.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-annotations-3.3.0.ga.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-3.2.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-3.6.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-entitymanager-3.6.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/itext-2.1.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-lgpl-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jackson-mapper-lgpl-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jasperreports-4.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jcommon-1.0.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-continuation-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-http-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-io-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-security-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-server-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-servlet-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-util-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-webapp-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jetty-xml-7.6.0.RC0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jfreechart-1.0.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/jta-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/junit-4.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/mockito-core-1.9.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/objenesis-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/oro-2.0.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/persistence-api-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/poi-3.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/poi-ooxml-3.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/poi-ooxml-schemas-3.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/postgresql-9.1-901.jdbc4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-asm-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-context-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-core-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-3.1.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-3.1.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-security-crypto-3.1.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-3.1.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/spring-web-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/stax-api-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/velocity-1.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/web.servlet-3.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/xmlbeans-2.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zats-common-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zats-mimic-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zats-mimic-ext6-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zcommon-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zel-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zhtml-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zk-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zkbind-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zkex-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zkmax-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zkplus-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zml-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zul-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/zweb-6.5.3.FL.20130508.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/css/common.css.dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/css/desktop.css.dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/css/tablet.css.dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/afro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/alien.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/anciano.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/artista.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/astronauta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/barbaman.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/bombero.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/boxeador.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/bruce_lee.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/caradebolsa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/chavo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/cientifica.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/cientifico_loco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/comisario.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/cupido.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/diabla.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/director.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/dreds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/elsanto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/elvis.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/emo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/userpic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/avatars/zk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/posts/image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/posts/image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/posts/image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/status/active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/images/status/mobile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/index.zul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/Contact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/MenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/data/FakeData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vm/NewsfeedVM.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/AuthorBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/ContactBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/ContactGroupBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/MenuGroupBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/MenuItemBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vo/PostBean.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/security/MD5.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Users.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PPU_Frame/web/WEB-INF/authoriz/authoriz.zul" />
       <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\src\main\java\com\PPU\DB\workLogic\CLA.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ajaxupload.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\images\border.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\images\loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\jquery.colorbox-min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\colorbox\jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_close.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_loading.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_nav_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_e.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_n.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_ne.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_nw.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_s.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_se.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_sw.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_shadow_w.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_title_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_title_main.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_title_over.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancy_title_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancybox-x.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancybox-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\fancybox.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\jquery.easing-1.3.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\jquery.fancybox-1.3.4.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\jquery.fancybox-1.3.4.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\jquery.fancybox-1.3.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\fancybox\jquery.mousewheel-3.0.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\jquery-1.6.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\jquery.cycle.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\jquery.cycle.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\jquery.jcarousel.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\README" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\arrows - копия.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\bullets.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\dev7logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\nemo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\slider.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\toystory.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\up.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\images\walle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\jquery.nivo.slider.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\nivo-slider\jquery.nivo.slider.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\css\superfish-navbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\css\superfish-vertical.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\css\superfish.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\example.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\images\arrows-ffffff.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\images\shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\js\hoverIntent.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\js\jquery-1.2.6.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\js\jquery.bgiframe.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\js\superfish.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\superfish\js\supersubs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\external\jquery.bgiframe-2.1.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\external\jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\external\jquery.metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\external\qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\external\qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery-ui-i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-af.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ar-DZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-az.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-bs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-cs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-da.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-de.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-el.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-en-AU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-en-GB.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-en-NZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-eo.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-es.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-et.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-fa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-fo.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-fr-CH.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-gl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-he.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-hy.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-id.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-is.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-it.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ja.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ko.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-kz.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-lt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-lv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ml.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ms.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-no.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-rm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sq.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sr-SR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-sv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-ta.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-th.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-tj.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-uk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-vi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-zh-HK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\i18n\jquery.ui.datepicker-zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\jquery-ui-1.8.16.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\jquery-ui-1.8.9.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\jquery-ui-timepicker-addon.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.blind.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.blind.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.bounce.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.bounce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.clip.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.clip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.core.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.drop.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.drop.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.explode.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.explode.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.fade.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.fade.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.fold.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.fold.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.highlight.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.highlight.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.pulsate.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.pulsate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.scale.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.scale.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.shake.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.shake.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.slide.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.slide.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.transfer.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.effects.transfer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.accordion.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.autocomplete.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.button.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.button.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.core.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.datepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.dialog.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.draggable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.droppable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.droppable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.mouse.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.mouse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.position.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.position.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.progressbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.resizable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.resizable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.selectable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.selectable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.slider.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.sortable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.sortable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.tabs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\minified\jquery.ui.widget.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.button.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.core.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.slider.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\base\jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery-ui-1.8.16.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery-ui-1.8.9.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.button.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.core.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.slider.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\jquery\ui\themes\ui-lightness\jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\WEB-INF\login_autoriz_page\login.zul" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ajaxupload.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\images\border.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\images\loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\jquery.colorbox-min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\colorbox\jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_close.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_loading.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_nav_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_e.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_n.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_ne.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_nw.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_s.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_se.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_sw.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_shadow_w.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_title_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_title_main.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_title_over.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancy_title_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancybox-x.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancybox-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\fancybox.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\jquery.easing-1.3.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\jquery.fancybox-1.3.4.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\jquery.fancybox-1.3.4.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\jquery.fancybox-1.3.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\fancybox\jquery.mousewheel-3.0.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\jquery-1.6.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\jquery.cycle.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\jquery.cycle.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\jquery.jcarousel.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\README" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\arrows - копия.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\bullets.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\dev7logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\nemo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\slider.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\toystory.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\up.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\images\walle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\jquery.nivo.slider.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\nivo-slider\jquery.nivo.slider.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\css\superfish-navbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\css\superfish-vertical.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\css\superfish.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\example.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\images\arrows-ffffff.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\images\shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\js\hoverIntent.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\js\jquery-1.2.6.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\js\jquery.bgiframe.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\js\superfish.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\superfish\js\supersubs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\external\jquery.bgiframe-2.1.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\external\jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\external\jquery.metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\external\qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\external\qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery-ui-i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-af.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ar-DZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-az.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-bs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-cs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-da.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-de.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-el.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-en-AU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-en-GB.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-en-NZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-eo.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-es.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-et.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-fa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-fo.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-fr-CH.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-gl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-he.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-hy.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-id.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-is.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-it.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ja.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ko.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-kz.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-lt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-lv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ml.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ms.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-no.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-rm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sq.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sr-SR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-sv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-ta.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-th.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-tj.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-uk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-vi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-zh-HK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\i18n\jquery.ui.datepicker-zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\jquery-ui-1.8.16.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\jquery-ui-1.8.9.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\jquery-ui-timepicker-addon.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.blind.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.blind.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.bounce.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.bounce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.clip.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.clip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.core.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.drop.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.drop.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.explode.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.explode.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.fade.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.fade.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.fold.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.fold.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.highlight.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.highlight.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.pulsate.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.pulsate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.scale.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.scale.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.shake.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.shake.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.slide.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.slide.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.transfer.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.effects.transfer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.accordion.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.autocomplete.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.button.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.button.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.core.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.datepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.dialog.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.draggable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.droppable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.droppable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.mouse.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.mouse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.position.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.position.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.progressbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.resizable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.resizable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.selectable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.selectable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.slider.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.sortable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.sortable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.tabs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\minified\jquery.ui.widget.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.button.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.core.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.slider.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\base\jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery-ui-1.8.16.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery-ui-1.8.9.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.button.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.core.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.slider.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\jquery\ui\themes\ui-lightness\jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\target\PPU-1.0-SNAPSHOT\js\customized_effect.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\web\WEB-INF\login_autoriz_page\login.zul" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\web\js\customized_effect.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vm/NewsfeedVM.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/vm/NewsfeedVM.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vm/NewsfeedVM.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/vm/NewsfeedVM.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/PPU_DBlogic-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/PPU_DBlogic-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/PPU_DBlogic-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/lib/PPU_DBlogic-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/NewsfeedVM.java" afterPath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/NewsfeedVM.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/.idea/ant.xml" afterPath="$PROJECT_DIR$/../PPU_Frame/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/index.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/index.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/index.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/index.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../PPU_Frame/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../PPU_Frame/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_Frame/.idea/workspace.xml" />
     </list>
     <ignored path="PPU_DBlogic.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397917128718" ignored="false" />
+    <file path="/Users.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397918525406" ignored="false" />
+    <file path="/ComandMZ.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397910242640" ignored="false" />
+    <file path="/PartnersMZ.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397918812593" ignored="false" />
+    <file path="/Main.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397923593203" ignored="false" />
+    <file path="/hibernate.cfg.xml" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397910794734" ignored="false" />
+    <file path="/PpuDaoInterface.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397911732546" ignored="false" />
+    <file path="/PpuDao.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397911809234" ignored="false" />
+    <file path="/WorkWithUser.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397923034406" ignored="false" />
+    <file path="/MD5.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397914976046" ignored="false" />
+    <file path="/WorkWithTable.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397922548078" ignored="false" />
+    <file path="/fragment.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397919757578" ignored="false" />
+    <file path="/PartnerCommercialMan.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397918746734" ignored="false" />
+    <file path="/WorkWithMZ.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397923021296" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397923259890" ignored="false" />
+    <file path="/registrAuthoriz.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397923257703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,9 +567,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" converted="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" converted="true" />
-    <breakpoint_any converted="true">
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -184,6 +576,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -199,6 +592,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -208,8 +602,67 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
-    <ui_properties converted="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" line="62" class="com.PPU.DB.DAO.PpuDao" package="com.PPU.DB.DAO">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" line="108" class="com.PPU.DB.workLogic.WorkWithMZ" package="com.PPU.DB.workLogic">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/Main.java" line="28" class="Main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/Main.java" line="27" class="Main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -217,41 +670,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="782">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkWithMZ.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WorkWithMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3566433" vertical-offset="754" max-vertical-offset="1632">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="4012">
-              <caret line="49" column="34" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassInvokeCall.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="799">
-              <caret line="8" column="60" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state line="109" column="0" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -260,38 +682,70 @@
       <file leaf-file-name="PpuDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="21148" max-vertical-offset="25721">
-              <caret line="1244" column="37" selection-start-line="1244" selection-start-column="9" selection-end-line="1244" selection-end-column="9" />
+            <state line="62" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-3.16">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Program.java">
+      <file leaf-file-name="WorkWithUser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state line="131" column="33" selection-start="3286" selection-end="3286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
+      <file leaf-file-name="MD5.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/security/MD5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state line="32" column="42" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CorrectionsProject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
+      <file leaf-file-name="WorkWithTable.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state line="20" column="53" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="5" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartnersMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="5" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartnerCommercialMan.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="3" selection-start="2077" selection-end="2313" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="816" selection-end="816" vertical-scroll-proportion="0.4047619">
               <folding />
             </state>
           </provider>
@@ -307,25 +761,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Program.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/CLA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/security/MD5.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -365,10 +824,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1374" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -383,10 +842,10 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -518,21 +977,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DAO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.20000002" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -549,7 +1069,7 @@
       <recent name="D:\1\PPU\PPU_DBlogic\src\main\java\com\PPU\DB\workLogic" />
     </key>
   </component>
-  <component name="RunManager" selected="Remote.Unnamed">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -599,24 +1119,19 @@
       <option name="CLASS_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
       <option name="DISABLE_BOOT_ANIMATION" value="false" />
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
           <MavenGeneralSettings>
-            <option name="alwaysUpdateSnapshots" value="false" />
             <option name="checksumPolicy" value="FAIL" />
             <option name="failureBehavior" value="FAST" />
             <option name="localRepository" value="" />
@@ -625,7 +1140,7 @@
             <option name="outputLevel" value="INFO" />
             <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
             <option name="printErrorStackTraces" value="false" />
-            <option name="threads" />
+            <option name="snapshotUpdatePolicy" value="ALWAYS_UPDATE" />
             <option name="usePluginRegistry" value="false" />
             <option name="userSettingsFile" value="" />
             <option name="workOffline" value="false" />
@@ -633,14 +1148,10 @@
         </option>
         <option name="myRunnerSettings">
           <MavenRunnerSettings>
-            <option name="environmentProperties">
-              <map />
-            </option>
             <option name="jreName" value="1.7" />
             <option name="mavenProperties">
               <map />
             </option>
-            <option name="passParentEnv" value="true" />
             <option name="runMavenInBackground" value="true" />
             <option name="skipTests" value="false" />
             <option name="vmOptions" value="" />
@@ -657,7 +1168,6 @@
             <option name="profilesMap">
               <map />
             </option>
-            <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="" />
           </MavenRunnerParameters>
         </option>
@@ -672,13 +1182,12 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
         <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="browserFamily" value="FIREFOX" />
           <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
         </LauncherParameters>
       </option>
@@ -768,19 +1277,14 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
       <option name="DISABLE_BOOT_ANIMATION" value="false" />
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Unnamed" type="Remote" factoryName="Remote">
@@ -801,13 +1305,18 @@
       <item index="0" class="java.lang.String" itemvalue="Remote.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -822,6 +1331,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">C:\Users\Alex\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
@@ -830,7 +1340,6 @@
       <changelist id="da349b13-f9b8-4ba0-b861-44b5c21cc39a" name="Default" comment="" />
       <created>1397324662953</created>
       <updated>1397324662953</updated>
-      <workItem from="1397672247196" duration="602000" />
     </task>
     <servers />
   </component>
@@ -838,36 +1347,36 @@
     <option name="totallyTimeSpent" value="15686000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1374" height="746" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49488056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47554806" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24545455" sideWeight="0.23271501" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.6222597" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32796487" sideWeight="0.6211604" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.6211604" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37883958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30454546" sideWeight="0.5244519" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3777403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -883,10 +1392,53 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
     </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -930,172 +1482,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1258">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="952">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="4012">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state line="164" column="7" selection-start="3679" selection-end="3915" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="799">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21080" max-vertical-offset="25670">
-          <caret line="1240" column="37" selection-start-line="1240" selection-start-column="37" selection-end-line="1240" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.1.RELEASE/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="782">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state line="29" column="18" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="4012">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="799">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21148" max-vertical-offset="25721">
-          <caret line="1244" column="37" selection-start-line="1244" selection-start-column="9" selection-end-line="1244" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="19" column="71" selection-start="1066" selection-end="1066" vertical-scroll-proportion="-12.68">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33216783" vertical-offset="0" max-vertical-offset="0">
-          <caret line="13" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="130" column="90" selection-start="7584" selection-end="7584" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/security/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="42" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="3" selection-start="2077" selection-end="2313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="5" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.1.RELEASE/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="35" selection-start="2311" selection-end="2311" vertical-scroll-proportion="-5.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="5" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="53" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="33" selection-start="3286" selection-end="3286" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-3.16">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3566433" vertical-offset="754" max-vertical-offset="1632">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state line="109" column="0" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="816" selection-end="816" vertical-scroll-proportion="0.4047619">
           <folding />
         </state>
       </provider>

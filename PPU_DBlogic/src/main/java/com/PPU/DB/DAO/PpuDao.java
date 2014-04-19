@@ -44,6 +44,7 @@ public class PpuDao implements PpuDaoInterface {
     private static String TYPE_SERVICE_MZ_TABLE = "TypeServiceMZ";
     private static String VALUES_PARAMETR_FOR_MZ_TABLE = "ValuesParametrForMZ";
     private static String VALUES_PARAMETR_FOR_PROJECT_TABLE = "ValuesParametrForProject";
+    private static String USERS_TABLE = "Users";
 
     private static SessionFactory sessionFactory;
 
@@ -325,6 +326,19 @@ public class PpuDao implements PpuDaoInterface {
         {
             System.out.println(e);
             return new ValuesParametrForProject();
+        }
+    }
+
+    @Override
+    public Users getUsers(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (Users) session.get(Users.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new Users();
         }
     }
 
@@ -614,6 +628,20 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             session.save(valuesParametrForProject);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean saveUsers(Users Users) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.save(Users);
             return true;
         } catch (Exception e)
         {
@@ -917,6 +945,20 @@ public class PpuDao implements PpuDaoInterface {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteUsers(Users Users) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(Users);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean updateMz(MZ MZ) {
         try
         {
@@ -1202,6 +1244,20 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             session.update(valuesParametrForProject);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateUsers(Users Users) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(Users);
             return true;
         } catch (Exception e)
         {
@@ -1499,6 +1555,19 @@ public class PpuDao implements PpuDaoInterface {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
             return session.createQuery("from "+VALUES_PARAMETR_FOR_PROJECT_TABLE + s).list();
+        } catch (Exception e)
+        {
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<Users> findUsers(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery("from "+USERS_TABLE + s).list();
         } catch (Exception e)
         {
             return Collections.emptyList();

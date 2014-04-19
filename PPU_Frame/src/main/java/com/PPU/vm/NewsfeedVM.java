@@ -455,5 +455,6 @@ public class NewsfeedVM {
 			return;
 		
 		Clients.showNotification(msg, Clients.NOTIFICATION_TYPE_INFO, comp, pos, 2000);
+
 	}
 }

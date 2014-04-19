@@ -34,6 +34,7 @@ public interface PpuDaoInterface {
     public TypeServiceMZ getTypeServiceMz(int id);
     public ValuesParametrForMZ getValuesParametrForMz(int id);
     public ValuesParametrForProject getValuesParametrForProject(int id);
+    public Users getUsers(int id);
 
     public boolean saveMz(MZ MZ);
     public boolean saveComandMZ(ComandMZ comandMZ);
@@ -56,6 +57,7 @@ public interface PpuDaoInterface {
     public boolean saveTypeServiceMz(TypeServiceMZ typeServiceMZ);
     public boolean saveValuesParametrForMz(ValuesParametrForMZ valuesParametrForMZ);
     public boolean saveValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
+    public boolean saveUsers(Users Users);
 
     public boolean deleteMz(MZ MZ);
     public boolean deleteComandMZ(ComandMZ comandMZ);
@@ -78,6 +80,7 @@ public interface PpuDaoInterface {
     public boolean deleteTypeServiceMz(TypeServiceMZ typeServiceMZ);
     public boolean deleteValuesParametrForMz(ValuesParametrForMZ valuesParametrForMZ);
     public boolean deleteValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
+    public boolean deleteUsers(Users Users);
 
     public boolean updateMz(MZ MZ);
     public boolean updateComandMZ(ComandMZ comandMZ);
@@ -100,6 +103,7 @@ public interface PpuDaoInterface {
     public boolean updateTypeServiceMz(TypeServiceMZ typeServiceMZ);
     public boolean updateValuesParametrForMz(ValuesParametrForMZ valuesParametrForMZ);
     public boolean updateValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
+    public boolean updateUsers(Users Users);
 
     public List<MZ> findMz(String fields, String fieldValue);
     public List<ComandMZ> findComandMZ(String fields, String fieldValue);
@@ -122,4 +126,5 @@ public interface PpuDaoInterface {
     public List<TypeServiceMZ> findTypeServiceMz(String fields, String fieldValue);
     public List<ValuesParametrForMZ> findValuesParametrForMz(String fields, String fieldValue);
     public List<ValuesParametrForProject> findValuesParametrForProject(String fields, String fieldValue);
+    public List<Users> findUsers(String fields, String fieldValue);
 }

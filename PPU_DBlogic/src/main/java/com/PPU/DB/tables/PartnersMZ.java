@@ -22,6 +22,7 @@ import java.util.Set;
 //        address text,
 //        description text,
 //        type_mu integer,
+//        id_user integer,
 //        CONSTRAINT "partners_MZ_pkey" PRIMARY KEY (id)
 //        )
 
@@ -34,7 +35,9 @@ public class PartnersMZ {
     private String address;
     private String description;
     private int typeMU;
+    private int idUser;
     private Set<ComandMZ> ComandMZ = new HashSet<ComandMZ>(0);
+    private Users user;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -84,6 +87,15 @@ public class PartnersMZ {
         this.typeMU = typeMU;
     }
 
+    @Column(name="id_user")
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
@@ -92,5 +104,15 @@ public class PartnersMZ {
 
     public void setComandMZ(Set<ComandMZ> comandMZ) {
         ComandMZ = comandMZ;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_user", insertable = false, updatable = false)
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }

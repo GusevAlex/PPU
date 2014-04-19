@@ -103,6 +103,33 @@ public class WorkWithMZ extends WorkWithTable{
         else
             return ClassInvokeCall.callMethod(mz, "set"+columnName, listValue);
     }
-    
-    
+
+    @Override
+    public void addEntity(Object obj) throws Exception {
+        if (obj instanceof MZ)
+            ppuDao.saveMz((MZ) obj);
+        else
+            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+    }
+
+    @Override
+    public void changeEntity(Object obj) throws Exception {
+        if (obj instanceof MZ)
+            ppuDao.updateMz((MZ) obj);
+        else
+            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+    }
+
+    @Override
+    public void deleteEntity(Object obj) throws Exception {
+        if (obj instanceof MZ)
+            ppuDao.deleteMz((MZ) obj);
+        else
+            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+    }
+
+    @Override
+    public Object getEntity(int id) {
+        return ppuDao.getMz(id);
+    }
 }

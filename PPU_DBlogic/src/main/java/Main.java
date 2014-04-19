@@ -1,8 +1,10 @@
 import com.PPU.DB.DAO.PpuDao;
 import com.PPU.DB.DAO.PpuDaoInterface;
+import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import com.PPU.DB.workLogic.WorkWithMZ;
+import com.PPU.DB.workLogic.WorkWithUser;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.math.BigInteger;
@@ -22,19 +24,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        WorkWithMZ workWithMZ = new WorkWithMZ();
+        WorkWithUser workWithUser = new WorkWithUser();
+        String gh = MD5.getMD5("mypassword");
+        WorkWithMZ workWithMZ = new WorkWithMZ(1);
 
-        List<MZ> list = workWithMZ.findAndGetAllRow("","");
-        
-        workWithMZ.setRowById(1);
-
-        String s = "";
         try {
-            s = (String) workWithMZ.getColumnValue(WorkWithMZ.COLUMN_NAME);
-        } catch (IllegalAccessException e) {
+            workWithUser.addEntity(new Users());
+        } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-
-        int y = 0;
     }
 }

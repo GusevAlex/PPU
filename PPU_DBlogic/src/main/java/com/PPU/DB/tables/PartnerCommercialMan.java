@@ -21,6 +21,7 @@ import java.util.Set;
 //        name text,
 //        address text,
 //        description text,
+//        id_user integer,
 //        CONSTRAINT partner_commercial_man_pkey PRIMARY KEY (id)
 //        )
 
@@ -33,6 +34,7 @@ public class PartnerCommercialMan {
     private String address;
     private String description;
     private Set<ComandProject> comandProject = new HashSet<ComandProject>(0);
+    private Users user;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -81,5 +83,15 @@ public class PartnerCommercialMan {
 
     public void setComandProject(Set<ComandProject> comandProject) {
         comandProject = comandProject;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_user", insertable = false, updatable = false)
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }
