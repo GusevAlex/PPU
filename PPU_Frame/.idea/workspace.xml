@@ -1,60 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85846bca-dd19-40bc-a07b-5dff919de4a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/security/MD5.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Users.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\src\main\java\com\PPU\DB\workLogic\CLA.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\target\classes\com\PPU\DB\workLogic\CLA.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\web\WEB-INF\login_autoriz_page\login.zul" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_Frame\web\js\customized_effect.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDaoInterface.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDaoInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/Main.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.zul" afterPath="$PROJECT_DIR$/web/index.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/misc.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="85846bca-dd19-40bc-a07b-5dff919de4a2" name="Default" comment="" />
     <ignored path="PPU.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397909098781" ignored="false" />
-    <file path="/registrAuthoriz.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397923257703" ignored="false" />
-    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397917128718" ignored="false" />
-    <file path="/Users.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397918525406" ignored="false" />
-    <file path="/ComandMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397910242640" ignored="false" />
-    <file path="/PartnersMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397918812593" ignored="false" />
-    <file path="/Main.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397923593203" ignored="false" />
-    <file path="/hibernate.cfg.xml" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397910794734" ignored="false" />
-    <file path="/PpuDaoInterface.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397911732546" ignored="false" />
-    <file path="/PpuDao.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397911809218" ignored="false" />
-    <file path="/WorkWithUser.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397923033796" ignored="false" />
-    <file path="/MD5.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397914976046" ignored="false" />
-    <file path="/WorkWithTable.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397922548078" ignored="false" />
-    <file path="/fragment.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397919757578" ignored="false" />
-    <file path="/PartnerCommercialMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397918746734" ignored="false" />
-    <file path="/WorkWithMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397923020656" ignored="false" />
+    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924234437" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/Main.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/resources/hibernate.cfg.xml" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924546875" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/hibernate.cfg.xml" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924548625" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/applicationContext.xml" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1397924548625" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,30 +77,26 @@
       <file leaf-file-name="NewsfeedVM.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="13" selection-start="1400" selection-end="1400" vertical-scroll-proportion="56.48">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="70" selection-start="0" selection-end="1881" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registrAuthoriz.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
+      <file leaf-file-name="index.zul" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="30" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="6" column="38" selection-start="199" selection-end="199" vertical-scroll-proportion="0.17989418">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authoriz.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="5" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,7 +104,7 @@
       <file leaf-file-name="Contact.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/Contact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,17 +137,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authoriz.zul" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="60" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.4084249">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/script.js">
+      <file leaf-file-name="reviewListMzController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -199,8 +146,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviewListMzController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
+      <file leaf-file-name="reviewListMz.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/include/pages/reviewListMz.zul">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -215,17 +162,10 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitLogSettings">
-    <option name="myDateState">
-      <MyDateState />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/web/WEB-INF/include/toolbar.zul" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/include/titlebar.zul" />
         <option value="$PROJECT_DIR$/web/WEB-INF/include/pages/addMz.zul" />
@@ -236,12 +176,11 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/include/post.zul" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/Contact.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/js/customized_effect.js" />
         <option value="$PROJECT_DIR$/web/WEB-INF/login_autoriz_page/login.zul" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul" />
         <option value="$PROJECT_DIR$/web/index.zul" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/registrAuthoriz/registrAuthoriz.zul" />
       </list>
     </option>
   </component>
@@ -286,7 +225,7 @@
     <option name="width" value="1374" />
     <option name="height" value="746" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -397,24 +336,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -487,37 +408,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="registrAuthoriz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="funcControl" />
+              <option name="myItemId" value="composite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,7 +426,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Confirmation" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PPU_DBlogic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="project.structure.side.proportion" value="0.20000002" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -723,21 +614,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -754,6 +630,21 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -921,7 +812,7 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -936,7 +827,6 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="true">C:\Users\Alex\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
@@ -949,7 +839,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16842000" />
+    <option name="totallyTimeSpent" value="10883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="746" extended-state="6" />
@@ -958,23 +848,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32546374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42158517" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3537736" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23499268" sideWeight="0.4701258" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23712121" sideWeight="0.57841486" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23484848" sideWeight="0.5298742" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30503145" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -984,6 +872,8 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32704404" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1083,7 +973,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1091,6 +981,31 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/include/navigation.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/include/comment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/com/PPU/DB/workLogic/WorkWithTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/com/PPU/DB/workLogic/ClassInvokeCall.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/AbstractUiFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/com/PPU/DB/workLogic/WorkWithMZ.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1099,6 +1014,13 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/common/zel/6.5.3.FL.20130508/zel-6.5.3.FL.20130508.jar!/org/zkoss/zel/BeanELResolver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/include/pages/reviewListMz.zul">
@@ -1117,26 +1039,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery-ui-i18n.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/script.js">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="51" column="5" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1157,55 +1074,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/select/SelectorComposer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="64" selection-start="2070" selection-end="2070" vertical-scroll-proportion="1.1338583">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/Component.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="177" selection-end="177" vertical-scroll-proportion="0.16732283">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="1400" selection-end="1400" vertical-scroll-proportion="56.48">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/EventProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="16" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.37209302">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="30" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="70" selection-start="0" selection-end="1881" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/authoriz/authoriz.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="60" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.4084249">
+        <state line="6" column="38" selection-start="199" selection-end="199" vertical-scroll-proportion="0.17989418">
           <folding />
         </state>
       </provider>
