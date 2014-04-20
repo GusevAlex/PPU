@@ -1,0 +1,9 @@
+<hbox sclass="toolbarr" children="@load(vm.toolbarModel)" width="30%">
+	<template name="children">
+		<cell align="left" width="33%">
+			<toolbarbutton
+				label="${each[0]}"
+				onClick='@command("showMessage", pos="after_center")' />
+		</cell>
+	</template>
+</hbox>

@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da349b13-f9b8-4ba0-b861-44b5c21cc39a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/WEB-INF/authoriz/authoriz.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/WEB-INF/authoriz/authoriz.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/index.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/index.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/NewsfeedVM.java" afterPath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/NewsfeedVM.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" afterPath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" />
     </list>
     <ignored path="PPU_DBlogic.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397924234437" ignored="false" />
     <file path="$PROJECT_DIR$/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/hibernate.cfg.xml" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397924548625" ignored="false" />
     <file path="$PROJECT_DIR$/target/PPU_DBlogic-1.0-SNAPSHOT.jar!/applicationContext.xml" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397924548625" ignored="false" />
+    <file path="/a.dummy" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397926806328" ignored="false" />
+    <file path="/NewsfeedVM.java" changelist="da349b13-f9b8-4ba0-b861-44b5c21cc39a" time="1397928177468" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -16,7 +16,6 @@ import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
 import com.PPU.composite.Contact;
 import com.PPU.composite.MenuItem;
-import com.PPU.data.FakeData;
 import com.PPU.vo.AuthorBean;
 import com.PPU.vo.ContactBean;
 import com.PPU.vo.ContactGroupBean;
@@ -26,6 +25,7 @@ import com.PPU.vo.PostBean;
 import org.zkoss.web.fn.ServletFns;
 import org.zkoss.web.servlet.Servlets;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Session;
 import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.Selectors;
@@ -71,7 +71,12 @@ public class NewsfeedVM {
 
     public NewsfeedVM()
     {
+        Session session = Sessions.getCurrent();
+        String login = (String) session.getAttribute("login");
 
+        if (login == null)
+            //грузим страницу авторизации
+            Executions.sendRedirect("/pages/authoriz/authoriz.zul");
     }
 
 
@@ -168,15 +173,13 @@ public class NewsfeedVM {
 	public void setLikeStatus(boolean likeStatus) {
 		this.likeStatus = likeStatus;
 	}
-
-	public List<PostBean> getPostModel(){
-		return FakeData.getPosts();
-	}
 	
 	private ServletRequest request = ServletFns.getCurrentRequest();
 
 	@Init
 	public void init() {
+
+
 		mobile = Servlets.getBrowser(request, "mobile") != null;
 		
 		if (mobile) {
@@ -281,11 +284,6 @@ public class NewsfeedVM {
 				)	
 			)
 		};
-
-        Session session = Sessions.getCurrent();
-        session.setAttribute("login",(String) "login");
-
-        int y = 0;
 	}
 	
 	@AfterCompose
@@ -294,7 +292,7 @@ public class NewsfeedVM {
 		if (ie != null && ie < 8.0) {
 			Clients.showNotification("This demo does not support IE6/7", true);
 		}
-		
+
 		Selectors.wireComponents(view, this, false);
 	}
 	
@@ -302,68 +300,6 @@ public class NewsfeedVM {
 	@NotifyChange("modalShow")
 	public void hideModal(){
 		modalShow = false;
-	}
-	
-	@Command
-	@NotifyChange({"currentPost","modalShow","likeStatus"})
-	public void feedback(
-			@BindingParam("instance") PostBean post,
-			@BindingParam("ref")      Component likeArea
-	) {
-		currentPost = post;
-		likeStatus = currentPost.getLikeList().contains(currentUser);
-		currentPost.setLiked(likeStatus);
-		modalShow = true;
-		
-		if (mobile) {
-			feedbackPopup.open(feedbackPopup.getFellow("mainWindow"), "bottom_right");
-		} else {
-			Clients.evalJavaScript("jq('.newsfeedPanel .z-center-body').eq(0).scrollTop(700);");
-			Clients.scrollIntoView(likeArea);
-		
-			feedbackPopup.open(likeArea, "after_start");
-		}
-	}
-
-	@Command
-	@NotifyChange({"currentPost","currentComment"})
-	public void addComment() {
-		PostBean comment = new PostBean();
-		comment.setAuthor(currentUser);
-		comment.setContent(currentComment);
-		comment.setTime(new Date());
-		currentPost.getCommentList().add(comment);
-		currentComment = "";
-	}
-	
-	@Command
-	@NotifyChange({"currentPost", "likeStatus"})
-	public void likePost(@BindingParam("instance") PostBean post) {
-		if (post != null) currentPost = post;
-		
-		List<AuthorBean> likeList = currentPost.getLikeList();
-		likeStatus = likeList.contains(currentUser);
-		
-		if (likeStatus) {
-			likeList.remove(currentUser);
-		} else {
-			likeList.add(currentUser);
-		}
-		
-		likeStatus = !likeStatus;
-		
-		currentPost.setLiked(likeStatus);
-	}
-	
-	@Command
-	@NotifyChange({"menuOpen", "contactOpen"})
-	public void toggleMenu() {
-		menuOpen = !menuOpen;
-		
-		if ("landscape".equals(orient))
-			contactOpen = !menuOpen;
-		
-		if (hideContact) contactOpen = false;
 	}
 	
 	@Command
@@ -379,15 +315,15 @@ public class NewsfeedVM {
 		
 		if (hideContact) contactOpen = false;
 	}
-	
+
 	@Command
 	@NotifyChange({"contactOpen", "menuOpen", "modalShow"})
 	public void updateDeviceStatus(
 			@BindingParam("orient") String orient,
 			@BindingParam("width")  int    width) {
-		
+
 		Window mainWindow = ((Window) feedbackPopup.getFellow("mainWindow"));
-		
+
 		// Adjust width for desktop
 		if (!mobile) {
 			if (width > 1366) {
@@ -400,7 +336,7 @@ public class NewsfeedVM {
 		} else {
 			feedbackPopup.setWidth("70%");
 			feedbackPopup.setHeight("100%");
-			
+
 			// For mobile devices, responsive to orientation change
 			if (!this.orient.equals(orient)) {
 				this.orient = orient;
@@ -409,25 +345,25 @@ public class NewsfeedVM {
 				Clients.resize(mainWindow);
 
 				Clients.showNotification(orient, Clients.NOTIFICATION_TYPE_INFO, null, "middle_center", 2000);
-			
+
 				if ("portrait".equals(orient)) {
 					if (contactOpen) contactOpen = false;
 				} else {
 					if (!menuOpen && !contactOpen) 	contactOpen = true;
 				}
-				
+
 				feedbackPopup.close();
 				modalShow = false;
 			}
 		}
-		
+
 		if (width <= 800) {
 			hideContact = true;
 			contactOpen = false;
 		} else {
 			hideContact = false;
 			if (!menuOpen) contactOpen = true;
-			
+
 			if (!mobile) menuOpen = true;
 		}
 	}

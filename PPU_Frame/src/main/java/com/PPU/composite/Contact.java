@@ -24,7 +24,7 @@ public class Contact extends Listitem implements IdSpace {
 	private Image status;
 	
 	public Contact() {
-		Executions.createComponents("/WEB-INF/composite/Contact.zul", this, null);
+		Executions.createComponents("/pages/composite/Contact.zul", this, null);
 		Selectors.wireComponents(this, this, false);
 	}
 	

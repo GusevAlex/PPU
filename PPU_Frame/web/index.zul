@@ -63,7 +63,7 @@
         <!--  -->
 
         <caption>
-            <include src="/WEB-INF/include/titlebar.zul" />
+            <include src="/pages/include/titlebar.zul" />
         </caption>
 
         <!-- Divide the main layout into Menu Panel and Content Panel -->
@@ -85,7 +85,7 @@
                 </caption>
                 <!-- -->
 
-                <include src="/WEB-INF/include/navigation.zul" />
+                <include src="/pages/include/navigation.zul" />
             </west>
             <!--  -->
 
@@ -110,7 +110,7 @@
 
                         <!-- Toolbar -->
                         <caption>
-                            <include src="/WEB-INF/include/toolbar.zul" />
+                            <include src="/pages/include/toolbar.zul" />
                         </caption>
                         <!--  -->
 
@@ -118,7 +118,7 @@
                         <div>
                             <vlayout>
                                 <!--<template name="children" var="post">-->
-                                <include src="/WEB-INF/include/post.zul" />
+                                <include src="/pages/include/post.zul" />
                                 <!--</template>-->
                             </vlayout>
 
@@ -128,7 +128,7 @@
                                     height="50%"
                                     sclass="feedback"
                                     onOpen='@command("hideModal")' >
-                                <include src="/WEB-INF/include/comment.zul"/>
+                                <include src="/pages/include/comment.zul"/>
                             </popup>
                         </div>
                         <!--  -->

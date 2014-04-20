@@ -528,3 +528,15 @@ table.z-caption
 .valign-middle {
 	vertical-align: center;
 }
+
+.authorizPanel
+{
+    /*background: ${t:gradValue('ver', '#007497 0%; #007497 38px; transparent 39px; transparent 100%')},*/
+    /*url(${c:encodeURL('/images/background/background.png')}) center 36px;*/
+    /*<c:if test="${zk.ff > 0}">*/
+    /*background: ${t:gradValue('ver', '#007497 0%; #007497 35px; transparent 35px; transparent 100%')},*/
+    /*url(${c:encodeURL('/images/background/background.png')}) center 36px;*/
+    /*</c:if>*/
+
+    background: url(../images/background/background.png);
+}

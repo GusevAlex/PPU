@@ -1,0 +1,14 @@
+<div apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.PPU.registrAuthoriz.registrAuthoriz')">
+
+    <div apply="com.PPU.registrAuthoriz.registrAuthoriz">
+    <button label="@load(vm.css)"/>
+    <style src="@load(vm.css)" />
+
+        <div class="authorizPanel" >
+
+        </div>
+
+    </div>
+
+</div>

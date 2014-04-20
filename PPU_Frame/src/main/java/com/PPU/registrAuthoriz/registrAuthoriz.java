@@ -3,6 +3,7 @@ package com.PPU.registrAuthoriz;
 import com.PPU.DB.workLogic.WorkWithUser;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Session;
 import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.SelectorComposer;
@@ -33,6 +34,8 @@ public class registrAuthoriz extends SelectorComposer<Component> {
     @Wire
     Textbox name;
 
+    private String css = "../../css/common.css.dsp";
+
     public registrAuthoriz()
     {
 
@@ -54,12 +57,19 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
             Session session = Sessions.getCurrent();
             session.setAttribute("login",name.getValue());
-
-            Clients.evalJavaScript("zk.Widget.$('$loginWin').setMinimized(true)");
+            Executions.sendRedirect("/index.zul");
         } else {
             mesg.setValue("Введены неверные имя пользователя и пароль!");
             Clients.evalJavaScript("loginFailed()");
         }
 
+    }
+
+    public String getCss() {
+        return css;
+    }
+
+    public void setCss(String css) {
+        this.css = css;
     }
 }

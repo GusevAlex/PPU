@@ -19,7 +19,7 @@ public class MenuItem extends Listitem implements IdSpace {
 	private Label count;
 	
 	public MenuItem() {
-		Executions.createComponents("/WEB-INF/composite/MenuItem.zul", this, null);
+		Executions.createComponents("/pages/composite/MenuItem.zul", this, null);
 		Selectors.wireComponents(this, this, false);
 	}
 	
