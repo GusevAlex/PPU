@@ -1,11 +1,8 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.DAO.PpuDaoInterface;
-import com.PPU.DB.tables.MZ;
-import com.PPU.DB.tables.Users;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.security.core.userdetails.User;
 
 import java.util.List;
 

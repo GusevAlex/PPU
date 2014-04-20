@@ -27,7 +27,8 @@
         <mapping class="com.PPU.DB.tables.PartnersMZ" />
         <mapping class="com.PPU.DB.tables.Program" />
         <mapping class="com.PPU.DB.tables.Project" />
-        <mapping class="com.PPU.DB.tables.Users" />
+        <mapping class="com.PPU.DB.tables.UsersMunMan" />
+        <mapping class="com.PPU.DB.tables.UsersComMan" />
 
     </session-factory>
 </hibernate-configuration>

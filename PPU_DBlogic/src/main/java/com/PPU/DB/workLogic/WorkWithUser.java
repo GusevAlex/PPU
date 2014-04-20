@@ -1,11 +1,9 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.security.MD5;
-import com.PPU.DB.tables.Users;
-import com.PPU.DB.tables.Users;
+import com.PPU.DB.tables.UsersComMan;
+import com.PPU.DB.tables.UsersMunMan;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 /**
@@ -22,83 +20,98 @@ public class WorkWithUser extends WorkWithTable {
     public static String HASH_ID = "Hash";
     public static String NAME_ID = "Name";
 
-    private List<Users> users;
-    private Users user;
+    private List<UsersMunMan> usersMunMans;
+    private UsersMunMan userMunMan;
+
+    private List<UsersComMan> usersComMans;
+    private UsersComMan userComMan;
 
     public WorkWithUser()
     {
         super();
 
-        user = new Users();
-        users = ppuDao.findUsers("", "");
+        userMunMan = new UsersMunMan();
+        usersMunMans = ppuDao.findUsersMunMan("", "");
     }
 
     public WorkWithUser(int idUsers)
     {
         this();
 
-        user = ppuDao.getUsers(idUsers);
+        userMunMan = ppuDao.getUsersMunMan(idUsers);
     }
 
     public WorkWithUser(String fields, String fieldValue)
     {
         this();
 
-        users = ppuDao.findUsers(fields, fieldValue);
+        usersMunMans = ppuDao.findUsersMunMan(fields, fieldValue);
     }
 
     @Override
     public List getListRows()
     {
-        return users;
+        return usersMunMans;
     }
 
     @Override
-    public List<Users> findAndGetAllRow(String fields, String fieldValue)
+    public List findAndGetAllRow(String fields, String fieldValue)
     {
-        return ppuDao.findUsers(fields, fieldValue);
+        List list1 = ppuDao.findUsersMunMan(fields, fieldValue);
+        List list2 = ppuDao.findUsersComMan(fields, fieldValue);
+
+        return (list1.size()!=0) ? list1 : list2;
     }
 
     @Override
     public void setRows(Object obj)
     {
-        if ((user != null) && (user instanceof Users))
+        if ((userMunMan != null) && (obj instanceof UsersMunMan))
         {
-            this.user = (Users) obj;
+            this.userMunMan = (UsersMunMan) obj;
         }
         else
+            if ((userComMan != null) && (obj instanceof UsersComMan))
+            {
+                this.userComMan = (UsersComMan) obj;
+            }
             throw new IllegalArgumentException("Неверно передан входной параметр");
     }
 
     @Override
     public void setRowById(int id)
     {
-        user = ppuDao.getUsers(id);
+        userMunMan = ppuDao.getUsersMunMan(id);
+        userComMan = ppuDao.getUsersComMan(id);
     }
 
-    public Users getUsers()
+    public UsersMunMan getUsersMunMans()
     {
-        return user;
+        return userMunMan;
+    }
+
+    public UsersComMan getUserComMan() {
+        return userComMan;
     }
 
     @Override
     public Object getColumnValue(String columnName) throws IllegalAccessException {
-        if (user == null)
+        if (userMunMan == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в user");
+            throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
-            return ClassInvokeCall.callMethod(user, "get"+columnName);
+            return ClassInvokeCall.callMethod(userMunMan, "get"+columnName);
     }
 
     @Override
     public Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException {
-        if (user == null)
+        if (userMunMan == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в user");
+            throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
-            return ClassInvokeCall.callMethod(user, "set"+columnName, listValue);
+            return ClassInvokeCall.callMethod(userMunMan, "set"+columnName, listValue);
     }
 
     public boolean checkLoginAndPassword(String login, String password)
@@ -111,32 +124,66 @@ public class WorkWithUser extends WorkWithTable {
             return false;
     }
 
+    public boolean checkLogin(Object obj)
+    {
+        if (obj instanceof UsersMunMan) {
+            return findAndGetAllRow("login",  ((UsersMunMan) obj).getLogin()).size() == 0 ? true : false;
+        }
+        else
+        if (obj instanceof UsersComMan) {
+            return findAndGetAllRow("login",  ((UsersComMan) obj).getLogin()).size() == 0 ? true : false;
+        }
+
+        return false;
+    }
+
     @Override
     public void addEntity(Object obj) throws Exception {
-        if (obj instanceof Users)
-            ppuDao.saveUsers((Users) obj);
+        if (obj instanceof UsersMunMan) {
+            ppuDao.saveUsersMunMan((UsersMunMan) obj);
+        }
         else
-            throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
+            if (obj instanceof UsersComMan) {
+                ppuDao.saveUsersComMan((UsersComMan) obj);
+            }
+            else
+                throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
     }
 
     @Override
     public void changeEntity(Object obj) throws Exception {
-        if (obj instanceof Users)
-            ppuDao.updateUsers((Users) obj);
+        if (obj instanceof UsersMunMan)
+            ppuDao.updateUsersMunMan((UsersMunMan) obj);
         else
-            throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
+            if (obj instanceof UsersComMan)
+                ppuDao.updateUsersComMan((UsersComMan) obj);
+            else
+                throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
     }
 
     @Override
     public void deleteEntity(Object obj) throws Exception {
-        if (obj instanceof Users)
-            ppuDao.deleteUsers((Users) obj);
+        if (obj instanceof UsersMunMan)
+            ppuDao.deleteUsersMunMan((UsersMunMan) obj);
         else
-            throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
+            if (obj instanceof UsersComMan)
+                ppuDao.deleteUsersComMan((UsersComMan) obj);
+            else
+                throw new Exception("В метод WorkWithUser.addEntity передан неверный параметр");
     }
 
     @Override
     public Object getEntity(int id) {
-        return ppuDao.getUsers(id);
+        return new Object();
+    }
+
+    public UsersMunMan getUserMunManEntity(int id)
+    {
+        return ppuDao.getUsersMunMan(id);
+    }
+
+    public UsersComMan getUserComManEntity(int id)
+    {
+        return ppuDao.getUsersComMan(id);
     }
 }

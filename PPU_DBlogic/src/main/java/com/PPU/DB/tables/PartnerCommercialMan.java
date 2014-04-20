@@ -34,7 +34,7 @@ public class PartnerCommercialMan {
     private String address;
     private String description;
     private Set<ComandProject> comandProject = new HashSet<ComandProject>(0);
-    private Users user;
+    private Set<UsersComMan> user;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -85,13 +85,13 @@ public class PartnerCommercialMan {
         comandProject = comandProject;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_user", insertable = false, updatable = false)
-    public Users getUser() {
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<UsersComMan> getUser() {
         return user;
     }
 
-    public void setUser(Users user) {
+    public void setUser(Set<UsersComMan> user) {
         this.user = user;
     }
 }

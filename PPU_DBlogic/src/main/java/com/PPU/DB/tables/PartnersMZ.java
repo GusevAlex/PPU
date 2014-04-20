@@ -35,9 +35,8 @@ public class PartnersMZ {
     private String address;
     private String description;
     private int typeMU;
-    private int idUser;
     private Set<ComandMZ> ComandMZ = new HashSet<ComandMZ>(0);
-    private Users user;
+    private Set<UsersMunMan> user;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -87,15 +86,6 @@ public class PartnersMZ {
         this.typeMU = typeMU;
     }
 
-    @Column(name="id_user")
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
-    }
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
@@ -106,13 +96,13 @@ public class PartnersMZ {
         ComandMZ = comandMZ;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_user", insertable = false, updatable = false)
-    public Users getUser() {
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<UsersMunMan> getUser() {
         return user;
     }
 
-    public void setUser(Users user) {
+    public void setUser(Set<UsersMunMan> user) {
         this.user = user;
     }
 }

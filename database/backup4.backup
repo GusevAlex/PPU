@@ -1,0 +1,875 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.3beta1
+-- Dumped by pg_dump version 9.3beta1
+-- Started on 2014-04-20 23:30:54
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 193 (class 3079 OID 11750)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2110 (class 0 OID 0)
+-- Dependencies: 193
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 170 (class 1259 OID 25074)
+-- Name: MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "MZ" (
+    id integer NOT NULL,
+    id_program integer,
+    name text,
+    id_customer integer,
+    id_leader integer,
+    start_date date,
+    expiration_date date,
+    description text,
+    budget real,
+    status integer,
+    service_type integer
+);
+
+
+ALTER TABLE public."MZ" OWNER TO postgres;
+
+--
+-- TOC entry 171 (class 1259 OID 25080)
+-- Name: comand_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "comand_MZ" (
+    id integer NOT NULL,
+    id_mz integer,
+    id_partner_mz integer
+);
+
+
+ALTER TABLE public."comand_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 172 (class 1259 OID 25083)
+-- Name: comand_project; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE comand_project (
+    id integer NOT NULL,
+    id_project integer,
+    id_partner_project integer
+);
+
+
+ALTER TABLE public.comand_project OWNER TO postgres;
+
+--
+-- TOC entry 173 (class 1259 OID 25086)
+-- Name: corrections_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "corrections_MZ" (
+    id integer NOT NULL,
+    id_mz integer,
+    correction_date date,
+    id_parametr integer,
+    value_after text,
+    value_before text
+);
+
+
+ALTER TABLE public."corrections_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 174 (class 1259 OID 25092)
+-- Name: corrections_project; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE corrections_project (
+    id integer NOT NULL,
+    id_project integer,
+    correction_date date,
+    id_parametr integer,
+    value_after text,
+    value_before text
+);
+
+
+ALTER TABLE public.corrections_project OWNER TO postgres;
+
+--
+-- TOC entry 175 (class 1259 OID 25098)
+-- Name: default_parametrs_service_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "default_parametrs_service_MZ" (
+    id integer NOT NULL,
+    id_service_mz integer,
+    id_parametr integer
+);
+
+
+ALTER TABLE public."default_parametrs_service_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 176 (class 1259 OID 25101)
+-- Name: limits_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "limits_MZ" (
+    id integer NOT NULL,
+    id_parametr integer,
+    value text,
+    id_mz integer
+);
+
+
+ALTER TABLE public."limits_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 177 (class 1259 OID 25107)
+-- Name: limits_project; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE limits_project (
+    id integer NOT NULL,
+    id_parametr integer,
+    value text,
+    id_project integer
+);
+
+
+ALTER TABLE public.limits_project OWNER TO postgres;
+
+--
+-- TOC entry 178 (class 1259 OID 25113)
+-- Name: parametrs; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE parametrs (
+    id integer NOT NULL,
+    name text,
+    type character(1)
+);
+
+
+ALTER TABLE public.parametrs OWNER TO postgres;
+
+--
+-- TOC entry 179 (class 1259 OID 25119)
+-- Name: partner_commercial_man; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE partner_commercial_man (
+    id integer NOT NULL,
+    name text,
+    address text,
+    description text
+);
+
+
+ALTER TABLE public.partner_commercial_man OWNER TO postgres;
+
+--
+-- TOC entry 180 (class 1259 OID 25125)
+-- Name: partners_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "partners_MZ" (
+    id integer NOT NULL,
+    name text,
+    address text,
+    description text,
+    type_mu integer
+);
+
+
+ALTER TABLE public."partners_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 181 (class 1259 OID 25131)
+-- Name: programs; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE programs (
+    id integer NOT NULL,
+    name text,
+    target text,
+    description text
+);
+
+
+ALTER TABLE public.programs OWNER TO postgres;
+
+--
+-- TOC entry 182 (class 1259 OID 25137)
+-- Name: projects; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE projects (
+    id integer NOT NULL,
+    id_program integer,
+    name text,
+    id_customer integer,
+    id_leader integer,
+    start_date date,
+    expiration_date date,
+    description text,
+    budget real,
+    status integer
+);
+
+
+ALTER TABLE public.projects OWNER TO postgres;
+
+--
+-- TOC entry 183 (class 1259 OID 25143)
+-- Name: providers; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE providers (
+    id integer NOT NULL,
+    name text,
+    description text,
+    address text
+);
+
+
+ALTER TABLE public.providers OWNER TO postgres;
+
+--
+-- TOC entry 184 (class 1259 OID 25149)
+-- Name: resources_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "resources_MZ" (
+    id integer NOT NULL,
+    id_mz integer,
+    id_provider_resources integer
+);
+
+
+ALTER TABLE public."resources_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 185 (class 1259 OID 25152)
+-- Name: resources_project; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE resources_project (
+    id integer NOT NULL,
+    id_project integer,
+    id_provider_resources integer
+);
+
+
+ALTER TABLE public.resources_project OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 25155)
+-- Name: type_MU; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "type_MU" (
+    id integer NOT NULL,
+    name text
+);
+
+
+ALTER TABLE public."type_MU" OWNER TO postgres;
+
+--
+-- TOC entry 187 (class 1259 OID 25161)
+-- Name: type_budget_service; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE type_budget_service (
+    id integer NOT NULL,
+    name text,
+    description text
+);
+
+
+ALTER TABLE public.type_budget_service OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 25167)
+-- Name: type_service_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "type_service_MZ" (
+    id integer NOT NULL,
+    name text
+);
+
+
+ALTER TABLE public."type_service_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 191 (class 1259 OID 25228)
+-- Name: users_ComMan; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "users_ComMan" (
+    login text,
+    hash text,
+    email text,
+    id integer NOT NULL,
+    id_partner_commercial integer,
+    name text
+);
+
+
+ALTER TABLE public."users_ComMan" OWNER TO postgres;
+
+--
+-- TOC entry 192 (class 1259 OID 25236)
+-- Name: users_MunMan; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "users_MunMan" (
+    id integer NOT NULL,
+    login text,
+    hash text,
+    name text,
+    id_partner_mz integer
+);
+
+
+ALTER TABLE public."users_MunMan" OWNER TO postgres;
+
+--
+-- TOC entry 189 (class 1259 OID 25173)
+-- Name: values_parametr_for_MZ; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "values_parametr_for_MZ" (
+    id integer NOT NULL,
+    id_parametr integer,
+    value text,
+    date_rec_value date,
+    id_mz integer
+);
+
+
+ALTER TABLE public."values_parametr_for_MZ" OWNER TO postgres;
+
+--
+-- TOC entry 190 (class 1259 OID 25179)
+-- Name: values_parametr_for_project; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE values_parametr_for_project (
+    id integer NOT NULL,
+    id_parametr integer,
+    value text,
+    date_rec_value date,
+    id_project integer
+);
+
+
+ALTER TABLE public.values_parametr_for_project OWNER TO postgres;
+
+--
+-- TOC entry 2080 (class 0 OID 25074)
+-- Dependencies: 170
+-- Data for Name: MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "MZ" (id, id_program, name, id_customer, id_leader, start_date, expiration_date, description, budget, status, service_type) FROM stdin;
+1	1	dfgfdg	0	0	2012-03-21	2014-04-15	fdsgdf	1111	1	1
+2	1	ыва	0	0	2012-03-21	2012-03-21	мрпарапра	1123	1	1
+\.
+
+
+--
+-- TOC entry 2081 (class 0 OID 25080)
+-- Dependencies: 171
+-- Data for Name: comand_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "comand_MZ" (id, id_mz, id_partner_mz) FROM stdin;
+1	1	1
+\.
+
+
+--
+-- TOC entry 2082 (class 0 OID 25083)
+-- Dependencies: 172
+-- Data for Name: comand_project; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY comand_project (id, id_project, id_partner_project) FROM stdin;
+1	1	1
+\.
+
+
+--
+-- TOC entry 2083 (class 0 OID 25086)
+-- Dependencies: 173
+-- Data for Name: corrections_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "corrections_MZ" (id, id_mz, correction_date, id_parametr, value_after, value_before) FROM stdin;
+1	1	2013-04-21	1	sdf	sdfg
+\.
+
+
+--
+-- TOC entry 2084 (class 0 OID 25092)
+-- Dependencies: 174
+-- Data for Name: corrections_project; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY corrections_project (id, id_project, correction_date, id_parametr, value_after, value_before) FROM stdin;
+1	1	2013-04-21	1	fdg	fgjh
+\.
+
+
+--
+-- TOC entry 2085 (class 0 OID 25098)
+-- Dependencies: 175
+-- Data for Name: default_parametrs_service_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "default_parametrs_service_MZ" (id, id_service_mz, id_parametr) FROM stdin;
+1	1	1
+\.
+
+
+--
+-- TOC entry 2086 (class 0 OID 25101)
+-- Dependencies: 176
+-- Data for Name: limits_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "limits_MZ" (id, id_parametr, value, id_mz) FROM stdin;
+1	2	dsf	1
+\.
+
+
+--
+-- TOC entry 2087 (class 0 OID 25107)
+-- Dependencies: 177
+-- Data for Name: limits_project; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY limits_project (id, id_parametr, value, id_project) FROM stdin;
+1	1	dsfg	1
+\.
+
+
+--
+-- TOC entry 2088 (class 0 OID 25113)
+-- Dependencies: 178
+-- Data for Name: parametrs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY parametrs (id, name, type) FROM stdin;
+1	sdfsdf	f
+\.
+
+
+--
+-- TOC entry 2089 (class 0 OID 25119)
+-- Dependencies: 179
+-- Data for Name: partner_commercial_man; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY partner_commercial_man (id, name, address, description) FROM stdin;
+1	df	sdf	sdf
+\.
+
+
+--
+-- TOC entry 2090 (class 0 OID 25125)
+-- Dependencies: 180
+-- Data for Name: partners_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "partners_MZ" (id, name, address, description, type_mu) FROM stdin;
+1	dsf	sdf	sdf	23
+\.
+
+
+--
+-- TOC entry 2091 (class 0 OID 25131)
+-- Dependencies: 181
+-- Data for Name: programs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY programs (id, name, target, description) FROM stdin;
+1	dfg	dfg	dfg
+2	dsf	sdf	sdf
+\.
+
+
+--
+-- TOC entry 2092 (class 0 OID 25137)
+-- Dependencies: 182
+-- Data for Name: projects; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY projects (id, id_program, name, id_customer, id_leader, start_date, expiration_date, description, budget, status) FROM stdin;
+1	2	fdg	1	1	2013-04-21	2013-04-21	ssdf	12	12334
+\.
+
+
+--
+-- TOC entry 2093 (class 0 OID 25143)
+-- Dependencies: 183
+-- Data for Name: providers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY providers (id, name, description, address) FROM stdin;
+1	dsf	sdf	sdf
+\.
+
+
+--
+-- TOC entry 2094 (class 0 OID 25149)
+-- Dependencies: 184
+-- Data for Name: resources_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "resources_MZ" (id, id_mz, id_provider_resources) FROM stdin;
+1	1	1
+\.
+
+
+--
+-- TOC entry 2095 (class 0 OID 25152)
+-- Dependencies: 185
+-- Data for Name: resources_project; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY resources_project (id, id_project, id_provider_resources) FROM stdin;
+1	1	1
+\.
+
+
+--
+-- TOC entry 2096 (class 0 OID 25155)
+-- Dependencies: 186
+-- Data for Name: type_MU; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "type_MU" (id, name) FROM stdin;
+1	dfgdfg
+\.
+
+
+--
+-- TOC entry 2097 (class 0 OID 25161)
+-- Dependencies: 187
+-- Data for Name: type_budget_service; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY type_budget_service (id, name, description) FROM stdin;
+1	sdf	sdfdsf
+\.
+
+
+--
+-- TOC entry 2098 (class 0 OID 25167)
+-- Dependencies: 188
+-- Data for Name: type_service_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "type_service_MZ" (id, name) FROM stdin;
+1	dsfsdf
+\.
+
+
+--
+-- TOC entry 2101 (class 0 OID 25228)
+-- Dependencies: 191
+-- Data for Name: users_ComMan; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "users_ComMan" (login, hash, email, id, id_partner_commercial, name) FROM stdin;
+alex2	\N	\N	1	1	\N
+\.
+
+
+--
+-- TOC entry 2102 (class 0 OID 25236)
+-- Dependencies: 192
+-- Data for Name: users_MunMan; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "users_MunMan" (id, login, hash, name, id_partner_mz) FROM stdin;
+1	alex	34819d7beeabb926a5c854bc85b3e44	fdsgdfg	1
+\.
+
+
+--
+-- TOC entry 2099 (class 0 OID 25173)
+-- Dependencies: 189
+-- Data for Name: values_parametr_for_MZ; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "values_parametr_for_MZ" (id, id_parametr, value, date_rec_value, id_mz) FROM stdin;
+1	1	sdf	2013-04-21	1
+\.
+
+
+--
+-- TOC entry 2100 (class 0 OID 25179)
+-- Dependencies: 190
+-- Data for Name: values_parametr_for_project; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY values_parametr_for_project (id, id_parametr, value, date_rec_value, id_project) FROM stdin;
+1	1	sfdg	2013-04-21	1
+\.
+
+
+--
+-- TOC entry 2035 (class 2606 OID 25186)
+-- Name: MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "MZ"
+    ADD CONSTRAINT "MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2037 (class 2606 OID 25188)
+-- Name: comand_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "comand_MZ"
+    ADD CONSTRAINT "comand_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2039 (class 2606 OID 25190)
+-- Name: comand_project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY comand_project
+    ADD CONSTRAINT comand_project_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2041 (class 2606 OID 25192)
+-- Name: corrections_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "corrections_MZ"
+    ADD CONSTRAINT "corrections_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2043 (class 2606 OID 25194)
+-- Name: corrections_project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY corrections_project
+    ADD CONSTRAINT corrections_project_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2045 (class 2606 OID 25196)
+-- Name: default_parametrs_service_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "default_parametrs_service_MZ"
+    ADD CONSTRAINT "default_parametrs_service_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2047 (class 2606 OID 25198)
+-- Name: limits_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "limits_MZ"
+    ADD CONSTRAINT limits_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2049 (class 2606 OID 25200)
+-- Name: limits_project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY limits_project
+    ADD CONSTRAINT limits_project_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2051 (class 2606 OID 25202)
+-- Name: parametrs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY parametrs
+    ADD CONSTRAINT parametrs_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2053 (class 2606 OID 25204)
+-- Name: partner_commercial_man_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY partner_commercial_man
+    ADD CONSTRAINT partner_commercial_man_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2055 (class 2606 OID 25206)
+-- Name: partners_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "partners_MZ"
+    ADD CONSTRAINT "partners_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2057 (class 2606 OID 25208)
+-- Name: programs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY programs
+    ADD CONSTRAINT programs_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2059 (class 2606 OID 25210)
+-- Name: projects_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY projects
+    ADD CONSTRAINT projects_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2061 (class 2606 OID 25212)
+-- Name: providers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY providers
+    ADD CONSTRAINT providers_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2063 (class 2606 OID 25214)
+-- Name: resources_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "resources_MZ"
+    ADD CONSTRAINT resources_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2065 (class 2606 OID 25216)
+-- Name: resources_project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY resources_project
+    ADD CONSTRAINT resources_project_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2067 (class 2606 OID 25218)
+-- Name: type_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "type_MU"
+    ADD CONSTRAINT "type_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2069 (class 2606 OID 25220)
+-- Name: type_budget_service_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY type_budget_service
+    ADD CONSTRAINT type_budget_service_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2071 (class 2606 OID 25222)
+-- Name: type_service_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "type_service_MZ"
+    ADD CONSTRAINT "type_service_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2077 (class 2606 OID 25235)
+-- Name: users_in_system_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "users_ComMan"
+    ADD CONSTRAINT users_in_system_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2079 (class 2606 OID 25243)
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "users_MunMan"
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2073 (class 2606 OID 25224)
+-- Name: values_parametr_for_MZ_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY "values_parametr_for_MZ"
+    ADD CONSTRAINT "values_parametr_for_MZ_pkey" PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2075 (class 2606 OID 25226)
+-- Name: values_parametr_for_project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY values_parametr_for_project
+    ADD CONSTRAINT values_parametr_for_project_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2109 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2014-04-20 23:30:55
+
+--
+-- PostgreSQL database dump complete
+--
+

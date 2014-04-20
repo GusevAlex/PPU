@@ -211,7 +211,7 @@ public class NewsfeedVM {
 					}
 				)
 			),
-			
+
 			new MenuGroupBean(
 				"Проекты",
 				new ListModelArray<MenuItemBean>(

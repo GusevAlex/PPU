@@ -44,7 +44,8 @@ public class PpuDao implements PpuDaoInterface {
     private static String TYPE_SERVICE_MZ_TABLE = "TypeServiceMZ";
     private static String VALUES_PARAMETR_FOR_MZ_TABLE = "ValuesParametrForMZ";
     private static String VALUES_PARAMETR_FOR_PROJECT_TABLE = "ValuesParametrForProject";
-    private static String USERS_TABLE = "Users";
+    private static String USERS_MUN_MAN_TABLE = "UsersMunMan";
+    private static String USERS_COM_MAN_TABLE = "UsersComMan";
 
     private static SessionFactory sessionFactory;
 
@@ -330,15 +331,28 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
-    public Users getUsers(int id) {
+    public UsersMunMan getUsersMunMan(int id) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            return (Users) session.get(Users.class, id);
+            return (UsersMunMan) session.get(UsersMunMan.class, id);
         } catch (Exception e)
         {
             System.out.println(e);
-            return new Users();
+            return new UsersMunMan();
+        }
+    }
+
+    @Override
+    public UsersComMan getUsersComMan(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (UsersComMan) session.get(UsersComMan.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new UsersComMan();
         }
     }
 
@@ -637,11 +651,24 @@ public class PpuDao implements PpuDaoInterface {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean saveUsers(Users Users) {
+    public boolean saveUsersMunMan(UsersMunMan UsersMunMan) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.save(Users);
+            session.save(UsersMunMan);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean saveUsersComMan(UsersComMan UsersComMan) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.save(UsersComMan);
             return true;
         } catch (Exception e)
         {
@@ -945,11 +972,25 @@ public class PpuDao implements PpuDaoInterface {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean deleteUsers(Users Users) {
+    public boolean deleteUsersMunMan(UsersMunMan UsersMunMan) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.delete(Users);
+            session.delete(UsersMunMan);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteUsersComMan(UsersComMan UsersComMan) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(UsersComMan);
             return true;
         } catch (Exception e)
         {
@@ -1253,11 +1294,25 @@ public class PpuDao implements PpuDaoInterface {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean updateUsers(Users Users) {
+    public boolean updateUsersMunMan(UsersMunMan UsersMunMan) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.update(Users);
+            session.update(UsersMunMan);
+            return true;
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateUsersComMan(UsersComMan UsersComMan) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(UsersComMan);
             return true;
         } catch (Exception e)
         {
@@ -1562,12 +1617,25 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
-    public List<Users> findUsers(String fields, String fieldValue) {
+    public List<UsersMunMan> findUsersMunMan(String fields, String fieldValue) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
-            return session.createQuery("from "+USERS_TABLE + s).list();
+            return session.createQuery("from "+USERS_MUN_MAN_TABLE + s).list();
+        } catch (Exception e)
+        {
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<UsersComMan> findUsersComMan(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery("from "+USERS_COM_MAN_TABLE + s).list();
         } catch (Exception e)
         {
             return Collections.emptyList();
