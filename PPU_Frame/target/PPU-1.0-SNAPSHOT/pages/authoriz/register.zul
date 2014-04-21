@@ -50,12 +50,8 @@
 
 
                         <div>
-                            <textbox id="password" onChange='@command("showMessage", pos="after_center")'>
-                            <!--<attribute name="onChange">-->
-                                <!--<![CDATA[-->
-                                    <!--@command("showMessage", pos="after_center");-->
-                                <!--]]>-->
-                            <!--</attribute>-->
+                            <textbox id="password">
+
                             </textbox>
                         </div>
                     </vlayout>

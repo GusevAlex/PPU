@@ -16,7 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         WorkWithUser workWithUser = new WorkWithUser();
+
+		boolean n = workWithUser.checkLoginAndPassword("alex", "mypassword");
 
         UsersMunMan usersMunMan = new UsersMunMan();
         usersMunMan.setLogin("alex");

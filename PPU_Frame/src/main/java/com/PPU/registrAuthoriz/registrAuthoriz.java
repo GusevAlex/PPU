@@ -41,6 +41,12 @@ public class registrAuthoriz extends SelectorComposer<Component> {
     @Wire
     Textbox name;
 
+	@Wire("#password")
+	Textbox passwordField;
+
+	@Wire("#email")
+	Textbox emailField;
+
     private String css = "../../css/common.css.dsp";
     private String nameUser;
     private String surnameUser;
@@ -81,7 +87,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
             Executions.sendRedirect("/index.zul");
         } else {
-            mesg.setValue("Р’РІРµРґРµРЅС‹ РЅРµРІРµСЂРЅС‹Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё РїР°СЂРѕР»СЊ!");
+            mesg.setValue("Введены неверные имя пользователя и пароль!");
             Clients.evalJavaScript("loginFailed()");
         }
 
@@ -97,31 +103,19 @@ public class registrAuthoriz extends SelectorComposer<Component> {
         return matcher.find();
     }
 
-    @Command
-    public void showMessage(
-            @ContextParam(ContextType.COMPONENT) Component comp,
-            @BindingParam("pos")				 String	   pos
-    ) {
-        String msg = null;
-
-        if (comp instanceof Listbox) {
-            Listitem item = ((Listbox) comp).getSelectedItem();
-
-            if (item instanceof Contact)
-                msg = ((Contact) item).getName();
-            else if (item instanceof MenuItem)
-                msg = ((MenuItem) item).getTitle();
-
-            ((Listbox) comp).setSelectedItem(null);
-            comp = item;
-        } else if (comp instanceof Toolbarbutton) {
-            msg = ((Toolbarbutton) comp).getLabel();
-        } else
-            return;
-
-        Clients.showNotification(msg, Clients.NOTIFICATION_TYPE_INFO, comp, pos, 2000);
-
+	@Listen("onChange = #email")
+    public void showMessageByEmail()
+    {
+		if (!checkEmail(emailField.getValue()))
+			Clients.showNotification("Введен неверный email","info", emailField, "end_before", 3000);
     }
+
+	@Listen("onChange = #password")
+	public void showMessageByPassword()
+	{
+		if (passwordField.getValue().length()<5)
+			Clients.showNotification("Введен короткий пароль", passwordField);
+	}
 
     public static void main(String[] args) {
         checkEmail("");
