@@ -75,7 +75,8 @@ public class WorkWithUser extends WorkWithTable {
             {
                 this.userComMan = (UsersComMan) obj;
             }
-            throw new IllegalArgumentException("Неверно передан входной параметр");
+            else
+                throw new IllegalArgumentException("Неверно передан входной параметр");
     }
 
     @Override

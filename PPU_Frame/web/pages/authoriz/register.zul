@@ -6,22 +6,23 @@
     <style src="@load(vm.css)" />
 
         <div class="authorizPanel" >
-            <panel id="panel" framable="true" width="500px" height="400px"
+          <div style="padding-top: 10%;">
+            <panel id="panel" framable="true" width="800px" height="700px"
                    title="Регистрация"
                    maximizable="true" minimizable="true" border="normal"
-                   collapsible="true" closable="true">
+                   collapsible="true" closable="true" style="margin: 0 auto;">
             <panelchildren>
 
                 <hlayout style="text-align: center;color: #13598F;">
                     <label style="font-size: 20px;" value="Здравствуйте. Пожалуйста заполните форму для регистрации"/>
                 </hlayout>
 
-                <hlayout  style="color: #1469AB;font-weight: bold;font-size: 14px;">
-                    Введите данные о себе:
-                </hlayout>
+                <!--<hlayout  style="color: #1469AB;font-weight: bold;font-size: 14px;">-->
+                    <!--Введите данные о себе:-->
+                <!--</hlayout>-->
 
-                <hlayout style="margin: 0% 25%;">
-                    <vlayout>
+                <hlayout style="margin: 3% 0%;">
+                    <vlayout style="padding-right: 5%;">
                         <hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout>
                         <hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout>
                         <hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout>
@@ -67,7 +68,7 @@
 
                     <hbox spacing="15px">
                     <groupbox id="grMun" width="100%">
-                        <caption>
+                        <caption width="100%">
                             <radio id="cb"  radiogroup="sv1" />
                             Муниципальное управление
                         </caption>
@@ -106,7 +107,7 @@
 
                 </panelchildren>
             </panel>
-
+           </div>
         </div>
 
     </div>
