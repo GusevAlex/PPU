@@ -4,6 +4,7 @@ import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -16,43 +17,31 @@ import java.util.List;
 public class WorkWithUser extends WorkWithTable {
 
     public static String COLUMN_ID = "Id";
-    public static String LOGIN_ID = "Login";
-    public static String HASH_ID = "Hash";
-    public static String NAME_ID = "Name";
+    public static String COLUMN_LOGIN = "Login";
+    public static String COLUMN_HASH = "Hash";
+    public static String COLUMN_NAME = "Name";
 
-    private List<UsersMunMan> usersMunMans;
-    private UsersMunMan userMunMan;
-
-    private List<UsersComMan> usersComMans;
-    private UsersComMan userComMan;
 
     public WorkWithUser()
     {
         super();
-
-        userMunMan = new UsersMunMan();
-        usersMunMans = ppuDao.findUsersMunMan("", "");
-    }
-
-    public WorkWithUser(int idUsers)
-    {
-        this();
-
-        userMunMan = ppuDao.getUsersMunMan(idUsers);
-    }
-
-    public WorkWithUser(String fields, String fieldValue)
-    {
-        this();
-
-        usersMunMans = ppuDao.findUsersMunMan(fields, fieldValue);
     }
 
     @Override
     public List getListRows()
     {
-        return usersMunMans;
+        return Collections.emptyList();
     }
+
+	public List getUsersMunManList()
+	{
+		return ppuDao.findUsersMunMan("", "");
+	}
+
+	public List getUsersComManList()
+	{
+		return ppuDao.findUsersComMan("", "");
+	}
 
     @Override
     public List findAndGetAllRow(String fields, String fieldValue)
@@ -64,55 +53,23 @@ public class WorkWithUser extends WorkWithTable {
     }
 
     @Override
-    public void setRows(Object obj)
-    {
-        if ((userMunMan != null) && (obj instanceof UsersMunMan))
-        {
-            this.userMunMan = (UsersMunMan) obj;
-        }
-        else
-            if ((userComMan != null) && (obj instanceof UsersComMan))
-            {
-                this.userComMan = (UsersComMan) obj;
-            }
-            else
-                throw new IllegalArgumentException("Неверно передан входной параметр");
-    }
-
-    @Override
-    public void setRowById(int id)
-    {
-        userMunMan = ppuDao.getUsersMunMan(id);
-        userComMan = ppuDao.getUsersComMan(id);
-    }
-
-    public UsersMunMan getUsersMunMans()
-    {
-        return userMunMan;
-    }
-
-    public UsersComMan getUserComMan() {
-        return userComMan;
-    }
-
-    @Override
-    public Object getColumnValue(String columnName) throws IllegalAccessException {
-        if (userMunMan == null)
+    public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
-            return ClassInvokeCall.callMethod(userMunMan, "get"+columnName);
+            return ClassInvokeCall.callMethod(obj, "get"+columnName);
     }
 
     @Override
-    public Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException {
-        if (userMunMan == null)
+    public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
-            return ClassInvokeCall.callMethod(userMunMan, "set"+columnName, listValue);
+            return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
     }
 
     public boolean checkLoginAndPassword(String login, String password)

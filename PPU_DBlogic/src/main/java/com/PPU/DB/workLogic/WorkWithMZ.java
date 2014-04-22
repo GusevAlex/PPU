@@ -25,35 +25,9 @@ public class WorkWithMZ extends WorkWithTable{
     public static String COLUMN_STATUS = "Status";
     public static String COLUMN_SERVICE_TYPE = "ServiceType";
 
-    private List<MZ> mzs;
-    private MZ mz;
-
     public WorkWithMZ()
     {
         super();
-
-        mz = new MZ();
-        mzs = ppuDao.findMz("", "");
-    }
-
-    public WorkWithMZ(int idMZ)
-    {
-        this();
-
-        mz = ppuDao.getMz(idMZ);
-    }
-
-    public WorkWithMZ(String fields, String fieldValue)
-    {
-        this();
-
-        mzs = ppuDao.findMz(fields, fieldValue);
-    }
-
-    @Override
-    public List getListRows()
-    {
-        return mzs;
     }
 
     @Override
@@ -63,45 +37,23 @@ public class WorkWithMZ extends WorkWithTable{
     }
 
     @Override
-    public void setRows(Object obj)
-    {
-        if ((mz != null) && (mz instanceof MZ))
-        {
-            this.mz = (MZ) obj;
-        }
-        else
-            throw new IllegalArgumentException("Неверно передан входной параметр");
-    }
-
-    @Override
-    public void setRowById(int id)
-    {
-        mz = ppuDao.getMz(id);
-    }
-    
-    public MZ getMZ()
-    {
-        return mz;    
-    }
-
-    @Override
-    public Object getColumnValue(String columnName) throws IllegalAccessException {
-        if (mz == null)
+    public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в mz");
         }
         else
-            return ClassInvokeCall.callMethod(mz, "get"+columnName);
+            return ClassInvokeCall.callMethod(obj, "get"+columnName);
     }
 
     @Override
-    public Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException {
-        if (mz == null)
+    public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в mz");
         }
         else
-            return ClassInvokeCall.callMethod(mz, "set"+columnName, listValue);
+            return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
     }
 
     @Override
@@ -132,4 +84,9 @@ public class WorkWithMZ extends WorkWithTable{
     public Object getEntity(int id) {
         return ppuDao.getMz(id);
     }
+
+	@Override
+	public List getListRows() {
+		return findAndGetAllRow("", "");
+	}
 }

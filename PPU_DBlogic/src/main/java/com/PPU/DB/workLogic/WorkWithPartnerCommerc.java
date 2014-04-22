@@ -1,35 +1,33 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.tables.PartnerCommercialMan;
-import com.PPU.DB.tables.Project;
 
-import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Alex on 21.04.2014.
+ * Created by user on 22.04.14.
  */
-public class WorkWithProject extends WorkWithTable  {
+public class WorkWithPartnerCommerc extends WorkWithTable {
 
 	private static String COLUMN_ID = "Id";
-	private static String COLUMN_ID_PROGRAM = "Id_program";
 	private static String COLUMN_NAME = "Name";
-	private static String COLUMN_ID_CUSTOMER = "Id_customer";
-	private static String COLUMN_ID_LEADER = "Id_leader";
-	private static String COLUMN_START_DATE = "Start_date";
-	private static String COLUMN_EXPIREATION_DATE = "Expiration_date";
+	private static String COLUMN_ADDRESS = "Address";
 	private static String COLUMN_DESCRIPTION = "Description";
-	private static String COLUMN_BUDGET = "Budget";
-	private static String COLUMN_STATUS = "Status";
+
+
+	public WorkWithPartnerCommerc()
+	{
+		super();
+	}
 
 	@Override
 	public List getListRows() {
-		return ppuDao.findProject("", "");
+		return ppuDao.findPartnerCommercialMan("", "");
 	}
 
 	@Override
 	public List findAndGetAllRow(String fields, String fieldValue) {
-		return ppuDao.findProject(fields, fieldValue);
+		return ppuDao.findPartnerCommercialMan(fields, fieldValue);
 	}
 
 	@Override
@@ -54,30 +52,31 @@ public class WorkWithProject extends WorkWithTable  {
 
 	@Override
 	public void addEntity(Object obj) throws Exception {
-		if (obj instanceof Project)
-			ppuDao.saveProject((Project) obj);
+		if (obj instanceof PartnerCommercialMan)
+			ppuDao.savePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
 	}
 
 	@Override
 	public void changeEntity(Object obj) throws Exception {
-		if (obj instanceof Project)
-			ppuDao.updateProject((Project) obj);
+		if (obj instanceof PartnerCommercialMan)
+			ppuDao.updatePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
 	}
 
 	@Override
 	public void deleteEntity(Object obj) throws Exception {
-		if (obj instanceof Project)
-			ppuDao.deleteProject((Project) obj);
+		if (obj instanceof PartnerCommercialMan)
+			ppuDao.deletePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
 	}
 
 	@Override
 	public Object getEntity(int id) {
-		return ppuDao.getProject(id);
+		return ppuDao.getComandProject(id);
 	}
+
 }

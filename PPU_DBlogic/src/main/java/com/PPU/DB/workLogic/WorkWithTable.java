@@ -27,13 +27,9 @@ public abstract class WorkWithTable {
 
     public abstract List findAndGetAllRow(String fields, String fieldValue);
 
-    public abstract void setRows(Object obj);
+    public abstract Object getColumnValue(Object obj, String columnName)  throws IllegalAccessException;
 
-    public abstract void setRowById(int id);
-
-    public abstract Object getColumnValue(String columnName) throws IllegalAccessException;
-
-    public abstract Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException;
+    public abstract Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException;
 
     public abstract void addEntity(Object obj) throws Exception;
     public abstract void changeEntity(Object obj) throws Exception;

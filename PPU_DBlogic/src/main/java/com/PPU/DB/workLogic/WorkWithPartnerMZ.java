@@ -1,6 +1,5 @@
 package com.PPU.DB.workLogic;
 
-import com.PPU.DB.tables.MZ;
 import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
@@ -12,19 +11,11 @@ import java.util.List;
  */
 public class WorkWithPartnerMZ extends WorkWithTable {
 
-    private String name;
-    private String address;
-    private String description;
-    private int typeMU;
-
     private static String COLUMN_ID = "Id";
-    private static String NAME_ID = "Name";
-    private static String ADDRESS_ID = "Address";
-    private static String DESCRIPTION_ID = "Description";
-    private static String TYPE_MU_ID = "TypeMU";
-
-    private PartnersMZ partnersMZ;
-    private List<PartnersMZ> partnersMZs;
+    private static String COLUMN_NAME = "Name";
+    private static String COLUMN_ADDRESS = "Address";
+    private static String COLUMN_DESCRIPTION = "Description";
+    private static String COLUMN_TYPE_MU = "TypeMU";
 
     @Override
     public List getListRows() {
@@ -37,38 +28,23 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     }
 
     @Override
-    public void setRows(Object obj) {
-        if ((obj instanceof PartnersMZ))
-        {
-            this.partnersMZ = (PartnersMZ) obj;
-        }
-        else
-            throw new IllegalArgumentException("Неверно передан входной параметр");
-    }
-
-    @Override
-    public void setRowById(int id) {
-        partnersMZ = ppuDao.getPartnersMz(id);
-    }
-
-    @Override
-    public Object getColumnValue(String columnName) throws IllegalAccessException {
-        if (partnersMZ == null)
+    public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в partnersMZ");
         }
         else
-            return ClassInvokeCall.callMethod(partnersMZ, "get"+columnName);
+            return ClassInvokeCall.callMethod(obj, "get"+columnName);
     }
 
     @Override
-    public Object setColumnValueFromList(String columnName, Object ... listValue) throws IllegalAccessException {
-        if (partnersMZ == null)
+    public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
+        if (obj == null)
         {
             throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
-            return ClassInvokeCall.callMethod(partnersMZ, "set"+columnName, listValue);
+            return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
     }
 
     @Override
@@ -97,6 +73,6 @@ public class WorkWithPartnerMZ extends WorkWithTable {
 
     @Override
     public Object getEntity(int id) {
-        return ppuDao.getMz(id);
+        return ppuDao.getPartnersMz(id);
     }
 }
