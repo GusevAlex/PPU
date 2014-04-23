@@ -71,36 +71,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" line="1622" class="com.PPU.DB.DAO.PpuDao" package="com.PPU.DB.DAO">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" line="1636" class="com.PPU.DB.DAO.PpuDao" package="com.PPU.DB.DAO">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -111,92 +81,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WorkWithProgram.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgram.java">
+      <file leaf-file-name="WorkWithTypeBudgetService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="63" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
-              <folding />
+            <state line="80" column="5" selection-start="180" selection-end="2141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PpuDao.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
+      <file leaf-file-name="WorkWithResourcesProject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1609" column="65" selection-start="47039" selection-end="47039" vertical-scroll-proportion="0.30898875" vertical-offset="23680" max-vertical-offset="24570">
-              <folding />
+            <state line="15" column="58" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkWithProject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java">
+      <file leaf-file-name="WorkWithResourcesMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="24" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1335">
-              <folding />
+            <state line="14" column="58" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="WorkWithProviders.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="47" selection-start="2301" selection-end="2301" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="2850">
-              <folding />
+            <state line="18" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultParametrsServiceMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java">
+      <file leaf-file-name="WorkWithParametrs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="13" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1155">
-              <folding />
+            <state line="18" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parametrs.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
+      <file leaf-file-name="WorkWithLimitsProject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1530">
-              <folding />
+            <state line="50" column="40" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeMU.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
+      <file leaf-file-name="WorkWithLimitsMz.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="22" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="825">
-              <folding />
+            <state line="29" column="24" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkWithPartnerCommerc.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java">
+      <file leaf-file-name="WorkWithDefaultParametrsServiceMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="56" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1320">
-              <folding />
+            <state line="15" column="45" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkWithPartnerMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java">
+      <file leaf-file-name="WorkWithCorrectionProject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1260">
-              <folding />
+            <state line="16" column="41" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkWithMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
+      <file leaf-file-name="WorkCorrectionMZ.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="90" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1470">
-              <folding />
+            <state line="17" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.18539326" vertical-offset="90" max-vertical-offset="1380">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,7 +205,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Program.java" />
@@ -244,6 +233,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/CorrectionProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeMU.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java" />
       </list>
     </option>
   </component>
@@ -301,7 +307,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -316,8 +322,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,20 +339,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PPU_DBlogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_DBlogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_DBlogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -896,11 +888,12 @@
       <workItem from="1398250073309" duration="203000" />
       <workItem from="1398250277391" duration="15000" />
       <workItem from="1398250293178" duration="727000" />
+      <workItem from="1398256093142" duration="2575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35295000" />
+    <option name="totallyTimeSpent" value="37870000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -939,7 +932,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24524158" sideWeight="0.4465409" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24524158" sideWeight="0.4465409" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -953,6 +945,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32704404" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1014,162 +1007,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersMunMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.1.RELEASE/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersMunMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersMunMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -1187,84 +1024,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.1.RELEASE/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="23" selection-start="814" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="2145">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1144#1159#0" expanded="false" />
-            <element signature="e#1251#1266#0" expanded="false" />
-            <element signature="e#1351#1377#0" expanded="false" />
-            <element signature="e#1446#1464#0" expanded="false" />
-            <element signature="e#1537#1557#0" expanded="false" />
-            <element signature="e#1724#1725#0" expanded="false" />
-            <element signature="e#1749#1750#0" expanded="false" />
-            <element signature="e#1782#1783#0" expanded="false" />
-            <element signature="e#1810#1811#0" expanded="false" />
-            <element signature="e#1875#1876#0" expanded="false" />
-            <element signature="e#1908#1909#0" expanded="false" />
-            <element signature="e#1957#1958#0" expanded="false" />
-            <element signature="e#2001#2002#0" expanded="false" />
-            <element signature="e#2057#2058#0" expanded="false" />
-            <element signature="e#2084#2085#0" expanded="false" />
-            <element signature="e#2124#2125#0" expanded="false" />
-            <element signature="e#2156#2157#0" expanded="false" />
-            <element signature="e#2223#2224#0" expanded="false" />
-            <element signature="e#2257#2258#0" expanded="false" />
-            <element signature="e#2308#2309#0" expanded="false" />
-            <element signature="e#2354#2355#0" expanded="false" />
-            <element signature="e#2417#2418#0" expanded="false" />
-            <element signature="e#2449#2450#0" expanded="false" />
-            <element signature="e#2496#2497#0" expanded="false" />
-            <element signature="e#2538#2539#0" expanded="false" />
-            <element signature="e#2604#2605#0" expanded="false" />
-            <element signature="e#2637#2638#0" expanded="false" />
-            <element signature="e#2687#2688#0" expanded="false" />
-            <element signature="e#2731#2732#0" expanded="false" />
-            <element signature="e#2807#2808#0" expanded="false" />
-            <element signature="e#2845#2846#0" expanded="false" />
-            <element signature="e#2905#2906#0" expanded="false" />
-            <element signature="e#2959#2960#0" expanded="false" />
-            <element signature="e#3029#3030#0" expanded="false" />
-            <element signature="e#3063#3064#0" expanded="false" />
-            <element signature="e#3117#3118#0" expanded="false" />
-            <element signature="e#3163#3164#0" expanded="false" />
-            <element signature="e#3222#3223#0" expanded="false" />
-            <element signature="e#3251#3252#0" expanded="false" />
-            <element signature="e#3294#3295#0" expanded="false" />
-            <element signature="e#3330#3331#0" expanded="false" />
-            <element signature="e#3387#3388#0" expanded="false" />
-            <element signature="e#3416#3417#0" expanded="false" />
-            <element signature="e#3457#3458#0" expanded="false" />
-            <element signature="e#3493#3494#0" expanded="false" />
-            <element signature="e#3719#3720#0" expanded="false" />
-            <element signature="e#3755#3756#0" expanded="false" />
-            <element signature="e#3825#3826#0" expanded="false" />
-            <element signature="e#3875#3876#0" expanded="false" />
-            <element signature="e#4026#4027#0" expanded="false" />
-            <element signature="e#4056#4057#0" expanded="false" />
-            <element signature="e#4103#4104#0" expanded="false" />
-            <element signature="e#4141#4142#0" expanded="false" />
-            <element signature="e#4367#4368#0" expanded="false" />
-            <element signature="e#4403#4404#0" expanded="false" />
-            <element signature="e#4473#4474#0" expanded="false" />
-            <element signature="e#4523#4524#0" expanded="false" />
-            <element signature="e#4771#4772#0" expanded="false" />
-            <element signature="e#4818#4819#0" expanded="false" />
-            <element signature="e#4921#4922#0" expanded="false" />
-            <element signature="e#4993#4994#0" expanded="false" />
-            <element signature="e#5225#5226#0" expanded="false" />
-            <element signature="e#5264#5265#0" expanded="false" />
-            <element signature="e#5343#5344#0" expanded="false" />
-            <element signature="e#5399#5400#0" expanded="false" />
-            <element signature="e#5635#5636#0" expanded="false" />
-            <element signature="e#5676#5677#0" expanded="false" />
-            <element signature="e#5761#5762#0" expanded="false" />
-            <element signature="e#5821#5822#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
@@ -1308,57 +1067,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="1305">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
-            <element signature="e#1056#1057#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-            <element signature="e#1117#1118#0" expanded="false" />
-            <element signature="e#1171#1172#0" expanded="false" />
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#1235#1236#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1342#1343#0" expanded="false" />
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#1437#1438#0" expanded="false" />
-            <element signature="e#1484#1485#0" expanded="false" />
-            <element signature="e#1550#1551#0" expanded="false" />
-            <element signature="e#1583#1584#0" expanded="false" />
-            <element signature="e#1632#1633#0" expanded="false" />
-            <element signature="e#1676#1677#0" expanded="false" />
-            <element signature="e#1747#1748#0" expanded="false" />
-            <element signature="e#1781#1782#0" expanded="false" />
-            <element signature="e#1835#1836#0" expanded="false" />
-            <element signature="e#1876#1877#0" expanded="false" />
-            <element signature="e#1945#1946#0" expanded="false" />
-            <element signature="e#1978#1979#0" expanded="false" />
-            <element signature="e#2030#2031#0" expanded="false" />
-            <element signature="e#2069#2070#0" expanded="false" />
-            <element signature="e#2205#2206#0" expanded="false" />
-            <element signature="e#2230#2231#0" expanded="false" />
-            <element signature="e#2262#2263#0" expanded="false" />
-            <element signature="e#2290#2291#0" expanded="false" />
-            <element signature="e#2445#2446#0" expanded="false" />
-            <element signature="e#2476#2477#0" expanded="false" />
-            <element signature="e#2527#2528#0" expanded="false" />
-            <element signature="e#2567#2568#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="28" selection-start="524" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2220">
           <folding />
         </state>
       </provider>
@@ -1379,13 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="48" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/CLA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
@@ -1393,23 +1097,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="90" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="33" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="56" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
@@ -1428,13 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1095">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="13" selection-start="675" selection-end="675" vertical-scroll-proportion="0.33258426" vertical-offset="79" max-vertical-offset="1215">
@@ -1445,13 +1128,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="22" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="24" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
@@ -1486,8 +1162,260 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1609" column="65" selection-start="47039" selection-end="47039" vertical-scroll-proportion="0.30898875" vertical-offset="23680" max-vertical-offset="24570">
+        <state line="1611" column="93" selection-start="47198" selection-end="47198" vertical-scroll-proportion="0.39325842" vertical-offset="23635" max-vertical-offset="24570">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="88" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="371" selection-end="2806" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="31" selection-start="654" selection-end="868" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="25" selection-start="705" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="3" selection-start="562" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="56" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="4" selection-start="601" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Providers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="3" selection-start="533" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="4" selection-start="816" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="24" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ResourcesMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="4" selection-start="541" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ResourcesProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeBudgetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="21" selection-start="649" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="26" selection-start="662" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="49" selection-start="2325" selection-end="2325" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2220">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="60" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeMU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="5" selection-start="157" selection-end="1942" vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1305">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="5" selection-start="180" selection-end="2141" vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="1320">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="58" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="58" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="40" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1335">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="24" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="45" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.18539326" vertical-offset="90" max-vertical-offset="1380">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
