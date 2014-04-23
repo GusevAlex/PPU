@@ -25,15 +25,15 @@ public class ClassInvokeCall {
         }
         catch (NoSuchMethodException e)
         {
-            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅС‹ РїР°СЂР°РјРµС‚СЂС‹ СЃРїРёСЃРєР° Р·РЅР°С‡РµРЅРёР№ РІ РјРµС‚РѕРґ ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("Неверно переданы параметры списка значений в метод ClassInvokeCall.callMethod(...) ");
         }
         catch (IllegalAccessException e1)
         {
-            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅРѕ РЅР°Р·РІР°РЅРёРµ РјРµС‚РѕРґР° ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
         }
         catch (InvocationTargetException e2)
         {
-            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅРѕ РЅР°Р·РІР°РЅРёРµ РјРµС‚РѕРґР° ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
         }
 
         return retObj;

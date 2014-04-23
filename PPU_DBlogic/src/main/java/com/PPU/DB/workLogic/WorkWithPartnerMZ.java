@@ -31,7 +31,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ partnersMZ");
+            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
         }
         else
             return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -41,7 +41,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ userMunMan");
+            throw new IllegalAccessException("Не было передано параметра в userMunMan");
         }
         else
             return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -52,7 +52,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.savePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
+            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
     }
 
     @Override
@@ -60,7 +60,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.updatePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
+            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
     }
 
     @Override
@@ -68,7 +68,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.deletePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
+            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
     }
 
     @Override
