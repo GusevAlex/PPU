@@ -4,6 +4,9 @@ import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.PartnerCommercialMan;
 import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.tables.UsersComMan;
+import com.PPU.DB.workLogic.WorkWithCommandMz;
+import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
+import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 import com.PPU.composite.Contact;
 import com.PPU.composite.MenuItem;
@@ -47,6 +50,18 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Wire("#email")
 	Textbox emailField;
 
+	@Wire
+	Listbox listboxMun;
+
+	@Wire
+	Listbox listboxCommerc;
+
+	@Wire
+	Groupbox groupboxMZ;
+
+	@Wire
+	Groupbox groupboxCommerc;
+
     private String css = "../../css/common.css.dsp";
     private String nameUser;
     private String surnameUser;
@@ -68,7 +83,24 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
     }
 
-    @Listen("onClick = #loginOK")
+	@Override
+	public void doAfterCompose(Component comp) throws Exception {
+		super.doAfterCompose(comp);
+
+		if (listboxMun != null)
+		{
+			WorkWithPartnerMZ workWithPartnerMZ = new WorkWithPartnerMZ();
+			listboxMun.setModel(new ListModelList<Object>(workWithPartnerMZ.getListRows()));
+		}
+
+		if (listboxCommerc != null)
+		{
+			WorkWithPartnerCommerc workWithPartnerCommerc = new WorkWithPartnerCommerc();
+			listboxCommerc.setModel(new ListModelList<Object>(workWithPartnerCommerc.getListRows()));
+		}
+	}
+
+	@Listen("onClick = #loginOK")
     public void clickLoginOK()
     {
         WorkWithUser workWithUser = new WorkWithUser();
@@ -145,4 +177,22 @@ public class registrAuthoriz extends SelectorComposer<Component> {
     public void setPartnerCommercialMan(PartnerCommercialMan partnerCommercialMan) {
         this.partnerCommercialMan = partnerCommercialMan;
     }
+
+	@Listen("onClick = #groupboxMZ")
+	public void openCaptionMZ()
+	{
+		if (groupboxMZ.isOpen())
+		{
+			groupboxCommerc.setOpen(false);
+		}
+	}
+
+	@Listen("onClick = #groupboxCommerc")
+	public void openCaptionCommerc()
+	{
+		if (groupboxCommerc.isOpen())
+		{
+			groupboxMZ.setOpen(false);
+		}
+	}
 }

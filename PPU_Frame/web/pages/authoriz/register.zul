@@ -67,39 +67,57 @@
                     </caption>
 
                     <hbox spacing="15px">
-                    <groupbox id="grMun" width="100%">
+                    <groupbox id="groupboxMZ" width="100%">
                         <caption width="100%">
                             <radio id="cb"  radiogroup="sv1" />
                             Муниципальное управление
                         </caption>
 
-                        <listbox id="listboxMun" mold="paging" pageSize="10">
-                            <listitem forEach="${partnersMZ}">
-                                <listcell label="${each}" />
-                                <listcell label="${each}" />
-                                <listcell label="${each}" />
-                                <listcell label="${each}" />
-                            </listitem>
-                        </listbox>
+						<listbox id="listboxMun" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">
+							<listhead>
+								<listheader label="First Name" width="80px"></listheader>
+								<listheader label="Last Name" width="80px"></listheader>
+								<listheader label="Full Name"></listheader>
+								<listheader label="Married" width="60px"></listheader>
+							</listhead>
+							<template name="model">
+								<listitem>
+									<listcell label="${each.name }"/>
+									<listcell label="${each.address }"/>
+									<listcell label="${each.description }"/>
+									<listcell label="${each.typeMU}"/>
+								</listitem>
+							</template>
+						</listbox>
+
                         <button label="Добавить новое муниципальное учреждение"/>
                     </groupbox>
                     </hbox>
 
                     <hbox spacing="15px">
-                        <groupbox id="grCommerc" width="100%">
+                        <groupbox id="groupboxCommerc" width="100%">
                             <caption>
                                 <radio id="cb2"  radiogroup="sv1" />
                                 Коммерческое управление
                             </caption>
 
-                            <listbox id="listboxCommerc" mold="paging" pageSize="10">
-                                <listitem forEach="${partnerCommercialMan}">
-                                    <listcell label="${each}" />
-                                    <listcell label="${each}" />
-                                    <listcell label="${each}" />
-                                    <listcell label="${each}" />
-                                </listitem>
-                            </listbox>
+							<listbox id="listboxCommerc" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">
+								<listhead>
+									<listheader label="First Name" width="80px"></listheader>
+									<listheader label="Last Name" width="80px"></listheader>
+									<listheader label="Full Name"></listheader>
+									<listheader label="Married" width="60px"></listheader>
+								</listhead>
+								<template name="model">
+									<listitem>
+										<listcell label="${each.firstName }"/>
+										<listcell label="${each.lastName }"/>
+										<listcell label="${each.fullName }"/>
+										<listcell label="${each.married ? 'Y' : 'N' }"/>
+									</listitem>
+								</template>
+							</listbox>
+
                             <button label="Добавить новую организацию"/>
                         </groupbox>
                     </hbox>
