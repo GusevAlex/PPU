@@ -60,7 +60,7 @@ public class ResourcesMZ {
         this.idProviderResources = idProviderResources;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
         return MZ;
@@ -70,7 +70,7 @@ public class ResourcesMZ {
         this.MZ = MZ;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_provider_resources", insertable = false, updatable = false)
     public Providers getProviders() {
         return providers;

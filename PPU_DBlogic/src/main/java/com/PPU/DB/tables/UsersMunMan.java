@@ -83,7 +83,7 @@ public class UsersMunMan {
         this.idPartnerMZ = idPartnerMZ;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnerMZ() {
         return partnerMZ;

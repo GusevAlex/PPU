@@ -64,7 +64,7 @@ public class Parametrs {
         this.type = type;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
         return valuesParametrForMZ;
@@ -74,7 +74,7 @@ public class Parametrs {
         this.valuesParametrForMZ = valuesParametrForMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForProject> getValuesParametrForProjects() {
         return valuesParametrForProjects;
@@ -84,7 +84,7 @@ public class Parametrs {
         this.valuesParametrForProjects = valuesParametrForProjects;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
         return correctionsMZ;

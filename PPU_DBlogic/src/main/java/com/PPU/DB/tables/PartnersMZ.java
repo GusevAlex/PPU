@@ -86,7 +86,7 @@ public class PartnersMZ {
         this.typeMU = typeMU;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
         return ComandMZ;
@@ -96,7 +96,7 @@ public class PartnersMZ {
         ComandMZ = comandMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersMunMan> getUser() {
         return user;

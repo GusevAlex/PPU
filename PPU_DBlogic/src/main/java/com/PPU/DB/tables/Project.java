@@ -145,7 +145,7 @@ public class Project {
         this.status = status;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
         return comandProject;
@@ -155,7 +155,7 @@ public class Project {
         this.comandProject = comandProject;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_program", insertable = false, updatable = false)
     public Program getProgram() {
         return program;
@@ -165,7 +165,7 @@ public class Project {
         this.program = program;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsProject> getLimitsProject() {
         return limitsProject;
@@ -175,7 +175,7 @@ public class Project {
         this.limitsProject = limitsProject;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForProject> getValuesParametrForProject() {
         return valuesParametrForProject;
@@ -185,7 +185,7 @@ public class Project {
         this.valuesParametrForProject = valuesParametrForProject;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesProject> getResourcesProject() {
         return resourcesProject;
@@ -195,7 +195,7 @@ public class Project {
         this.resourcesProject = resourcesProject;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsProject> getCorrectionsProject() {
         return correctionsProject;

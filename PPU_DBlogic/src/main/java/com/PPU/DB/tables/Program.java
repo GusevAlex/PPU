@@ -73,7 +73,7 @@ public class Program {
         this.description = description;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "program")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
         return MZ;
@@ -83,7 +83,7 @@ public class Program {
         this.MZ = MZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "program")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<Project> getProjects() {
         return projects;

@@ -158,7 +158,7 @@ public class MZ {
         this.serviceType = serviceType;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
         return comandMZ;
@@ -168,7 +168,7 @@ public class MZ {
         this.comandMZ = comandMZ;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_program", insertable = false, updatable = false)
     public Program getProgram() {
         return program;
@@ -178,7 +178,7 @@ public class MZ {
         this.program = program;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "service_type", insertable = false, updatable = false)
     public TypeServiceMZ getTypeServiceMZ() {
         return typeServiceMZ;
@@ -188,7 +188,7 @@ public class MZ {
         this.typeServiceMZ = typeServiceMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsMZ> getLimitsMZ() {
         return limitsMZ;
@@ -198,7 +198,7 @@ public class MZ {
         this.limitsMZ = limitsMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
         return valuesParametrForMZ;
@@ -208,7 +208,7 @@ public class MZ {
         this.valuesParametrForMZ = valuesParametrForMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesMZ> getResourcesMZ() {
         return resourcesMZ;
@@ -218,7 +218,7 @@ public class MZ {
         this.resourcesMZ = resourcesMZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
         return correctionsMZ;

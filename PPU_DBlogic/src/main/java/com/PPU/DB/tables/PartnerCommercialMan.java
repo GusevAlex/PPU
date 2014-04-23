@@ -75,7 +75,7 @@ public class PartnerCommercialMan {
         this.description = description;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
         return comandProject;
@@ -85,7 +85,7 @@ public class PartnerCommercialMan {
         comandProject = comandProject;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersComMan> getUser() {
         return user;

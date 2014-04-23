@@ -94,7 +94,7 @@ public class CorrectionsProject {
         ValueAfter = valueAfter;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
         return project;
@@ -104,7 +104,7 @@ public class CorrectionsProject {
         this.project = project;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {
         return parametr;

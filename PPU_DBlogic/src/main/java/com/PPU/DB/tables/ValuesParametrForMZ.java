@@ -83,7 +83,7 @@ public class ValuesParametrForMZ {
         this.idMZ = idMZ;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {
         return parametr;
@@ -93,7 +93,7 @@ public class ValuesParametrForMZ {
         this.parametr = parametr;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
         return MZ;
