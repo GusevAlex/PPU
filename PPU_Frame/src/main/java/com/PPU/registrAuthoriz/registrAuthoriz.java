@@ -10,6 +10,7 @@ import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 import com.PPU.composite.Contact;
 import com.PPU.composite.MenuItem;
+import com.PPU.windowControllers.ModalDialog;
 import org.zkoss.bind.annotation.*;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
@@ -181,6 +182,9 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxMZ")
 	public void openCaptionMZ()
 	{
+        ModalDialog modalDialog = new ModalDialog();
+
+        modalDialog.createDialog();
 		if (groupboxMZ.isOpen())
 		{
 			groupboxCommerc.setOpen(false);
