@@ -13,6 +13,8 @@
                    collapsible="true" closable="true" style="margin: 0 auto;">
             <panelchildren>
 
+                <label value="sdgdfgdfgdfg" if="${'Y2'=='Y'}"/>
+
                 <hlayout style="text-align: center;color: #13598F;">
                     <label style="font-size: 20px;" value="Здравствуйте. Пожалуйста заполните форму для регистрации"/>
                 </hlayout>

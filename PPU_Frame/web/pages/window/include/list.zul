@@ -1,0 +1,17 @@
+<listbox id="listboxMun" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">
+
+    <listhead  sizable="true">
+        <zk forEach="${modalDialog$composer.header}">
+            <listheader label="${each}" width="80px"></listheader>
+        </zk>
+    </listhead>
+
+    <template name="model">
+        <listitem>
+            <listcell label="${each.name }"/>
+            <listcell label="${each.address }"/>
+            <listcell label="${each.description }"/>
+            <listcell label="${each.typeMU}"/>
+        </listitem>
+    </template>
+</listbox>
