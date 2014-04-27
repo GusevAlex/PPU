@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -50,6 +51,8 @@ public class PartnersMZ {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -59,6 +62,8 @@ public class PartnersMZ {
         this.name = name;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Адрес")
     @Column(name="address")
     public String getAddress() {
         return address;
@@ -68,6 +73,8 @@ public class PartnersMZ {
         this.address = address;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;

@@ -184,7 +184,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	{
         ModalDialog modalDialog = new ModalDialog();
 
-        modalDialog.createDialog();
+        modalDialog.showList(new WorkWithPartnerMZ().findAndGetAllRow("", "").toArray());
 		if (groupboxMZ.isOpen())
 		{
 			groupboxCommerc.setOpen(false);

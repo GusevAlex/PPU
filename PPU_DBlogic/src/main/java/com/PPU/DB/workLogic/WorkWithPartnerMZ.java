@@ -75,4 +75,28 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     public Object getEntity(int id) {
         return ppuDao.getPartnersMz(id);
     }
+
+    public static Object invokeCallMethode(Object obj, String funcName, Object ... listValue) throws Exception {
+        if (obj == null || funcName == null)
+            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
+
+        if (!(obj instanceof PartnersMZ))
+        {
+            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+        }
+
+        return ClassInvokeCall.callMethod(obj, funcName, listValue);
+    }
+
+    public static Object invokeCallMethode(Object obj, String funcName) throws Exception {
+        if (obj == null || funcName == null)
+            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
+
+        if (!(obj instanceof PartnersMZ))
+        {
+            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+        }
+
+        return ClassInvokeCall.callMethod(obj, funcName);
+    }
 }

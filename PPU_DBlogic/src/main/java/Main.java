@@ -1,6 +1,7 @@
 import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.WorkWithMZ;
+import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 
 import java.util.List;
@@ -17,33 +18,13 @@ public class Main {
     public static void main(String[] args) {
 
 
+        WorkWithPartnerMZ workWithPartnerMZ = new WorkWithPartnerMZ();
+        try {
+            Object obj = workWithPartnerMZ.invokeCallMethode(workWithPartnerMZ.getEntity(1), "getName");
 
-        WorkWithUser workWithUser = new WorkWithUser();
-
-		boolean n = workWithUser.checkLoginAndPassword("alex", "mypassword");
-
-        UsersMunMan usersMunMan = new UsersMunMan();
-        usersMunMan.setLogin("alex");
-
-        boolean bol = workWithUser.checkLogin(usersMunMan);
-
-        usersMunMan.setLogin("alex2");
-
-        bol = workWithUser.checkLogin(usersMunMan);
-
-        UsersComMan usersComMan = new UsersComMan();
-        usersComMan.setLogin("alex");
-
-        bol = workWithUser.checkLogin(usersComMan);
-
-        usersComMan.setLogin("alex3");
-
-        bol = workWithUser.checkLogin(usersComMan);
-
-
-
-        List list = workWithUser.findAndGetAllRow("login", "alex");
-
-        int i = 0;
+            int f = 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

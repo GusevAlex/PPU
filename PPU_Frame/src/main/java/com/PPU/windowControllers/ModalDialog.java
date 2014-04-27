@@ -1,15 +1,14 @@
 package com.PPU.windowControllers;
 
+import com.PPU.DB.workLogic.WorkWithCommandMz;
+import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.Logic.AnotationService;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zul.Window;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Alex on 24.04.2014.
@@ -19,9 +18,10 @@ public class ModalDialog extends SelectorComposer<Component>
     private static String namePage;
     private static String labelButton1;
     private static String labelButton2;
-    private static String [] header;
-    private static Integer [] colymnType;
-    private static List<String> methodList;
+    private static List<String> header = new ArrayList<String>(10);
+    private static List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
+
+    private static Object [] obj;
 
     public  String getNamePage() {
         return namePage;
@@ -59,39 +59,88 @@ public class ModalDialog extends SelectorComposer<Component>
         ModalDialog.labelButton2 = labelButton2;
     }
 
-    public String[] getHeader() {
+    public List<String> getHeader() {
         return header;
     }
 
-    public void setHeader(String[] header) {
+    public void setHeader(List<String> header) {
         ModalDialog.header = header;
     }
 
-    public Integer[] getColymnType() {
-        return colymnType;
+    public List<ListCellContant> getListCellContant() {
+        return listCellContant;
     }
 
-    public void setColymnType(Integer[] colymnType) {
-        ModalDialog.colymnType = colymnType;
+    public void setListCellContant(List<ListCellContant> listCellContant) {
+        ModalDialog.listCellContant = listCellContant;
     }
 
-    public List<String> getMethodList() {
-        return methodList;
+    public Object[] getObj() {
+        return obj;
     }
 
-    public void setMethodList(List<String> methodList) {
-        ModalDialog.methodList = methodList;
+    public void setObj(Object[] obj) {
+        ModalDialog.obj = obj;
     }
 
     public void setParamForList(Object obj)
     {
         Map map = AnotationService.getMapAnnotationFieldTypeByClass(obj);
 
-        methodList = Collections.emptyList();
-        for (Object set : map.keySet())
+        List list1 = new ArrayList();
+        List list2 = new ArrayList();
+
+        for (Object entr : map.entrySet())
         {
-            methodList.add((String) set);
+            Map.Entry mapEntr = (Map.Entry) entr;
+            Object [] values = (Object []) mapEntr.getValue();
+
+            ListCellContant listCellContant1 = new ListCellContant();
+            listCellContant1.setColymnType((Integer) values[0]);
+            listCellContant1.setMethodList((String) mapEntr.getKey());
+
+            list1.add((String) values[1]);
+            list2.add(listCellContant1);
         }
+
+        setHeader(list1);
+        setListCellContant(list2);
+
+        int i = 0;
     }
+
+    public void showList(Object [] obj1)
+    {
+        if (obj1.length == 0) return;
+
+        setObj(obj1);
+
+        setParamForList(obj1[0]);
+
+//        for (int i=0; i<methodList.size(); i++)
+//            try {
+//                Object y = WorkWithPartnerMZ.invokeCallMethode(getObj()[0], getMethodList().get(i));
+//                int yr = 0;
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+
+        namePage = "/pages/window/include/list.zul";
+        labelButton1 = "dfgfdg";
+        labelButton2 = "sdfsdfdfgfdg";
+
+        Window window = (Window) Executions.createComponents(
+                "/pages/window/window.zul", null, null);
+        window.doModal();
+
+    }
+
+    public static void main(String[] args) {
+        ModalDialog modalDialog = new ModalDialog();
+        modalDialog.showList(new WorkWithPartnerMZ().findAndGetAllRow("", "").toArray());
+
+    }
+
+
 
 }

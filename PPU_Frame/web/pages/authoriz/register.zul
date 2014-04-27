@@ -68,6 +68,23 @@
                         Выбор вида управления
                     </caption>
 
+                    <hlayout>
+                        <zscript>
+                            classes = new String[] {"College", "Graduate"};
+                            grades = new String[] {"Best", "Better"};
+
+                        </zscript>
+                       <zk forEach="${classes}">
+                           <custom-attributes master="${each}"/>
+
+                           <zk forEach="${grades}">
+                               <label value="${forEachStatus.index}"/>
+                               <label value="${each}"/>
+                           </zk>
+
+                       </zk>
+                    </hlayout>
+
                     <hbox spacing="15px">
                     <groupbox id="groupboxMZ" width="100%">
                         <caption width="100%">
@@ -82,9 +99,9 @@
 								<listheader label="Full Name"></listheader>
 								<listheader label="Married" width="60px"></listheader>
 							</listhead>
-							<template name="model">
+							<template name="model" var="each2">
 								<listitem>
-									<listcell label="${each.name }"/>
+									<listcell label="${each.getName() }"/>
 									<listcell label="${each.address }"/>
 									<listcell label="${each.description }"/>
 									<listcell label="${each.typeMU}"/>

@@ -1,0 +1,7 @@
+<window id="subDialog" title="Окно" border="normal" width="460px"
+        position="center,center" closable="true"
+        action="show: slideDown;hide: slideUp">
+    fghfghfgh
+    <label value="${modalDialog$composer.gh}" />
+    <button label="${modalDialog$composer.gh}"/>
+    </window>
