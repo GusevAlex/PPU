@@ -1,0 +1,18 @@
+<zk>
+    <zscript>
+        <![CDATA[
+    import com.PPU.composite.*;
+                  ViewWindow window = self;
+               ]]>
+    </zscript>
+
+        <vlayout>
+
+            <include src="/pages/window/include/list.zul" />
+
+            <hlayout>
+                <button id="button1" label="fdsg"/>
+                <button id="button2" label="dfg"/>
+            </hlayout>
+        </vlayout>
+</zk>

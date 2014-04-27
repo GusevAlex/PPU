@@ -1,16 +1,35 @@
+<!--<zk>-->
+<!--<window id="modalDialog" title="Окно" border="normal" width="460px"-->
+        <!--apply="com.PPU.windowControllers.ModalDialog"-->
+        <!--position="center,center" closable="true"-->
+        <!--action="show: slideDown;hide: slideUp">-->
+    <!--<vlayout>-->
+
+        <!--<include src="${modalDialog$composer.namePage}" />-->
+
+        <!--<hlayout>-->
+            <!--<button id="button1" label="${modalDialog$composer.labelButton1}"/>-->
+            <!--<button id="button2" label="${modalDialog$composer.labelButton2}"/>-->
+        <!--</hlayout>-->
+    <!--</vlayout>-->
+<!--</window>-->
+<!--</zk>-->
+
+<?component
+        name="viewWindow"
+        class="com.PPU.composite.ViewWindow" ?>
 <zk>
-    <window id="modalDialog" title="Окно" border="normal" width="460px"
-            apply="com.PPU.windowControllers.ModalDialog"
-            position="center,center" closable="true"
-            action="show: slideDown;hide: slideUp">
-        <vlayout>
+<zscript>
+    <![CDATA[
+                  import com.PPU.DB.workLogic.WorkWithPartnerMZ;
+                  WorkWithPartnerMZ work = new WorkWithPartnerMZ();
+                  Object [] objs = work.getListRows().toArray();
+               ]]>
+</zscript>
 
-            <include src="${modalDialog$composer.namePage}" />
+<viewWindow id="modalDialog" title="Окно" border="normal" width="460px"
+        position="center,center" closable="true"
+        action="show: slideDown;hide: slideUp">
 
-            <hlayout>
-                <button id="button1" label="${modalDialog$composer.labelButton1}"/>
-                <button id="button2" label="${modalDialog$composer.labelButton2}"/>
-            </hlayout>
-        </vlayout>
-    </window>
+    </viewWindow>
 </zk>

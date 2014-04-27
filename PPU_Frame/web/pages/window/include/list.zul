@@ -1,62 +1,8 @@
-<listbox id="listboxMun" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
 
-    <listhead  sizable="true">
-        <zk forEach="${modalDialog$composer.header}">
-            <listheader label="${each}" width="80px"></listheader>
-        </zk>
-    </listhead>
 
-    <zk forEach="${modalDialog$composer.obj}">
-        <custom-attributes objs="${each}"/>
-        <listitem>
-            <zk forEach="${modalDialog$composer.listCellContant}">
-                <zscript>
-                <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, each.methodList);
-                    Integer valType = each.colymnType;
 
-                    Integer type1 = 1;
-                    Integer type2 = 2;
-                    Integer type3 = 3;
-                ]]>
-                </zscript>
-                <zk switch="${valType}">
-                    <zk case="${type2}">
-                        <listcell label="${objEach}"/>
-                    </zk>
-
-                    <zk case="${type1}">
-                        <listcell >
-                            <button label="${objEach}" >
-                                <attribute name="onClick"><![CDATA[
-                                        String gh = "rtyui";
-                                        subDialog0.setVisible(true);
-
-                                        ]]></attribute>
-                                    </button>
-
-                            <window id="subDialog${forEachStatus.index}" visible="false" title="Окно" border="normal" width="460px"
-                                    position="center,center" closable="true"
-                                    action="show: slideDown;hide: slideUp">
-                                fghfghfgh
-                                <label value="${gh}" />
-                                <button label="${gh}"/>
-                            </window>
-
-                        </listcell>
-                    </zk>
-
-                    <zk case="${type3}">
-                        <listcell >
-
-                        </listcell>
-                    </zk>
-
-                </zk>
-
-            </zk>
-
-        </listitem>
-
-    </zk>
-</listbox>
+<ObjectListBox objs="${window.obj}" header = "${window.header}" listCellContant = "${window.listCellContant}"
+               id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>

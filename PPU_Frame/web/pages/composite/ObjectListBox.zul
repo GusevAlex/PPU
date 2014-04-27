@@ -1,31 +1,37 @@
-<listbox id="listboxMun" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">
+<zk>
+
+    <zscript>
+    <![CDATA[
+    import com.PPU.composite.*;
+                  ObjectListBox listObj = self;
+               ]]>
+    </zscript>
 
     <listhead  sizable="true">
-        <zk forEach="${arg.header}">
+        <zk forEach="${listObj.header}">
             <listheader label="${each}" width="80px"></listheader>
         </zk>
     </listhead>
 
-    <zk forEach="${arg.obj}">
+    <zk forEach="${listObj.objs}">
         <custom-attributes objs="${each}"/>
         <listitem>
-            <zk forEach="${arg.listCellContant}">
+            <zk forEach="${listObj.listCellContant}">
                 <zscript>
                     <![CDATA[
                     Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, each.methodList);
                     Integer valType = each.colymnType;
-
                     Integer type1 = 1;
                     Integer type2 = 2;
                     Integer type3 = 3;
                 ]]>
                 </zscript>
                 <zk switch="${valType}">
-                    <zk case="${type2}">
+                    <zk case="${type1}">
                         <listcell label="${objEach}"/>
                     </zk>
 
-                    <zk case="${type1}">
+                    <zk case="${type2}">
                         <listcell >
                             <button label="${objEach}" >
 
@@ -47,4 +53,6 @@
         </listitem>
 
     </zk>
-</listbox>
+<!--</listbox>-->
+
+</zk>
