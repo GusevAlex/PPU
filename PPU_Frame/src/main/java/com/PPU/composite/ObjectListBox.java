@@ -1,6 +1,7 @@
 package com.PPU.composite;
 
 import com.PPU.Logic.AnotationService;
+import com.PPU.composite.helper.AnnotHelper;
 import com.PPU.windowControllers.ListCellContant;
 import org.aspectj.lang.annotation.Before;
 import org.zkoss.bind.annotation.AfterCompose;
@@ -75,26 +76,12 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setParamForList(Object obj)
     {
-        Map map = AnotationService.getMapAnnotationFieldTypeByClass(obj);
+		AnnotHelper annotHelper = new AnnotHelper();
 
-        List list1 = new ArrayList();
-        List list2 = new ArrayList();
+		annotHelper.setParamForList(obj);
 
-        for (Object entr : map.entrySet())
-        {
-            Map.Entry mapEntr = (Map.Entry) entr;
-            Object [] values = (Object []) mapEntr.getValue();
-
-            ListCellContant listCellContant1 = new ListCellContant();
-            listCellContant1.setColymnType((Integer) values[0]);
-            listCellContant1.setMethodList((String) mapEntr.getKey());
-
-            list1.add((String) values[1]);
-            list2.add(listCellContant1);
-        }
-
-        setHeader(list1);
-        setListCellContant(list2);
+		setHeader(annotHelper.getHeader());
+		setListCellContant(annotHelper.getListCellContant());
     }
 
     public void setLoad(boolean load) {

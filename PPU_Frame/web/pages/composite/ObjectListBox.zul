@@ -21,6 +21,7 @@
                     <![CDATA[
                     Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, each.methodList);
                     Integer valType = each.colymnType;
+                    alert(objEach);
                     Integer type1 = 1;
                     Integer type2 = 2;
                     Integer type3 = 3;

@@ -2,13 +2,18 @@ package com.PPU.composite;
 
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.Logic.AnotationService;
+import com.PPU.composite.helper.AnnotHelper;
 import com.PPU.windowControllers.ListCellContant;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.select.Selectors;
+import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Window;
 
+import java.io.BufferedWriter;
+import java.io.CharArrayWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -44,26 +49,12 @@ public class ViewWindow extends Window implements IdSpace {
 
     public void setParamForList(Object obj)
     {
-        Map map = AnotationService.getMapAnnotationFieldTypeByClass(obj);
+		AnnotHelper annotHelper = new AnnotHelper();
 
-        List list1 = new ArrayList();
-        List list2 = new ArrayList();
+		annotHelper.setParamForList(obj);
 
-        for (Object entr : map.entrySet())
-        {
-            Map.Entry mapEntr = (Map.Entry) entr;
-            Object [] values = (Object []) mapEntr.getValue();
-
-            ListCellContant listCellContant1 = new ListCellContant();
-            listCellContant1.setColymnType((Integer) values[0]);
-            listCellContant1.setMethodList((String) mapEntr.getKey());
-
-            list1.add((String) values[1]);
-            list2.add(listCellContant1);
-        }
-
-        setHeader(list1);
-        setListCellContant(list2);
+		setHeader(annotHelper.getHeader());
+		setListCellContant(annotHelper.getListCellContant());
     }
 
     public Object[] getObj() {
@@ -86,6 +77,7 @@ public class ViewWindow extends Window implements IdSpace {
         this.load = load;
         Executions.createComponents("/pages/composite/viewWindow.zul", this, null);
         Selectors.wireComponents(this, this, false);
+		Selectors.wireEventListeners(this, this);
     }
 
     public static void showWindow()

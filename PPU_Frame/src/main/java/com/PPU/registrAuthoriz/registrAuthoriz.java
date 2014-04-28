@@ -8,6 +8,7 @@ import com.PPU.DB.workLogic.WorkWithCommandMz;
 import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
+import com.PPU.composite.AddObject;
 import com.PPU.composite.Contact;
 import com.PPU.composite.MenuItem;
 import com.PPU.composite.ViewWindow;
@@ -183,7 +184,11 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxMZ")
 	public void openCaptionMZ()
 	{
-        ViewWindow.showWindow();
+		AddObject add = new AddObject();
+
+		add.setWorker(new WorkWithPartnerMZ());
+
+		add.showWindow();
 
 		if (groupboxMZ.isOpen())
 		{

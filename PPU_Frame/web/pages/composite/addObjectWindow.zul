@@ -1,0 +1,27 @@
+<?component
+		name="ObjectListBox"
+		class="com.PPU.composite.ObjectListBox" ?>
+
+<zk>
+	<zscript>
+		<![CDATA[
+    import com.PPU.composite.*;
+                  AddObjectWindow window = self;
+               ]]>
+	</zscript>
+
+	<zk switch="${window.listCellContant.colymnType}">
+		<zk case="1">
+			<textbox width="370px;" tabindex="11" />
+		</zk>
+
+		<zk case="2">
+			<ObjectListBox objs="${window.obj}"
+						   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+		</zk>
+
+
+	</zk>
+
+
+</zk>

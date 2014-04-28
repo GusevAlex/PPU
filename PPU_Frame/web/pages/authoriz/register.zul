@@ -27,40 +27,19 @@
                 <!--</hlayout>-->
 
                 <hlayout style="margin: 3% 0%;">
-                    <vlayout style="padding-right: 5%;">
-                        <hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout>
-                        <hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout>
-                        <hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout>
-                        <hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout>
-                    </vlayout>
+					<grid sclass="loginGrid">
+					<columns>
+						<column hflex="1" />
+						<column hflex="2" />
+					</columns>
 
-                    <vlayout>
-                        <div>
-                            <textbox id="name">
-
-                            </textbox>
-                        </div>
-
-                        <div>
-                            <textbox id="email">
-
-                            </textbox>
-                        </div>
-
-
-                        <div>
-                            <textbox id="login">
-
-                            </textbox>
-                        </div>
-
-
-                        <div>
-                            <textbox id="password">
-
-                            </textbox>
-                        </div>
-                    </vlayout>
+						<rows>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout> <textbox id="name"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout> <textbox id="email"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout> <textbox id="login"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password"/></row>
+						</rows>
+					</grid>
                 </hlayout>
 
 
@@ -103,8 +82,8 @@
                         ]]>
                         </zscript>
                         <div>
-                        <ObjectListBox objs="${objs}"
-                                       id="listboxMun" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+							<ObjectListBox objs="${objs}"
+										   id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
                         </div>
                         <button label="Добавить новое муниципальное учреждение"/>
                     </groupbox>

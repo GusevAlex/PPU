@@ -2,6 +2,7 @@ package com.PPU.Logic;
 
 import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.tables.TableAnnot.HeaderName;
+import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -31,7 +32,7 @@ public class AnotationService {
 
                     HeaderName annot2 = method.getAnnotation(HeaderName.class);
 
-                    map.put(method.getName(), new Object[]{annot1.type(),annot2.name()});
+                    map.put(method.getName(), new Object[]{annot1.type(),annot2.name(), annot1.worker()});
                 }
             }
         }
@@ -39,7 +40,9 @@ public class AnotationService {
     }
 
     public static void main(String[] args) {
-      getMapAnnotationFieldTypeByClass(new Cl());
+      	getMapAnnotationFieldTypeByClass(new Cl());
+
+
 
     }
 }

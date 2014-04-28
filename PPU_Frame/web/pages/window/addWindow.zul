@@ -1,0 +1,10 @@
+<?component
+		name="addObjectWindow"
+		class="com.PPU.composite.AddObjectWindow" ?>
+<zk>
+	<addObjectWindow id="modalDialog" title="Окно" border="normal" width="460px"
+				position="center,center" closable="true"
+				action="show: slideDown;hide: slideUp">
+
+	</addObjectWindow>
+</zk>
