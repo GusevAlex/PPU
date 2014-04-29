@@ -5,6 +5,7 @@ import com.PPU.windowControllers.ListCellContant;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.select.Selectors;
+import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zul.Window;
 
 /**
@@ -15,6 +16,8 @@ public class AddObjectWindow extends Window implements IdSpace {
 
 	private int countPage;
 	private int numPage;
+
+	private AddObject addObject;
 
 	private String header;
 	private ListCellContant listCellContant;
@@ -78,6 +81,7 @@ public class AddObjectWindow extends Window implements IdSpace {
 
 		Executions.createComponents("/pages/composite/addObjectWindow.zul", this, null);
 		Selectors.wireComponents(this, this, false);
+		Selectors.wireEventListeners(this,this);
 	}
 
 	@Override
@@ -86,5 +90,20 @@ public class AddObjectWindow extends Window implements IdSpace {
 			obj = (Object []) AnnotHelper.callWorkerMethod(workerName, listCellContant.getMethodList());
 
 		super.doModal();
+	}
+
+	public void doModal(AddObject addObject) {
+		this.addObject = addObject;
+		if (!workerName.equals(""))
+			obj = (Object []) AnnotHelper.callWorkerMethod(workerName, listCellContant.getMethodList());
+
+		super.doModal();
+	}
+
+	@Listen("onClick = #but1")
+	public void openCaptionCommerc()
+	{
+		addObject.nextClick(new Object());
+		int u = 0;
 	}
 }

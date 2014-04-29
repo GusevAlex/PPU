@@ -8,6 +8,7 @@ import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.MouseEvent;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zul.Window;
 
@@ -98,12 +99,14 @@ public class AddObject implements EventListener {
 		setWorkerName(annotHelper.getWorker());
 	}
 
-	public Window createWindow()
+	public AddObjectWindow createWindow()
 	{
 			AddObjectWindow add = (AddObjectWindow) Executions.createComponents(
 					"/pages/window/addWindow.zul", null, null);
 
 			//AddObjectWindow add = new AddObjectWindow();
+			add.setCountPage(countPage);
+			add.setNumPage(numPage);
 
 			add.setHeader(header.get(numPage));
 			add.setListCellContant(listCellContant.get(numPage));
@@ -125,20 +128,39 @@ public class AddObject implements EventListener {
 		createWindow().doModal();
 	}
 
-	@Override
-	public void onEvent(Event evt) throws Exception{
+	private void nextObject()
+	{
 		numPage++;
 
 		if (numPage<countPage)
 		{
-			createWindow().doModal();
+			createWindow().doModal(this);
 		}
 	}
 
-	@Listen("onClick = #yu")
-	public void openCaptionCommerc()
+	private void previsionObject()
 	{
-		int u = 0;
+		numPage--;
+
+		if (numPage<countPage)
+		{
+			createWindow().doModal(this);
+		}
+	}
+
+	@Override
+	public void onEvent(Event evt) throws Exception{
+		nextObject();
+	}
+
+	public void nextClick(Object value)
+	{
+		nextObject();
+	}
+
+	public void previsClick(Object value)
+	{
+		previsionObject();
 	}
 
 

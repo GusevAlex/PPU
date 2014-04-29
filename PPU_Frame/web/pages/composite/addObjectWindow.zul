@@ -15,23 +15,49 @@
                ]]>
 	</zscript>
 
-	<zk switch="${window.listCellContant.colymnType}">
-		<zk case="${int1}">
-			<textbox rows="6" value="" width="370px;" tabindex="11" />
-		</zk>
-
-		<zk case="${int2}">
-			<ObjectListBox objs="${window.obj}"
-						   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
-		</zk>
 
 
-	</zk>
 
 
-	<hlayout>
-		<button id="yu" label="Назад" />
-		<button label="Далее" />
-	</hlayout>
+
+	<grid sclass="loginGrid">
+		<rows>
+			<row>
+
+				<label value="${window.header}"/>
+
+				<label value="${window.numPage}/${window.countPage}"/>
+
+			</row>
+
+			<row width="Grid">
+				<cell colspan="2">
+					<zk switch="${window.listCellContant.colymnType}">
+						<zk case="${int1}">
+							<textbox rows="6" value="" width="370px;" tabindex="11" />
+						</zk>
+
+						<zk case="${int2}">
+							<ObjectListBox objs="${window.obj}"
+										   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+						</zk>
+
+
+					</zk>
+				</cell>
+
+			</row>
+
+			<row>
+				<cell colspan="2">
+					<hlayout>
+						<button id="but1" label="Назад" />
+						<button label="Далее" />
+					</hlayout>
+				</cell>
+
+			</row>
+		</rows>
+	</grid>
 
 </zk>

@@ -46,41 +46,16 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_1_1_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_jdbc4.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PPU_DBlogic.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/AddObject.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/AddObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/AddObject.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/AddObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/AddObjectWindow.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/WEB-INF/classes/com/PPU/composite/AddObjectWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/AddObjectWindow.class" afterPath="$PROJECT_DIR$/../PPU_Frame/target/classes/com/PPU/composite/AddObjectWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObject.java" afterPath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TableAnnot/FieldType.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TableAnnot/FieldType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/ObjectListBox.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/ObjectListBox.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithComandProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithComandProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgram.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgram.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeMU.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeMU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObjectWindow.java" afterPath="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObjectWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/pages/composite/addObjectWindow.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/pages/composite/addObjectWindow.zul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/addObjectWindow.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/addObjectWindow.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/web/pages/window/addWindow.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/web/pages/window/addWindow.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/pages/window/addWindow.zul" afterPath="$PROJECT_DIR$/../PPU_Frame/target/PPU-1.0-SNAPSHOT/pages/window/addWindow.zul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_Frame/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_Frame/.idea/workspace.xml" />
     </list>
@@ -858,7 +833,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -879,7 +854,7 @@
       <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35135135" sideWeight="0.65358365" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22283508" sideWeight="0.65358365" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34611288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34611288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
