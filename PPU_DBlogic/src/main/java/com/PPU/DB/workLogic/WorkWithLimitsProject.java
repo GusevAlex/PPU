@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.LimitsMZ;
 import com.PPU.DB.tables.LimitsProject;
 
@@ -78,6 +79,11 @@ public class WorkWithLimitsProject extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new LimitsProject();
 	}
 
 }

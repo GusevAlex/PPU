@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.LimitsProject;
 import com.PPU.DB.tables.Parametrs;
 
@@ -77,5 +78,10 @@ public class WorkWithParametrs extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new Parametrs();
 	}
 }

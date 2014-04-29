@@ -38,4 +38,28 @@ public class ClassInvokeCall {
 
         return retObj;
     }
+
+	public static Object returnObjectByName(String className)
+	{
+		Object obj = new Object();
+		try
+		{
+			Class class1 = Class.forName(className);
+
+			obj = class1.newInstance();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+
+		return obj;
+	}
+
+
+
+	public static Object returnWorkerByName(String className)
+	{
+		return returnObjectByName("com.PPU.DB.workLogic."+className);
+	}
 }

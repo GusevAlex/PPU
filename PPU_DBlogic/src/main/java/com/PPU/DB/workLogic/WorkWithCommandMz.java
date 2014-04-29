@@ -1,6 +1,7 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.tables.ComandMZ;
+import com.PPU.DB.tables.CorrectionsMZ;
 
 import java.util.List;
 
@@ -70,6 +71,11 @@ public class WorkWithCommandMz extends WorkWithTable {
 	@Override
 	public Object getEntity(int id) {
 		return ppuDao.getComandMZ(id);
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new ComandMZ();
 	}
 
 }

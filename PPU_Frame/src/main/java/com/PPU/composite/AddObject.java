@@ -8,6 +8,7 @@ import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zul.Window;
 
 import java.util.ArrayList;
@@ -99,18 +100,20 @@ public class AddObject implements EventListener {
 
 	public Window createWindow()
 	{
-		AddObjectWindow add = (AddObjectWindow) Executions.createComponents(
-				"/pages/window/addWindow.zul", null, null);
+			AddObjectWindow add = (AddObjectWindow) Executions.createComponents(
+					"/pages/window/addWindow.zul", null, null);
 
-		//AddObjectWindow add = new AddObjectWindow();
+			//AddObjectWindow add = new AddObjectWindow();
 
-		add.setHeader(header.get(numPage));
-		add.setListCellContant(listCellContant.get(numPage));
-		add.setWorkerName(workerName.get(numPage));
+			add.setHeader(header.get(numPage));
+			add.setListCellContant(listCellContant.get(numPage));
+			add.setWorkerName(workerName.get(numPage));
 
-		add.setLoad(true);
+			add.setId("addWindow"+numPage);
 
-		add.addEventListener("onClose", this);
+			add.setLoad(true);
+
+			add.addEventListener("onClose", this);
 
 		return add;
 	}
@@ -126,7 +129,16 @@ public class AddObject implements EventListener {
 	public void onEvent(Event evt) throws Exception{
 		numPage++;
 
-		createWindow().doModal();
+		if (numPage<countPage)
+		{
+			createWindow().doModal();
+		}
+	}
+
+	@Listen("onClick = #yu")
+	public void openCaptionCommerc()
+	{
+		int u = 0;
 	}
 
 

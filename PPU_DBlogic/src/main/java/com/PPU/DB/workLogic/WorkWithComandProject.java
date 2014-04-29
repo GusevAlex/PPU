@@ -1,6 +1,8 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.tables.ComandProject;
+import com.PPU.DB.tables.CorrectionsMZ;
+import com.PPU.DB.tables.CorrectionsProject;
 
 import java.util.List;
 
@@ -69,6 +71,11 @@ public class WorkWithComandProject extends WorkWithTable {
 	@Override
 	public Object getEntity(int id) {
 		return ppuDao.getComandProject(id);
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new ComandProject();
 	}
 
 }

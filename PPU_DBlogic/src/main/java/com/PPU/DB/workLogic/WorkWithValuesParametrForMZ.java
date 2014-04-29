@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.ValuesParametrForMZ;
 
 import java.util.Date;
@@ -81,4 +82,10 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 	public List getListRows() {
 		return findAndGetAllRow("", "");
 	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new ValuesParametrForMZ();
+	}
+
 }

@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithComandProject.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgram.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeBudgetService.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeMU.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.java" charset="windows-1251" />
-  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
 </project>
 

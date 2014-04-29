@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
@@ -99,4 +100,10 @@ public class WorkWithPartnerMZ extends WorkWithTable {
 
         return ClassInvokeCall.callMethod(obj, funcName);
     }
+
+	@Override
+	public Object getEmptyEntity() {
+		return new PartnersMZ();
+	}
+
 }

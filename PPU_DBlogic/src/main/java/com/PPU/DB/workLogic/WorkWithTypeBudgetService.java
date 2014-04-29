@@ -1,6 +1,7 @@
 package com.PPU.DB.workLogic;
 
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.TypeBudgetService;
 
 import java.util.List;
@@ -78,5 +79,10 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new TypeBudgetService();
 	}
 }

@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.ValuesParametrForProject;
 
 import java.util.List;
@@ -79,5 +80,10 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new ValuesParametrForProject();
 	}
 }

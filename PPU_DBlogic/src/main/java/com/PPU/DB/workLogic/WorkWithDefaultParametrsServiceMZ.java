@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.CorrectionsProject;
 import com.PPU.DB.tables.DefaultParametrsServiceMZ;
 
@@ -80,6 +81,11 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new DefaultParametrsServiceMZ();
 	}
 
 }

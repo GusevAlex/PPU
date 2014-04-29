@@ -1,6 +1,7 @@
 package com.PPU.DB.DAO;
 
 import com.PPU.DB.tables.*;
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

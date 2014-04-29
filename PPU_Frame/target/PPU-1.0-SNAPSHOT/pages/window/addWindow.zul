@@ -1,0 +1,17 @@
+<?component
+		name="addObjectWindow"
+		class="com.PPU.composite.AddObjectWindow" ?>
+<zk>
+	<addObjectWindow title="Окно" border="normal" width="460px"
+				position="center,center" closable="true"
+				action="show: slideDown;hide: slideUp">
+
+		<hlayout>
+			<button label="Назад" />
+			<button label="Далее" />
+		</hlayout>
+
+	</addObjectWindow>
+
+
+</zk>

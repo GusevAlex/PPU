@@ -1,5 +1,7 @@
 package com.PPU.DB.tables.TableAnnot;
 
+import com.PPU.DB.workLogic.WorkWithTable;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -17,4 +19,5 @@ public @interface FieldType {
      * 3 - кол-во строк
      **/
     int type();
+	String worker() default "";
 }

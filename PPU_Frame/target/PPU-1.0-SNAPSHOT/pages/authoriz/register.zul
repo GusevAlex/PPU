@@ -1,0 +1,129 @@
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
+<zk>
+<div class="registerContentDiv" apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.PPU.registrAuthoriz.registrAuthoriz')">
+
+    <div class="registerContentDiv" apply="com.PPU.registrAuthoriz.registrAuthoriz">
+    <style src="@load(vm.css)" />
+
+        <div class="authorizPanel" >
+          <div style="padding-top: 10%;">
+            <panel id="panel" framable="true" width="800px" height="700px"
+                   title="Регистрация"
+                   maximizable="true" minimizable="true" border="normal"
+                   collapsible="true" closable="true" style="margin: 0 auto;">
+            <panelchildren>
+
+                <label value="sdgdfgdfgdfg" if="${'Y2'=='Y'}"/>
+
+                <hlayout style="text-align: center;color: #13598F;">
+                    <label style="font-size: 20px;" value="Здравствуйте. Пожалуйста заполните форму для регистрации"/>
+                </hlayout>
+
+                <!--<hlayout  style="color: #1469AB;font-weight: bold;font-size: 14px;">-->
+                    <!--Введите данные о себе:-->
+                <!--</hlayout>-->
+
+                <hlayout style="margin: 3% 0%;">
+					<grid sclass="loginGrid">
+					<columns>
+						<column hflex="1" />
+						<column hflex="2" />
+					</columns>
+
+						<rows>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout> <textbox id="name"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout> <textbox id="email"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout> <textbox id="login"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password"/></row>
+						</rows>
+					</grid>
+                </hlayout>
+
+
+                <radiogroup id="sv1" onCheck="choice1.value = self.selectedItem.label" />
+                <groupbox width="100%">
+
+                    <caption>
+                        Выбор вида управления
+                    </caption>
+
+                    <hlayout>
+                        <zscript>
+                            classes = new String[] {"College", "Graduate"};
+                            grades = new String[] {"Best", "Better"};
+
+                        </zscript>
+                       <zk forEach="${classes}">
+                           <custom-attributes master="${each}"/>
+
+                           <zk forEach="${grades}">
+                               <label value="${forEachStatus.index}"/>
+                               <label value="${each}"/>
+                           </zk>
+
+                       </zk>
+                    </hlayout>
+
+                    <hbox spacing="15px">
+                    <groupbox id="groupboxMZ" width="100%">
+                        <caption width="100%">
+                            <radio id="cb"  radiogroup="sv1" />
+                            Муниципальное управление
+                        </caption>
+
+                        <zscript>
+                        <![CDATA[
+                        import com.PPU.DB.workLogic.WorkWithPartnerMZ;
+                        WorkWithPartnerMZ work = new WorkWithPartnerMZ();
+                        Object [] objs = work.getListRows().toArray();
+                        ]]>
+                        </zscript>
+                        <div>
+							<ObjectListBox objs="${objs}"
+										   id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+                        </div>
+                        <button label="Добавить новое муниципальное учреждение"/>
+                    </groupbox>
+                    </hbox>
+
+                    <hbox spacing="15px">
+                        <groupbox id="groupboxCommerc" width="100%">
+                            <caption>
+                                <radio id="cb2"  radiogroup="sv1" />
+                                Коммерческое управление
+                            </caption>
+
+							<!--<listbox id="listboxCommerc" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8">-->
+								<!--<listhead>-->
+									<!--<listheader label="First Name" width="80px"></listheader>-->
+									<!--<listheader label="Last Name" width="80px"></listheader>-->
+									<!--<listheader label="Full Name"></listheader>-->
+									<!--<listheader label="Married" width="60px"></listheader>-->
+								<!--</listhead>-->
+								<!--<template name="model">-->
+									<!--<listitem>-->
+										<!--<listcell label="${each.firstName }"/>-->
+										<!--<listcell label="${each.lastName }"/>-->
+										<!--<listcell label="${each.fullName }"/>-->
+										<!--<listcell label="${each.married ? 'Y' : 'N' }"/>-->
+									<!--</listitem>-->
+								<!--</template>-->
+							<!--</listbox>-->
+
+                            <button label="Добавить новую организацию"/>
+                        </groupbox>
+                    </hbox>
+                </groupbox>
+
+                </panelchildren>
+            </panel>
+           </div>
+        </div>
+
+    </div>
+
+</div>
+</zk>

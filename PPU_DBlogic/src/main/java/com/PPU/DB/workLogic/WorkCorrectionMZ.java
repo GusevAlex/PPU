@@ -83,4 +83,9 @@ public class WorkCorrectionMZ extends WorkWithTable {
 	public List getListRows() {
 		return findAndGetAllRow("", "");
 	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new CorrectionsMZ();
+	}
 }

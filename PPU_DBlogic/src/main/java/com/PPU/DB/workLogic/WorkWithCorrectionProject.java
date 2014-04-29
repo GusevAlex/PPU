@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.CorrectionsProject;
 
 import java.util.List;
@@ -80,6 +81,11 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new CorrectionsProject();
 	}
 
 }

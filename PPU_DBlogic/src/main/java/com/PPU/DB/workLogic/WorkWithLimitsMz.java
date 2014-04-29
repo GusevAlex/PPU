@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.LimitsMZ;
 
 import java.util.List;
@@ -79,4 +80,8 @@ public class WorkWithLimitsMz extends WorkWithTable {
 		return findAndGetAllRow("", "");
 	}
 
+	@Override
+	public Object getEmptyEntity() {
+		return new LimitsMZ();
+	}
 }

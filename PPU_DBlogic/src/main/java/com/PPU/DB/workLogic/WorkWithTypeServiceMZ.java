@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.TypeServiceMZ;
 
 import java.util.List;
@@ -76,4 +77,10 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	public List getListRows() {
 		return findAndGetAllRow("", "");
 	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new TypeServiceMZ();
+	}
+
 }

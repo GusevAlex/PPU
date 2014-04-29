@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.PartnerCommercialMan;
 import com.PPU.DB.tables.Project;
 
@@ -79,5 +80,10 @@ public class WorkWithProject extends WorkWithTable  {
 	@Override
 	public Object getEntity(int id) {
 		return ppuDao.getProject(id);
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new Project();
 	}
 }

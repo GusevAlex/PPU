@@ -1,0 +1,34 @@
+<?component
+		name="ObjectListBox"
+		class="com.PPU.composite.ObjectListBox" ?>
+
+<zk>
+	<zscript>
+		<![CDATA[
+    				import com.PPU.composite.*;
+                  	AddObjectWindow window = self;
+
+					Integer int1 = 1;
+					Integer int2 = 2;
+					Integer int3 = 3;
+					Integer int4 = 4;
+               ]]>
+	</zscript>
+
+	<zk switch="${window.listCellContant.colymnType}">
+		<zk case="${int1}">
+			<textbox rows="6" value="" width="370px;" tabindex="11" />
+		</zk>
+
+		<zk case="${int2}">
+			<ObjectListBox objs="${window.obj}"
+						   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+		</zk>
+
+
+	</zk>
+
+
+
+
+</zk>

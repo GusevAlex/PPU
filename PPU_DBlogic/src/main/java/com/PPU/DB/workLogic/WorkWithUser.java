@@ -1,6 +1,7 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.security.MD5;
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
 
@@ -144,4 +145,17 @@ public class WorkWithUser extends WorkWithTable {
     {
         return ppuDao.getUsersComMan(id);
     }
+
+	@Override
+	public Object getEmptyEntity() {
+		return new Object();
+	}
+
+	public Object getEmptyMUUser() {
+		return new UsersMunMan();
+	}
+
+	public Object getEmptyComUser() {
+		return new UsersComMan();
+	}
 }

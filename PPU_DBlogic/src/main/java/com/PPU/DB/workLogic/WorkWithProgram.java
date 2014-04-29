@@ -1,5 +1,6 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.Program;
 
 import java.util.List;
@@ -71,5 +72,10 @@ public class WorkWithProgram extends WorkWithTable {
 	@Override
 	public Object getEntity(int id) {
 		return ppuDao.getProgram(id);
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new Program();
 	}
 }

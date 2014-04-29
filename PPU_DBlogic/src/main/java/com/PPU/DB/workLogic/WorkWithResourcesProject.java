@@ -1,6 +1,7 @@
 package com.PPU.DB.workLogic;
 
 
+import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.ResourcesProject;
 
 import java.util.List;
@@ -79,5 +80,10 @@ public class WorkWithResourcesProject extends WorkWithTable {
 	@Override
 	public List getListRows() {
 		return findAndGetAllRow("", "");
+	}
+
+	@Override
+	public Object getEmptyEntity() {
+		return new ResourcesProject();
 	}
 }

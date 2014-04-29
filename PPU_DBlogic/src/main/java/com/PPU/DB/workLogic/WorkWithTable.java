@@ -35,4 +35,12 @@ public abstract class WorkWithTable {
     public abstract void changeEntity(Object obj) throws Exception;
     public abstract void deleteEntity(Object obj) throws Exception;
     public abstract Object getEntity(int id);
+
+	public abstract Object getEmptyEntity();
+
+
+	public static Object callDAOMethod(String nameFunc, Object ... values)
+	{
+		return ClassInvokeCall.callMethod(ppuDao, nameFunc, values);
+	}
 }
