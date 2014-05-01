@@ -21,149 +21,149 @@ import java.util.Map;
  */
 public class AddObject implements EventListener {
 
-	private WorkWithTable worker;
-	private Object obj;
+    private WorkWithTable worker;
+    private Object obj;
 
-	private List<String> header = new ArrayList<String>(10);
-	private List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
-	private List<String> workerName = new ArrayList<String>(10);
+    private List<String> header = new ArrayList<String>(10);
+    private List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
+    private List<String> workerName = new ArrayList<String>(10);
 
-	private int countPage;
-	private int numPage;
+    private int countPage;
+    private int numPage;
 
-	public WorkWithTable getWorker() {
-		return worker;
-	}
+    public WorkWithTable getWorker() {
+        return worker;
+    }
 
-	public void setWorker(WorkWithTable worker) {
-		this.worker = worker;
-	}
+    public void setWorker(WorkWithTable worker) {
+        this.worker = worker;
+    }
 
-	private void initObject()
-	{
-		obj = worker.getEmptyEntity();
+    private void initObject()
+    {
+        obj = worker.getEmptyEntity();
 
-		setParamForList(obj);
+        setParamForList(obj);
 
-		countPage = header.size();
-	}
+        countPage = header.size();
+    }
 
-	public List<String> getHeader() {
-		return header;
-	}
+    public List<String> getHeader() {
+        return header;
+    }
 
-	public void setHeader(List<String> header) {
-		this.header = header;
-	}
+    public void setHeader(List<String> header) {
+        this.header = header;
+    }
 
-	public List<ListCellContant> getListCellContant() {
-		return listCellContant;
-	}
+    public List<ListCellContant> getListCellContant() {
+        return listCellContant;
+    }
 
-	public void setListCellContant(List<ListCellContant> listCellContant) {
-		this.listCellContant = listCellContant;
-	}
+    public void setListCellContant(List<ListCellContant> listCellContant) {
+        this.listCellContant = listCellContant;
+    }
 
-	public int getCountPage() {
-		return countPage;
-	}
+    public int getCountPage() {
+        return countPage;
+    }
 
-	public void setCountPage(int countPage) {
-		this.countPage = countPage;
-	}
+    public void setCountPage(int countPage) {
+        this.countPage = countPage;
+    }
 
-	public int getNumPage() {
-		return numPage;
-	}
+    public int getNumPage() {
+        return numPage;
+    }
 
-	public void setNumPage(int numPage) {
-		this.numPage = numPage;
-	}
+    public void setNumPage(int numPage) {
+        this.numPage = numPage;
+    }
 
-	public List<String> getWorkerName() {
-		return workerName;
-	}
+    public List<String> getWorkerName() {
+        return workerName;
+    }
 
-	public void setWorkerName(List<String> workerName) {
-		this.workerName = workerName;
-	}
+    public void setWorkerName(List<String> workerName) {
+        this.workerName = workerName;
+    }
 
-	private void setParamForList(Object obj)
-	{
-		AnnotHelper annotHelper = new AnnotHelper();
+    private void setParamForList(Object obj)
+    {
+        AnnotHelper annotHelper = new AnnotHelper();
 
-		annotHelper.setParamForList(obj);
+        annotHelper.setParamForList(obj);
 
-		setHeader(annotHelper.getHeader());
-		setListCellContant(annotHelper.getListCellContant());
-		setWorkerName(annotHelper.getWorker());
-	}
+        setHeader(annotHelper.getHeader());
+        setListCellContant(annotHelper.getListCellContant());
+        setWorkerName(annotHelper.getWorker());
+    }
 
-	public AddObjectWindow createWindow()
-	{
-			AddObjectWindow add = (AddObjectWindow) Executions.createComponents(
-					"/pages/window/addWindow.zul", null, null);
+    public AddObjectWindow createWindow()
+    {
+        AddObjectWindow add = (AddObjectWindow) Executions.createComponents(
+                "/pages/window/addWindow.zul", null, null);
 
-			//AddObjectWindow add = new AddObjectWindow();
-			add.setCountPage(countPage);
-			add.setNumPage(numPage);
+        //AddObjectWindow add = new AddObjectWindow();
+        add.setCountPage(countPage);
+        add.setNumPage(numPage);
 
-			add.setHeader(header.get(numPage));
-			add.setListCellContant(listCellContant.get(numPage));
-			add.setWorkerName(workerName.get(numPage));
+        add.setHeader(header.get(numPage));
+        add.setListCellContant(listCellContant.get(numPage));
+        add.setWorkerName(workerName.get(numPage));
 
-			add.setId("addWindow"+numPage);
+        add.setId("addWindow"+numPage);
 
-			add.setObj(obj);
+        add.setObj(obj);
 
-			add.setLoad(true);
+        add.setLoad(true);
 
-			add.addEventListener("onClose", this);
+        add.addEventListener("onClose", this);
 
-		return add;
-	}
+        return add;
+    }
 
-	public void showWindow()
-	{
-		initObject();
+    public void showWindow()
+    {
+        initObject();
 
-		createWindow().doModal(this);
-	}
+        createWindow().doModal(this);
+    }
 
-	private void nextObject()
-	{
-		numPage++;
+    private void nextObject()
+    {
+        numPage++;
 
-		if (numPage<countPage)
-		{
-			createWindow().doModal(this);
-		}
-	}
+        if (numPage<countPage)
+        {
+            createWindow().doModal(this);
+        }
+    }
 
-	private void previsionObject()
-	{
-		numPage--;
+    private void previsionObject()
+    {
+        numPage--;
 
-		if (numPage<countPage)
-		{
-			createWindow().doModal(this);
-		}
-	}
+        if (numPage<countPage)
+        {
+            createWindow().doModal(this);
+        }
+    }
 
-	@Override
-	public void onEvent(Event evt) throws Exception{
-		nextObject();
-	}
+    @Override
+    public void onEvent(Event evt) throws Exception{
+        nextObject();
+    }
 
-	public void nextClick(Object value)
-	{
-		nextObject();
-	}
+    public void nextClick(Object value)
+    {
+        nextObject();
+    }
 
-	public void previsClick(Object value)
-	{
-		previsionObject();
-	}
+    public void previsClick(Object value)
+    {
+        previsionObject();
+    }
 
 
 }

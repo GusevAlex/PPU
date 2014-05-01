@@ -14,64 +14,64 @@ import java.util.Map;
  */
 public class AnnotHelper {
 
-	private List<String> header = new ArrayList<String>(10);
-	private List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
-	private List<String> worker = new ArrayList<String>(10);
+    private List<String> header = new ArrayList<String>(10);
+    private List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
+    private List<String> worker = new ArrayList<String>(10);
 
-	public List<String> getHeader() {
-		return header;
-	}
+    public List<String> getHeader() {
+        return header;
+    }
 
-	public void setHeader(List<String> header) {
-		this.header = header;
-	}
+    public void setHeader(List<String> header) {
+        this.header = header;
+    }
 
-	public List<ListCellContant> getListCellContant() {
-		return listCellContant;
-	}
+    public List<ListCellContant> getListCellContant() {
+        return listCellContant;
+    }
 
-	public void setListCellContant(List<ListCellContant> listCellContant) {
-		this.listCellContant = listCellContant;
-	}
+    public void setListCellContant(List<ListCellContant> listCellContant) {
+        this.listCellContant = listCellContant;
+    }
 
-	public List<String> getWorker() {
-		return worker;
-	}
+    public List<String> getWorker() {
+        return worker;
+    }
 
-	public void setWorker(List<String> worker) {
-		this.worker = worker;
-	}
+    public void setWorker(List<String> worker) {
+        this.worker = worker;
+    }
 
-	public void setParamForList(Object obj)
-	{
-		Map map = AnotationService.getMapAnnotationFieldTypeByClass(obj);
+    public void setParamForList(Object obj)
+    {
+        Map map = AnotationService.getMapAnnotationFieldTypeByClass(obj);
 
-		List list1 = new ArrayList();
-		List list2 = new ArrayList();
-		List list3 = new ArrayList();
+        List list1 = new ArrayList();
+        List list2 = new ArrayList();
+        List list3 = new ArrayList();
 
-		for (Object entr : map.entrySet())
-		{
-			Map.Entry mapEntr = (Map.Entry) entr;
-			Object [] values = (Object []) mapEntr.getValue();
+        for (Object entr : map.entrySet())
+        {
+            Map.Entry mapEntr = (Map.Entry) entr;
+            Object [] values = (Object []) mapEntr.getValue();
 
-			ListCellContant listCellContant1 = new ListCellContant();
-			listCellContant1.setColymnType((Integer) values[0]);
-			listCellContant1.setMethodList((String) mapEntr.getKey());
+            ListCellContant listCellContant1 = new ListCellContant();
+            listCellContant1.setColymnType((Integer) values[0]);
+            listCellContant1.setMethodList((String) mapEntr.getKey());
 
-			list1.add((String) values[1]);
-			list2.add(listCellContant1);
-			list3.add((String) values[2]);
-		}
+            list1.add((String) values[1]);
+            list2.add(listCellContant1);
+            list3.add((String) values[2]);
+        }
 
-		setHeader(list1);
-		setListCellContant(list2);
-		setWorker(list3);
-	}
+        setHeader(list1);
+        setListCellContant(list2);
+        setWorker(list3);
+    }
 
-	public static Object callWorkerMethod(String workerName, String funcName, Object ... obj)
-	{
-		return ClassInvokeCall.callMethod(ClassInvokeCall.returnWorkerByName(workerName), funcName, obj);
-	}
+    public static Object callWorkerMethod(String workerName, String funcName, Object ... obj)
+    {
+        return ClassInvokeCall.callMethod(ClassInvokeCall.returnWorkerByName(workerName), funcName, obj);
+    }
 
 }

@@ -49,12 +49,12 @@ public class ViewWindow extends Window implements IdSpace {
 
     public void setParamForList(Object obj)
     {
-		AnnotHelper annotHelper = new AnnotHelper();
+        AnnotHelper annotHelper = new AnnotHelper();
 
-		annotHelper.setParamForList(obj);
+        annotHelper.setParamForList(obj);
 
-		setHeader(annotHelper.getHeader());
-		setListCellContant(annotHelper.getListCellContant());
+        setHeader(annotHelper.getHeader());
+        setListCellContant(annotHelper.getListCellContant());
     }
 
     public Object[] getObj() {
@@ -77,7 +77,7 @@ public class ViewWindow extends Window implements IdSpace {
         this.load = load;
         Executions.createComponents("/pages/composite/viewWindow.zul", this, null);
         Selectors.wireComponents(this, this, false);
-		Selectors.wireEventListeners(this, this);
+        Selectors.wireEventListeners(this, this);
     }
 
     public static void showWindow()

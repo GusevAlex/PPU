@@ -124,7 +124,11 @@ public class DualObjectListBox extends Div implements IdSpace {
     public void onChooseAllBtn()
     {
         int selectIndex = leftListbox.getSelectedIndex();
-        leftListbox.
+        Listitem it = leftListbox.getSelectedItem();
+
+        leftListbox.renderItem(it);
+
+        Object o = it.getValue();
         if (selectIndex != -1)
         {
             List<Listitem> listItems = leftListbox.getItems();

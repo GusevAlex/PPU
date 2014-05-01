@@ -1,5 +1,4 @@
 package com.PPU.composite;
-
 import com.PPU.composite.helper.*;
 import com.PPU.windowControllers.*;
 import com.sun.istack.internal.NotNull;
@@ -26,7 +25,7 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     private boolean loadHandler;
 
-     public ObjectListBox()
+    public ObjectListBox()
     {
         super();
     }
@@ -73,12 +72,12 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setParamForList(Object obj)
     {
-		AnnotHelper annotHelper = new AnnotHelper();
+        AnnotHelper annotHelper = new AnnotHelper();
 
-		annotHelper.setParamForList(obj);
+        annotHelper.setParamForList(obj);
 
-		setHeader(annotHelper.getHeader());
-		setListCellContant(annotHelper.getListCellContant());
+        setHeader(annotHelper.getHeader());
+        setListCellContant(annotHelper.getListCellContant());
     }
 
     public void setLoad(boolean load) {
