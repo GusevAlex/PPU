@@ -5,6 +5,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.ResourcesMZ;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -22,7 +23,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 	}
 
 	@Override
-	public List<ResourcesMZ> findAndGetAllRow(String fields, String fieldValue)
+	public Set<ResourcesMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findResourcesMz(fields, fieldValue);
 	}
@@ -31,7 +32,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ResourcesMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ResourcesMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -41,7 +42,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ResourcesMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ResourcesMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -52,7 +53,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 		if (obj instanceof ResourcesMZ)
 			ppuDao.saveResourcesMz((ResourcesMZ) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -60,7 +61,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 		if (obj instanceof ResourcesMZ)
 			ppuDao.updateResourcesMz((ResourcesMZ) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -68,7 +69,7 @@ public class WorkWithResourcesMZ extends WorkWithTable {
 		if (obj instanceof ResourcesMZ)
 			ppuDao.deleteResourcesMz((ResourcesMZ) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

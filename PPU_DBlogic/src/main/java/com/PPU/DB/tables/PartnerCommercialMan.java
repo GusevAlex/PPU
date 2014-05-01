@@ -1,10 +1,11 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
 
 /**
@@ -33,7 +34,7 @@ public class PartnerCommercialMan {
     private String name;
     private String address;
     private String description;
-    private Set<ComandProject> comandProject = new HashSet<ComandProject>(0);
+    private Set<ComandProject> comandProject = new TreeSet<ComandProject>();
     private Set<UsersComMan> user;
 
     @Id
@@ -94,4 +95,18 @@ public class PartnerCommercialMan {
     public void setUser(Set<UsersComMan> user) {
         this.user = user;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof PartnerCommercialMan)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
+    }
+
 }

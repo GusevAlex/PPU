@@ -5,6 +5,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.CorrectionsProject;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 22.04.14.
@@ -28,7 +29,7 @@ public class WorkWithComandProject extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ComandProject");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ComandProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -38,7 +39,7 @@ public class WorkWithComandProject extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ComandProject");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ComandProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -49,7 +50,7 @@ public class WorkWithComandProject extends WorkWithTable {
 		if (obj instanceof ComandProject)
 			ppuDao.saveComandProject((ComandProject) obj);
 		else
-			throw new Exception("В метод ComandProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -57,7 +58,7 @@ public class WorkWithComandProject extends WorkWithTable {
 		if (obj instanceof ComandProject)
 			ppuDao.updateComandProject((ComandProject) obj);
 		else
-			throw new Exception("В метод ComandProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -65,7 +66,7 @@ public class WorkWithComandProject extends WorkWithTable {
 		if (obj instanceof ComandProject)
 			ppuDao.deleteComandProject((ComandProject) obj);
 		else
-			throw new Exception("В метод ComandProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

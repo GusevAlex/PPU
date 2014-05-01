@@ -3,7 +3,7 @@ package com.PPU.DB.workLogic;
 import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.ValuesParametrForProject;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -23,7 +23,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 	}
 
 	@Override
-	public List<ValuesParametrForProject> findAndGetAllRow(String fields, String fieldValue)
+	public Set<ValuesParametrForProject> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findValuesParametrForProject(fields, fieldValue);
 	}
@@ -32,7 +32,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ValuesParametrForProject");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ValuesParametrForProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -42,7 +42,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ValuesParametrForProject");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ValuesParametrForProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -53,7 +53,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 		if (obj instanceof ValuesParametrForProject)
 			ppuDao.saveValuesParametrForProject((ValuesParametrForProject) obj);
 		else
-			throw new Exception("В метод ValuesParametrForProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 		if (obj instanceof ValuesParametrForProject)
 			ppuDao.updateValuesParametrForProject((ValuesParametrForProject) obj);
 		else
-			throw new Exception("В метод ValuesParametrForProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class WorkWithValuesParametrForProject extends WorkWithTable {
 		if (obj instanceof ValuesParametrForProject)
 			ppuDao.deleteValuesParametrForProject((ValuesParametrForProject) obj);
 		else
-			throw new Exception("В метод ValuesParametrForProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

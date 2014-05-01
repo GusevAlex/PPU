@@ -82,12 +82,10 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setLoad(boolean load) {
         this.load = load;
-        removeAllChild();
+        removeChild();
 
         Executions.createComponents("/pages/composite/ObjectListBox.zul", this, null);
         Selectors.wireComponents(this, this, false);
-
-        yu();
     }
 
     public void yu()
@@ -100,7 +98,7 @@ public class ObjectListBox extends Listbox implements IdSpace {
         objs = ok;
     }
 
-    public void removeAllChild()
+    public void removeChild()
     {
         this.loadHandler = true;
 
@@ -117,12 +115,17 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
                 if ((listChild.get(i) instanceof Listitem))
                 {
-//                    this.removeChild(listChild.get(i));
+                    this.removeChild(listChild.get(i));
                 }
             }
 
         }
 
+    }
+
+    public void refresh()
+    {
+        setLoad(true);
     }
 
     public boolean getLoadHandler() {
@@ -131,5 +134,22 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setLoadHandler(boolean loadHandler) {
         this.loadHandler = loadHandler;
+    }
+
+    public int findAndGetEqObject(Object obj)
+    {
+        int result = -1;
+
+        for (int i=0; i<objs.length; i++)
+        {
+            if (objs[i].equals(obj))
+            {
+                result = i;
+
+                return result;
+            }
+        }
+
+        return result;
     }
 }

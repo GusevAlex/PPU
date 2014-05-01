@@ -1,6 +1,7 @@
 package com.PPU.DB.tables;
 
 import com.PPU.DB.security.MD5;
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -104,5 +105,19 @@ public class UsersComMan {
 
     public void setPartnerProject(PartnerCommercialMan partnerProject) {
         this.partnerProject = partnerProject;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof UsersComMan)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

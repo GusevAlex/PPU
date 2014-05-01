@@ -1,10 +1,12 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.DAO.PpuDaoInterface;
+import com.PPU.DB.tables.PartnersMZ;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IntelliJ IDEA.
@@ -43,4 +45,34 @@ public abstract class WorkWithTable {
 	{
 		return ClassInvokeCall.callMethod(ppuDao, nameFunc, values);
 	}
+
+    public static Object invokeCallMethode(Object obj, String funcName, Object ... listValue) throws Exception {
+        if (obj == null || funcName == null)
+            throw new IllegalAccessException("Не было передано параметра в invokeCallMethode");
+        Object obj1 = new Object();
+        try
+        {
+            obj1 = ClassInvokeCall.callMethod(obj, funcName, listValue);
+        }
+        catch (Exception e){
+            throw new Exception("В метод invokeCallMethode передан неверный параметр");
+        }
+
+        return obj1;
+    }
+
+    public static Object invokeCallMethode(Object obj, String funcName) throws Exception {
+        if (obj == null || funcName == null)
+            throw new IllegalAccessException("Не было передано параметра в invokeCallMethode");
+        Object obj1 = new Object();
+        try
+        {
+            obj1 = ClassInvokeCall.callMethod(obj, funcName);
+        }
+        catch (Exception e){
+            throw new Exception("В метод invokeCallMethode передан неверный параметр");
+        }
+
+        return obj1;
+    }
 }

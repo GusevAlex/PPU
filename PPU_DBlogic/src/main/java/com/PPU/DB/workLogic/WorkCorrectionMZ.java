@@ -6,6 +6,7 @@ import com.PPU.DB.tables.Parametrs;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -25,7 +26,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 	}
 
 	@Override
-	public List<CorrectionsMZ> findAndGetAllRow(String fields, String fieldValue)
+	public Set<CorrectionsMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findCorrectionsMz(fields, fieldValue);
 	}
@@ -34,7 +35,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в CorrectionsMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ CorrectionsMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -44,7 +45,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в CorrectionsMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ CorrectionsMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -55,7 +56,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 		if (obj instanceof CorrectionsMZ)
 			ppuDao.saveCorrectionsMz((CorrectionsMZ) obj);
 		else
-			throw new Exception("В метод CorrectionsMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -63,7 +64,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 		if (obj instanceof CorrectionsMZ)
 			ppuDao.updateCorrectionsMz((CorrectionsMZ) obj);
 		else
-			throw new Exception("В метод CorrectionsMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class WorkCorrectionMZ extends WorkWithTable {
 		if (obj instanceof CorrectionsMZ)
 			ppuDao.deleteCorrectionsMz((CorrectionsMZ) obj);
 		else
-			throw new Exception("В метод CorrectionsMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

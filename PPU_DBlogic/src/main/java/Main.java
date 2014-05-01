@@ -5,7 +5,7 @@ import com.PPU.DB.workLogic.WorkWithMZ;
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 
-import java.util.List;
+import java.util.Set;
 import java.util.Set;
 
 /**
@@ -18,7 +18,10 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
-		WorkWithPartnerMZ work = new WorkWithPartnerMZ();
+//        WorkWithMZ work1 = new WorkWithMZ();
+//        MZ mz = (MZ) work1.getEntity(1);
+
+		com.PPU.DB.workLogic.WorkWithPartnerMZ work = new WorkWithPartnerMZ();
 
 		PartnersMZ part = (PartnersMZ) work.getEntity(1);
 

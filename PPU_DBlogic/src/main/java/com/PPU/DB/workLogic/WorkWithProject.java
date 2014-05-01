@@ -5,6 +5,7 @@ import com.PPU.DB.tables.PartnerCommercialMan;
 import com.PPU.DB.tables.Project;
 
 import java.util.Date;
+import java.util.Set;
 import java.util.List;
 
 /**
@@ -37,7 +38,7 @@ public class WorkWithProject extends WorkWithTable  {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в partnersCommercial");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ partnersCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -47,7 +48,7 @@ public class WorkWithProject extends WorkWithTable  {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в userMunCommercial");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ userMunCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -58,7 +59,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.saveProject((Project) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -66,7 +67,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.updateProject((Project) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -74,7 +75,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.deleteProject((Project) obj);
 		else
-			throw new Exception("В метод Project.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

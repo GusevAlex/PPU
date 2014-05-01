@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -50,6 +52,8 @@ public class ComandMZ {
         this.idMZ = idMZ;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Команда")
     @Column(name="id_partner_mz")
     public int getIdPartnerMZ() {
         return idPartnerMZ;
@@ -77,5 +81,19 @@ public class ComandMZ {
 
     public void setMZ(MZ MZ) {
         this.MZ = MZ;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof ComandMZ)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

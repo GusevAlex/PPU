@@ -4,6 +4,7 @@ import com.PPU.DB.tables.ComandMZ;
 import com.PPU.DB.tables.CorrectionsMZ;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 22.04.14.
@@ -28,7 +29,7 @@ public class WorkWithCommandMz extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ComandMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ComandMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -38,7 +39,7 @@ public class WorkWithCommandMz extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ComandMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ComandMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -49,7 +50,7 @@ public class WorkWithCommandMz extends WorkWithTable {
 		if (obj instanceof ComandMZ)
 			ppuDao.saveComandMZ((ComandMZ) obj);
 		else
-			throw new Exception("В метод ComandMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -57,7 +58,7 @@ public class WorkWithCommandMz extends WorkWithTable {
 		if (obj instanceof ComandMZ)
 			ppuDao.updateComandMZ((ComandMZ) obj);
 		else
-			throw new Exception("В метод ComandMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -65,7 +66,7 @@ public class WorkWithCommandMz extends WorkWithTable {
 		if (obj instanceof ComandMZ)
 			ppuDao.deleteComandMZ((ComandMZ) obj);
 		else
-			throw new Exception("В метод ComandMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ComandMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

@@ -18,7 +18,7 @@
 
         <zscript>
         <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, "getId");
+                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(each, "getId");
                     Integer intBol = (Integer) objEach;
 
                     boolean bolLoad = (intBol == 0) ? false : true;
@@ -29,7 +29,7 @@
             <zk forEach="${listObj.listCellContant}">
                 <zscript>
                     <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, each.methodList);
+                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, each.methodList);
                     Integer valType = each.colymnType;
                     Integer type1 = 1;
                     Integer type2 = 2;

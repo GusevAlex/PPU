@@ -1,11 +1,12 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
 
 /**
@@ -45,12 +46,12 @@ public class Project {
     private String description;
     private float budget;
     private int status;
-    private Set<ComandProject> comandProject = new HashSet<ComandProject>(0);
+    private Set<ComandProject> comandProject = new TreeSet<ComandProject>();
     private Program program;
-    private Set<LimitsProject> limitsProject = new HashSet<LimitsProject>(0);
-    private Set<ValuesParametrForProject> valuesParametrForProject = new HashSet<ValuesParametrForProject>(0);
-    private Set<ResourcesProject> resourcesProject = new HashSet<ResourcesProject>(0);
-    private Set<CorrectionsProject> correctionsProject = new HashSet<CorrectionsProject>(0);
+    private Set<LimitsProject> limitsProject = new TreeSet<LimitsProject>();
+    private Set<ValuesParametrForProject> valuesParametrForProject = new TreeSet<ValuesParametrForProject>();
+    private Set<ResourcesProject> resourcesProject = new TreeSet<ResourcesProject>();
+    private Set<CorrectionsProject> correctionsProject = new TreeSet<CorrectionsProject>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -203,5 +204,19 @@ public class Project {
 
     public void setCorrectionsProject(Set<CorrectionsProject> correctionsProject) {
         this.correctionsProject = correctionsProject;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Project)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

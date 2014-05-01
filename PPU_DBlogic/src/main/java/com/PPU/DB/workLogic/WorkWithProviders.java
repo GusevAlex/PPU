@@ -3,7 +3,7 @@ package com.PPU.DB.workLogic;
 import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.Providers;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -20,7 +20,7 @@ public class WorkWithProviders extends WorkWithTable {
 	}
 
 	@Override
-	public List<Providers> findAndGetAllRow(String fields, String fieldValue)
+	public Set<Providers> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findProviders(fields, fieldValue);
 	}
@@ -29,7 +29,7 @@ public class WorkWithProviders extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Providers");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Providers");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -39,7 +39,7 @@ public class WorkWithProviders extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Parametrs");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Parametrs");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -50,7 +50,7 @@ public class WorkWithProviders extends WorkWithTable {
 		if (obj instanceof Providers)
 			ppuDao.saveProviders((Providers) obj);
 		else
-			throw new Exception("В метод Providers.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Providers.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class WorkWithProviders extends WorkWithTable {
 		if (obj instanceof Providers)
 			ppuDao.updateProviders((Providers) obj);
 		else
-			throw new Exception("В метод Providers.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Providers.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class WorkWithProviders extends WorkWithTable {
 		if (obj instanceof Providers)
 			ppuDao.deleteProviders((Providers) obj);
 		else
-			throw new Exception("В метод Providers.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Providers.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

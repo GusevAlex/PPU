@@ -184,13 +184,6 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxMZ")
 	public void openCaptionMZ()
 	{
-
-		AddObject add = new AddObject();
-
-		add.setWorker(new WorkWithPartnerMZ());
-
-		add.showWindow();
-
 		if (groupboxMZ.isOpen())
 		{
 			groupboxCommerc.setOpen(false);
@@ -200,10 +193,19 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxCommerc")
 	public void openCaptionCommerc()
 	{
-        listboxMun1.setLoad(true);
 		if (groupboxCommerc.isOpen())
 		{
 			groupboxMZ.setOpen(false);
 		}
 	}
+
+    @Listen("onClick = #addMunMan")
+    public void onClickAddMunMan()
+    {
+        AddObject add = new AddObject();
+
+        add.setWorker(new WorkWithPartnerMZ());
+
+        add.showWindow();
+    }
 }

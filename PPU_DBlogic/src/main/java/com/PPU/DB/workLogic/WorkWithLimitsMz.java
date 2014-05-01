@@ -4,6 +4,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.LimitsMZ;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -21,7 +22,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 	}
 
 	@Override
-	public List<LimitsMZ> findAndGetAllRow(String fields, String fieldValue)
+	public Set<LimitsMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findLimitsMz(fields, fieldValue);
 	}
@@ -30,7 +31,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в LimitsMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ LimitsMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -40,7 +41,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в LimitsMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ LimitsMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -51,7 +52,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 		if (obj instanceof LimitsMZ)
 			ppuDao.saveLimitsMz((LimitsMZ) obj);
 		else
-			throw new Exception("В метод DefaultParametrsServiceMz.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ DefaultParametrsServiceMz.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 		if (obj instanceof LimitsMZ)
 			ppuDao.updateLimitsMz((LimitsMZ) obj);
 		else
-			throw new Exception("В метод LimitsMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -67,7 +68,7 @@ public class WorkWithLimitsMz extends WorkWithTable {
 		if (obj instanceof LimitsMZ)
 			ppuDao.deleteLimitsMz((LimitsMZ) obj);
 		else
-			throw new Exception("В метод LimitsMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

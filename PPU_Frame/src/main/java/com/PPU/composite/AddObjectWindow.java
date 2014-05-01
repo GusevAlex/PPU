@@ -11,6 +11,8 @@ import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Textbox;
 import org.zkoss.zul.Window;
 
+import java.util.*;
+
 /**
  * Created by user on 28.04.14.
  */
@@ -22,6 +24,9 @@ public class AddObjectWindow extends Window implements IdSpace {
 
     @Wire
     ObjectListBox listboxV;
+
+    @Wire
+    DualObjectListBox dualObjectListBox;
 
     private int countPage;
     private int numPage;
@@ -85,6 +90,12 @@ public class AddObjectWindow extends Window implements IdSpace {
 
     public void setWorkerName(String workerName) {
         this.workerName = workerName;
+
+        if (!workerName.equals(""))
+        {
+            Object y = AnnotHelper.callWorkerMethod(workerName, "getListRows");
+            objs = ((ArrayList)AnnotHelper.callWorkerMethod(workerName, "getListRows")).toArray();
+        }
     }
 
     public Object getObj() {
@@ -95,6 +106,8 @@ public class AddObjectWindow extends Window implements IdSpace {
         this.obj = obj;
     }
 
+
+
     public void setLoad(boolean load) {
         this.load = load;
 
@@ -103,10 +116,18 @@ public class AddObjectWindow extends Window implements IdSpace {
         Selectors.wireEventListeners(this,this);
     }
 
+    public Object[] getObjs() {
+        return objs;
+    }
+
+    public void setObjs(Object[] objs) {
+        this.objs = objs;
+    }
+
     @Override
     public void doModal() {
         if (!workerName.equals(""))
-            objs = (Object []) AnnotHelper.callWorkerMethod(workerName, listCellContant.getMethodList());
+            objs = ((ArrayList)AnnotHelper.callWorkerMethod(workerName, "getListRows")).toArray();
 
         super.doModal();
     }
@@ -114,7 +135,7 @@ public class AddObjectWindow extends Window implements IdSpace {
     public void doModal(AddObject addObject) {
         this.addObject = addObject;
         if (!workerName.equals(""))
-            objs = (Object []) AnnotHelper.callWorkerMethod(workerName, listCellContant.getMethodList());
+            objs = ((ArrayList)AnnotHelper.callWorkerMethod(workerName, "getListRows")).toArray();
 
         getParamInObj();
         super.doModal();
@@ -133,6 +154,18 @@ public class AddObjectWindow extends Window implements IdSpace {
         {
             case 1:
                 paramList[0] = text.getValue();
+                break;
+            case 2:
+                List<Object> lists = new ArrayList<Object>(Arrays.asList(dualObjectListBox.getRightList()));
+
+                paramList[0] = lists;
+                break;
+            case 3:
+                int selectedIndex = listboxV.getSelectedIndex();
+
+                if (selectedIndex != -1)
+                    paramList[0] = listboxV.getObjs()[selectedIndex];
+                break;
         }
 
         //геттер превращается в сеттер))
@@ -153,20 +186,32 @@ public class AddObjectWindow extends Window implements IdSpace {
                     text.setValue(ClassInvokeCall.callMethod(obj,methodName).toString());
                 else
                     text.setValue("");
+
                 break;
             case 2:
-                int selectedIndex = listboxV.getSelectedIndex();
+                List list1 = new ArrayList();
+                dualObjectListBox.getWorker();
+                list1.set(0, AnnotHelper.callWorkerMethod(workerName, "getEmptyEntity"));
 
-                if (selectedIndex != -1)
-                {
-                    obj = listboxV.getObjs()[selectedIndex];
-                }
+                List list2 = (List) ClassInvokeCall.callMethod(obj,methodName);
+
+                list1.addAll(list2);
+                dualObjectListBox.setRightList(list1.toArray());
+
+                break;
+            case 3:
+                int val = listboxV.findAndGetEqObject(ClassInvokeCall.callMethod(obj,methodName));
+
+                if (val != -1)
+                    listboxV.setSelectedIndex(val);
+
+                break;
 
         }
     }
 
     @Listen("onClick = #but2")
-    public void butn1Click()
+    public void butn2Click()
     {
         addObject.nextClick(obj);
         int u = 0;
@@ -175,11 +220,22 @@ public class AddObjectWindow extends Window implements IdSpace {
     }
 
     @Listen("onClick = #but1")
-    public void butn2Click()
+    public void butn1Click()
     {
         addObject.previsClick(obj);
         int u = 0;
         setParamInObj();
         closeWindow();
     }
+
+    @Listen("onClick = #but3")
+    public void but3Click()
+    {
+        setParamInObj();
+        addObject.saveClick();
+
+        closeWindow();
+    }
+
+
 }

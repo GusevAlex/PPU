@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -78,5 +79,19 @@ public class LimitsProject {
 
     public void setProject(Project project) {
         this.project = project;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof LimitsProject)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

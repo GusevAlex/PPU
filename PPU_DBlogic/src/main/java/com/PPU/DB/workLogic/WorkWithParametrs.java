@@ -5,6 +5,7 @@ import com.PPU.DB.tables.LimitsProject;
 import com.PPU.DB.tables.Parametrs;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -21,7 +22,7 @@ public class WorkWithParametrs extends WorkWithTable {
 	}
 
 	@Override
-	public List<Parametrs> findAndGetAllRow(String fields, String fieldValue)
+	public Set<Parametrs> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findParametrs(fields, fieldValue);
 	}
@@ -30,7 +31,7 @@ public class WorkWithParametrs extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Parametrs");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Parametrs");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -40,7 +41,7 @@ public class WorkWithParametrs extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Parametrs");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Parametrs");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -51,7 +52,7 @@ public class WorkWithParametrs extends WorkWithTable {
 		if (obj instanceof Parametrs)
 			ppuDao.saveParametrs((Parametrs) obj);
 		else
-			throw new Exception("В метод Parametrs.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Parametrs.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class WorkWithParametrs extends WorkWithTable {
 		if (obj instanceof Parametrs)
 			ppuDao.updateParametrs((Parametrs) obj);
 		else
-			throw new Exception("В метод LimitsProject.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -67,7 +68,7 @@ public class WorkWithParametrs extends WorkWithTable {
 		if (obj instanceof Parametrs)
 			ppuDao.deleteParametrs((Parametrs) obj);
 		else
-			throw new Exception("В метод Parametrs.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Parametrs.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

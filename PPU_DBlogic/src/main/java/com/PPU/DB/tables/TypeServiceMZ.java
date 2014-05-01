@@ -1,10 +1,11 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
 
 /**
@@ -28,8 +29,8 @@ public class TypeServiceMZ {
 
     private int id;
     private String name;
-    private Set<MZ> MZ = new HashSet<MZ>(0);
-    private Set<DefaultParametrsServiceMZ> defaultParametrsServiceMZs = new HashSet<DefaultParametrsServiceMZ>(0);
+    private Set<MZ> MZ = new TreeSet<MZ>();
+    private Set<DefaultParametrsServiceMZ> defaultParametrsServiceMZs = new TreeSet<DefaultParametrsServiceMZ>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -70,5 +71,19 @@ public class TypeServiceMZ {
 
     public void setDefaultParametrsServiceMZs(Set<DefaultParametrsServiceMZ> defaultParametrsServiceMZs) {
         this.defaultParametrsServiceMZs = defaultParametrsServiceMZs;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof ComandProject)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

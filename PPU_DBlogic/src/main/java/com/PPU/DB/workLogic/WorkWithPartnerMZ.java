@@ -6,6 +6,7 @@ import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Alex on 21.04.2014.

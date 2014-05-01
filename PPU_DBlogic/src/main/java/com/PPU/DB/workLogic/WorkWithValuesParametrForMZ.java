@@ -5,6 +5,7 @@ import com.PPU.DB.tables.ValuesParametrForMZ;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -24,7 +25,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 	}
 
 	@Override
-	public List<ValuesParametrForMZ> findAndGetAllRow(String fields, String fieldValue)
+	public Set<ValuesParametrForMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findValuesParametrForMz(fields, fieldValue);
 	}
@@ -33,7 +34,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ValuesParametrForMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ValuesParametrForMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -43,7 +44,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в ValuesParametrForMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ValuesParametrForMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -54,7 +55,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 		if (obj instanceof ValuesParametrForMZ)
 			ppuDao.saveValuesParametrForMz((ValuesParametrForMZ) obj);
 		else
-			throw new Exception("В метод ValuesParametrForMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -62,7 +63,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 		if (obj instanceof ValuesParametrForMZ)
 			ppuDao.updateValuesParametrForMz((ValuesParametrForMZ) obj);
 		else
-			throw new Exception("В метод ValuesParametrForMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -70,7 +71,7 @@ public class WorkWithValuesParametrForMZ extends WorkWithTable {
 		if (obj instanceof ValuesParametrForMZ)
 			ppuDao.deleteValuesParametrForMz((ValuesParametrForMZ) obj);
 		else
-			throw new Exception("В метод ValuesParametrForMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ValuesParametrForMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

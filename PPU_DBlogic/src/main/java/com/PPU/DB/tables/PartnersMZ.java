@@ -1,6 +1,7 @@
 package com.PPU.DB.tables;
 
 import com.PPU.DB.tables.TableAnnot.*;
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -35,7 +36,7 @@ public class PartnersMZ {
     private String address;
     private String description;
     private int typeMU;
-    private Set<ComandMZ> ComandMZ = new HashSet<ComandMZ>(0);
+    private Set<ComandMZ> ComandMZ = new TreeSet<ComandMZ>();
     private Set<UsersMunMan> user;
 
     @Id
@@ -92,7 +93,10 @@ public class PartnersMZ {
         this.typeMU = typeMU;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerMZ")
+
+    @FieldType(type = 2, worker="WorkWithCommandMz")
+    @HeaderName(name = "Команда")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
         return ComandMZ;
@@ -102,6 +106,7 @@ public class PartnersMZ {
         ComandMZ = comandMZ;
     }
 
+
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersMunMan> getUser() {
@@ -110,5 +115,19 @@ public class PartnersMZ {
 
     public void setUser(Set<UsersMunMan> user) {
         this.user = user;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof PartnersMZ)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }

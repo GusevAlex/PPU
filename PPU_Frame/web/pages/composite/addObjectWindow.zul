@@ -2,6 +2,10 @@
 		name="ObjectListBox"
 		class="com.PPU.composite.ObjectListBox" ?>
 
+<?component
+        name="dualObjectListBox"
+        class="com.PPU.composite.DualObjectListBox" ?>
+
 <zk>
 	<zscript>
 		<![CDATA[
@@ -31,15 +35,20 @@
 			<row width="Grid">
 				<cell colspan="2">
 					<zk switch="${window.listCellContant.colymnType}">
+
 						<zk case="${int1}">
 							<textbox id="text" rows="6" value="" width="370px;" tabindex="11" />
 						</zk>
 
-						<zk case="${int2}">
-							<ObjectListBox objs="${window.obj}"
+                        <zk case="${int2}">
+                            <dualObjectListBox worker="WorkWithPartnerMZ"
+                                               id="dualListBoxObject" load="true"/>
+                        </zk>
+
+						<zk case="${int3}">
+							<ObjectListBox objs="${window.objs}"
 										   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
 						</zk>
-
 
 					</zk>
 				</cell>
@@ -51,7 +60,7 @@
 					<hlayout>
 						<button id="but1" label="Назад" disabled="${visPrevis}" />
 						<button id="but2" label="Далее" if="${visNext==true}" />
-						<button id="but2" label="Сохранить" if="${visNext==false}" />
+						<button id="but3" label="Сохранить" if="${visNext==false}" />
 					</hlayout>
 				</cell>
 

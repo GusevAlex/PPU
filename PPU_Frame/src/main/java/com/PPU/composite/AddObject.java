@@ -150,6 +150,15 @@ public class AddObject implements EventListener {
         }
     }
 
+    public void saveObject()
+    {
+        try {
+            worker.addEntity(obj);
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
     @Override
     public void onEvent(Event evt) throws Exception{
         nextObject();
@@ -165,5 +174,8 @@ public class AddObject implements EventListener {
         previsionObject();
     }
 
-
+    public void saveClick()
+    {
+        saveObject();
+    }
 }

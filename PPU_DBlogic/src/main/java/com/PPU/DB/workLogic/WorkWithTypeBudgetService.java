@@ -5,6 +5,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.TypeBudgetService;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -22,7 +23,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 	}
 
 	@Override
-	public List<TypeBudgetService> findAndGetAllRow(String fields, String fieldValue)
+	public Set<TypeBudgetService> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findTypeBudgetService(fields, fieldValue);
 	}
@@ -31,7 +32,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в TypeBudgetService");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeBudgetService");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -41,7 +42,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в TypeBudgetService");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeBudgetService");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -52,7 +53,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 		if (obj instanceof TypeBudgetService)
 			ppuDao.saveTypeBudgetService((TypeBudgetService) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -60,7 +61,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 		if (obj instanceof TypeBudgetService)
 			ppuDao.updateTypeBudgetService((TypeBudgetService) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -68,7 +69,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 		if (obj instanceof TypeBudgetService)
 			ppuDao.deleteTypeBudgetService((TypeBudgetService) obj);
 		else
-			throw new Exception("В метод TypeBudgetService.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ TypeBudgetService.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

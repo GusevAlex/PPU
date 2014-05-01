@@ -4,6 +4,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.TypeServiceMZ;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 23.04.14.
@@ -19,7 +20,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	}
 
 	@Override
-	public List<TypeServiceMZ> findAndGetAllRow(String fields, String fieldValue)
+	public Set<TypeServiceMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findTypeServiceMz(fields, fieldValue);
 	}
@@ -28,7 +29,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в TypeServiceMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeServiceMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -38,7 +39,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в TypeServiceMZ");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeServiceMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -49,7 +50,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.saveTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -57,7 +58,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.updateTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -65,7 +66,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.deleteTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("В метод TypeServiceMZ.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ TypeServiceMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

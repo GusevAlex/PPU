@@ -4,6 +4,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.Program;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 22.04.14.
@@ -29,7 +30,7 @@ public class WorkWithProgram extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Program");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Program");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -39,7 +40,7 @@ public class WorkWithProgram extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в Program");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Program");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -50,7 +51,7 @@ public class WorkWithProgram extends WorkWithTable {
 		if (obj instanceof Program)
 			ppuDao.saveProgram((Program) obj);
 		else
-			throw new Exception("В метод Program.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Program.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -58,7 +59,7 @@ public class WorkWithProgram extends WorkWithTable {
 		if (obj instanceof Program)
 			ppuDao.updateProgram((Program) obj);
 		else
-			throw new Exception("В метод Program.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Program.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -66,7 +67,7 @@ public class WorkWithProgram extends WorkWithTable {
 		if (obj instanceof Program)
 			ppuDao.deleteProgram((Program) obj);
 		else
-			throw new Exception("В метод Program.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Program.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

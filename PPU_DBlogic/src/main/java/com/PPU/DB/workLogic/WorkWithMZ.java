@@ -8,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Alex on 14.04.2014.
@@ -32,7 +33,7 @@ public class WorkWithMZ extends WorkWithTable{
     }
 
     @Override
-    public List<MZ> findAndGetAllRow(String fields, String fieldValue)
+    public Set<MZ> findAndGetAllRow(String fields, String fieldValue)
     {
        return ppuDao.findMz(fields, fieldValue);
     }
@@ -41,7 +42,7 @@ public class WorkWithMZ extends WorkWithTable{
     public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в mz");
+            throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ mz");
         }
         else
             return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -51,7 +52,7 @@ public class WorkWithMZ extends WorkWithTable{
     public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в mz");
+            throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ mz");
         }
         else
             return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -62,7 +63,7 @@ public class WorkWithMZ extends WorkWithTable{
         if (obj instanceof MZ)
             ppuDao.saveMz((MZ) obj);
         else
-            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+            throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ WorkWithMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
     }
 
     @Override
@@ -70,7 +71,7 @@ public class WorkWithMZ extends WorkWithTable{
         if (obj instanceof MZ)
             ppuDao.updateMz((MZ) obj);
         else
-            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+            throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ WorkWithMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
     }
 
     @Override
@@ -78,7 +79,7 @@ public class WorkWithMZ extends WorkWithTable{
         if (obj instanceof MZ)
             ppuDao.deleteMz((MZ) obj);
         else
-            throw new Exception("В метод WorkWithMZ.addEntity передан неверный параметр");
+            throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ WorkWithMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
     }
 
     @Override

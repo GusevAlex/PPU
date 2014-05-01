@@ -4,6 +4,7 @@ import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.PartnerCommercialMan;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 22.04.14.
@@ -35,7 +36,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в partnersCommercial");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ partnersCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -45,7 +46,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("Не было передано параметра в userMunCommercial");
+			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ userMunCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -56,7 +57,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 		if (obj instanceof PartnerCommercialMan)
 			ppuDao.savePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ PartnerCommercialMan.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -64,7 +65,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 		if (obj instanceof PartnerCommercialMan)
 			ppuDao.updatePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ PartnerCommercialMan.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override
@@ -72,7 +73,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 		if (obj instanceof PartnerCommercialMan)
 			ppuDao.deletePartnerCommercialMan((PartnerCommercialMan) obj);
 		else
-			throw new Exception("В метод PartnerCommercialMan.addEntity передан неверный параметр");
+			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ PartnerCommercialMan.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 
 	@Override

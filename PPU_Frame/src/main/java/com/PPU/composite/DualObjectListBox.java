@@ -1,5 +1,6 @@
 package com.PPU.composite;
 
+import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import com.PPU.DB.workLogic.WorkWithTable;
 import org.zkoss.zk.ui.Executions;
@@ -8,10 +9,12 @@ import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Div;
+import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Listitem;
 
 import java.lang.String;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -92,7 +95,12 @@ public class DualObjectListBox extends Div implements IdSpace {
     }
 
     public Object[] getRightList() {
-        return rightList;
+        Object [] mas = new Object[rightList.length-1];
+
+        for (int i=0; i<rightList.length; i++)
+            mas[i] = rightList[i+1];
+
+        return mas;
     }
 
     public void setRightList(Object[] rightList) {
@@ -112,6 +120,11 @@ public class DualObjectListBox extends Div implements IdSpace {
         WorkWithTable workTable = (WorkWithTable) ClassInvokeCall.returnWorkerByName(worker);
 
         List leftList1 = workTable.findAndGetAllRow("","");
+        leftList1.add(leftList1.get(0));
+        leftList1.add(leftList1.get(0));
+
+        ((PartnersMZ) leftList1.get(1)).setAddress("134");
+        ((PartnersMZ) leftList1.get(2)).setAddress("234");
 
         List rightList1  = new ArrayList();
         rightList1.add(workTable.getEmptyEntity());
@@ -120,20 +133,111 @@ public class DualObjectListBox extends Div implements IdSpace {
         rightList = rightList1.toArray();
     }
 
-    @Listen("onClick = #chooseAllBtn")
-    public void onChooseAllBtn()
+    @Listen("onClick = #chooseBtn")
+    public void onChooseBtn()
     {
-        int selectIndex = leftListbox.getSelectedIndex();
-        Listitem it = leftListbox.getSelectedItem();
-
-        leftListbox.renderItem(it);
-
-        Object o = it.getValue();
-        if (selectIndex != -1)
+        //сначала добавляем
+        for (Listitem selItem : leftListbox.getSelectedItems())
         {
-            List<Listitem> listItems = leftListbox.getItems();
+            int selectIndex = selItem.getIndex();
 
+            if (selectIndex != -1)
+            {
+                Object [] objs2 = new Object[rightList.length+1];
 
+                for (int i=0; i<rightList.length; i++)
+                    objs2[i] = rightList[i];
+
+                objs2[rightList.length] = leftList[selectIndex];
+
+                rightList = objs2;
+
+                rightListbox.setObjs(rightList);
+            }
         }
+
+        //потом удаляем
+        for (Listitem selItem : leftListbox.getSelectedItems())
+        {
+            int selectIndex = selItem.getIndex();
+
+            if (selectIndex != -1)
+            {
+                Object [] objs = new Object[leftList.length-1];
+
+                for (int i=0; i<selectIndex; i++)
+                {
+                    objs[i] = leftList[i];
+                }
+
+                for (int i=selectIndex; i<leftList.length-1; i++)
+                {
+                    objs[i] = leftList[i+1];
+                }
+
+                leftList = objs;
+
+                leftListbox.setObjs(leftList);
+            }
+        }
+
+        leftListbox.refresh();
+        rightListbox.refresh();
+    }
+
+    @Listen("onClick = #removeBtn")
+    public void onRemoveBtn()
+    {
+        //сначала добавляем
+        for (Listitem selItem : rightListbox.getSelectedItems())
+        {
+            int selectIndex = selItem.getIndex();
+
+            if (selectIndex != -1)
+            {
+                Object [] objs2 = new Object[leftList.length+1];
+
+
+                for (int i=0; i<leftList.length; i++)
+                    objs2[i] = leftList[i];
+
+                objs2[leftList.length] = rightList[selectIndex+1];
+
+                leftList = objs2;
+
+                leftListbox.setObjs(leftList);
+            }
+        }
+
+        //потом удаляем
+        for (Listitem selItem : rightListbox.getSelectedItems())
+        {
+            int selectIndex = selItem.getIndex();
+
+            if (selectIndex != -1)
+            {
+                Object [] objs = new Object[rightList.length-1];
+
+
+                for (int i=0; i<selectIndex+1; i++)
+                    objs[i] = rightList[i];
+
+                for (int i=selectIndex+1; i<rightList.length-1; i++)
+                    objs[i] = rightList[i+1];
+
+
+                rightList = objs;
+
+                rightListbox.setObjs(rightList);
+            }
+        }
+
+        rightListbox.refresh();
+        leftListbox.refresh();
+    }
+
+    public Object [] getSelectedList()
+    {
+        return rightList;
     }
 }

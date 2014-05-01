@@ -15,8 +15,8 @@ import java.lang.annotation.Target;
 @Retention(value= RetentionPolicy.RUNTIME)
 public @interface FieldType {
     /**1 - простое значение
-     * 2 - кнопка для формы со списком
-     * 3 - кол-во строк
+     * 2 - кнопка для формы со списком (попробуем пока двойной список список для many to one)
+     * 3 - кол-во строк (попробуем пока одинарный список список для one to many)
      **/
     int type();
 	String worker() default "";

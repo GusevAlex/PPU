@@ -87,11 +87,8 @@
                         </zscript>
                         <div>
 
-                            <dualObjectListBox worker="WorkWithPartnerMZ"
-                                            id="listboxMun123" load="true"/>
-
-							<!--<ObjectListBox objs="${objs}"-->
-										   <!--id="listboxMun1" rows="8" load="true"/>-->
+							<ObjectListBox objs="${objs}"
+										   id="listboxMun1" rows="8" load="true"/>
 
                             <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
                                 <!--<listhead>-->
@@ -163,7 +160,7 @@
 
 
 
-                        <button label="Добавить новое муниципальное учреждение"/>
+                        <button id="addMunMan" label="Добавить новое муниципальное учреждение"/>
                     </groupbox>
                     </hbox>
 

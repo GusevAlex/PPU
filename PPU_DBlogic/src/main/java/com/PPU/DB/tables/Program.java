@@ -1,10 +1,11 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
 
 /**
@@ -31,8 +32,8 @@ public class Program {
     private String name;
     private String target;
     private String description;
-    private Set<MZ> MZ = new HashSet<MZ>(0);
-    private Set<Project> projects = new HashSet<Project>(0);
+    private Set<MZ> MZ = new TreeSet<MZ>();
+    private Set<Project> projects = new TreeSet<Project>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -91,5 +92,19 @@ public class Program {
 
     public void setProjects(Set<Project> projects) {
         this.projects = projects;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Program)) return false;
+
+        boolean eq = false;
+
+        Integer par1 = (Integer) ClassInvokeCall.callMethod(this, "getId");
+        Integer par2 = (Integer) ClassInvokeCall.callMethod(obj, "getId");
+
+        if (par1.equals(par2)) eq = true;
+
+        return eq;
     }
 }
