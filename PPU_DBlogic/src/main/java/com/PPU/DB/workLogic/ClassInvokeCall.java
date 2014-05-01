@@ -2,11 +2,23 @@ package com.PPU.DB.workLogic;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Alex on 14.04.2014.
  */
 public class ClassInvokeCall {
+
+    private static Map<String,Class> classMap = new HashMap<String, Class>()
+            { {
+            put("LinkedHashSet",  Set.class);
+            put("HashSet", Set.class);
+            put("ArrayList",   List.class);
+            }
+            };
 
     public static Object callMethod(Object obj, String nameFunc, Object ... listValues)
     {
@@ -18,6 +30,9 @@ public class ClassInvokeCall {
 
             for (int i = 0; i < listValues.length; i++) {
                 paramTypes[i] = listValues[i].getClass();
+
+                if (classMap.containsKey(paramTypes[i].getSimpleName()))
+                    paramTypes[i] = classMap.get(paramTypes[i].getSimpleName());
             }
 
             Method method = c.getMethod(nameFunc, paramTypes);
