@@ -36,7 +36,7 @@ public class PartnersMZ {
     private String address;
     private String description;
     private int typeMU;
-    private Set<ComandMZ> ComandMZ = new TreeSet<ComandMZ>();
+    private Set<ComandMZ> ComandMZ = new LinkedHashSet<ComandMZ>();
     private Set<UsersMunMan> user;
 
     @Id

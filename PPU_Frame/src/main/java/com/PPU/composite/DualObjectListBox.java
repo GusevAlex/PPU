@@ -95,9 +95,13 @@ public class DualObjectListBox extends Div implements IdSpace {
     }
 
     public Object[] getRightList() {
+        return rightList;
+    }
+
+    public Object[] getRightListWithoutEmptyFirst() {
         Object [] mas = new Object[rightList.length-1];
 
-        for (int i=0; i<rightList.length; i++)
+        for (int i=0; i<rightList.length-1; i++)
             mas[i] = rightList[i+1];
 
         return mas;
@@ -120,11 +124,6 @@ public class DualObjectListBox extends Div implements IdSpace {
         WorkWithTable workTable = (WorkWithTable) ClassInvokeCall.returnWorkerByName(worker);
 
         List leftList1 = workTable.findAndGetAllRow("","");
-        leftList1.add(leftList1.get(0));
-        leftList1.add(leftList1.get(0));
-
-        ((PartnersMZ) leftList1.get(1)).setAddress("134");
-        ((PartnersMZ) leftList1.get(2)).setAddress("234");
 
         List rightList1  = new ArrayList();
         rightList1.add(workTable.getEmptyEntity());

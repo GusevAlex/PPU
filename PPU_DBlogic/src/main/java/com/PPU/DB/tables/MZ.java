@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -49,13 +49,13 @@ public class MZ {
     private float budget;
     private int status;
     private int serviceType;
-    private Set<ComandMZ> comandMZ = new TreeSet<ComandMZ>();
+    private Set<ComandMZ> comandMZ = new LinkedHashSet<ComandMZ>();
     private Program program;
     private TypeServiceMZ typeServiceMZ;
-    private Set<LimitsMZ> limitsMZ = new TreeSet<LimitsMZ>();
-    private Set<ValuesParametrForMZ> valuesParametrForMZ = new TreeSet<ValuesParametrForMZ>();
-    private Set<ResourcesMZ> resourcesMZ = new TreeSet<ResourcesMZ>();
-    private Set<CorrectionsMZ> correctionsMZ = new TreeSet<CorrectionsMZ>();
+    private Set<LimitsMZ> limitsMZ = new LinkedHashSet<LimitsMZ>();
+    private Set<ValuesParametrForMZ> valuesParametrForMZ = new LinkedHashSet<ValuesParametrForMZ>();
+    private Set<ResourcesMZ> resourcesMZ = new LinkedHashSet<ResourcesMZ>();
+    private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
 
     @Column(name="id_program")
     public int getIdProgram() {

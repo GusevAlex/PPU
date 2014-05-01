@@ -3,7 +3,7 @@ package com.PPU.DB.workLogic;
 import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.CorrectionsProject;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by user on 23.04.14.
@@ -24,7 +24,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 	}
 
 	@Override
-	public Set<CorrectionsProject> findAndGetAllRow(String fields, String fieldValue)
+	public List<CorrectionsProject> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findCorrectionsProject(fields, fieldValue);
 	}
@@ -33,7 +33,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ CorrectionsProject");
+			throw new IllegalAccessException("Не было передано параметра в CorrectionsProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -43,7 +43,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ CorrectionsProject");
+			throw new IllegalAccessException("Не было передано параметра в CorrectionsProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -54,7 +54,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 		if (obj instanceof CorrectionsProject)
 			ppuDao.saveCorrectionsProject((CorrectionsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод CorrectionsProject.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 		if (obj instanceof CorrectionsProject)
 			ppuDao.updateCorrectionsProject((CorrectionsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод CorrectionsProject.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public static String COLUMN_VALUE_AFTER = "ValueAfter";
 		if (obj instanceof CorrectionsProject)
 			ppuDao.deleteCorrectionsProject((CorrectionsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ CorrectionsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод CorrectionsProject.addEntity передан неверный параметр");
 	}
 
 	@Override

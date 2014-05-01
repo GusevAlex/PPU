@@ -5,7 +5,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -29,8 +29,8 @@ public class TypeServiceMZ {
 
     private int id;
     private String name;
-    private Set<MZ> MZ = new TreeSet<MZ>();
-    private Set<DefaultParametrsServiceMZ> defaultParametrsServiceMZs = new TreeSet<DefaultParametrsServiceMZ>();
+    private Set<MZ> MZ = new LinkedHashSet<MZ>();
+    private Set<DefaultParametrsServiceMZ> defaultParametrsServiceMZs = new LinkedHashSet<DefaultParametrsServiceMZ>();
 
     @Id
     @GeneratedValue(generator="increment")

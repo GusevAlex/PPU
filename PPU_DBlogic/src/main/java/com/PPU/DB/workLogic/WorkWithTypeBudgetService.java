@@ -23,7 +23,7 @@ public class WorkWithTypeBudgetService extends WorkWithTable {
 	}
 
 	@Override
-	public Set<TypeBudgetService> findAndGetAllRow(String fields, String fieldValue)
+	public List<TypeBudgetService> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findTypeBudgetService(fields, fieldValue);
 	}

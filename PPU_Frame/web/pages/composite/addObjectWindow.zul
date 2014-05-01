@@ -41,7 +41,7 @@
 						</zk>
 
                         <zk case="${int2}">
-                            <dualObjectListBox worker="WorkWithPartnerMZ"
+                            <dualObjectListBox worker="${window.workerName}"
                                                id="dualListBoxObject" load="true"/>
                         </zk>
 

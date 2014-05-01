@@ -23,7 +23,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 	}
 
 	@Override
-	public Set<LimitsProject> findAndGetAllRow(String fields, String fieldValue)
+	public List<LimitsProject> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findLimitsProject(fields, fieldValue);
 	}
@@ -32,7 +32,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ LimitsProject");
+			throw new IllegalAccessException("Не было передано параметра в LimitsProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -42,7 +42,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ LimitsProject");
+			throw new IllegalAccessException("Не было передано параметра в LimitsProject");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -53,7 +53,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 		if (obj instanceof LimitsProject)
 			ppuDao.saveLimitsProject((LimitsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод LimitsProject.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 		if (obj instanceof LimitsProject)
 			ppuDao.updateLimitsProject((LimitsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод LimitsProject.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class WorkWithLimitsProject extends WorkWithTable {
 		if (obj instanceof LimitsProject)
 			ppuDao.deleteLimitsProject((LimitsProject) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ LimitsProject.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод LimitsProject.addEntity передан неверный параметр");
 	}
 
 	@Override

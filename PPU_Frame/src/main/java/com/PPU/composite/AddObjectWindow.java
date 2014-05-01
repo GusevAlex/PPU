@@ -26,7 +26,7 @@ public class AddObjectWindow extends Window implements IdSpace {
     ObjectListBox listboxV;
 
     @Wire
-    DualObjectListBox dualObjectListBox;
+    DualObjectListBox dualListBoxObject;
 
     private int countPage;
     private int numPage;
@@ -136,9 +136,9 @@ public class AddObjectWindow extends Window implements IdSpace {
         this.addObject = addObject;
         if (!workerName.equals(""))
             objs = ((ArrayList)AnnotHelper.callWorkerMethod(workerName, "getListRows")).toArray();
+        super.doModal();
 
         getParamInObj();
-        super.doModal();
     }
 
     private void closeWindow()
@@ -156,9 +156,9 @@ public class AddObjectWindow extends Window implements IdSpace {
                 paramList[0] = text.getValue();
                 break;
             case 2:
-                List<Object> lists = new ArrayList<Object>(Arrays.asList(dualObjectListBox.getRightList()));
+                Set<Object> sets = new LinkedHashSet<Object>(Arrays.asList(dualListBoxObject.getRightList()));
 
-                paramList[0] = lists;
+                paramList[0] = sets;
                 break;
             case 3:
                 int selectedIndex = listboxV.getSelectedIndex();
@@ -189,14 +189,16 @@ public class AddObjectWindow extends Window implements IdSpace {
 
                 break;
             case 2:
-                List list1 = new ArrayList();
-                dualObjectListBox.getWorker();
-                list1.set(0, AnnotHelper.callWorkerMethod(workerName, "getEmptyEntity"));
+                if (dualListBoxObject != null)
+                {
+                    List list1 = new ArrayList();
+                    list1.add(AnnotHelper.callWorkerMethod(workerName, "getEmptyEntity"));
 
-                List list2 = (List) ClassInvokeCall.callMethod(obj,methodName);
+                    LinkedHashSet set2 = (LinkedHashSet) ClassInvokeCall.callMethod(obj,methodName);
 
-                list1.addAll(list2);
-                dualObjectListBox.setRightList(list1.toArray());
+                    list1.addAll(set2);
+                    dualListBoxObject.setRightList(list1.toArray());
+                }
 
                 break;
             case 3:

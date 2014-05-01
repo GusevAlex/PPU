@@ -4,6 +4,7 @@
 <zk>
 <zscript>
     <![CDATA[
+    alert("sdfdsfg");
                   import com.PPU.composite.*;
                   DualObjectListBox listObj = self;
                ]]>

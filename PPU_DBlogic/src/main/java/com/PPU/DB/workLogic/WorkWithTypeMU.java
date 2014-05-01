@@ -3,7 +3,7 @@ package com.PPU.DB.workLogic;
 import com.PPU.DB.tables.CorrectionsMZ;
 import com.PPU.DB.tables.TypeMU;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by user on 23.04.14.
@@ -21,7 +21,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 	}
 
 	@Override
-	public Set<TypeMU> findAndGetAllRow(String fields, String fieldValue)
+	public List<TypeMU> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findTypeMu(fields, fieldValue);
 	}
@@ -30,7 +30,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeMU");
+			throw new IllegalAccessException("Не было передано параметра в TypeMU");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -40,7 +40,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ TypeMU");
+			throw new IllegalAccessException("Не было передано параметра в TypeMU");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -51,7 +51,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 		if (obj instanceof TypeMU)
 			ppuDao.saveTypeMu((TypeMU) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 		if (obj instanceof TypeMU)
 			ppuDao.updateTypeMu((TypeMU) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ ResourcesMZ.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class WorkWithTypeMU extends WorkWithTable {
 		if (obj instanceof TypeMU)
 			ppuDao.deleteTypeMu((TypeMU) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ TypeMU.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод TypeMU.addEntity передан неверный параметр");
 	}
 
 	@Override

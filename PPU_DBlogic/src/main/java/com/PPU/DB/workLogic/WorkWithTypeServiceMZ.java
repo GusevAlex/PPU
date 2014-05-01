@@ -20,7 +20,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	}
 
 	@Override
-	public Set<TypeServiceMZ> findAndGetAllRow(String fields, String fieldValue)
+	public List<TypeServiceMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findTypeServiceMz(fields, fieldValue);
 	}
@@ -29,7 +29,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("�� ���� �������� ��������� � TypeServiceMZ");
+			throw new IllegalAccessException("Не было передано параметра в TypeServiceMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -39,7 +39,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("�� ���� �������� ��������� � TypeServiceMZ");
+			throw new IllegalAccessException("Не было передано параметра в TypeServiceMZ");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -50,7 +50,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.saveTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("� ����� ResourcesMZ.addEntity ������� �������� ��������");
+			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.updateTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("� ����� ResourcesMZ.addEntity ������� �������� ��������");
+			throw new Exception("В метод ResourcesMZ.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class WorkWithTypeServiceMZ extends WorkWithTable {
 		if (obj instanceof TypeServiceMZ)
 			ppuDao.deleteTypeServiceMz((TypeServiceMZ) obj);
 		else
-			throw new Exception("� ����� TypeServiceMZ.addEntity ������� �������� ��������");
+			throw new Exception("В метод TypeServiceMZ.addEntity передан неверный параметр");
 	}
 
 	@Override

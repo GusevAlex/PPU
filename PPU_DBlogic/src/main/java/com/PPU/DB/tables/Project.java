@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -46,12 +46,12 @@ public class Project {
     private String description;
     private float budget;
     private int status;
-    private Set<ComandProject> comandProject = new TreeSet<ComandProject>();
+    private Set<ComandProject> comandProject = new LinkedHashSet<ComandProject>();
     private Program program;
-    private Set<LimitsProject> limitsProject = new TreeSet<LimitsProject>();
-    private Set<ValuesParametrForProject> valuesParametrForProject = new TreeSet<ValuesParametrForProject>();
-    private Set<ResourcesProject> resourcesProject = new TreeSet<ResourcesProject>();
-    private Set<CorrectionsProject> correctionsProject = new TreeSet<CorrectionsProject>();
+    private Set<LimitsProject> limitsProject = new LinkedHashSet<LimitsProject>();
+    private Set<ValuesParametrForProject> valuesParametrForProject = new LinkedHashSet<ValuesParametrForProject>();
+    private Set<ResourcesProject> resourcesProject = new LinkedHashSet<ResourcesProject>();
+    private Set<CorrectionsProject> correctionsProject = new LinkedHashSet<CorrectionsProject>();
 
     @Id
     @GeneratedValue(generator="increment")

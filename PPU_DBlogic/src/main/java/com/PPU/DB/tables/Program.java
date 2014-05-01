@@ -5,7 +5,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -32,8 +32,8 @@ public class Program {
     private String name;
     private String target;
     private String description;
-    private Set<MZ> MZ = new TreeSet<MZ>();
-    private Set<Project> projects = new TreeSet<Project>();
+    private Set<MZ> MZ = new LinkedHashSet<MZ>();
+    private Set<Project> projects = new LinkedHashSet<Project>();
 
     @Id
     @GeneratedValue(generator="increment")

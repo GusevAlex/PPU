@@ -5,7 +5,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -31,9 +31,9 @@ public class Parametrs {
     private int id;
     private String name;
     private char type;
-    private Set<ValuesParametrForMZ> valuesParametrForMZ = new TreeSet<ValuesParametrForMZ>();
-    private Set<ValuesParametrForProject> valuesParametrForProjects = new TreeSet<ValuesParametrForProject>();
-    private Set<CorrectionsMZ> correctionsMZ = new TreeSet<CorrectionsMZ>();
+    private Set<ValuesParametrForMZ> valuesParametrForMZ = new LinkedHashSet<ValuesParametrForMZ>();
+    private Set<ValuesParametrForProject> valuesParametrForProjects = new LinkedHashSet<ValuesParametrForProject>();
+    private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
 
     @Id
     @GeneratedValue(generator="increment")

@@ -5,7 +5,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -34,7 +34,7 @@ public class PartnerCommercialMan {
     private String name;
     private String address;
     private String description;
-    private Set<ComandProject> comandProject = new TreeSet<ComandProject>();
+    private Set<ComandProject> comandProject = new LinkedHashSet<ComandProject>();
     private Set<UsersComMan> user;
 
     @Id

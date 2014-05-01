@@ -5,6 +5,8 @@ import com.PPU.DB.workLogic.WorkWithMZ;
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.Set;
 
@@ -21,23 +23,16 @@ public class Main {
 //        WorkWithMZ work1 = new WorkWithMZ();
 //        MZ mz = (MZ) work1.getEntity(1);
 
-		com.PPU.DB.workLogic.WorkWithPartnerMZ work = new WorkWithPartnerMZ();
+        WorkWithPartnerMZ work = new WorkWithPartnerMZ();
 
-		PartnersMZ part = (PartnersMZ) work.getEntity(1);
+        PartnersMZ part = (PartnersMZ) work.getEmptyEntity();
 
-		UsersMunMan user = new UsersMunMan();
-		user.setLogin("Potato");
-		user.setHash("hash");
-		user.setPartnerMZ(part);
+        Set set = new LinkedHashSet();
+        set.add(new ComandMZ());
 
-		WorkWithUser workus = new WorkWithUser();
+        ClassInvokeCall.callMethod(part, "setComandMZ", new Object []{ set });
 
-		try {
-			workus.addEntity(user);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+        int y = 0;
 
 	}
 }

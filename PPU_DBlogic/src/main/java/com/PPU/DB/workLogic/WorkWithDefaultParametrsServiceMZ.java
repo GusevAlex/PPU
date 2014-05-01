@@ -25,7 +25,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 	}
 
 	@Override
-	public Set<DefaultParametrsServiceMZ> findAndGetAllRow(String fields, String fieldValue)
+	public List<DefaultParametrsServiceMZ> findAndGetAllRow(String fields, String fieldValue)
 	{
 		return ppuDao.findDefaultParametrsServiceMz(fields, fieldValue);
 	}
@@ -34,7 +34,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ DefaultParametrsServiceMz");
+			throw new IllegalAccessException("Не было передано параметра в DefaultParametrsServiceMz");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -44,7 +44,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ DefaultParametrsServiceMz");
+			throw new IllegalAccessException("Не было передано параметра в DefaultParametrsServiceMz");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -55,7 +55,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 		if (obj instanceof DefaultParametrsServiceMZ)
 			ppuDao.saveDefaultParametrsServiceMz((DefaultParametrsServiceMZ) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ DefaultParametrsServiceMz.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод DefaultParametrsServiceMz.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 		if (obj instanceof DefaultParametrsServiceMZ)
 			ppuDao.updateDefaultParametrsServiceMz((DefaultParametrsServiceMZ) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ DefaultParametrsServiceMz.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод DefaultParametrsServiceMz.addEntity передан неверный параметр");
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class WorkWithDefaultParametrsServiceMZ extends WorkWithTable {
 		if (obj instanceof DefaultParametrsServiceMZ)
 			ppuDao.deleteDefaultParametrsServiceMz((DefaultParametrsServiceMZ) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ DefaultParametrsServiceMz.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("В метод DefaultParametrsServiceMz.addEntity передан неверный параметр");
 	}
 
 	@Override
