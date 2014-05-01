@@ -33,7 +33,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ partnersMZ");
         }
         else
             return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -43,7 +43,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
     public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в userMunMan");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ userMunMan");
         }
         else
             return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -54,7 +54,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.savePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
@@ -62,7 +62,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.updatePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
@@ -70,7 +70,7 @@ public class WorkWithPartnerMZ extends WorkWithTable {
         if (obj instanceof PartnersMZ)
             ppuDao.deletePartnersMz((PartnersMZ) obj);
         else
-            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
@@ -80,11 +80,11 @@ public class WorkWithPartnerMZ extends WorkWithTable {
 
     public static Object invokeCallMethode(Object obj, String funcName, Object ... listValue) throws Exception {
         if (obj == null || funcName == null)
-            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ partnersMZ");
 
         if (!(obj instanceof PartnersMZ))
         {
-            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
         }
 
         return ClassInvokeCall.callMethod(obj, funcName, listValue);
@@ -92,19 +92,19 @@ public class WorkWithPartnerMZ extends WorkWithTable {
 
     public static Object invokeCallMethode(Object obj, String funcName) throws Exception {
         if (obj == null || funcName == null)
-            throw new IllegalAccessException("Не было передано параметра в partnersMZ");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ partnersMZ");
 
         if (!(obj instanceof PartnersMZ))
         {
-            throw new Exception("В метод PartnersMZ.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ PartnersMZ.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
         }
 
         return ClassInvokeCall.callMethod(obj, funcName);
     }
 
-	@Override
-	public Object getEmptyEntity() {
-		return new PartnersMZ();
-	}
+    @Override
+    public Object getEmptyEntity() {
+        return new PartnersMZ();
+    }
 
 }

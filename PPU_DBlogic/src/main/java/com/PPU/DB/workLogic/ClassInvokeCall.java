@@ -13,12 +13,12 @@ import java.util.Set;
 public class ClassInvokeCall {
 
     private static Map<String,Class> classMap = new HashMap<String, Class>()
-            { {
+    { {
             put("LinkedHashSet",  Set.class);
             put("HashSet", Set.class);
             put("ArrayList",   List.class);
-            }
-            };
+        }
+    };
 
     public static Object callMethod(Object obj, String nameFunc, Object ... listValues)
     {
@@ -40,41 +40,41 @@ public class ClassInvokeCall {
         }
         catch (NoSuchMethodException e)
         {
-            throw new IllegalArgumentException("Неверно переданы параметры списка значений в метод ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅС‹ РїР°СЂР°РјРµС‚СЂС‹ СЃРїРёСЃРєР° Р·РЅР°С‡РµРЅРёР№ РІ РјРµС‚РѕРґ ClassInvokeCall.callMethod(...) ");
         }
         catch (IllegalAccessException e1)
         {
-            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅРѕ РЅР°Р·РІР°РЅРёРµ РјРµС‚РѕРґР° ClassInvokeCall.callMethod(...) ");
         }
         catch (InvocationTargetException e2)
         {
-            throw new IllegalArgumentException("Неверно передано название метода ClassInvokeCall.callMethod(...) ");
+            throw new IllegalArgumentException("РќРµРІРµСЂРЅРѕ РїРµСЂРµРґР°РЅРѕ РЅР°Р·РІР°РЅРёРµ РјРµС‚РѕРґР° ClassInvokeCall.callMethod(...) ");
         }
 
         return retObj;
     }
 
-	public static Object returnObjectByName(String className)
-	{
-		Object obj = new Object();
-		try
-		{
-			Class class1 = Class.forName(className);
+    public static Object returnObjectByName(String className)
+    {
+        Object obj = new Object();
+        try
+        {
+            Class class1 = Class.forName(className);
 
-			obj = class1.newInstance();
-		}
-		catch (Exception e)
-		{
-			System.out.println(e);
-		}
+            obj = class1.newInstance();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
 
-		return obj;
-	}
+        return obj;
+    }
 
 
 
-	public static Object returnWorkerByName(String className)
-	{
-		return returnObjectByName("com.PPU.DB.workLogic."+className);
-	}
+    public static Object returnWorkerByName(String className)
+    {
+        return returnObjectByName("com.PPU.DB.workLogic."+className);
+    }
 }

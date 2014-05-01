@@ -29,7 +29,7 @@ public class WorkWithProviders extends WorkWithTable {
     public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в Providers");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ Providers");
         }
         else
             return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -39,7 +39,7 @@ public class WorkWithProviders extends WorkWithTable {
     public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
         if (obj == null)
         {
-            throw new IllegalAccessException("Не было передано параметра в Parametrs");
+            throw new IllegalAccessException("РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґР°РЅРѕ РїР°СЂР°РјРµС‚СЂР° РІ Parametrs");
         }
         else
             return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -50,7 +50,7 @@ public class WorkWithProviders extends WorkWithTable {
         if (obj instanceof Providers)
             ppuDao.saveProviders((Providers) obj);
         else
-            throw new Exception("В метод Providers.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ Providers.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
@@ -58,7 +58,7 @@ public class WorkWithProviders extends WorkWithTable {
         if (obj instanceof Providers)
             ppuDao.updateProviders((Providers) obj);
         else
-            throw new Exception("В метод Providers.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ Providers.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
@@ -66,7 +66,7 @@ public class WorkWithProviders extends WorkWithTable {
         if (obj instanceof Providers)
             ppuDao.deleteProviders((Providers) obj);
         else
-            throw new Exception("В метод Providers.addEntity передан неверный параметр");
+            throw new Exception("Р’ РјРµС‚РѕРґ Providers.addEntity РїРµСЂРµРґР°РЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ");
     }
 
     @Override
