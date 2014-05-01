@@ -1,6 +1,10 @@
 <?component
         name="ObjectListBox"
         class="com.PPU.composite.ObjectListBox" ?>
+
+<?component
+        name="dualObjectListBox"
+        class="com.PPU.composite.DualObjectListBox" ?>
 <zk>
 <div class="registerContentDiv" apply="org.zkoss.bind.BindComposer"
         viewModel="@id('vm') @init('com.PPU.registrAuthoriz.registrAuthoriz')">
@@ -82,9 +86,83 @@
                         ]]>
                         </zscript>
                         <div>
-							<ObjectListBox objs="${objs}"
-										   id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+
+                            <dualObjectListBox worker="WorkWithPartnerMZ"
+                                            id="listboxMun123" load="true"/>
+
+							<!--<ObjectListBox objs="${objs}"-->
+										   <!--id="listboxMun1" rows="8" load="true"/>-->
+
+                            <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
+                                <!--<listhead>-->
+                                    <!--<listheader label="First Name" width="80px"></listheader>-->
+                                    <!--<listheader label="Last Name" width="80px"></listheader>-->
+                                    <!--<listheader label="Full Name"></listheader>-->
+                                    <!--<listheader label="Married" width="60px"></listheader>-->
+                                <!--</listhead>-->
+
+                                    <!--<listitem>-->
+                                        <!--<listcell label="1"/>-->
+                                        <!--<listcell label="2"/>-->
+                                        <!--<listcell label="3"/>-->
+                                        <!--<listcell label="4"/>-->
+                                    <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                            <!--</listbox>-->
+
+
+
                         </div>
+
+
+
                         <button label="Добавить новое муниципальное учреждение"/>
                     </groupbox>
                     </hbox>

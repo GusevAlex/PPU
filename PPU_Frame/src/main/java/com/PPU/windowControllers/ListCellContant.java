@@ -7,15 +7,15 @@ import java.util.List;
  * Created by Alex on 27.04.2014.
  */
 public class ListCellContant {
-    private static Integer colymnType = new Integer(0);
-    private static String methodList = new String();
+    private Integer colymnType = new Integer(0);
+    private String methodList = new String();
 
     public Integer getColymnType() {
         return colymnType;
     }
 
     public void setColymnType(Integer colymnType) {
-        ListCellContant.colymnType = colymnType;
+        this.colymnType = colymnType;
     }
 
     public String getMethodList() {
@@ -23,6 +23,6 @@ public class ListCellContant {
     }
 
     public void setMethodList(String methodList) {
-        ListCellContant.methodList = methodList;
+		this.methodList = methodList;
     }
 }

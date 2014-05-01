@@ -7,7 +7,7 @@
                ]]>
     </zscript>
 
-    <listhead  sizable="true">
+    <listhead sizable="true" if="${listObj.loadHandler}">
         <zk forEach="${listObj.header}">
             <listheader label="${each}" width="80px"></listheader>
         </zk>
@@ -15,7 +15,17 @@
 
     <zk forEach="${listObj.objs}">
         <custom-attributes objs="${each}"/>
-        <listitem>
+
+        <zscript>
+        <![CDATA[
+                    Object objEach = com.PPU.DB.workLogic.WorkWithPartnerMZ.invokeCallMethode(objs, "getId");
+                    Integer intBol = (Integer) objEach;
+
+                    boolean bolLoad = (intBol == 0) ? false : true;
+                ]]>
+        </zscript>
+
+        <listitem if="${bolLoad}">
             <zk forEach="${listObj.listCellContant}">
                 <zscript>
                     <![CDATA[
@@ -54,5 +64,4 @@
 
     </zk>
 <!--</listbox>-->
-
 </zk>

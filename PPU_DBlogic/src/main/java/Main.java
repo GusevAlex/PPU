@@ -6,6 +6,7 @@ import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +18,23 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-		Object obj = ClassInvokeCall.returnWorkerByName("WorkWithMZ");//"com.PPU.workLogic.WorkWithMZ"
+		WorkWithPartnerMZ work = new WorkWithPartnerMZ();
 
-		int y = 0;
-    }
+		PartnersMZ part = (PartnersMZ) work.getEntity(1);
+
+		UsersMunMan user = new UsersMunMan();
+		user.setLogin("Potato");
+		user.setHash("hash");
+		user.setPartnerMZ(part);
+
+		WorkWithUser workus = new WorkWithUser();
+
+		try {
+			workus.addEntity(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
+	}
 }

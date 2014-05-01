@@ -12,13 +12,11 @@
 					Integer int2 = 2;
 					Integer int3 = 3;
 					Integer int4 = 4;
+
+					boolean visPrevis = (window.numPage == 0) ? true : false;
+					boolean visNext = (window.numPage == window.countPage-1) ? false : true;
                ]]>
 	</zscript>
-
-
-
-
-
 
 	<grid sclass="loginGrid">
 		<rows>
@@ -26,7 +24,7 @@
 
 				<label value="${window.header}"/>
 
-				<label value="${window.numPage}/${window.countPage}"/>
+				<label value="${window.numPage+1}/${window.countPage}"/>
 
 			</row>
 
@@ -34,7 +32,7 @@
 				<cell colspan="2">
 					<zk switch="${window.listCellContant.colymnType}">
 						<zk case="${int1}">
-							<textbox rows="6" value="" width="370px;" tabindex="11" />
+							<textbox id="text" rows="6" value="" width="370px;" tabindex="11" />
 						</zk>
 
 						<zk case="${int2}">
@@ -51,8 +49,9 @@
 			<row>
 				<cell colspan="2">
 					<hlayout>
-						<button id="but1" label="Назад" />
-						<button label="Далее" />
+						<button id="but1" label="Назад" disabled="${visPrevis}" />
+						<button id="but2" label="Далее" if="${visNext==true}" />
+						<button id="but2" label="Сохранить" if="${visNext==false}" />
 					</hlayout>
 				</cell>
 

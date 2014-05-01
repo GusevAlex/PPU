@@ -29,6 +29,9 @@
         <module name="PPU_DBlogic" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PPU_DBlogic" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

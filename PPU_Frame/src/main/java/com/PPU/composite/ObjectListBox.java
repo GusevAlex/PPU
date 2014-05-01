@@ -1,22 +1,16 @@
 package com.PPU.composite;
 
-import com.PPU.Logic.AnotationService;
-import com.PPU.composite.helper.AnnotHelper;
-import com.PPU.windowControllers.ListCellContant;
-import org.aspectj.lang.annotation.Before;
-import org.zkoss.bind.annotation.AfterCompose;
-import org.zkoss.bind.annotation.Init;
+import com.PPU.composite.helper.*;
+import com.PPU.windowControllers.*;
+import com.sun.istack.internal.NotNull;
+import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.select.Selectors;
-import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zul.Listbox;
-import org.zkoss.zul.Listhead;
-import org.zkoss.zul.Listheader;
+import org.zkoss.zul.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Alex on 27.04.2014.
@@ -30,9 +24,11 @@ public class ObjectListBox extends Listbox implements IdSpace {
     private static String gh = "dfdfg";
     private boolean load;
 
+    private boolean loadHandler;
+
      public ObjectListBox()
     {
-
+        super();
     }
 
     public List<String> getHeader() {
@@ -55,11 +51,12 @@ public class ObjectListBox extends Listbox implements IdSpace {
         return objs;
     }
 
-    public void setObjs(Object[] objs) {
+    public void setObjs(@NotNull Object[] objs) {
         this.objs = objs;
 
         if (objs.length!=0)
             setParamForList(objs[0]);
+
     }
 
     public String getGh() {
@@ -86,7 +83,54 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setLoad(boolean load) {
         this.load = load;
+        removeAllChild();
+
         Executions.createComponents("/pages/composite/ObjectListBox.zul", this, null);
         Selectors.wireComponents(this, this, false);
+
+        yu();
+    }
+
+    public void yu()
+    {
+        ListModel l = this.getListModel();
+        List l2 = this.getItems();
+        Object [] ok = new Object[2];
+        ok[1] = objs[0];
+        ok[0] = objs[0];
+        objs = ok;
+    }
+
+    public void removeAllChild()
+    {
+        this.loadHandler = true;
+
+        List<Component> listChild = this.getChildren();
+        for (int i=listChild.size()-1 ; i>=0; i--)
+        {
+
+            if (!(listChild.get(i) instanceof Paging))
+            {
+                if ((listChild.get(i) instanceof Listhead))
+                {
+                    this.loadHandler = false;
+                }
+
+                if ((listChild.get(i) instanceof Listitem))
+                {
+//                    this.removeChild(listChild.get(i));
+                }
+            }
+
+        }
+
+    }
+
+    public boolean getLoadHandler() {
+        return loadHandler;
+    }
+
+    public void setLoadHandler(boolean loadHandler) {
+        this.loadHandler = loadHandler;
     }
 }

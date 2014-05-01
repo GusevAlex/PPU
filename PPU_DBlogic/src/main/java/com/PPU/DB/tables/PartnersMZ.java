@@ -5,8 +5,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -103,11 +102,11 @@ public class PartnersMZ {
         ComandMZ = comandMZ;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerMZ")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersMunMan> getUser() {
         return user;
-    }
+	}
 
     public void setUser(Set<UsersMunMan> user) {
         this.user = user;

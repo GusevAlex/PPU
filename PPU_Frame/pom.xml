@@ -9,6 +9,7 @@
     <packaging>war</packaging>
 
     <properties>
+        <!--<zk.version>6.5.3.FL.20130508</zk.version>-->
         <zk.version>6.5.3.FL.20130508</zk.version>
         <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
         <org.hibernate.version>3.5.0-Final</org.hibernate.version>

@@ -1,9 +1,9 @@
 package com.PPU.composite;
 
 import com.PPU.DB.workLogic.WorkWithTable;
-import com.PPU.Logic.AnotationService;
-import com.PPU.composite.helper.AnnotHelper;
-import com.PPU.windowControllers.ListCellContant;
+import com.PPU.Logic.*;
+import com.PPU.composite.helper.*;
+import com.PPU.windowControllers.*;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.event.Event;
@@ -114,6 +114,8 @@ public class AddObject implements EventListener {
 
 			add.setId("addWindow"+numPage);
 
+			add.setObj(obj);
+
 			add.setLoad(true);
 
 			add.addEventListener("onClose", this);
@@ -125,7 +127,7 @@ public class AddObject implements EventListener {
 	{
 		initObject();
 
-		createWindow().doModal();
+		createWindow().doModal(this);
 	}
 
 	private void nextObject()

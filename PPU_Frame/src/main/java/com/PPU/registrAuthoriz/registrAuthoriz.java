@@ -8,11 +8,8 @@ import com.PPU.DB.workLogic.WorkWithCommandMz;
 import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
-import com.PPU.composite.AddObject;
-import com.PPU.composite.Contact;
-import com.PPU.composite.MenuItem;
-import com.PPU.composite.ViewWindow;
-import com.PPU.windowControllers.ModalDialog;
+import com.PPU.composite.*;
+import com.PPU.windowControllers.*;
 import org.zkoss.bind.annotation.*;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
@@ -64,6 +61,9 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
 	@Wire
 	Groupbox groupboxCommerc;
+
+    @Wire
+    ObjectListBox listboxMun1;
 
     private String css = "../../css/common.css.dsp";
     private String nameUser;
@@ -184,6 +184,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxMZ")
 	public void openCaptionMZ()
 	{
+
 		AddObject add = new AddObject();
 
 		add.setWorker(new WorkWithPartnerMZ());
@@ -199,6 +200,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 	@Listen("onClick = #groupboxCommerc")
 	public void openCaptionCommerc()
 	{
+        listboxMun1.setLoad(true);
 		if (groupboxCommerc.isOpen())
 		{
 			groupboxMZ.setOpen(false);
