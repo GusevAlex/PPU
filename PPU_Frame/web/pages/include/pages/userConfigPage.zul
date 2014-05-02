@@ -1,0 +1,65 @@
+<zk>
+    <div apply="org.zkoss.bind.BindComposer"
+         viewModel="@id('vm') @init('com.PPU.windowControllers.UserConfigPage')">
+
+    <div class="editProfileContentDiv" apply="com.PPU.windowControllers.UserConfigPage">
+
+            <style src="../../../css/common.css.dsp" />
+
+            <div class="authorizPanel" >
+                <div style="padding-top: 3%;">
+                    <panel id="panel" framable="true" width="800px" height="1000px"
+                           title="Регистрация"
+                           maximizable="true" minimizable="true" border="normal"
+                           collapsible="true" closable="true" style="margin: 0 auto;">
+                        <panelchildren>
+                            <tabbox width="100%" height="100%" sclass="nav_tabs">
+                                <tabs id="tabs">
+                                    <tab label="Управление профилем" />
+                                </tabs>
+                                <tabpanels>
+                                    <tabpanel style="height:100%;">
+
+                                            <grid >
+                                                <columns>
+                                                    <column hflex="1" />
+                                                    <column hflex="2" />
+                                                </columns>
+                                                <rows>
+                                                    <row>Логин : <textbox id="login" value="@load(loginStr)" /></row>
+                                                    <row>Имя : <textbox id="name" value="@load(nameUser)" /></row>
+                                                    <row>Электронная почта : <textbox id="email" value="@load(emailStr)" /></row>
+                                                </rows>
+                                            </grid>
+
+                                            <groupbox mold="3d" width="100%" style="margin-top: 100px;" open="false">
+                                                <caption label="Поменять пароль" />
+                                                <hlayout spacing="30px">
+
+                                                    <grid >
+                                                        <columns>
+                                                            <column hflex="1" />
+                                                            <column hflex="2" />
+                                                        </columns>
+                                                        <rows>
+                                                            <row>Старый пароль : <textbox id="oldPasword" /></row>
+                                                            <row>Новый пароль : <textbox id="pasword" /></row>
+                                                        </rows>
+                                                    </grid>
+
+                                                </hlayout>
+                                            </groupbox>
+
+                                        <button label="Сохранить" id="saveBtn" />
+                                    </tabpanel>
+                                </tabpanels>
+                            </tabbox>
+                        </panelchildren>
+                    </panel>
+                </div>
+            </div>
+
+
+    </div>
+    </div>
+</zk>

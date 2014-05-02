@@ -15,22 +15,23 @@
         <toolbarbutton label="/"/>
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
     </cell>
-    <div id="div1">
-        hjhgjgjgj
-    </div>
 
-    <popup id="status" width="300px">
+    <cell align="right" valign="middle" width="100%">
+        <div style="width:150px;" sclass="container">
+            <!--<menubar >-->
+                    <toolbarbutton id="user" label="@load(vm.nameUser)" style="width:150px; font-size: 14px;"   >
+                        <attribute name="onClick"><![CDATA[
+                        status.open(self, "after_end");
+                    ]]> </attribute>
+                            </toolbarbutton>
+            <!--</menubar>-->
+        </div>
+    </cell>
+
+    <popup id="status" width="150px">
         <vlayout>
-            This user is online now !
-            <a label="Mail him/her"/>
+        <a href="/pages/include/pages/userConfigPage.zul">Выйти</a>
         </vlayout>
     </popup>
 
-    <cell align="right" valign="middle" width="100%">
-        <div sclass="container">
-            <menubar >
-                    <menu id="user" label="@load(vm.nameUser)" content="#status" />
-            </menubar>
-        </div>
-    </cell>
 </hbox>

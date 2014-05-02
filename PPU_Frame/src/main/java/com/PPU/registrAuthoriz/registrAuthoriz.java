@@ -119,15 +119,23 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
             List list = workWithUser.findAndGetAllRow("login", name.getValue());
             String nameUser = new String();
+            String emailUser = new String();
 
             if (list.get(0) instanceof UsersComMan)
+            {
                 nameUser = ((UsersComMan) list.get(0)).getName();
+                emailUser = ((UsersComMan) list.get(0)).getEmail();
+            }
             else
+            {
                 nameUser = ((UsersMunMan) list.get(0)).getName();
+                emailUser = ((UsersMunMan) list.get(0)).getEmail();
+            }
 
             Session session = Sessions.getCurrent();
             session.setAttribute("login",name.getValue());
             session.setAttribute("nameUser",nameUser);
+            session.setAttribute("email",emailUser);
 
             if (list.get(0) instanceof UsersComMan)
                 session.setAttribute("type","Com");
@@ -139,8 +147,6 @@ public class registrAuthoriz extends SelectorComposer<Component> {
             mesg.setValue("¬ведены неверные им€ пользовател€ и пароль!");
             Clients.evalJavaScript("loginFailed()");
         }
-
-
 
     }
 

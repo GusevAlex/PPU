@@ -541,3 +541,16 @@ table.z-caption
     width: 100%;
     height: 100%;
 }
+
+.profilePanel
+{
+    background: url(../images/background/background.png);
+    width: 100%;
+    height: 100%;
+}
+
+.editProfileContentDiv
+{
+    width: 100%;
+    height: 100%;
+}
