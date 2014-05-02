@@ -58,6 +58,7 @@ public class AnnotHelper {
             ListCellContant listCellContant1 = new ListCellContant();
             listCellContant1.setColymnType((Integer) values[0]);
             listCellContant1.setMethodList((String) mapEntr.getKey());
+            listCellContant1.setWorkerName((String) values[2]);
 
             list1.add((String) values[1]);
             list2.add(listCellContant1);

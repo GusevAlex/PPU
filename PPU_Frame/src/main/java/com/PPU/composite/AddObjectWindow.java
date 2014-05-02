@@ -8,6 +8,8 @@ import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zul.Doublespinner;
+import org.zkoss.zul.Spinner;
 import org.zkoss.zul.Textbox;
 import org.zkoss.zul.Window;
 
@@ -27,6 +29,12 @@ public class AddObjectWindow extends Window implements IdSpace {
 
     @Wire
     DualObjectListBox dualListBoxObject;
+
+    @Wire
+    Spinner spinner;
+
+    @Wire
+    Doublespinner doubleSpinnerBox;
 
     private int countPage;
     private int numPage;
@@ -156,16 +164,29 @@ public class AddObjectWindow extends Window implements IdSpace {
                 paramList[0] = text.getValue();
                 break;
             case 2:
-                Set<Object> sets = new LinkedHashSet<Object>(Arrays.asList(dualListBoxObject.getRightList()));
-
-                paramList[0] = sets;
-                break;
-            case 3:
                 int selectedIndex = listboxV.getSelectedIndex();
 
                 if (selectedIndex != -1)
                     paramList[0] = listboxV.getObjs()[selectedIndex];
                 break;
+            case 3:
+                Set<Object> sets = new LinkedHashSet<Object>(Arrays.asList(dualListBoxObject.rightListbox.getObjs()));
+
+                sets.remove(dualListBoxObject.rightListbox.getObjs()[0]);
+
+                paramList[0] = sets;
+                break;
+            case 4:
+                Float fl = doubleSpinnerBox.getValue().floatValue();
+                paramList[0] = fl;
+
+                break;
+            case 5:
+                int val = spinner.getValue();
+                paramList[0] = val;
+
+                break;
+
         }
 
         //геттер превращается в сеттер))
@@ -188,24 +209,56 @@ public class AddObjectWindow extends Window implements IdSpace {
                     text.setValue("");
 
                 break;
-            case 2:
+            case 3:
                 if (dualListBoxObject != null)
                 {
-                    List list1 = new ArrayList();
-                    list1.add(AnnotHelper.callWorkerMethod(workerName, "getEmptyEntity"));
-
                     LinkedHashSet set2 = (LinkedHashSet) ClassInvokeCall.callMethod(obj,methodName);
 
+                    List list1 = new ArrayList();
+
+                    Object emptyEntity = AnnotHelper.callWorkerMethod(workerName, "getEmptyEntity");
+
+                    if ((set2.size()==0) || ((set2.size()!=0) && !set2.toArray()[0].equals(emptyEntity)))
+                        list1.add(emptyEntity);
+
+                    List list2 = Arrays.asList(dualListBoxObject.leftListbox.getObjs());
+                    List list3 = new ArrayList(0);
+                    for (Object o : list2)
+                    {
+                        boolean save = true;
+                        for (Object o2 : set2)
+                        {
+                            if (o.equals(o2))
+                                save = false;
+                        }
+
+                        if (save)
+                            list3.add(o);
+                    }
+
                     list1.addAll(set2);
+
                     dualListBoxObject.setRightList(list1.toArray());
+                    dualListBoxObject.setLeftList(list3.toArray());
+
+                    dualListBoxObject.leftListbox.refresh();
+                    dualListBoxObject.rightListbox.refresh();
                 }
 
                 break;
-            case 3:
+            case 2:
                 int val = listboxV.findAndGetEqObject(ClassInvokeCall.callMethod(obj,methodName));
 
                 if (val != -1)
                     listboxV.setSelectedIndex(val);
+
+                break;
+            case 4:
+                doubleSpinnerBox.setValue(4.7);
+
+                break;
+            case 5:
+                spinner.setValue(4);
 
                 break;
 
@@ -219,6 +272,8 @@ public class AddObjectWindow extends Window implements IdSpace {
         int u = 0;
         setParamInObj();
         closeWindow();
+
+
     }
 
     @Listen("onClick = #but1")

@@ -4,6 +4,7 @@ import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.PartnerCommercialMan;
 import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.tables.UsersComMan;
+import com.PPU.DB.tables.UsersMunMan;
 import com.PPU.DB.workLogic.WorkWithCommandMz;
 import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
 import com.PPU.DB.workLogic.WorkWithPartnerMZ;
@@ -44,7 +45,10 @@ public class registrAuthoriz extends SelectorComposer<Component> {
     @Wire
     Textbox name;
 
-	@Wire("#password")
+    @Wire
+    Textbox login;
+
+    @Wire("#password")
 	Textbox passwordField;
 
 	@Wire("#email")
@@ -64,6 +68,9 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
     @Wire
     ObjectListBox listboxMun1;
+
+    @Wire
+    ObjectListBox listboxCom1;
 
     private String css = "../../css/common.css.dsp";
     private String nameUser;
@@ -111,9 +118,16 @@ public class registrAuthoriz extends SelectorComposer<Component> {
             mesg.setValue("");
 
             List list = workWithUser.findAndGetAllRow("login", name.getValue());
+            String nameUser = new String();
+
+            if (list.get(0) instanceof UsersComMan)
+                nameUser = ((UsersComMan) list.get(0)).getName();
+            else
+                nameUser = ((UsersMunMan) list.get(0)).getName();
 
             Session session = Sessions.getCurrent();
             session.setAttribute("login",name.getValue());
+            session.setAttribute("nameUser",nameUser);
 
             if (list.get(0) instanceof UsersComMan)
                 session.setAttribute("type","Com");
@@ -206,6 +220,128 @@ public class registrAuthoriz extends SelectorComposer<Component> {
 
         add.setWorker(new WorkWithPartnerMZ());
 
+        add.setObjectListBox(listboxMun1);
+
         add.showWindow();
     }
+
+    public boolean checkRegister()
+    {
+        boolean success = true;
+
+        String userName = name.getValue();
+        String password = passwordField.getValue();
+        String email = emailField.getValue();
+        String loginVal = login.getValue();
+        int selectedIndex = -1;
+
+        if (groupboxMZ.isOpen())
+        {
+            selectedIndex = listboxMun1.getSelectedIndex();
+        }
+        else
+            if (groupboxCommerc.isOpen())
+                selectedIndex = listboxCom1.getSelectedIndex();
+
+        if (userName.equals(""))
+        {
+            Messagebox.show("Не введены Фамилия и имя!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (password.length()<=4)
+        {
+            Messagebox.show("Введен короткий пароль!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (!checkEmail(email))
+        {
+            Messagebox.show("Введен неверный email!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (!groupboxMZ.isOpen() && !groupboxCommerc.isOpen())
+        {
+            Messagebox.show("Не выбран вид управления!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+        else
+        {
+            if (selectedIndex == -1)
+            {
+                Messagebox.show("Не выбрана организация управления!", "Error", Messagebox.OK, Messagebox.ERROR);
+                success = false;
+            }
+            Object objUser = new Object();
+
+            if (groupboxMZ.isOpen())
+            {
+                objUser = new UsersMunMan();
+                ((UsersMunMan)objUser).setLogin(loginVal);
+            }
+
+            if (groupboxCommerc.isOpen())
+            {
+                objUser = new UsersComMan();
+                ((UsersComMan)objUser).setLogin(loginVal);
+            }
+
+            if (!(new WorkWithUser().checkLogin(objUser)))
+            {
+                Messagebox.show("Введен не уникальный логин!", "Error", Messagebox.OK, Messagebox.ERROR);
+                success = false;
+            }
+        }
+     return success;
+    }
+
+
+
+    @Listen("onClick = #registation")
+    public void onClickRegistation()
+    {
+        if (checkRegister())
+        {
+            String userName = name.getValue();
+            String password = passwordField.getValue();
+            String email = emailField.getValue();
+            String loginVal = login.getValue();
+
+            Object objUser = new Object();
+
+            if (groupboxMZ.isOpen())
+            {
+                objUser = new UsersMunMan();
+                ((UsersMunMan)objUser).setLogin(loginVal);
+                ((UsersMunMan)objUser).setHash(password);
+                ((UsersMunMan)objUser).setName(userName);
+                ((UsersMunMan)objUser).setEmail(email);
+
+                int selectedIndex = listboxMun1.getSelectedIndex();
+
+                ((UsersMunMan)objUser).setPartnerMZ( (PartnersMZ) listboxMun1.getObjs()[selectedIndex]);
+            }
+
+            if (groupboxCommerc.isOpen())
+            {
+                objUser = new UsersComMan();
+                ((UsersComMan)objUser).setLogin(loginVal);
+                ((UsersComMan)objUser).setHash(password);
+                ((UsersComMan)objUser).setName(userName);
+                ((UsersComMan)objUser).setEmail(email);
+
+                int selectedIndex = listboxCom1.getSelectedIndex();
+
+                ((UsersComMan)objUser).setPartnerProject((PartnerCommercialMan) listboxCom1.getObjs()[selectedIndex]);
+            }
+
+            try {
+                new WorkWithUser().addEntity(objUser);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

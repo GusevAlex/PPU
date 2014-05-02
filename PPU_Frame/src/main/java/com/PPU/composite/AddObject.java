@@ -1,5 +1,6 @@
 package com.PPU.composite;
 
+import com.PPU.DB.workLogic.ClassInvokeCall;
 import com.PPU.DB.workLogic.WorkWithTable;
 import com.PPU.Logic.*;
 import com.PPU.composite.helper.*;
@@ -13,6 +14,7 @@ import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zul.Window;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -31,6 +33,8 @@ public class AddObject implements EventListener {
     private int countPage;
     private int numPage;
 
+    private ObjectListBox objectListBox;
+
     public WorkWithTable getWorker() {
         return worker;
     }
@@ -41,7 +45,8 @@ public class AddObject implements EventListener {
 
     private void initObject()
     {
-        obj = worker.getEmptyEntity();
+        if (obj == null)
+            obj = worker.getEmptyEntity();
 
         setParamForList(obj);
 
@@ -86,6 +91,22 @@ public class AddObject implements EventListener {
 
     public void setWorkerName(List<String> workerName) {
         this.workerName = workerName;
+    }
+
+    public Object getObj() {
+        return obj;
+    }
+
+    public void setObj(Object obj) {
+        this.obj = obj;
+    }
+
+    public ObjectListBox getObjectListBox() {
+        return objectListBox;
+    }
+
+    public void setObjectListBox(ObjectListBox objectListBox) {
+        this.objectListBox = objectListBox;
     }
 
     private void setParamForList(Object obj)
@@ -161,7 +182,7 @@ public class AddObject implements EventListener {
 
     @Override
     public void onEvent(Event evt) throws Exception{
-        nextObject();
+
     }
 
     public void nextClick(Object value)
@@ -177,5 +198,21 @@ public class AddObject implements EventListener {
     public void saveClick()
     {
         saveObject();
+
+        if (objectListBox != null)
+        {
+            Object [] listVal = objectListBox.getObjs();
+            Object [] resVal = new Object[listVal.length+1];
+
+
+            for (int i=0; i<listVal.length; i++)
+                resVal[i] = listVal[i];
+
+            resVal[listVal.length] = obj;
+
+            objectListBox.setObjs(resVal);
+
+            objectListBox.refresh();
+        }
     }
 }

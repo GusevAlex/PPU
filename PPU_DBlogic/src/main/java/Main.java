@@ -23,6 +23,8 @@ public class Main {
 //        WorkWithMZ work1 = new WorkWithMZ();
 //        MZ mz = (MZ) work1.getEntity(1);
 
+        String d = MD5.getMD5("1234");
+
         WorkWithPartnerMZ work = new WorkWithPartnerMZ();
 
         PartnersMZ part = (PartnersMZ) work.getEmptyEntity();

@@ -2,32 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85846bca-dd19-40bc-a07b-5dff919de4a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" />
+      <change type="DELETED" beforePath="D:\3_1_2\PPU\.qitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\3_1_2\PPU\PPU_Frame\src\main\java\com\PPU\vm\NewsfeedVM.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/DefaultParametrsServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/DefaultParametrsServiceMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/MZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/MZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Parametrs.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Parametrs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Program.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Program.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Project.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Project.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Providers.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Providers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeBudgetService.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeBudgetService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeMU.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeMU.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeServiceMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersComMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersComMan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersMunMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersMunMan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkCorrectionMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkCorrectionMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithComandProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithComandProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCommandMz.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCommandMz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsMz.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsMz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithParametrs.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithParametrs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerCommerc.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerCommerc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProgram.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProgram.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesProject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeBudgetService.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeBudgetService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul" afterPath="$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TableAnnot/FieldType.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TableAnnot/FieldType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ListCellContant.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ListCellContant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/Main.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" afterPath="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PPU.iml" afterPath="$PROJECT_DIR$/PPU.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul" afterPath="$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/authoriz/authoriz.zul" afterPath="$PROJECT_DIR$/web/pages/authoriz/authoriz.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/authoriz/register.zul" afterPath="$PROJECT_DIR$/web/pages/authoriz/register.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/include/titlebar.zul" afterPath="$PROJECT_DIR$/web/pages/include/titlebar.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PPU.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398962223015" ignored="false" />
-    <file path="/AddObjectWindow.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398959943343" ignored="false" />
+    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399002806734" ignored="false" />
+    <file path="/AddObjectWindow.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399022881078" ignored="false" />
     <file path="/DualObjectListBox.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398956120859" ignored="false" />
-    <file path="/ObjectListBox.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398944395015" ignored="false" />
-    <file path="/registrAuthoriz.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398936514531" ignored="false" />
-    <file path="/ObjectListBox.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398947336968" ignored="false" />
-    <file path="/fragment.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398962480812" ignored="false" />
+    <file path="/ObjectListBox.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399033395718" ignored="false" />
+    <file path="/registrAuthoriz.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399035126140" ignored="false" />
+    <file path="/ObjectListBox.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399021674906" ignored="false" />
+    <file path="/fragment.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399035025265" ignored="false" />
     <file path="/nullCompos.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398883762453" ignored="false" />
-    <file path="/DualObjectListBox.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398956426671" ignored="false" />
-    <file path="/a.dummy" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398960646578" ignored="false" />
-    <file path="/register.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398936472921" ignored="false" />
-    <file path="/AnnotHelper.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398926315515" ignored="false" />
-    <file path="/addObjectWindow.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398941556765" ignored="false" />
-    <file path="/FieldType.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398938155859" ignored="false" />
-    <file path="/AddObject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398938809359" ignored="false" />
+    <file path="/DualObjectListBox.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399007181468" ignored="false" />
+    <file path="/a.dummy" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399022225343" ignored="false" />
+    <file path="/register.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399025214968" ignored="false" />
+    <file path="/AnnotHelper.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399012670843" ignored="false" />
+    <file path="/addObjectWindow.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399005194546" ignored="false" />
+    <file path="/FieldType.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399003515140" ignored="false" />
+    <file path="/AddObject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399024648562" ignored="false" />
     <file path="/PartnersMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398940763046" ignored="false" />
     <file path="/ComandMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398946795375" ignored="false" />
     <file path="/WorkWithTable.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952681390" ignored="false" />
     <file path="/ResourcesProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398946920109" ignored="false" />
-    <file path="/Main.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398962281843" ignored="false" />
+    <file path="/Main.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399032375265" ignored="false" />
     <file path="/PartnerCommercialMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398949918953" ignored="false" />
-    <file path="/PpuDao.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952760906" ignored="false" />
+    <file path="/PpuDao.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399029787796" ignored="false" />
     <file path="/PpuDaoInterface.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952689796" ignored="false" />
     <file path="/MZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952618796" ignored="false" />
     <file path="/WorkWithProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952663234" ignored="false" />
@@ -49,6 +118,17 @@
     <file path="/WorkCorrectionMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952799578" ignored="false" />
     <file path="/WorkWithTypeBudgetService.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398952804140" ignored="false" />
     <file path="/ClassInvokeCall.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1398963146343" ignored="false" />
+    <file path="/buttonOpenList.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399011781968" ignored="false" />
+    <file path="/ListCellContant.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399011737265" ignored="false" />
+    <file path="/ViewObject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399020582203" ignored="false" />
+    <file path="/viewWindowObject.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399014588437" ignored="false" />
+    <file path="/viewObject.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399021163093" ignored="false" />
+    <file path="/viewWindowObjectDialog.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399021986562" ignored="false" />
+    <file path="/CallInterf.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399022843609" ignored="false" />
+    <file path="/UsersMunMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399028773750" ignored="false" />
+    <file path="/authoriz.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399031666875" ignored="false" />
+    <file path="/NewsfeedVM.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399034715468" ignored="false" />
+    <file path="/titlebar.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1399037617890" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +143,38 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" line="201" class="com.PPU.composite.AddObject" package="com.PPU.composite">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/Main.java" line="11" class="Main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -98,107 +209,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" line="155" class="com.PPU.composite.AddObject" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java" line="217" class="com.PPU.composite.AddObjectWindow" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java" line="138" class="com.PPU.composite.AddObjectWindow" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" line="138" class="com.PPU.composite.DualObjectListBox" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" line="127" class="com.PPU.composite.ObjectListBox" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" line="123" class="com.PPU.composite.DualObjectListBox" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" line="190" class="com.PPU.composite.DualObjectListBox" package="com.PPU.composite">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -208,75 +218,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DualObjectListBox.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java">
+      <file leaf-file-name="registrAuthoriz.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="0" selection-start="3287" selection-end="3287" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectListBox.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DualObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="76" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reviewListMzController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="12" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddObject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="0" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddObjectWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="59" selection-start="4607" selection-end="4607" vertical-scroll-proportion="0.43589744">
+            <state line="128" column="0" selection-start="3059" selection-end="3059" vertical-scroll-proportion="-4.12">
               <folding>
-                <element signature="e#3556#3564#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addObjectWindow.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul">
+      <file leaf-file-name="FakeData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/data/FakeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="83" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0">
+            <state line="19" column="43" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
+      <file leaf-file-name="index.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="67" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
+            <state line="65" column="12" selection-start="2118" selection-end="2163" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,7 +250,64 @@
       <file leaf-file-name="NewsfeedVM.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="82" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0">
+            <state line="173" column="62" selection-start="6589" selection-end="6589" vertical-scroll-proportion="-6.76">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="89" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectListBox.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="160" column="69" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#630#638#0" expanded="true" />
+                <element signature="e#709#726#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toolbar.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/include/toolbar.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="77" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/include/navigation.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="titlebar.zul" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="36" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.64915574">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/include/comment.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -309,22 +331,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ListCellContant.java" />
-        <option value="$PROJECT_DIR$/web/pages/composite/nullCompos.zul" />
-        <option value="$PROJECT_DIR$/web/pages/window/include/list.zul" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ModalDialog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/ViewWindow.java" />
-        <option value="$PROJECT_DIR$/web/pages/authoriz/register.zul" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" />
-        <option value="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/ViewObject.java" />
+        <option value="$PROJECT_DIR$/web/pages/window/viewWindowObjectDialog.zul" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" />
+        <option value="$PROJECT_DIR$/web/pages/composite/viewObject.zul" />
         <option value="$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul" />
-        <option value="$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/CallInterf.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java" />
+        <option value="$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java" />
+        <option value="$PROJECT_DIR$/web/pages/authoriz/register.zul" />
+        <option value="$PROJECT_DIR$/web/pages/authoriz/authoriz.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" />
+        <option value="$PROJECT_DIR$/web/pages/include/titlebar.zul" />
       </list>
     </option>
   </component>
@@ -397,6 +419,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -443,46 +466,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="window" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -505,29 +488,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="composite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="authoriz" />
+              <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,14 +545,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="windowControllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -616,36 +569,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -679,104 +602,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="funcControl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="composite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="composite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -789,7 +617,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="SearchEverywhereHistory" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PPU_DBlogic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="project.structure.side.proportion" value="0.3017341" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -899,6 +727,27 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="PPU" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -1481,18 +1330,20 @@
         </option>
       </method>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jetty Server.Jetty 7.6.14.v20131031" />
       <item index="1" class="java.lang.String" itemvalue="Jetty Server.Jetty 7.6.14.v201310311" />
       <item index="2" class="java.lang.String" itemvalue="Application.registrAuthoriz" />
       <item index="3" class="java.lang.String" itemvalue="Application.AnotationService" />
       <item index="4" class="java.lang.String" itemvalue="Application.ModalDialog" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.ModalDialog" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AnotationService" />
-        <item index="2" class="java.lang.String" itemvalue="Application.registrAuthoriz" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ModalDialog" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AnotationService" />
+        <item index="3" class="java.lang.String" itemvalue="Application.registrAuthoriz" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1527,21 +1378,23 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35919055" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29173693" sideWeight="0.4816984" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4407796" sideWeight="0.4032258" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928848" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24166666" sideWeight="0.529511" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.6408094" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24166666" sideWeight="0.6408094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21212122" sideWeight="0.46543002" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2816189" sideWeight="0.5183016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1551,8 +1404,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1657,105 +1508,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
+    <entry file="file://$PROJECT_DIR$/web/css/desktop.css.dsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="82" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zul/6.5.3.FL.20130508/zul-6.5.3.FL.20130508.jar!/org/zkoss/zul/Listbox.class">
+    <entry file="file://$PROJECT_DIR$/web/pages/authoriz/register.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="49" selection-start="6677" selection-end="6677" vertical-scroll-proportion="0.3484252" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+        <state line="42" column="127" selection-start="1803" selection-end="1803" vertical-scroll-proportion="-8.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
+    <entry file="file://$PROJECT_DIR$/web/pages/authoriz/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="82" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0">
+        <state line="38" column="68" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-6.16">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/metainfo/Property.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="17" selection-start="1812" selection-end="1812" vertical-scroll-proportion="0.36042404" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/common/zel/6.5.3.FL.20130508/zel-6.5.3.FL.20130508.jar!/org/zkoss/zel/BeanELResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="669" selection-end="669" vertical-scroll-proportion="0.36042404" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zul/6.5.3.FL.20130508/zul-6.5.3.FL.20130508.jar!/org/zkoss/zul/Window.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="16" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.35692307" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/UiEngineImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="17" selection-start="10420" selection-end="10420" vertical-scroll-proportion="0.36042404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="76" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul">
+    <entry file="file://$PROJECT_DIR$/web/pages/include/post.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="83" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="67" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="3287" selection-end="3287" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="0" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/EventProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="63" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.45084745" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="59" selection-start="4607" selection-end="4607" vertical-scroll-proportion="0.43589744">
+        <state line="160" column="69" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#3556#3564#0" expanded="true" />
+            <element signature="e#630#638#0" expanded="true" />
+            <element signature="e#709#726#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="89" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zkbind/6.5.3.FL.20130508/zkbind-6.5.3.FL.20130508.jar!/org/zkoss/bind/impl/ParamCall.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="16" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.35843372">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/data/FakeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="43" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/NewsfeedVM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="62" selection-start="6589" selection-end="6589" vertical-scroll-proportion="-6.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="0" selection-start="3059" selection-end="3059" vertical-scroll-proportion="-4.12">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="12" selection-start="2118" selection-end="2163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/toolbar.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="77" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/comment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/navigation.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="36" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.64915574">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1817,7 +1683,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.20000002" />
+                <option value="0.3017341" />
               </list>
             </option>
           </splitter-proportions>

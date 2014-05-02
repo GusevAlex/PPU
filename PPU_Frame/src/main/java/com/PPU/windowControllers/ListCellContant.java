@@ -9,6 +9,7 @@ import java.util.List;
 public class ListCellContant {
     private Integer colymnType = new Integer(0);
     private String methodList = new String();
+    private String workerName = new String();
 
     public Integer getColymnType() {
         return colymnType;
@@ -24,5 +25,13 @@ public class ListCellContant {
 
     public void setMethodList(String methodList) {
 		this.methodList = methodList;
+    }
+
+    public String getWorkerName() {
+        return workerName;
+    }
+
+    public void setWorkerName(String workerName) {
+        this.workerName = workerName;
     }
 }

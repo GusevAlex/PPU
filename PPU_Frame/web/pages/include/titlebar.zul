@@ -15,11 +15,21 @@
         <toolbarbutton label="/"/>
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
     </cell>
+    <div id="div1">
+        hjhgjgjgj
+    </div>
+
+    <popup id="status" width="300px">
+        <vlayout>
+            This user is online now !
+            <a label="Mail him/her"/>
+        </vlayout>
+    </popup>
 
     <cell align="right" valign="middle" width="100%">
         <div sclass="container">
-            <menubar width="160px">
-                <menu id="user" label="Васильев Евгений" content="#color=#999999" />
+            <menubar >
+                    <menu id="user" label="@load(vm.nameUser)" content="#status" />
             </menubar>
         </div>
     </cell>

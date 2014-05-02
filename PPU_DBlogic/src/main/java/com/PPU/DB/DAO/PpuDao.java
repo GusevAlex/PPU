@@ -662,6 +662,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -675,6 +676,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }

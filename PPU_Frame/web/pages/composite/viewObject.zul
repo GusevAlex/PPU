@@ -1,0 +1,17 @@
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
+
+<zk>
+        <zscript>
+            <![CDATA[
+                      import com.PPU.composite.*;
+                      ViewObject viewObj = self;
+                   ]]>
+        </zscript>
+
+    <zk>
+        <ObjectListBox objs="${viewObj.objs2}" id="listView1"
+                       mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+    </zk>
+</zk>

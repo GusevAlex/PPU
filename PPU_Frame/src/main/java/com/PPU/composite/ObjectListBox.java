@@ -2,6 +2,7 @@ package com.PPU.composite;
 import com.PPU.composite.helper.*;
 import com.PPU.windowControllers.*;
 import com.sun.istack.internal.NotNull;
+import org.hibernate.collection.PersistentSet;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
@@ -151,5 +152,28 @@ public class ObjectListBox extends Listbox implements IdSpace {
         }
 
         return result;
+    }
+
+    public static void showViewObject(Object obj)
+    {
+        ViewObject view = new ViewObject();
+        view.setId("viewWindowObject");
+        view.setObjs2(obj);
+        view.setLoad(true);
+
+        view.doModal();
+    }
+
+    public static void showViewObject(PersistentSet obj)
+    {
+        ViewObject view  = (ViewObject) Executions.createComponents(
+                "/pages/window/viewWindowObjectDialog.zul", null, null);
+
+        //ViewObject view = new ViewObject();
+        view.setId("viewWindowObject");
+        view.setObjs2(obj);
+        view.setLoad(true);
+
+        view.doModal();
     }
 }

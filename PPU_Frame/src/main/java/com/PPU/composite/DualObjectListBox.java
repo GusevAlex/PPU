@@ -92,6 +92,8 @@ public class DualObjectListBox extends Div implements IdSpace {
 
     public void setLeftList(Object[] leftList) {
         this.leftList = leftList;
+
+        leftListbox.setObjs(leftList);
     }
 
     public Object[] getRightList() {
@@ -109,6 +111,8 @@ public class DualObjectListBox extends Div implements IdSpace {
 
     public void setRightList(Object[] rightList) {
         this.rightList = rightList;
+
+        rightListbox.setObjs(rightList);
     }
 
     public int getRows() {
@@ -135,6 +139,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     @Listen("onClick = #chooseBtn")
     public void onChooseBtn()
     {
+        leftList = leftListbox.getObjs();
+        rightList = rightListbox.getObjs();
         //сначала добавляем
         for (Listitem selItem : leftListbox.getSelectedItems())
         {
@@ -187,6 +193,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     @Listen("onClick = #removeBtn")
     public void onRemoveBtn()
     {
+        leftList = leftListbox.getObjs();
+        rightList = rightListbox.getObjs();
         //сначала добавляем
         for (Listitem selItem : rightListbox.getSelectedItems())
         {

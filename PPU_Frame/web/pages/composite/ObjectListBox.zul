@@ -1,3 +1,7 @@
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
+
 <zk>
 
     <zscript>
@@ -9,7 +13,7 @@
 
     <listhead sizable="true" if="${listObj.loadHandler}">
         <zk forEach="${listObj.header}">
-            <listheader label="${each}" width="80px"></listheader>
+            <listheader label="${each}" width="${listObj.width}"></listheader>
         </zk>
     </listhead>
 
@@ -18,7 +22,7 @@
 
         <zscript>
         <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(each, "getId");
+                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, "getId");
                     Integer intBol = (Integer) objEach;
 
                     boolean bolLoad = (intBol == 0) ? false : true;
@@ -30,6 +34,7 @@
                 <zscript>
                     <![CDATA[
                     Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, each.methodList);
+
                     Integer valType = each.colymnType;
                     Integer type1 = 1;
                     Integer type2 = 2;
@@ -43,16 +48,30 @@
 
                     <zk case="${type2}">
                         <listcell >
-                            <button label="${objEach}" >
+                            <buttonOpenList label="Просмотр" obj="${objEach}" workerName="${each.workerName}" >
+                                <attribute name="onClick">   <![CDATA[
+                                 import com.PPU.DB.workLogic.*;
 
-                            </button>
+                                 AddObject add = new AddObject();
+                                 add.setObj(self.getObj().toArray());
+                                 add.setWorker((WorkWithTable) ClassInvokeCall.returnWorkerByName(self.getWorkerName()));
+
+                                 add.showWindow();
+                            ]]>  </attribute>
+                            </buttonOpenList>
+
 
                         </listcell>
                     </zk>
 
                     <zk case="${type3}">
                         <listcell >
-
+                            <buttonOpenList label="Все значения" obj="${objEach}" >
+                                <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                            ]]>  </attribute>
+                            </buttonOpenList>
                         </listcell>
                     </zk>
 

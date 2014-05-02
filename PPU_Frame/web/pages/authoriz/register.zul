@@ -13,8 +13,8 @@
     <style src="@load(vm.css)" />
 
         <div class="authorizPanel" >
-          <div style="padding-top: 10%;">
-            <panel id="panel" framable="true" width="800px" height="700px"
+          <div style="padding-top: 3%;">
+            <panel id="panel" framable="true" width="800px" height="1000px"
                    title="Регистрация"
                    maximizable="true" minimizable="true" border="normal"
                    collapsible="true" closable="true" style="margin: 0 auto;">
@@ -54,23 +54,6 @@
                         Выбор вида управления
                     </caption>
 
-                    <hlayout>
-                        <zscript>
-                            classes = new String[] {"College", "Graduate"};
-                            grades = new String[] {"Best", "Better"};
-
-                        </zscript>
-                       <zk forEach="${classes}">
-                           <custom-attributes master="${each}"/>
-
-                           <zk forEach="${grades}">
-                               <label value="${forEachStatus.index}"/>
-                               <label value="${each}"/>
-                           </zk>
-
-                       </zk>
-                    </hlayout>
-
                     <hbox spacing="15px">
                     <groupbox id="groupboxMZ" width="100%">
                         <caption width="100%">
@@ -88,7 +71,8 @@
                         <div>
 
 							<ObjectListBox objs="${objs}"
-										   id="listboxMun1" rows="8" load="true"/>
+										   id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" multiple="true" rows="8" load="true"/>
 
                             <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
                                 <!--<listhead>-->
@@ -192,6 +176,8 @@
                         </groupbox>
                     </hbox>
                 </groupbox>
+
+                <button id="registation" label="Регистрация" />
 
                 </panelchildren>
             </panel>

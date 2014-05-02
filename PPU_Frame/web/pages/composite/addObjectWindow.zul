@@ -16,6 +16,7 @@
 					Integer int2 = 2;
 					Integer int3 = 3;
 					Integer int4 = 4;
+                    Integer int5 = 5;
 
 					boolean visPrevis = (window.numPage == 0) ? true : false;
 					boolean visNext = (window.numPage == window.countPage-1) ? false : true;
@@ -40,15 +41,25 @@
 							<textbox id="text" rows="6" value="" width="370px;" tabindex="11" />
 						</zk>
 
-                        <zk case="${int2}">
+
+
+						<zk case="${int2}">
+							<ObjectListBox objs="${window.objs}"
+										   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+						</zk>
+
+                        <zk case="${int3}">
                             <dualObjectListBox worker="${window.workerName}"
                                                id="dualListBoxObject" load="true"/>
                         </zk>
 
-						<zk case="${int3}">
-							<ObjectListBox objs="${window.objs}"
-										   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
-						</zk>
+                        <zk case="${int4}">
+                            <doublespinner id="doubleSpinnerBox" value="0" hflex="1" step="0.01" width="200px" />
+                        </zk>
+
+                        <zk case="${int5}">
+                            <spinner value="0" tabindex="10" />
+                        </zk>
 
 					</zk>
 				</cell>

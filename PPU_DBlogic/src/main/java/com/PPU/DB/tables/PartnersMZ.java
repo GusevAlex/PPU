@@ -94,7 +94,7 @@ public class PartnersMZ {
     }
 
 
-    @FieldType(type = 2, worker="WorkWithCommandMz")
+    @FieldType(type = 3, worker="WorkWithCommandMz")
     @HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})

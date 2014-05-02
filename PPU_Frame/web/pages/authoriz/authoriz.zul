@@ -1,7 +1,7 @@
 <zk xmlns:c="client">
     <vlayout >
         <window id="loginWin" title="Вход в систему" width="300px" visible="true"
-                minimizable="false" onOK="loginCheck()" border='normal' apply="com.PPU.registrAuthoriz.registrAuthoriz">
+                minimizable="false" border='normal' apply="com.PPU.registrAuthoriz.registrAuthoriz">
             <attribute name="onMinimize"><![CDATA[
         if (self.isMinimized())
         Clients.evalJavaScript("loginSuccess(" + event.getLeft().replace("px","") + "," + event.getTop().replace("px","") + ")");
@@ -23,6 +23,11 @@
                 color: red;
                 font-style: italic;
                 }
+                td.loginRegCtl .z-label {
+                color: red;
+                font-style: italic;
+                text-align: right;
+                }
             </style>
             <grid sclass="loginGrid">
                 <columns>
@@ -30,10 +35,11 @@
                     <column hflex="2" />
                 </columns>
                 <rows>
-                    <row>User Name : <textbox id="name" value="zk" c:onFocus="this.select()" /></row>
-                    <row>Password : <textbox id="pwd" type="password" c:onFocus="this.select()"/></row>
+                    <row>Логин : <textbox id="name" value="zk" c:onFocus="this.select()" /></row>
+                    <row>Пароль : <textbox id="pwd" type="password" /></row>
+                    <row><cell sclass="loginRegCtl" colspan="2"><a href="/pages/authoriz/register.zul" >Регистрация</a></cell></row>
                     <row><cell sclass="loginCtl" colspan="2"><vlayout>
-                        <button id="loginOK" label="Submit" width="100px"/>
+                        <button id="loginOK" label="Войти" width="100px"/>
                         <label id="mesg" />
                     </vlayout></cell></row>
                 </rows>

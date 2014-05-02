@@ -32,6 +32,7 @@ public class UsersMunMan {
     private String login;
     private String hash;
     private String name;
+    private String email;
     private int idPartnerMZ;
     private PartnersMZ partnerMZ;
 
@@ -82,6 +83,15 @@ public class UsersMunMan {
 
     public void setIdPartnerMZ(int idPartnerMZ) {
         this.idPartnerMZ = idPartnerMZ;
+    }
+
+    @Column(name="email")
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
