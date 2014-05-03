@@ -1,4 +1,7 @@
 import com.PPU.DB.security.MD5;
+import com.PPU.DB.tables.ProgramMZ;
+import com.PPU.DB.workLogic.WorkWithProgramCommerc;
+import com.PPU.DB.workLogic.WorkWithProgramMZ;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,7 +12,13 @@ import com.PPU.DB.security.MD5;
  */
 public class Main {
     public static void main(String[] args) {
-        String s = MD5.getMD5("mypassword2103");
-        s = MD5.getMD5("1234");
+        WorkWithProgramMZ work = new WorkWithProgramMZ();
+
+        Object pm = work.getEntity(1);
+
+        WorkWithProgramCommerc work2 = new WorkWithProgramCommerc();
+        pm = work2.getEntity(1);
+
+        int y = 0;
     }
 }

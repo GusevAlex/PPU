@@ -72,7 +72,7 @@ public class LimitsMZ {
         this.idMZ = idMZ;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
         return MZ;

@@ -53,7 +53,7 @@ public class TypeServiceMZ {
         this.name = name;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "typeServiceMZ")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
         return MZ;
@@ -63,7 +63,7 @@ public class TypeServiceMZ {
         this.MZ = MZ;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "typeServiceMZ")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<DefaultParametrsServiceMZ> getDefaultParametrsServiceMZs() {
         return defaultParametrsServiceMZs;

@@ -71,7 +71,7 @@ public class LimitsProject {
         this.idProject = idProject;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
         return project;

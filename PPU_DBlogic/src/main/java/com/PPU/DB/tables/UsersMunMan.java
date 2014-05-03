@@ -94,7 +94,7 @@ public class UsersMunMan {
         this.email = email;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnerMZ() {
         return partnerMZ;

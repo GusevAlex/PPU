@@ -95,7 +95,7 @@ public class CorrectionsMZ {
         ValueAfter = valueAfter;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
         return MZ;
@@ -105,7 +105,7 @@ public class CorrectionsMZ {
         this.MZ = MZ;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {
         return parametr;

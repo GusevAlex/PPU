@@ -11,6 +11,7 @@ import org.zkoss.zul.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Alex on 27.04.2014.
@@ -156,7 +157,9 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public static void showViewObject(Object obj)
     {
-        ViewObject view = new ViewObject();
+        ViewObject view  = (ViewObject) Executions.createComponents(
+                "/pages/window/viewWindowObjectDialog.zul", null, null);
+
         view.setId("viewWindowObject");
         view.setObjs2(obj);
         view.setLoad(true);
@@ -165,6 +168,19 @@ public class ObjectListBox extends Listbox implements IdSpace {
     }
 
     public static void showViewObject(PersistentSet obj)
+    {
+        ViewObject view  = (ViewObject) Executions.createComponents(
+                "/pages/window/viewWindowObjectDialog.zul", null, null);
+
+        //ViewObject view = new ViewObject();
+        view.setId("viewWindowObject");
+        view.setObjs2(obj);
+        view.setLoad(true);
+
+        view.doModal();
+    }
+
+    public static void showViewObject(Set obj)
     {
         ViewObject view  = (ViewObject) Executions.createComponents(
                 "/pages/window/viewWindowObjectDialog.zul", null, null);

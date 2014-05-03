@@ -1,10 +1,12 @@
 package com.PPU.funcControl;
 
 import com.PPU.DB.tables.MZ;
-import com.PPU.DB.workLogic.ClassInvokeCall;
-import com.PPU.DB.workLogic.WorkWithMZ;
-import com.PPU.DB.workLogic.WorkWithTable;
+import com.PPU.DB.tables.UsersComMan;
+import com.PPU.DB.tables.UsersMunMan;
+import com.PPU.DB.workLogic.*;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Session;
+import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zul.ListModelList;
 
@@ -32,6 +34,7 @@ public class reviewListMzController extends SelectorComposer<Component> {
     
     public ListModelList<MZ> getMzs()
     {
+
         ListModelList n = new ListModelList<MZ>(mzs);
         return new ListModelList<MZ>(mzs);
     }
@@ -39,6 +42,7 @@ public class reviewListMzController extends SelectorComposer<Component> {
     public void setMzs(List mzs1)
     {
         this.mzs = mzs1;
+
     }
 
 }

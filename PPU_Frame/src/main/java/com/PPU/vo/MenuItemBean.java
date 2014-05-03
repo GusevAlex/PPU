@@ -4,15 +4,17 @@ public class MenuItemBean {
 	private String icon;
 	private String title;
 	private int	   count;
+    private String adressPage;
 	
 	public MenuItemBean() {
 		
 	}
 	
-	public MenuItemBean(String icon, String title, int count) {
+	public MenuItemBean(String icon, String title, int count, String adressPage) {
 		this.icon = icon;
 		this.title = title;
 		this.count = count;
+        this.adressPage = adressPage;
 	}
 	
 	public String getIcon() {
@@ -38,4 +40,12 @@ public class MenuItemBean {
 	public void setCount(int count) {
 		this.count = (count < 0) ? 0 : count;
 	}
+
+    public String getAdressPage() {
+        return adressPage;
+    }
+
+    public void setAdressPage(String adressPage) {
+        this.adressPage = adressPage;
+    }
 }

@@ -1,7 +1,6 @@
 package com.PPU.DB.DAO;
 
 import com.PPU.DB.tables.*;
-import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,7 +34,8 @@ public class PpuDao implements PpuDaoInterface {
     private static String PARAMETRS_TABLE = "Parametrs";
     private static String PARTNERS_MZ_TABLE = "PartnersMZ";
     private static String PARTNERS_PROJECT_TABLE = "PartnerCommercialMan";
-    private static String PROGRAM_TABLE = "Program";
+    private static String PROGRAM_MZ_TABLE = "ProgramMZ";
+    private static String PROGRAM_COMMERC_TABLE = "ProgramCommerc";
     private static String PROJECT_TABLE = "Project";
     private static String PROVIDERS_TABLE = "Providers";
     private static String RESOURCES_MZ_TABLE = "ResourcesMZ";
@@ -204,15 +202,28 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
-    public Program getProgram(int id) {
+    public ProgramMZ getProgramMZ(int id) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            return (Program) session.get(Program.class, id);
+            return (ProgramMZ) session.get(ProgramMZ.class, id);
         } catch (Exception e)
         {
             System.out.println(e);
-            return new Program();
+            return new ProgramMZ();
+        }
+    }
+
+    @Override
+    public ProgramCommerc getProgramCommerc(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (ProgramCommerc) session.get(ProgramCommerc.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new ProgramCommerc();
         }
     }
 
@@ -368,6 +379,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -382,6 +394,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -396,6 +409,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -410,6 +424,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -424,6 +439,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -438,6 +454,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -452,6 +469,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -466,6 +484,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -480,6 +499,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -494,6 +514,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -508,20 +529,36 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean saveProgram(Program program) {
+    public boolean saveProgramMZ(ProgramMZ programMZ) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.save(program);
+            session.save(programMZ);
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean saveProgramCommerc(ProgramCommerc programCommerc) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.save(programCommerc);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
             return false;
         }
     }
@@ -536,6 +573,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -550,6 +588,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -564,6 +603,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -578,6 +618,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -592,6 +633,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -606,6 +648,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -620,6 +663,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -634,6 +678,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -648,6 +693,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -691,6 +737,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -705,6 +752,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -719,6 +767,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -733,6 +782,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -747,6 +797,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -761,6 +812,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -775,6 +827,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -789,6 +842,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -803,6 +857,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -817,6 +872,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -831,20 +887,36 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean deleteProgram(Program program) {
+    public boolean deleteProgramMZ(ProgramMZ programMZ) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.delete(program);
+            session.delete(programMZ);
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean deleteProgramCommerc(ProgramCommerc programCommerc) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(programCommerc);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
             return false;
         }
     }
@@ -859,6 +931,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -873,6 +946,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -887,6 +961,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -901,6 +976,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -915,6 +991,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -929,6 +1006,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -943,6 +1021,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -957,6 +1036,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -971,6 +1051,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -985,6 +1066,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -999,6 +1081,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1013,6 +1096,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1027,6 +1111,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1041,6 +1126,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1055,6 +1141,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1069,6 +1156,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1083,6 +1171,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1097,6 +1186,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1111,6 +1201,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1125,6 +1216,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1139,6 +1231,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1153,20 +1246,36 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-    public boolean updateProgram(Program program) {
+    public boolean updateProgramMZ(ProgramMZ programMZ) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-            session.update(program);
+            session.update(programMZ);
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updateProgramCommerc(ProgramCommerc programCommerc) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(programCommerc);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
             return false;
         }
     }
@@ -1181,6 +1290,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1195,6 +1305,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1209,6 +1320,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1223,6 +1335,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1237,6 +1350,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1251,6 +1365,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1265,6 +1380,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1279,6 +1395,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1293,6 +1410,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1307,6 +1425,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1321,6 +1440,7 @@ public class PpuDao implements PpuDaoInterface {
             return true;
         } catch (Exception e)
         {
+            System.out.println(e);
             return false;
         }
     }
@@ -1357,6 +1477,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1370,6 +1491,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+COMADN_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1383,6 +1505,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+COMAND_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1396,6 +1519,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+CORRECTION_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1409,6 +1533,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+CORRECTION_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1422,6 +1547,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+DEFAULT_PARAMETRS_SERVICE_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1435,6 +1561,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+LIMITS_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1448,6 +1575,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+LIMITS_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1461,6 +1589,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+PARAMETRS_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1474,6 +1603,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+PARTNERS_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1487,19 +1617,35 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+PARTNERS_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
 
     @Override
-    public List<Program> findProgram(String fields, String fieldValue) {
+    public List<ProgramMZ> findProgramMZ(String fields, String fieldValue) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
-            return session.createQuery("from "+PROGRAM_TABLE + s).list();
+            return session.createQuery("from "+PROGRAM_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<ProgramCommerc> findProgramCommerc(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery("from "+PROGRAM_COMMERC_TABLE + s).list();
+        } catch (Exception e)
+        {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1513,6 +1659,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1526,6 +1673,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+PROVIDERS_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1539,6 +1687,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+RESOURCES_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1552,6 +1701,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+RESOURCES_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1565,6 +1715,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+TYPE_BUDGET_SERVICE_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1578,6 +1729,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+TYPE_MU_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1591,6 +1743,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+TYPE_SERVICE_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1604,6 +1757,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+VALUES_PARAMETR_FOR_MZ_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1617,6 +1771,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+VALUES_PARAMETR_FOR_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1630,6 +1785,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+USERS_MUN_MAN_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }
@@ -1643,6 +1799,7 @@ public class PpuDao implements PpuDaoInterface {
             return session.createQuery("from "+USERS_COM_MAN_TABLE + s).list();
         } catch (Exception e)
         {
+            System.out.println(e);
             return Collections.emptyList();
         }
     }

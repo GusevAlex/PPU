@@ -60,7 +60,7 @@ public class ComandProject {
         this.idPartnerProject = idPartnerProject;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_project", insertable = false, updatable = false)
     public PartnersMZ getPartnerProject() {
         return partnerProject;
@@ -70,7 +70,7 @@ public class ComandProject {
         this.partnerProject = partnerProject;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
         return project;

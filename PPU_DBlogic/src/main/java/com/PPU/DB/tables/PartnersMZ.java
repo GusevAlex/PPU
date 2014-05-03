@@ -38,6 +38,7 @@ public class PartnersMZ {
     private int typeMU;
     private Set<ComandMZ> ComandMZ = new LinkedHashSet<ComandMZ>();
     private Set<UsersMunMan> user;
+    private Set<ProgramMZ> programMZs = new LinkedHashSet<ProgramMZ>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -115,6 +116,16 @@ public class PartnersMZ {
 
     public void setUser(Set<UsersMunMan> user) {
         this.user = user;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnersMZ")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<ProgramMZ> getProgramMZs() {
+        return programMZs;
+    }
+
+    public void setProgramMZs(Set<ProgramMZ> programMZs) {
+        this.programMZs = programMZs;
     }
 
     @Override

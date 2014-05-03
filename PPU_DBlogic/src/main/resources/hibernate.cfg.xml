@@ -25,7 +25,8 @@
         <mapping class="com.PPU.DB.tables.Parametrs" />
         <mapping class="com.PPU.DB.tables.PartnerCommercialMan" />
         <mapping class="com.PPU.DB.tables.PartnersMZ" />
-        <mapping class="com.PPU.DB.tables.Program" />
+        <mapping class="com.PPU.DB.tables.ProgramMZ" />
+        <mapping class="com.PPU.DB.tables.ProgramCommerc" />
         <mapping class="com.PPU.DB.tables.Project" />
         <mapping class="com.PPU.DB.tables.UsersMunMan" />
         <mapping class="com.PPU.DB.tables.UsersComMan" />

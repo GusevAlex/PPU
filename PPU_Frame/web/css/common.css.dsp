@@ -554,3 +554,8 @@ table.z-caption
     width: 100%;
     height: 100%;
 }
+
+div > #count
+{
+    float: right;
+}

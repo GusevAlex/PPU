@@ -97,7 +97,7 @@ public class UsersComMan {
         this.idPartenerCommercial = idPartenerCommercial;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_commercial", insertable = false, updatable = false)
     public PartnerCommercialMan getPartnerProject() {
         return partnerProject;

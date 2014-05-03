@@ -33,7 +33,7 @@
     <window
             id="mainWindow"
             apply="org.zkoss.bind.BindComposer"
-            viewModel="@id('vm') @init('com.PPU.vm.NewsfeedVM')"
+            viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
             onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
             height="100%" width="100%" >
 

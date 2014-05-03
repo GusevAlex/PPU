@@ -5,6 +5,10 @@
 <?component
         name="dualObjectListBox"
         class="com.PPU.composite.DualObjectListBox" ?>
+
+<?component
+        name="FilterAndSortedObjectList"
+        class="com.PPU.composite.FilterAndSortedObjectList" ?>
 <zk>
 <div class="registerContentDiv" apply="org.zkoss.bind.BindComposer"
         viewModel="@id('vm') @init('com.PPU.registrAuthoriz.registrAuthoriz')">
@@ -70,9 +74,15 @@
                         </zscript>
                         <div>
 
-							<ObjectListBox objs="${objs}"
-										   id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
-                                           vflex="true" multiple="true" rows="8" load="true"/>
+							<!--<ObjectListBox objs="${objs}"-->
+										   <!--id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"-->
+                                           <!--vflex="true" multiple="true" rows="8" load="true"/>-->
+
+
+
+                            <FilterAndSortedObjectList objs="${objs}"
+                                           id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" load="true"/>
 
                             <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
                                 <!--<listhead>-->

@@ -3,8 +3,6 @@ package com.PPU.DB.DAO;
 import com.PPU.DB.tables.*;
 
 import java.util.List;
-import java.util.Set;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +24,8 @@ public interface PpuDaoInterface {
     public Parametrs getParametrs(int id);
     public PartnersMZ getPartnersMz(int id);
     public PartnerCommercialMan getPartnerCommercialMan(int id);
-    public Program getProgram(int id);
+    public ProgramMZ getProgramMZ(int id);
+    public ProgramCommerc getProgramCommerc(int id);
     public Project getProject(int id);
     public Providers getProviders(int id);
     public ResourcesMZ getResourcesMz(int id);
@@ -50,7 +49,8 @@ public interface PpuDaoInterface {
     public boolean saveParametrs(Parametrs parametrs);
     public boolean savePartnersMz(PartnersMZ partnersMZ);
     public boolean savePartnerCommercialMan(PartnerCommercialMan partnerCommercialMan);
-    public boolean saveProgram(Program program);
+    public boolean saveProgramMZ(ProgramMZ programMZ);
+    public boolean saveProgramCommerc(ProgramCommerc programCommerc);
     public boolean saveProject(Project project);
     public boolean saveProviders(Providers providers);
     public boolean saveResourcesMz(ResourcesMZ resourcesMZ);
@@ -74,7 +74,8 @@ public interface PpuDaoInterface {
     public boolean deleteParametrs(Parametrs parametrs);
     public boolean deletePartnersMz(PartnersMZ partnersMZ);
     public boolean deletePartnerCommercialMan(PartnerCommercialMan partnerCommercialMan);
-    public boolean deleteProgram(Program program);
+    public boolean deleteProgramMZ(ProgramMZ programMZ);
+    public boolean deleteProgramCommerc(ProgramCommerc programCommerc);
     public boolean deleteProject(Project project);
     public boolean deleteProviders(Providers providers);
     public boolean deleteResourcesMz(ResourcesMZ resourcesMZ);
@@ -98,7 +99,8 @@ public interface PpuDaoInterface {
     public boolean updateParametrs(Parametrs parametrs);
     public boolean updatePartnersMz(PartnersMZ partnersMZ);
     public boolean updatePartnerCommercialMan(PartnerCommercialMan partnerCommercialMan);
-    public boolean updateProgram(Program program);
+    public boolean updateProgramMZ(ProgramMZ programMZ);
+    public boolean updateProgramCommerc(ProgramCommerc programCommerc);
     public boolean updateProject(Project project);
     public boolean updateProviders(Providers providers);
     public boolean updateResourcesMz(ResourcesMZ resourcesMZ);
@@ -122,7 +124,8 @@ public interface PpuDaoInterface {
     public List<Parametrs> findParametrs(String fields, String fieldValue);
     public List<PartnersMZ> findPartnersMz(String fields, String fieldValue);
     public List<PartnerCommercialMan> findPartnerCommercialMan(String fields, String fieldValue);
-    public List<Program> findProgram(String fields, String fieldValue);
+    public List<ProgramMZ> findProgramMZ(String fields, String fieldValue);
+    public List<ProgramCommerc> findProgramCommerc(String fields, String fieldValue);
     public List<Project> findProject( String fields, String fieldValue);
     public List<Providers> findProviders(String fields, String fieldValue);
     public List<ResourcesMZ> findResourcesMz(String fields, String fieldValue);

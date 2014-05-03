@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" charset="UTF-8" />

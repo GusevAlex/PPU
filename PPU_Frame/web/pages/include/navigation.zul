@@ -33,7 +33,7 @@
 					ca:data-scrollable="false"
 					width="260px"
 					model="${menuGroup.menuItems}"
-					onSelect='@command("showMessage", pos="end_center")'>
+					onSelect='@command("redirectToPage")'>
 					<listhead sclass="menu-category">
 						<listheader label="${menuGroup.groupName}" />
 					</listhead>
@@ -41,7 +41,8 @@
 						<MenuItem
 							icon="${each.icon}"
 							title="${each.title}"
-							count="${each.count}" />
+							count="${each.count}"
+                            adressPage="${each.adressPage}" />
 					</template>
 				</listbox>
 			</template>

@@ -1,0 +1,91 @@
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
+
+<?component
+        name="myListItem"
+        class="com.PPU.composite.ListItem" ?>
+
+<zk>
+
+    <zscript>
+        <![CDATA[
+                  import com.PPU.composite.*;
+                  FilterAndSortedObjectList listObj = self;
+               ]]>
+    </zscript>
+
+    <columns  menupopup="auto" sizable="true" if="${listObj.loadHandler}">
+        <zk forEach="${listObj.header}">
+            <column sort="auto(address)"  label="${each}" width="${listObj.width}"></column>
+        </zk>
+    </columns>
+
+    <template name="model">
+        <custom-attributes objs="${each}"/>
+
+        <zscript>
+            <![CDATA[
+                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, "getId");
+                    Integer intBol = (Integer) objEach;
+
+                    boolean bolLoad = (intBol == 0) ? false : true;
+                ]]>
+        </zscript>
+
+        <row if="${bolLoad}" >
+            <zk forEach="${listObj.listCellContant}">
+                <custom-attributes each2="${each}"/>
+                <zscript>
+                    <![CDATA[
+                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, each2.methodList);
+
+                    Integer valType = each2.colymnType;
+                    Integer type1 = 1;
+                    Integer type2 = 2;
+                    Integer type3 = 3;
+                ]]>
+                </zscript>
+                <zk switch="${valType}">
+                    <zk case="${type1}">
+                        <label value="${objEach}"/>
+                    </zk>
+
+                    <zk case="${type2}">
+                        <hlayout >
+                            <buttonOpenList label="Просмотр" obj="${objEach}" workerName="${each2.workerName}" >
+                                <attribute name="onClick">   <![CDATA[
+                                 import com.PPU.DB.workLogic.*;
+
+                                 AddObject add = new AddObject();
+                                 add.setObj(self.getObj().toArray());
+                                 add.setWorker((WorkWithTable) ClassInvokeCall.returnWorkerByName(self.getWorkerName()));
+
+                                 add.showWindow();
+                            ]]>  </attribute>
+                            </buttonOpenList>
+
+
+                        </hlayout>
+                    </zk>
+
+                    <zk case="${type3}">
+                        <hlayout >
+                            <buttonOpenList label="Все значения" obj="${objEach}" >
+                                <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                            ]]>  </attribute>
+                            </buttonOpenList>
+                        </hlayout>
+                    </zk>
+
+                </zk>
+
+            </zk>
+
+        </row>
+
+    </template>
+    <!--</listbox>-->
+</zk>

@@ -61,7 +61,7 @@ public class ResourcesProject {
         this.idProviderResources = idProviderResources;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
         return project;
@@ -71,7 +71,7 @@ public class ResourcesProject {
         this.project = project;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_provider_resources", insertable = false, updatable = false)
     public Providers getProviders() {
         return providers;

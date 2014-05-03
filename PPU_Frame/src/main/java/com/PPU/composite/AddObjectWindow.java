@@ -3,6 +3,7 @@ package com.PPU.composite;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import com.PPU.composite.helper.*;
 import com.PPU.windowControllers.*;
+import org.hibernate.collection.PersistentSet;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.IdSpace;
 import org.zkoss.zk.ui.select.Selectors;
@@ -212,7 +213,13 @@ public class AddObjectWindow extends Window implements IdSpace {
             case 3:
                 if (dualListBoxObject != null)
                 {
-                    LinkedHashSet set2 = (LinkedHashSet) ClassInvokeCall.callMethod(obj,methodName);
+                    Object objSet = ClassInvokeCall.callMethod(obj,methodName);
+                    LinkedHashSet set2 = new LinkedHashSet();
+
+                    if (objSet instanceof PersistentSet)
+                        set2 = new LinkedHashSet(Arrays.asList(((PersistentSet)ClassInvokeCall.callMethod(obj,methodName)).toArray()));
+                    else
+                        set2 = (LinkedHashSet) ClassInvokeCall.callMethod(obj,methodName);
 
                     List list1 = new ArrayList();
 

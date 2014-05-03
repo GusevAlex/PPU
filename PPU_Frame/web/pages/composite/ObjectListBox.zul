@@ -2,6 +2,10 @@
         name="buttonOpenList"
         class="com.PPU.composite.ButtonOpenList" ?>
 
+<?component
+        name="myListItem"
+        class="com.PPU.composite.ListItem" ?>
+
 <zk>
 
     <zscript>
@@ -29,7 +33,7 @@
                 ]]>
         </zscript>
 
-        <listitem if="${bolLoad}">
+        <myListItem if="${bolLoad}" idObj="${intBol}" >
             <zk forEach="${listObj.listCellContant}">
                 <zscript>
                     <![CDATA[
@@ -79,7 +83,7 @@
 
             </zk>
 
-        </listitem>
+        </myListItem>
 
     </zk>
 <!--</listbox>-->

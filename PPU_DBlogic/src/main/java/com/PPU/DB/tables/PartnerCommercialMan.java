@@ -36,6 +36,7 @@ public class PartnerCommercialMan {
     private String description;
     private Set<ComandProject> comandProject = new LinkedHashSet<ComandProject>();
     private Set<UsersComMan> user;
+    private Set<ProgramCommerc> programCommercs = new LinkedHashSet<ProgramCommerc>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -76,7 +77,7 @@ public class PartnerCommercialMan {
         this.description = description;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerProject")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
         return comandProject;
@@ -86,7 +87,7 @@ public class PartnerCommercialMan {
         comandProject = comandProject;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partnerProject")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersComMan> getUser() {
         return user;
@@ -95,6 +96,17 @@ public class PartnerCommercialMan {
     public void setUser(Set<UsersComMan> user) {
         this.user = user;
     }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerCommercialMan")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<ProgramCommerc> getProgramCommercs() {
+        return programCommercs;
+    }
+
+    public void setProgramCommercs(Set<ProgramCommerc> programCommercs) {
+        this.programCommercs = programCommercs;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof PartnerCommercialMan)) return false;

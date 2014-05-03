@@ -60,7 +60,7 @@ public class DefaultParametrsServiceMZ {
         this.idParametr = idParametr;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_service_mz", insertable = false, updatable = false)
     public TypeServiceMZ getTypeServiceMZ() {
         return typeServiceMZ;

@@ -1,0 +1,82 @@
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
+
+<?component
+        name="myListItem"
+        class="com.PPU.composite.ListItem" ?>
+
+<zk>
+    <zscript>
+        <![CDATA[
+                  import com.PPU.composite.*;
+                  GridReviewProgramMz gridMZ = self;
+               ]]>
+    </zscript>
+
+    <grid  id="gridProgramMz" mold="paging" pageSize="10">
+
+    <columns  menupopup="auto" sizable="true">
+        <column label="Просмотр" width="${gridMZ.width}"></column>
+        <column label="Изменить" width="${gridMZ.width}"></column>
+        <column label="Просмотр всех муниципальных заданий" width="${gridMZ.width}"></column>
+        <column sort="auto(name)"  label="Название" width="${gridMZ.width}"></column>
+        <column sort="auto(target)"  label="Цель" width="${gridMZ.width}"></column>
+        <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
+        <column label="Заказчик" width="${gridMZ.width}"></column>
+    </columns>
+
+    <template name="model">
+        <custom-attributes objs="${each}"/>
+
+        <zscript>
+            <![CDATA[
+                    String name = objs.getName();
+                    String target = objs.getTarget();
+                    String description = objs.getDescription();
+                    Object partnersMZ = (Object) objs.getPartnersMZ();
+                ]]>
+        </zscript>
+
+        <row >
+            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+                <attribute name="onClick">   <![CDATA[
+                    AddObject add = new AddObject();
+
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setObj(self.getObj());
+                    add.showWindow();
+           ]]>  </attribute>
+                    </buttonOpenList>
+            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+                <attribute name="onClick">   <![CDATA[
+                    AddObject add = new AddObject();
+
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setObj(self.getObj());
+                    add.showWindow();
+           ]]>  </attribute>
+            </buttonOpenList>
+            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+                <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/pagesMZ/viewMz.zul");
+           ]]>  </attribute>
+            </buttonOpenList>
+            <label value="${name}" />
+            <label value="${target}" />
+            <label value="${description}" />
+            <buttonOpenList label="Все значения" obj="${partnersMZ}" >
+                <attribute name="onClick">   <![CDATA[
+                    AddObject add = new AddObject();
+
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setObj(self.getObj());
+                    add.showWindow();
+                            ]]>  </attribute>
+            </buttonOpenList>
+        </row>
+
+    </template>
+    <!--</listbox>-->
+    </grid>
+</zk>

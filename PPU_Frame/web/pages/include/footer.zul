@@ -1,0 +1,27 @@
+</vlayout>
+
+<popup
+        id="feedbackPopup"
+        width="250px"
+        height="50%"
+        sclass="feedback"
+        onOpen='@command("hideModal")' >
+    <include src="/pages/include/comment.zul"/>
+</popup>
+        </div>
+        <!--  -->
+        </center>
+        <!--  -->
+
+        <!-- Contact Panel -->
+
+        <!--  -->
+        </borderlayout>
+        <!--  -->
+        </center>
+        <!--  -->
+        </borderlayout>
+        <!--  -->
+        </window>
+        <!--  -->
+        </zk>

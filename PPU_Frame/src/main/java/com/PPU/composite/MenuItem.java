@@ -17,6 +17,8 @@ public class MenuItem extends Listitem implements IdSpace {
 	private Label title;
 	@Wire
 	private Label count;
+
+    private String adressPage;
 	
 	public MenuItem() {
 		Executions.createComponents("/pages/composite/MenuItem.zul", this, null);
@@ -42,8 +44,16 @@ public class MenuItem extends Listitem implements IdSpace {
 	public String getCount() {
 		return count.getValue();
 	}
-	
-	public void setCount(String count) {
+
+    public String getAdressPage() {
+        return adressPage;
+    }
+
+    public void setAdressPage(String adressPage) {
+        this.adressPage = adressPage;
+    }
+
+    public void setCount(String count) {
 		int value = 0;
 		try {
 			value = Integer.parseInt(count);
