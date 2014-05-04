@@ -93,7 +93,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     public void setLeftList(Object[] leftList) {
         this.leftList = leftList;
 
-        leftListbox.setObjs(leftList);
+        if (leftListbox != null)
+            leftListbox.setObjs(leftList);
     }
 
     public Object[] getRightList() {
@@ -112,7 +113,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     public void setRightList(Object[] rightList) {
         this.rightList = rightList;
 
-        rightListbox.setObjs(rightList);
+        if (rightListbox != null)
+            rightListbox.setObjs(rightList);
     }
 
     public int getRows() {
@@ -123,17 +125,97 @@ public class DualObjectListBox extends Div implements IdSpace {
         this.rows = rows;
     }
 
+    public void reloadList(Object [] list)
+    {
+        if (list != null && list.length != 0)
+        {
+            int id = (Integer) ClassInvokeCall.callMethod(list[0],"getId");
+
+            if (id == 0)
+            {
+                List list1 = Arrays.asList(list);
+
+                list1.remove(0);
+                list = list1.toArray();
+            }
+            else
+            {
+                Object obj = new Object();
+                try {
+                    obj = list[0].getClass().newInstance();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+
+                Object [] objs = new Object[list.length+1];
+
+                objs[0] = obj;
+
+                for (int i=0; i<list.length; i++)
+                    objs[i+1] = list[i];
+
+                list = objs;
+            }
+        }
+        else
+        {
+            try
+            {
+            Object [] objs = new Object [1];
+
+            if (leftList!=null && leftList.length!=0)
+                objs[0] = leftList[0].getClass().newInstance();
+             else if (rightList!=null && rightList.length!=0)
+                objs[0] = rightList[0].getClass().newInstance();
+
+                if (leftList == null || leftList.length == 0)
+                    leftList = objs;
+                else
+                    rightList = objs;
+            }
+            catch (Exception e)
+            {
+                System.out.println(e);
+            }
+        }
+    }
+
+    public void compareAndDeleteInList()
+    {
+        reloadList(leftList);
+        reloadList(rightList);
+
+        List list = new ArrayList();
+
+        for (int i=0; i<leftList.length; i++)
+        {
+            boolean isFind = false;
+
+            for (int j=0; j<rightList.length; j++)
+                if (leftList[i].equals(rightList[j]))
+                {
+                    isFind = true;
+                }
+
+            if (!isFind)
+                list.add(leftList[i]);
+        }
+
+        leftList = list.toArray();
+
+        reloadList(leftList);
+    }
+
     private void loadDataInList()
     {
         WorkWithTable workTable = (WorkWithTable) ClassInvokeCall.returnWorkerByName(worker);
 
         List leftList1 = workTable.findAndGetAllRow("","");
-
-        List rightList1  = new ArrayList();
-        rightList1.add(workTable.getEmptyEntity());
-
         leftList = leftList1.toArray();
-        rightList = rightList1.toArray();
+
+        compareAndDeleteInList();
     }
 
     @Listen("onClick = #chooseBtn")

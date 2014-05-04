@@ -158,7 +158,7 @@
 
                                                     <row>
                                                         <dualObjectListBox worker="WorkWithCommandMz"
-                                                                           id="comandMZ"  load="true" rightList="${comandMZ}"/>
+                                                                           id="comandMZ"  rightList="${comandMZ}" load="true" />
 
 
                                                     </row>
