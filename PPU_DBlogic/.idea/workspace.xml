@@ -4,116 +4,6 @@
     <list default="true" id="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" name="Default" comment="" />
     <ignored path="PPU_DBlogic.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/WorkWithValuesParametrForMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1398967894000" ignored="false" />
-    <file path="/Dummy.txt" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399181899421" ignored="false" />
-    <file path="$PROJECT_DIR$/../../PPU_Frame/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1398968607437" ignored="false" />
-    <file path="$PROJECT_DIR$/../../PPU_Frame/web/pages/authoriz/register.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1398968610562" ignored="false" />
-    <file path="/FieldType.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399003515140" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/addObjectWindow.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399024240656" ignored="false" />
-    <file path="/addObjectWindow.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399005194546" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObjectWindow.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399107908953" ignored="false" />
-    <file path="/AddObjectWindow.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399107863796" ignored="false" />
-    <file path="/a.dummy" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399119427843" ignored="false" />
-    <file path="/fragment.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399194968390" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/DualObjectListBox.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399196006203" ignored="false" />
-    <file path="/DualObjectListBox.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399195455828" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/AddObject.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399024793656" ignored="false" />
-    <file path="/AddObject.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399024648421" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/ObjectListBox.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399054402406" ignored="false" />
-    <file path="/ObjectListBox.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399054402406" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/buttonOpenList.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399010588875" ignored="false" />
-    <file path="/buttonOpenList.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399011781968" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/ButtonOpenList.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399011789968" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399101982328" ignored="false" />
-    <file path="/registrAuthoriz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399101948187" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/windowControllers/ListCellContant.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399011744562" ignored="false" />
-    <file path="/ListCellContant.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399011737265" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/helper/AnnotHelper.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399012707296" ignored="false" />
-    <file path="/AnnotHelper.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399012670843" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/ViewObject.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399020595562" ignored="false" />
-    <file path="/ViewObject.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399020582203" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/window/viewWindowObject.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399014710156" ignored="false" />
-    <file path="/viewWindowObject.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399014588437" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/viewObject.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399022242359" ignored="false" />
-    <file path="/viewObject.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399021163093" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/ObjectListBox.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399133293062" ignored="false" />
-    <file path="/ObjectListBox.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399107169187" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/window/viewWindowObjectDialog.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399021994343" ignored="false" />
-    <file path="/viewWindowObjectDialog.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399021986562" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/DualObjectListBox.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399022252390" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/authoriz/register.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399138415687" ignored="false" />
-    <file path="/register.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399137951265" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/CallInterf.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399022844078" ignored="false" />
-    <file path="/CallInterf.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399022843609" ignored="false" />
-    <file path="/UsersMunMan.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399028773750" ignored="false" />
-    <file path="/PpuDao.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399106177968" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/authoriz/authoriz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399032121406" ignored="false" />
-    <file path="/authoriz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399031666875" ignored="false" />
-    <file path="/Main.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399096654265" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/Main.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399096655828" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/NewsfeedVM.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399097089250" ignored="false" />
-    <file path="/NewsfeedVM.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399043946187" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/titlebar.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399047043750" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/.idea/workspace.xml" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399037906359" ignored="false" />
-    <file path="/titlebar.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399046612062" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/pages/userConfigPage.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399052848734" ignored="false" />
-    <file path="/userConfigPage.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399052623625" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/css/common.css.dsp" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399113756437" ignored="false" />
-    <file path="/common.css.dsp" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399049005218" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/windowControllers/UserConfigPage.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399052626031" ignored="false" />
-    <file path="/UserConfigPage.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399052533359" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/ListItem.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399054262562" ignored="false" />
-    <file path="/ListItem.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399054197171" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/FilterAndSortedObjectList.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399107206421" ignored="false" />
-    <file path="/FilterAndSortedObjectList.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399107205078" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/FilterAndSortedObjectList.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399057589656" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/pages/reviewListMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399105523609" ignored="false" />
-    <file path="/FilterAndSortedObjectList.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399057589656" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/index.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399097143296" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/header.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399097178953" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/footer.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399092937625" ignored="false" />
-    <file path="/index.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399092979062" ignored="false" />
-    <file path="/ProgramMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399094523406" ignored="false" />
-    <file path="/PartnersMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399094620640" ignored="false" />
-    <file path="/ProgramCommerc.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399096084484" ignored="false" />
-    <file path="/PartnerCommercialMan.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399095020484" ignored="false" />
-    <file path="/hibernate.cfg.xml" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399095183234" ignored="false" />
-    <file path="/PpuDaoInterface.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399095405625" ignored="false" />
-    <file path="/WorkWithProgramMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399095882453" ignored="false" />
-    <file path="/WorkWithProgramCommerc.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399096000046" ignored="false" />
-    <file path="/Project.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399096552015" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vm/MainPageController.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399125261250" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/pages/reviewMyProgram.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399115447968" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/gridReviewProgramMz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399098192203" ignored="false" />
-    <file path="/gridReviewProgramMz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399100844953" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/GridReviewProgramMz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399118338203" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/GridReviewProgramMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399118211515" ignored="false" />
-    <file path="/GridReviewProgramMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399117466031" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/post.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399110607359" ignored="false" />
-    <file path="/reviewListMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399105236765" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/funcControl/reviewListMzController.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399118268968" ignored="false" />
-    <file path="/reviewListMzController.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399118236265" ignored="false" />
-    <file path="/MainPageController.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399125186515" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/MenuItem.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399110440046" ignored="false" />
-    <file path="/MenuItem.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399109417750" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/vo/MenuItemBean.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399109616296" ignored="false" />
-    <file path="/MenuItemBean.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399109614890" ignored="false" />
-    <file path="/reviewMyProgram.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399115437203" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/include/navigation.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399110440046" ignored="false" />
-    <file path="/navigation.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399110002734" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/MenuItem.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399114181937" ignored="false" />
-    <file path="/MenuItem.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399113299843" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/pagesMZ/viewMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399125491187" ignored="false" />
-    <file path="/viewMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399125489125" ignored="false" />
-    <file path="/GridReviewProgramMz.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399118321640" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/src/main/java/com/PPU/composite/GridReviewMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399125593734" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/GridReviewMZ.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399135645984" ignored="false" />
-    <file path="/GridReviewMZ.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399135645281" ignored="false" />
-    <file path="/MZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399121738140" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/pagesMZ/MZ.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399184324859" ignored="false" />
-    <file path="/MZ.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399184324359" ignored="false" />
-    <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/authoriz/1.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399138196437" ignored="false" />
-    <file path="/1.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399138101593" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +26,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -152,6 +43,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -168,6 +60,7 @@
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -179,7 +72,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -189,46 +81,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MZ.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MZ.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="86" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkWithCommandMz.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="88" selection-start="815" selection-end="815" vertical-scroll-proportion="0.21383648">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeMU.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="13" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgramMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="67" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PpuDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1806" column="53" selection-start="53411" selection-end="53411" vertical-scroll-proportion="0.0">
+            <state line="191" column="56" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.30898875" vertical-offset="1645" max-vertical-offset="2580">
               <folding />
             </state>
           </provider>
@@ -237,7 +93,43 @@
       <file leaf-file-name="TypeServiceMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="55" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+            <state line="30" column="23" selection-start="688" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LimitsMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="5" selection-start="1703" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LimitsProject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parametrs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="60" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2085">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkWithTypeServiceMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="27" selection-start="2024" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
@@ -246,7 +138,7 @@
       <file leaf-file-name="UsersComMan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="13" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
+            <state line="32" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1935">
               <folding />
             </state>
           </provider>
@@ -255,7 +147,7 @@
       <file leaf-file-name="PartnerCommercialMan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+            <state line="4" column="32" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1950">
               <folding />
             </state>
           </provider>
@@ -264,7 +156,7 @@
       <file leaf-file-name="PartnersMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="61" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
+            <state line="68" column="32" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
@@ -273,7 +165,7 @@
       <file leaf-file-name="WorkWithProgramMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="75" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1305">
               <folding />
             </state>
           </provider>
@@ -305,7 +197,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -337,10 +240,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1374" />
-    <option name="height" value="746" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -370,8 +273,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -622,6 +523,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,7 +568,7 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
@@ -686,6 +589,7 @@
             <option name="profilesMap">
               <map />
             </option>
+            <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="" />
           </MavenRunnerParameters>
         </option>
@@ -796,91 +700,62 @@
       <changelist id="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" name="Default" comment="" />
       <created>1398967854812</created>
       <updated>1398967854812</updated>
+      <workItem from="1399273512094" duration="3825000" />
+      <workItem from="1399293836648" duration="610000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4435000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="746" extended-state="0" />
-    <editor active="false" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.6728499" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928848" sideWeight="0.6728499" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2621212" sideWeight="0.6728499" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2619967" sideWeight="0.6728499" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32640332" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41315347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -890,110 +765,264 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="2291" selection-end="2369" vertical-scroll-proportion="4.121212" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="51" selection-start="368" selection-end="368" vertical-scroll-proportion="-3.6666667" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="39" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="23" selection-start="4141" selection-end="4141" vertical-scroll-proportion="-5.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="76" selection-start="798" selection-end="798" vertical-scroll-proportion="-4.2" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="48" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="61" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="75" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="67" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1806" column="53" selection-start="53411" selection-end="53411" vertical-scroll-proportion="0.0">
+        <state line="191" column="56" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.0" vertical-offset="2580" max-vertical-offset="2580">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="55" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+        <state line="30" column="23" selection-start="688" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1425">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
+        <state line="92" column="5" selection-start="1703" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="60" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2085">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="27" selection-start="2024" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="32" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1305">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="86" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
+        <state line="51" column="28" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="88" selection-start="815" selection-end="815" vertical-scroll-proportion="0.21383648">
+        <state line="31" column="9" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1645" column="0" selection-start="48204" selection-end="48204" vertical-scroll-proportion="0.0" vertical-offset="24675" max-vertical-offset="24765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="24" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="32" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="12" selection-start="2291" selection-end="2369" vertical-scroll-proportion="4.121212" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="368" selection-end="368" vertical-scroll-proportion="-3.6666667" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="39" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="23" selection-start="4141" selection-end="4141" vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="76" selection-start="798" selection-end="798" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="48" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="32" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1806" column="0" selection-start="53411" selection-end="53411" vertical-scroll-proportion="0.0" vertical-offset="27090" max-vertical-offset="27180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCommandMz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="56" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="27" selection-start="2024" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="23" selection-start="688" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="60" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="5" selection-start="1703" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="56" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.30898875" vertical-offset="1645" max-vertical-offset="2580">
           <folding />
         </state>
       </provider>

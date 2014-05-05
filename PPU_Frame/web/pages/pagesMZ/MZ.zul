@@ -9,6 +9,9 @@
 <?component
         name="dualObjectListBox"
         class="com.PPU.composite.DualObjectListBox" ?>
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
 
 <zk xmlns:ca="client/attribute">
     <window
@@ -18,7 +21,7 @@
             onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
             height="100%" width="100%" >
 
-        <style src="@load(vm.css)" />
+		<style src="../../css/desktop.css.dsp" />
 
         <style>
             .contentPanel table.z-caption
@@ -98,32 +101,43 @@
 
                                     <zscript>
                                         <![CDATA[
-                                      import com.PPU.DB.tables.*;
-                                      import com.PPU.DB.workLogic.*;
-                                      import com.PPU.vm.*;
+										import com.PPU.DB.tables.*;
+										import com.PPU.DB.workLogic.*;
+										import com.PPU.vm.*;
 
-                                      int idMz = new Integer(execution.getParameter("id"));
+										int idMz = new Integer(execution.getParameter("id"));
 
-                                      MZ = new WorkWithMZ().getEntity(idMz);
+										MZ = new WorkWithMZ().getEntity(idMz);
 
-                                      String program = MZ.getProgram().getName();
+										String program = MZ.getProgram().getName();
 
-                                      String name = MZ.getName();
-                                      Date startDate = MZ.getStartDate();
-                                      Date expirationDate = MZ.getExpirationDate();
-                                      String description = MZ.getDescription();
-                                      float budget = MZ.getBudget();
+										String name = MZ.getName();
+										Date startDate = MZ.getStartDate();
+										Date expirationDate = MZ.getExpirationDate();
+										String description = MZ.getDescription();
+										float budget = MZ.getBudget();
 
-                                      Object comandMZ = (Object) MZ.getComandMZ().toArray();
-                                      Object[] program1 = new Object[1];
-                                      program1[0] = (Object) MZ.getProgram();
+										Object comandMZ = (Object) MZ.getComandMZ().toArray();
+										Object[] program1 = new Object[1];
+										program1[0] = (Object) MZ.getProgram();
+										WorkWithProgramMZ workerProgr = new WorkWithProgramMZ();
 
-                                      String typeServiceMZ = (String) MZ.getTypeServiceMZ().getName();
+										String typeServiceMZ = (String) MZ.getTypeServiceMZ().getName();
 
-                                      Object limitsMZ = (Object) MZ.getLimitsMZ().toArray();
-                                      Object valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
-                                      Object resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
-                                      Object correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
+										List listTypeService = new WorkWithTypeServiceMZ().getListRows();
+
+										Object [] limitsMZ =  MZ.getLimitsMZ().toArray();
+
+										List parametrsList = new ArrayList();
+
+										for (LimitsMZ l:limitsMZ)
+											parametrsList.add(((LimitsMZ)l).getParametr());
+
+										Object [] parametr = parametrsList.toArray();
+
+										Object valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
+										Object resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
+										Object correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
                                    ]]>
                                     </zscript>
 
@@ -146,8 +160,8 @@
 
                                             <grid sclass="loginGrid">
                                                 <columns>
-                                                    <column hflex="1" />
-                                                    <column hflex="2" />
+                                                    <column width="50%" />
+                                                    <column width="50%" />
                                                 </columns>
                                                 <rows>
                                                     <row>Название : <textbox id="name" value="${name}" cols="30" /></row>
@@ -157,11 +171,56 @@
                                                     <row>Бюджет : <doublespinner id="budget" value="${budget}" cols="12" /></row>
 
                                                     <row>
-                                                        <dualObjectListBox worker="WorkWithCommandMz"
-                                                                           id="comandMZ"  rightList="${comandMZ}" load="true" />
-
+                                                        <cell colspan="2">
+                                                            <dualObjectListBox worker="WorkWithCommandMz"
+                                                                               id="comandMZ"  rightList="${comandMZ}" load="true" />
+                                                        </cell>
 
                                                     </row>
+
+                                                    <row>
+                                                        <cell colspan="2">
+                                                            <ObjectListBox objs="${workerProgr.getListRows().toArray()}" selectedObjs="${program1[0]}"
+                                                                           id="program" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+
+                                                        </cell>
+
+                                                    </row>
+
+													<row>Тип муниципального задания :
+
+														<combobox id="typeService">
+
+															<zk forEach="${listTypeService}" >
+																<comboitem label="${each.name}">
+
+																	<zscript>
+																		<![CDATA[
+																		  import com.PPU.DB.tables.*;
+																		  import com.PPU.DB.workLogic.*;
+																		  import com.PPU.vm.*;
+
+																		  if (each.name.equals(typeServiceMZ))
+																		  	 typeService.setSelectedItem(self);
+																	   ]]>
+																	</zscript>
+
+																		</comboitem>
+															</zk>
+
+																</combobox>
+
+													</row>
+
+                                                    <row>
+                                                        <cell colspan="2">
+
+
+
+
+                                                        </cell>
+                                                    </row>
+
                                                 </rows>
                                             </grid>
 
@@ -181,6 +240,7 @@
                                     onOpen='@command("hideModal")' >
                                 <include src="/pages/include/comment.zul"/>
                             </popup>
+
                         </div>
                         <!--  -->
                     </center>

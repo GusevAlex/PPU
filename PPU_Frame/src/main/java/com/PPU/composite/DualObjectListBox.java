@@ -133,10 +133,19 @@ public class DualObjectListBox extends Div implements IdSpace {
 
             if (id == 0)
             {
-                List list1 = Arrays.asList(list);
+                if (list.length != 1) {
+                    List list1 = Arrays.asList(list);
 
-                list1.remove(0);
-                list = list1.toArray();
+                    list1.remove(0);
+                    list = list1.toArray();
+                }
+                else
+                {
+                    if (list.equals(leftList))
+                        leftList = new Object [0];
+                    else
+                        rightList = new Object [0];
+                }
             }
             else
             {
@@ -223,6 +232,10 @@ public class DualObjectListBox extends Div implements IdSpace {
     {
         leftList = leftListbox.getObjs();
         rightList = rightListbox.getObjs();
+
+        reloadList(leftList);
+        reloadList(rightList);
+
         //сначала добавляем
         for (Listitem selItem : leftListbox.getSelectedItems())
         {
@@ -239,7 +252,7 @@ public class DualObjectListBox extends Div implements IdSpace {
 
                 rightList = objs2;
 
-                rightListbox.setObjs(rightList);
+
             }
         }
 
@@ -264,9 +277,15 @@ public class DualObjectListBox extends Div implements IdSpace {
 
                 leftList = objs;
 
-                leftListbox.setObjs(leftList);
+
             }
         }
+
+        reloadList(leftList);
+        reloadList(rightList);
+
+        rightListbox.setObjs(rightList);
+        leftListbox.setObjs(leftList);
 
         leftListbox.refresh();
         rightListbox.refresh();
@@ -277,6 +296,10 @@ public class DualObjectListBox extends Div implements IdSpace {
     {
         leftList = leftListbox.getObjs();
         rightList = rightListbox.getObjs();
+
+        reloadList(leftList);
+        reloadList(rightList);
+
         //сначала добавляем
         for (Listitem selItem : rightListbox.getSelectedItems())
         {
@@ -290,11 +313,11 @@ public class DualObjectListBox extends Div implements IdSpace {
                 for (int i=0; i<leftList.length; i++)
                     objs2[i] = leftList[i];
 
-                objs2[leftList.length] = rightList[selectIndex+1];
+                objs2[leftList.length] = rightList[selectIndex];
 
                 leftList = objs2;
 
-                leftListbox.setObjs(leftList);
+
             }
         }
 
@@ -308,18 +331,24 @@ public class DualObjectListBox extends Div implements IdSpace {
                 Object [] objs = new Object[rightList.length-1];
 
 
-                for (int i=0; i<selectIndex+1; i++)
+                for (int i=0; i<selectIndex; i++)
                     objs[i] = rightList[i];
 
-                for (int i=selectIndex+1; i<rightList.length-1; i++)
+                for (int i=selectIndex; i<rightList.length-1; i++)
                     objs[i] = rightList[i+1];
 
 
                 rightList = objs;
 
-                rightListbox.setObjs(rightList);
+
             }
         }
+
+        reloadList(leftList);
+        reloadList(rightList);
+
+        leftListbox.setObjs(leftList);
+        rightListbox.setObjs(rightList);
 
         rightListbox.refresh();
         leftListbox.refresh();

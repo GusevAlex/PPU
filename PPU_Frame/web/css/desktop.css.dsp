@@ -33,9 +33,7 @@
 	-webkit-filter: invert(100%);
 }
 
-.menuPanel .z-west-body {
-	background: #112f37;
-}
+
 
 .menuPanel .z-west-caption {
 	margin: 8px 5px;
@@ -57,4 +55,9 @@
 
 .like-area > table {
 	margin-top: 9px;
+}
+
+body
+{
+    background: url(../images/background/background.png);
 }

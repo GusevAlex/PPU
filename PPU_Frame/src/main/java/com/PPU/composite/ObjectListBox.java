@@ -1,4 +1,9 @@
 package com.PPU.composite;
+import com.PPU.DB.tables.LimitsMZ;
+import com.PPU.DB.tables.MZ;
+import com.PPU.DB.tables.Parametrs;
+import com.PPU.DB.workLogic.WorkWithProgramMZ;
+import com.PPU.DB.workLogic.WorkWithTypeServiceMZ;
 import com.PPU.composite.helper.*;
 import com.PPU.windowControllers.*;
 import com.sun.istack.internal.NotNull;
@@ -22,6 +27,8 @@ public class ObjectListBox extends Listbox implements IdSpace {
     private List<String> header = new ArrayList<String>(10);
     private List<ListCellContant> listCellContant = new ArrayList<ListCellContant>();
     private Object [] objs;
+    private Object selectedObjs;
+
     private static String gh = "dfdfg";
     private boolean load;
 
@@ -58,6 +65,39 @@ public class ObjectListBox extends Listbox implements IdSpace {
         if (objs.length!=0)
             setParamForList(objs[0]);
 
+
+
+//		MZ MZ =  new MZ();
+//		Object comandMZ = (Object) MZ.getComandMZ().toArray();
+//		Object[] program1 = new Object[1];
+//		program1[0] = (Object) MZ.getProgram();
+//		WorkWithProgramMZ workerProgr = new WorkWithProgramMZ();
+//
+//		String typeServiceMZ = (String) MZ.getTypeServiceMZ().getName();
+//
+//		List listTypeService = new WorkWithTypeServiceMZ().getListRows();
+//
+//		LimitsMZ [] limitsMZ = (LimitsMZ []) MZ.getLimitsMZ().toArray();
+//
+//		List parametrsList = new ArrayList();
+//
+//		for (LimitsMZ l:limitsMZ)
+//			parametrsList.add(l.getParametr());
+//
+//		Object [] parametr = parametrsList.toArray();
+//
+//		Object valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
+//		Object resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
+//		Object correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
+
+    }
+
+    public Object getSelectedObjs() {
+        return selectedObjs;
+    }
+
+    public void setSelectedObjs(Object selectedObjs) {
+        this.selectedObjs = selectedObjs;
     }
 
     public String getGh() {
@@ -88,6 +128,15 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
         Executions.createComponents("/pages/composite/ObjectListBox.zul", this, null);
         Selectors.wireComponents(this, this, false);
+
+        if (selectedObjs != null)
+        for (int i=0; i<objs.length; i++)
+        {
+            if (objs[i].equals(selectedObjs))
+            {
+                setSelectedIndex(i);
+            }
+        }
     }
 
     public void yu()
