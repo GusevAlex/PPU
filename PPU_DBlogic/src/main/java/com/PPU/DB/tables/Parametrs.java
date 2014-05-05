@@ -34,6 +34,8 @@ public class Parametrs {
     private Set<ValuesParametrForMZ> valuesParametrForMZ = new LinkedHashSet<ValuesParametrForMZ>();
     private Set<ValuesParametrForProject> valuesParametrForProjects = new LinkedHashSet<ValuesParametrForProject>();
     private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
+    private Set<LimitsMZ> limitsMZs = new LinkedHashSet<LimitsMZ>();
+    private Set<LimitsProject> limitsProjects = new LinkedHashSet<LimitsProject>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -93,6 +95,26 @@ public class Parametrs {
 
     public void setCorrectionsMZ(Set<CorrectionsMZ> correctionsMZ) {
         this.correctionsMZ = correctionsMZ;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<LimitsMZ> getLimitsMZs() {
+        return limitsMZs;
+    }
+
+    public void setLimitsMZs(Set<LimitsMZ> limitsMZs) {
+        this.limitsMZs = limitsMZs;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<LimitsProject> getLimitsProjects() {
+        return limitsProjects;
+    }
+
+    public void setLimitsProjects(Set<LimitsProject> limitsProjects) {
+        this.limitsProjects = limitsProjects;
     }
 
     @Override

@@ -18,8 +18,8 @@
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -68,18 +68,20 @@
     <orderEntry type="library" name="Maven: org.apache.velocity:velocity:1.6" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />
     <orderEntry type="library" name="Maven: oro:oro:2.0.8" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zk:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.common:zweb:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.common:zcommon:6.5.3.FL.20130508" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zk:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.common:zweb:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.common:zcommon:7.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.common:zel:6.5.3.FL.20130508" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.common:zel:7.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zhtml:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zul:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zml:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zkbind:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zkmax:6.5.3.FL.20130508" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zkex:6.5.3.FL.20130508" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-jdk14:1.7.5" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.8" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zhtml:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zul:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zml:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zkbind:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zkmax:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zkex:7.0.1" level="project" />
     <orderEntry type="library" name="Maven: net.sf.jasperreports:jasperreports:4.5.1" level="project" />
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:2.1" level="project" />
     <orderEntry type="library" name="Maven: com.lowagie:itext:2.1.7" level="project" />
@@ -98,7 +100,7 @@
     <orderEntry type="library" name="Maven: org.jfree:jfreechart:1.0.14" level="project" />
     <orderEntry type="library" name="Maven: org.jfree:jcommon:1.0.17" level="project" />
     <orderEntry type="library" name="Maven: com.jhlabs:filters:2.0.235" level="project" />
-    <orderEntry type="library" name="Maven: org.zkoss.zk:zkplus:6.5.3.FL.20130508" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zk:zkplus:7.0.1" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.zkoss.zats:zats-mimic:1.1.0" level="project" />

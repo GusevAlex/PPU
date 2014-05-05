@@ -31,6 +31,7 @@ public class LimitsProject {
     private String value;
     private int idProject;
     private Project project;
+    private Parametrs parametr;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -79,6 +80,16 @@ public class LimitsProject {
 
     public void setProject(Project project) {
         this.project = project;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
+    public Parametrs getParametr() {
+        return parametr;
+    }
+
+    public void setParametr(Parametrs parametr) {
+        this.parametr = parametr;
     }
 
     @Override

@@ -115,6 +115,8 @@ public class DualObjectListBox extends Div implements IdSpace {
 
         if (rightListbox != null)
             rightListbox.setObjs(rightList);
+
+        compareAndDeleteInList();
     }
 
     public int getRows() {
@@ -215,6 +217,13 @@ public class DualObjectListBox extends Div implements IdSpace {
         leftList = list.toArray();
 
         reloadList(leftList);
+
+        if (leftListbox!=null && rightListbox!=null) {
+            leftListbox.setObjs(leftList);
+            rightListbox.setObjs(rightList);
+            leftListbox.refresh();
+            rightListbox.refresh();
+        }
     }
 
     private void loadDataInList()

@@ -32,6 +32,7 @@ public class LimitsMZ {
     private String value;
     private int idMZ;
     private MZ MZ;
+    private Parametrs parametr;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -81,6 +82,16 @@ public class LimitsMZ {
     public void setMZ(MZ MZ) {
         this.MZ = MZ;
     }
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
+    public Parametrs getParametr() {
+        return parametr;
+    }
+
+    public void setParametr(Parametrs parametr) {
+        this.parametr = parametr;
+    }
+
 
     @Override
     public boolean equals(Object obj) {
