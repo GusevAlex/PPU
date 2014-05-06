@@ -1,9 +1,7 @@
 package com.PPU.vm;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.Executors;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpSession;
@@ -32,10 +30,7 @@ import com.PPU.vo.MenuItemBean;
 import com.PPU.vo.PostBean;
 import org.zkoss.web.fn.ServletFns;
 import org.zkoss.web.servlet.Servlets;
-import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Executions;
-import org.zkoss.zk.ui.Session;
-import org.zkoss.zk.ui.Sessions;
+import org.zkoss.zk.ui.*;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
@@ -98,19 +93,30 @@ public class MainPageController {
         this.menuGroups = menuGroups;
     }
 
+//    public ListModel<String[]> getToolbarModel() {
+//
+//        return 	new ListModelList<String[]>(
+//                new String[][] {
+//
+//                        { "Мои Программы > ",   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNpiZEhrYSADTAPis0A8lwkqADLlPx78CkmzHBD7AfFMIDZjgQoWEbDxHZTuBWIDIHYD4nwgvgAzgBNKswPxLxyG9CJZBKJTQAwmNEW4NHchaX4ExPUwCSYiAgwUPqVQ9msgdgbijUC8DiTAQkAzyGsVUPZ3IPYB4jtAbAzEKsQYIA31FgjHAfEpdAX4DGCGOt0WiG8C8RdsivAZ8BeI0wkFEBMDhYDqBggRoUcUWxj8hQbaWxIs/4Xsgj5coYwngEF6GBjJzM5wABBgALS1KzDd2YvyAAAAAElFTkSuQmCC" },
+//                        { "Программа 1 > ",    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOtJREFUeNpiZEhrYaAEMAHxGSD+TwK+CsRCMANYgNgYiL8D8TUiLFQBYi0glgZiCSB+ygKVuAPEJkQYsAWIvaHsFUD8lwlNgRwQM6OJceIxUAjZAJCz7gFxL5rYdhya2UCWIRvwAoj7gHgN1H8gMA2I7YE4EIsBIJfxIBvwF4jroX58CLXZDyrXiMsPLGgmFkGjaAFUbBZaDOA0AOTXCQRioBSIdbEZ8B1qaxoJCfA7sgEOQGxAguZH0HQDN+AUFIO8UUeEAcbQWAG5+i8LmmQsgYSDDu4gG/AUiOWhqZFYcBndBa+hmGgAEGAAw0kvuVLIffoAAAAASUVORK5CYII=" },
+//                        { "Проекты > ", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO5JREFUeNpi/P//PwMIMKa3MpAK/s+sZmDCIccPxL1AfA+kDoifAPFMIBZFV4jNAHsgvgrERUCsCBWTBuI0qLgTPgNANqyAagCBLJDvgLgASX41EEvgMqAFSfIvEE+HsqdD+SAgBMTtuAzwRmIzA3EOEHNCaWYkOVcYgwXNACE0/mQoZsClDt0FZ4mMwbO4DJhFpAELcBmwEojvENAMkl+My4BfQJxCwIACqDqcCekgEC/DoXkrFONNiSBQBsTv0MTeQRMWAzEGPMXilUQgfkSsASCwHojnQtlTgHgTNkUsBAIsF4jZgLgYlwKAAAMAbegrRQ3UKeAAAAAASUVORK5CYII=" },
+//                }
+//        );
+//    }
+
     public ListModel<String[]> getToolbarModel() {
 
+        Map<String, String[][]> mapAdress = new HashMap<String, String [][]>()
+        {
+            {
+                put("1", new String[][]{{"Мои Программы > "}, {"Программа 1 > "}});
+                put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > "}, {"Программа 1 > "}});
+            }
+        };
+
         return 	new ListModelList<String[]>(
-                new String[][] {
-//                { "О ППУ ",   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNpiZEhrYSADTAPis0A8lwkqADLlPx78CkmzHBD7AfFMIDZjgQoWEbDxHZTuBWIDIHYD4nwgvgAzgBNKswPxLxyG9CJZBKJTQAwmNEW4NHchaX4ExPUwCSYiAgwUPqVQ9msgdgbijUC8DiTAQkAzyGsVUPZ3IPYB4jtAbAzEKsQYIA31FgjHAfEpdAX4DGCGOt0WiG8C8RdsivAZ8BeI0wkFEBMDhYDqBggRoUcUWxj8hQbaWxIs/4Xsgj5coYwngEF6GBjJzM5wABBgALS1KzDd2YvyAAAAAElFTkSuQmCC" },
-
-
-                        { "Мои Программы > ",   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNpiZEhrYSADTAPis0A8lwkqADLlPx78CkmzHBD7AfFMIDZjgQoWEbDxHZTuBWIDIHYD4nwgvgAzgBNKswPxLxyG9CJZBKJTQAwmNEW4NHchaX4ExPUwCSYiAgwUPqVQ9msgdgbijUC8DiTAQkAzyGsVUPZ3IPYB4jtAbAzEKsQYIA31FgjHAfEpdAX4DGCGOt0WiG8C8RdsivAZ8BeI0wkFEBMDhYDqBggRoUcUWxj8hQbaWxIs/4Xsgj5coYwngEF6GBjJzM5wABBgALS1KzDd2YvyAAAAAElFTkSuQmCC" },
-                        { "Программа 1 > ",    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOtJREFUeNpiZEhrYaAEMAHxGSD+TwK+CsRCMANYgNgYiL8D8TUiLFQBYi0glgZiCSB+ygKVuAPEJkQYsAWIvaHsFUD8lwlNgRwQM6OJceIxUAjZAJCz7gFxL5rYdhya2UCWIRvwAoj7gHgN1H8gMA2I7YE4EIsBIJfxIBvwF4jroX58CLXZDyrXiMsPLGgmFkGjaAFUbBZaDOA0AOTXCQRioBSIdbEZ8B1qaxoJCfA7sgEOQGxAguZH0HQDN+AUFIO8UUeEAcbQWAG5+i8LmmQsgYSDDu4gG/AUiOWhqZFYcBndBa+hmGgAEGAAw0kvuVLIffoAAAAASUVORK5CYII=" },
-                        { "Проекты > ", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO5JREFUeNpi/P//PwMIMKa3MpAK/s+sZmDCIccPxL1AfA+kDoifAPFMIBZFV4jNAHsgvgrERUCsCBWTBuI0qLgTPgNANqyAagCBLJDvgLgASX41EEvgMqAFSfIvEE+HsqdD+SAgBMTtuAzwRmIzA3EOEHNCaWYkOVcYgwXNACE0/mQoZsClDt0FZ4mMwbO4DJhFpAELcBmwEojvENAMkl+My4BfQJxCwIACqDqcCekgEC/DoXkrFONNiSBQBsTv0MTeQRMWAzEGPMXilUQgfkSsASCwHojnQtlTgHgTNkUsBAIsF4jZgLgYlwKAAAMAbegrRQ3UKeAAAAAASUVORK5CYII=" },
-//                { "Диаграмма Ганта", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO5JREFUeNpi/P//PwMIMKa3MpAK/s+sZmDCIccPxL1AfA+kDoifAPFMIBZFV4jNAHsgvgrERUCsCBWTBuI0qLgTPgNANqyAagCBLJDvgLgASX41EEvgMqAFSfIvEE+HsqdD+SAgBMTtuAzwRmIzA3EOEHNCaWYkOVcYgwXNACE0/mQoZsClDt0FZ4mMwbO4DJhFpAELcBmwEojvENAMkl+My4BfQJxCwIACqDqcCekgEC/DoXkrFONNiSBQBsTv0MTeQRMWAzEGPMXilUQgfkSsASCwHojnQtlTgHgTNkUsBAIsF4jZgLgYlwKAAAMAbegrRQ3UKeAAAAAASUVORK5CYII=" }
-
-                }
+                mapAdress.get(Executions.getCurrent().getDesktop().getRequestPath())
         );
     }
 
@@ -274,7 +280,7 @@ public class MainPageController {
                 ),
 
                 new MenuGroupBean(
-                        " ",
+                        "Помощь",
                         new ListModelArray<MenuItemBean>(
                                 new MenuItemBean[] {
                                         new MenuItemBean(

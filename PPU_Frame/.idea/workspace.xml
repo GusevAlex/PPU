@@ -2,258 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85846bca-dd19-40bc-a07b-5dff919de4a2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Program.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProgram.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ajaxupload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/colorbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/images/border.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/images/controls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/images/loading_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/jquery.colorbox-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/colorbox/jquery.colorbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/jquery.easing-1.3.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/jquery.fancybox-1.3.4.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/jquery.fancybox-1.3.4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/jquery.fancybox-1.3.4.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/fancybox/jquery.mousewheel-3.0.4.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/jquery-1.6.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/jquery.cycle.all.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/jquery.cycle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/jquery.jcarousel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/arrows - копия.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/dev7logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/nemo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/slider.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/toystory.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/up.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/images/walle.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/jquery.nivo.slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/nivo-slider/jquery.nivo.slider.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/css/superfish-navbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/css/superfish-vertical.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/css/superfish.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/images/arrows-ffffff.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/images/shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/js/hoverIntent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/js/jquery-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/js/jquery.bgiframe.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/js/superfish.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/superfish/js/supersubs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/tabs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/external/jquery.bgiframe-2.1.2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/external/jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/external/jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/external/qunit.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/external/qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery-ui-i18n.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ar-DZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-bs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-en-AU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-en-GB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-en-NZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-fr-CH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-hy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-kz.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-rm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sr-SR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-ta.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-tj.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-zh-HK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/i18n/jquery.ui.datepicker-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/jquery-ui-1.8.16.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/jquery-ui-1.8.9.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/jquery-ui-timepicker-addon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.blind.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.blind.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.bounce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.bounce.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.clip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.clip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.core.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.drop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.drop.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.explode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.explode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.fade.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.fade.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.fold.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.fold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.highlight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.highlight.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.pulsate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.pulsate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.scale.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.scale.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.shake.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.shake.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.slide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.slide.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.transfer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.effects.transfer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.accordion.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.autocomplete.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.button.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.core.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.dialog.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.draggable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.draggable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.droppable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.droppable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.mouse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.mouse.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.position.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.position.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.progressbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.resizable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.resizable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.selectable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.selectable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.slider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.sortable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.sortable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.tabs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/minified/jquery.ui.widget.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.all.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/base/jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-icons_228ef1_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-icons_ef8c08_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-icons_ffd27a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/images/ui-icons_ffffff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery-ui-1.8.9.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.all.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery/ui/themes/ui-lightness/jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\target\classes\com\PPU\DB\tables\Program.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\target\classes\com\PPU\DB\workLogic\WorkWithProgram.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/ClassInvokeCall.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/ClassInvokeCall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" />
@@ -303,34 +53,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/MZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/MZ.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" afterPath="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" afterPath="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Parametrs.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Parametrs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramCommerc.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramCommerc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Project.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ResourcesMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ResourcesMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ResourcesProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ResourcesProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersComMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersComMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/window/addWindow.zul" afterPath="$PROJECT_DIR$/web/pages/window/addWindow.zul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/PPU_DBlogic.iml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/PPU_DBlogic.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/main.iml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/pom.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/include/toolbar.zul" afterPath="$PROJECT_DIR$/web/pages/include/toolbar.zul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -350,8 +84,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -387,9 +121,9 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules />
-    <ui_properties />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true" />
+    <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -400,17 +134,47 @@
       <file leaf-file-name="navigation.zul" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/include/navigation.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+            <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="986">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectListBox.zul" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainPageController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1194853" vertical-offset="887" max-vertical-offset="7072">
+              <caret line="108" column="84" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding>
+                <element signature="e#4888#4889#0" expanded="true" />
+                <element signature="e#4924#4925#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="18" selection-start="898" selection-end="898" vertical-scroll-proportion="0.44407895" vertical-offset="90" max-vertical-offset="1440">
+            <state vertical-scroll-proportion="-13.964286" vertical-offset="1020" max-vertical-offset="1904">
+              <caret line="83" column="84" selection-start-line="83" selection-start-column="77" selection-end-line="83" selection-end-column="77" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectListBox.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3893">
+              <caret line="123" column="61" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#929#946#0" expanded="true" />
+                <element signature="e#3757#3758#0" expanded="true" />
+                <element signature="e#3803#3804#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -418,25 +182,8 @@
       <file leaf-file-name="AnnotHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="43" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addWindow.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/window/addWindow.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DualObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+            <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1105">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -445,37 +192,38 @@
       <file leaf-file-name="toolbar.zul" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/include/toolbar.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="titlebar.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
+      <file leaf-file-name="MZ.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="37" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="645">
-              <folding>
-                <marker date="1399354987098" expanded="true" signature="1095:1525" placeholder="..." />
-                <marker date="1399354987098" expanded="true" signature="1141:1513" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuItemBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vo/MenuItemBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+            <state vertical-scroll-proportion="-8.285714" vertical-offset="1706" max-vertical-offset="5593">
+              <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="addWindow.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/window/addWindow.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="45" selection-start="6645" selection-end="6645" vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="4830">
+            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DualObjectListBox.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -484,7 +232,8 @@
       <file leaf-file-name="getMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/getMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -513,7 +262,6 @@
         <option value="$PROJECT_DIR$/web/pages/composite/GridReviewProgramMz.zul" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/funcControl/reviewListMzController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/GridReviewProgramMz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/GridReviewMZ.java" />
         <option value="$PROJECT_DIR$/web/pages/composite/GridReviewMZ.zul" />
         <option value="$PROJECT_DIR$/web/pages/authoriz/1.zul" />
@@ -533,10 +281,12 @@
         <option value="$PROJECT_DIR$/web/pages/authoriz/authoriz.zul" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java" />
-        <option value="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" />
         <option value="$PROJECT_DIR$/web/pages/window/addWindow.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java" />
         <option value="$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul" />
+        <option value="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
+        <option value="$PROJECT_DIR$/web/pages/include/toolbar.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" />
       </list>
     </option>
   </component>
@@ -576,10 +326,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -597,7 +347,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -609,6 +359,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -680,6 +432,10 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pagesMZ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -700,6 +456,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_Frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -744,72 +526,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="authoriz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PPU_Frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1037,8 +753,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1185,7 +899,7 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
       <setting name="cmdLine" value="run-app" />
@@ -1195,7 +909,7 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
@@ -1231,7 +945,7 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -1312,7 +1026,7 @@
       <option name="launchUrl" value="false" />
       <option name="launcherParameters">
         <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
           <option name="launcherType" value="OSDefault" />
           <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
@@ -1349,13 +1063,14 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
         <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
           <option name="launcherType" value="OSDefault" />
           <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
@@ -1384,21 +1099,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
@@ -1415,6 +1115,21 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1434,6 +1149,7 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Jetty 7.6.14.v20131031" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 7.6.14.v201310311" ALTERNATIVE_JRE_ENABLED="false">
@@ -1749,14 +1465,15 @@
       <workItem from="1399352579483" duration="7847000" />
       <workItem from="1399339158278" duration="4700000" />
       <workItem from="1399378293550" duration="4375000" />
+      <workItem from="1399388350367" duration="9805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170494000" />
+    <option name="totallyTimeSpent" value="180299000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1764,35 +1481,38 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31761006" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38019168" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7248428" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4407796" sideWeight="0.4032258" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5143339" sideWeight="0.49772727" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40681577" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4056604" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7183811" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24166666" sideWeight="0.529511" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.6408094" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22393823" sideWeight="0.5564924" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22327965" sideWeight="0.5564924" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28144655" sideWeight="0.5183016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31761006" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -1840,7 +1560,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="56" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1848,181 +1568,211 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/getMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4267">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/register.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/viewMz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/include/pages/reviewMyProgram.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/EventProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/metainfo/Property.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/viewMz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/AddObjectWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/metainfo/Property.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/zk/zk/6.5.3.FL.20130508/zk-6.5.3.FL.20130508.jar!/org/zkoss/zk/ui/impl/EventProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/include/pages/reviewMyProgram.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/zkoss/common/zel/6.5.3.FL.20130508/zel-6.5.3.FL.20130508.jar!/org/zkoss/zel/BeanELResolver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/viewMz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/registrAuthoriz/registrAuthoriz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vo/MenuItemBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/getMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="22" selection-start="1855" selection-end="1858" vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="7350">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/common.css.dsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="536" column="57" selection-start="11428" selection-end="11428" vertical-scroll-proportion="-7.962963" vertical-offset="7825" max-vertical-offset="8340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/include/toolbar.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
+        <state vertical-scroll-proportion="-7.962963" vertical-offset="7825" max-vertical-offset="8340">
+          <caret line="536" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2031,146 +1781,190 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="1" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.7785978" vertical-offset="508" max-vertical-offset="1050" />
+        <state vertical-scroll-proportion="0.7785978" vertical-offset="508" max-vertical-offset="1050">
+          <caret line="62" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="45" selection-start="6645" selection-end="6645" vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="4830">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="5474">
+          <caret line="189" column="45" selection-start-line="189" selection-start-column="45" selection-end-line="189" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding>
-            <marker date="1399354987098" expanded="true" signature="1095:1525" placeholder="..." />
-            <marker date="1399354987098" expanded="true" signature="1141:1513" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="731">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="41" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2325">
+        <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2325">
+          <caret line="42" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0057142" vertical-offset="1755" max-vertical-offset="6840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery/js/jquery-ui-1.10.4.custom.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="747" selection-end="747" vertical-scroll-proportion="0.41118422" vertical-offset="0" max-vertical-offset="912" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/include/navigation.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+        <state vertical-scroll-proportion="0.41118422" vertical-offset="0" max-vertical-offset="912">
+          <caret line="25" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/register.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/authoriz.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="945">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="945">
+          <caret line="14" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="98" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="19" column="98" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar!/bsh/BSHMethodInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="392" selection-end="392" vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="285">
+          <caret line="13" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/composite/DualObjectListBox.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="912">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="912">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/DualObjectListBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0" vertical-offset="1165" max-vertical-offset="4965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4905">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1165" max-vertical-offset="4965">
+          <caret line="124" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ListCellContant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="143" selection-end="143" vertical-scroll-proportion="0.11797753" vertical-offset="0" max-vertical-offset="890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="30" selection-start="3086" selection-end="3086" vertical-scroll-proportion="0.29779837" vertical-offset="1213" max-vertical-offset="3375">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#929#946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="43" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="975">
+        <state vertical-scroll-proportion="0.11797753" vertical-offset="0" max-vertical-offset="890">
+          <caret line="8" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/composite/addObjectWindow.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="627" selection-end="627" vertical-scroll-proportion="0.4213483" vertical-offset="0" max-vertical-offset="1305">
+        <state vertical-scroll-proportion="0.4213483" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="25" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/window/addWindow.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/getMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/ObjectListBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3893">
+          <caret line="123" column="61" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#929#946#0" expanded="true" />
+            <element signature="e#3757#3758#0" expanded="true" />
+            <element signature="e#3803#3804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/Logic/AnotationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41880342" vertical-offset="214" max-vertical-offset="799">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/composite/helper/AnnotHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1105">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/navigation.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="986">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/composite/ObjectListBox.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="898" selection-end="898" vertical-scroll-proportion="0.44407895" vertical-offset="90" max-vertical-offset="1440">
+        <state vertical-scroll-proportion="-13.964286" vertical-offset="1020" max-vertical-offset="1904">
+          <caret line="83" column="84" selection-start-line="83" selection-start-column="77" selection-end-line="83" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.285714" vertical-offset="1706" max-vertical-offset="5593">
+          <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/include/toolbar.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1194853" vertical-offset="887" max-vertical-offset="7072">
+          <caret line="108" column="84" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="e#4888#4889#0" expanded="true" />
+            <element signature="e#4924#4925#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

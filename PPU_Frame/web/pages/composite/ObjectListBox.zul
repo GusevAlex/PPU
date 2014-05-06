@@ -51,7 +51,22 @@
                     </zk>
 
                     <zk case="${type2}">
-                        <listcell >
+                        <zscript>
+                         <![CDATA[
+                            import com.PPU.DB.tables.*;
+                            boolean loadField = false;
+
+                            String objEachName = new String();
+                            if (objEach instanceof Parametrs)
+                            {
+                                loadField = true;
+
+                                objEachName = (String) com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objEach, "getName");
+                            }
+                        ]]>
+                        </zscript>
+
+                        <listcell unless="${loadField}">
                             <buttonOpenList label="Просмотр" obj="${objEach}" workerName="${each.workerName}" >
                                 <attribute name="onClick">   <![CDATA[
                                  import com.PPU.DB.workLogic.*;
@@ -64,8 +79,9 @@
                             ]]>  </attribute>
                             </buttonOpenList>
 
-
                         </listcell>
+
+                        <listcell if="${loadField}" label="${objEachName}" />
                     </zk>
 
                     <zk case="${type3}">

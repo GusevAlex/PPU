@@ -34,6 +34,8 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     private boolean loadHandler;
 
+    private boolean loadAllSecondFildInRows = true;
+
     public ObjectListBox()
     {
         super();
@@ -137,6 +139,14 @@ public class ObjectListBox extends Listbox implements IdSpace {
                 setSelectedIndex(i);
             }
         }
+    }
+
+    public boolean isLoadAllSecondFildInRows() {
+        return loadAllSecondFildInRows;
+    }
+
+    public void setLoadAllSecondFildInRows(boolean loadAllSecondFildInRows) {
+        this.loadAllSecondFildInRows = loadAllSecondFildInRows;
     }
 
     public void yu()

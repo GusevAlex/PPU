@@ -112,6 +112,8 @@
 										int idMz = new Integer(execution.getParameter("id"));
 										vm.setId(new Integer(execution.getParameter("id")));
 
+										alert(execution.getDesktop().getRequestPath());
+
                                    ]]>
                                     </zscript>
 
