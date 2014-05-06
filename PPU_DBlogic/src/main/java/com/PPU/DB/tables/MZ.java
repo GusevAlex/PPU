@@ -56,6 +56,7 @@ public class MZ {
     private Set<ValuesParametrForMZ> valuesParametrForMZ = new LinkedHashSet<ValuesParametrForMZ>();
     private Set<ResourcesMZ> resourcesMZ = new LinkedHashSet<ResourcesMZ>();
     private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
+	private PartnersMZ leader;
 
     @Column(name="id_program")
     public int getIdProgram() {
@@ -229,7 +230,17 @@ public class MZ {
         this.correctionsMZ = correctionsMZ;
     }
 
-    @Override
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_leader", insertable = false, updatable = false)
+	public PartnersMZ getLeader() {
+		return leader;
+	}
+
+	public void setLeader(PartnersMZ leader) {
+		this.leader = leader;
+	}
+
+	@Override
     public boolean equals(Object obj) {
         if (!(obj instanceof MZ)) return false;
 

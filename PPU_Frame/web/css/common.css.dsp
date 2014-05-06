@@ -427,17 +427,7 @@ body {
   background-color: #005F77;
 }
 
-.z-caption button,
 
-.z-button {
-	font-size: 14px;
-	background: transparent;
-	color: white;
-	border: none;
-	border-radius: 2px;
-	padding: 1px 10px;
-	border: black ridge 1px;
-}
 
 table.z-caption
 {

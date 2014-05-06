@@ -1,8 +1,7 @@
 package com.PPU.DB.workLogic;
 
 import com.PPU.DB.DAO.PpuDaoInterface;
-import com.PPU.DB.tables.CorrectionsMZ;
-import com.PPU.DB.tables.MZ;
+import com.PPU.DB.tables.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -95,5 +94,36 @@ public class WorkWithMZ extends WorkWithTable{
 	@Override
 	public Object getEmptyEntity() {
 		return new MZ();
+	}
+
+	/** определяем уровень доступа для юзера
+	 * 1 - заказчик
+	 * 2 - руководитель
+	 * 3 - команда (исполнитель)
+	 * @param mz
+	 * @param user
+	 */
+	public int getUserRole(MZ mz, UsersMunMan user)
+	{
+		int id = user.getId();
+
+		PartnersMZ partnerMZ = user.getPartnerMZ();
+
+		PartnersMZ progrPartner = mz.getProgram().getPartnersMZ();
+
+		if (progrPartner.equals(partnerMZ)) return 1;
+
+		PartnersMZ leaderPartner = mz.getLeader();
+
+		if (leaderPartner.equals(partnerMZ)) return 2;
+
+		boolean isFind = false;
+		for (ComandMZ com : mz.getComandMZ())
+			if (com.getPartnerMZ().equals(partnerMZ))
+				isFind = true;
+
+		if (isFind) return 3;
+
+		return 0;
 	}
 }

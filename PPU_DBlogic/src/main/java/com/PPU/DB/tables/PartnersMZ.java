@@ -39,6 +39,7 @@ public class PartnersMZ {
     private Set<ComandMZ> ComandMZ = new LinkedHashSet<ComandMZ>();
     private Set<UsersMunMan> user;
     private Set<ProgramMZ> programMZs = new LinkedHashSet<ProgramMZ>();
+	private Set<MZ> mzs = new LinkedHashSet<MZ>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -128,7 +129,17 @@ public class PartnersMZ {
         this.programMZs = programMZs;
     }
 
-    @Override
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "leader")
+	@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+	public Set<MZ> getMzs() {
+		return mzs;
+	}
+
+	public void setMzs(Set<MZ> mzs) {
+		this.mzs = mzs;
+	}
+
+	@Override
     public boolean equals(Object obj) {
         if (!(obj instanceof PartnersMZ)) return false;
 

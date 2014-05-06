@@ -45,7 +45,7 @@
                 </rows>
             </grid>
         </window>
-        <script type="text/javascript" src="/js/jquery/ui/jquery-ui-1.8.16.custom.min.js" />
+        <script type="text/javascript" src="/js/jquery/js/jquery-ui-1.10.4.custom.min.js" />
         <script type="text/javascript" src="/js/script.js" />
     </vlayout>
 

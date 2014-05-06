@@ -1,8 +1,8 @@
 <hbox width="100%">
 	<!-- Верхнее меню -->
-	<cell align="left" width="23%">
-        <label width="200px" style="font-size: 28px; color: blue;" >ППУ</label>
-        <label width="200px" style="margin-left: 10px; font-size: 14px;" >Портал проектного управления</label>
+	<cell align="left" width="30%">
+        <label style="font-size: 28px;color: blue;" >ППУ</label>
+        <label style="margin-left: 5px;font-size: 14px;margin-top: 3px;" >Портал проектного управления</label>
 	</cell>
 
 	<cell align="center" valign="middle" width="100%">
@@ -16,10 +16,10 @@
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
     </cell>
 
-    <cell align="right" valign="middle" width="100%">
-        <div style="width:150px;" sclass="container">
+    <cell align="right" valign="middle" width="100%" style="padding-right: 3px;">
+        <div sclass="container" width="100%" >
             <!--<menubar >-->
-                    <toolbarbutton id="user" label="@load(vm.nameUser)" style="width:150px; font-size: 14px;"   >
+                    <toolbarbutton id="user" label="@load(vm.nameUser)" style="font-size: 14px;">
                         <attribute name="onClick"><![CDATA[
                         status.open(self, "after_end");
                     ]]> </attribute>
