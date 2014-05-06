@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -77,6 +79,8 @@ public class PartnerCommercialMan {
         this.description = description;
     }
 
+	@FieldType(type = 3, worker="WorkWithCorrectionProject")
+	@HeaderName(name = "Команда проекта")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
@@ -97,6 +101,8 @@ public class PartnerCommercialMan {
         this.user = user;
     }
 
+	@FieldType(type = 3, worker="WorkWithProgramCommerc")
+	@HeaderName(name = "Программа")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerCommercialMan")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ProgramCommerc> getProgramCommercs() {

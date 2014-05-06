@@ -1,7 +1,10 @@
 import com.PPU.DB.security.MD5;
+import com.PPU.DB.tables.MZ;
 import com.PPU.DB.tables.ProgramMZ;
+import com.PPU.DB.workLogic.WorkWithMZ;
 import com.PPU.DB.workLogic.WorkWithProgramCommerc;
 import com.PPU.DB.workLogic.WorkWithProgramMZ;
+import com.PPU.DB.workLogic.WorkWithUser;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,13 +15,10 @@ import com.PPU.DB.workLogic.WorkWithProgramMZ;
  */
 public class Main {
     public static void main(String[] args) {
-        WorkWithProgramMZ work = new WorkWithProgramMZ();
+		WorkWithMZ work = new WorkWithMZ();
 
-        Object pm = work.getEntity(1);
+		int y = work.getUserRole((MZ)work.getEntity(1),new WorkWithUser().getUserMunManEntity(1));
 
-        WorkWithProgramCommerc work2 = new WorkWithProgramCommerc();
-        pm = work2.getEntity(1);
-
-        int y = 0;
+		int u = 0;
     }
 }

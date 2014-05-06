@@ -17,7 +17,7 @@
 
     <listhead sizable="true" if="${listObj.loadHandler}">
         <zk forEach="${listObj.header}">
-            <listheader label="${each}" width="${listObj.width}"></listheader>
+            <listheader label="${each}"></listheader>
         </zk>
     </listhead>
 
@@ -57,7 +57,7 @@
                                  import com.PPU.DB.workLogic.*;
 
                                  AddObject add = new AddObject();
-                                 add.setObj(self.getObj().toArray());
+                                 add.setObj(self.getObj());
                                  add.setWorker((WorkWithTable) ClassInvokeCall.returnWorkerByName(self.getWorkerName()));
 
                                  add.showWindow();

@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -160,6 +162,8 @@ public class MZ {
         this.serviceType = serviceType;
     }
 
+	@FieldType(type = 3, worker="WorkWithCommandMz")
+	@HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
@@ -170,6 +174,8 @@ public class MZ {
         this.comandMZ = comandMZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithProgramMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Программа")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_program", insertable = false, updatable = false)
     public ProgramMZ getProgram() {
@@ -180,6 +186,8 @@ public class MZ {
         this.program = programMZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithTypeServiceMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Тип услуги")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "service_type", insertable = false, updatable = false)
     public TypeServiceMZ getTypeServiceMZ() {
@@ -190,6 +198,8 @@ public class MZ {
         this.typeServiceMZ = typeServiceMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithLimitsMz")
+	@HeaderName(name = "Лимиты МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsMZ> getLimitsMZ() {
@@ -200,6 +210,8 @@ public class MZ {
         this.limitsMZ = limitsMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithValuesParametrForMZ")
+	@HeaderName(name = "Параметры МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
@@ -210,6 +222,8 @@ public class MZ {
         this.valuesParametrForMZ = valuesParametrForMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithResourcesMZ")
+	@HeaderName(name = "Ресурсы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesMZ> getResourcesMZ() {
@@ -220,6 +234,8 @@ public class MZ {
         this.resourcesMZ = resourcesMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithCorrectionProject")
+	@HeaderName(name = "Корректировки МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
@@ -230,6 +246,8 @@ public class MZ {
         this.correctionsMZ = correctionsMZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithPartnerMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Руководитель")
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_leader", insertable = false, updatable = false)
 	public PartnersMZ getLeader() {

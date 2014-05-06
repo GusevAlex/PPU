@@ -108,7 +108,6 @@ public class PartnersMZ {
         ComandMZ = comandMZ;
     }
 
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersMunMan> getUser() {
@@ -119,6 +118,8 @@ public class PartnersMZ {
         this.user = user;
     }
 
+	@FieldType(type = 3, worker="WorkWithProgramMZ")
+	@HeaderName(name = "Программы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnersMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ProgramMZ> getProgramMZs() {
@@ -129,6 +130,8 @@ public class PartnersMZ {
         this.programMZs = programMZs;
     }
 
+	@FieldType(type = 3, worker="WorkWithMZ")
+	@HeaderName(name = "Муниципальные задания")
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "leader")
 	@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
 	public Set<MZ> getMzs() {

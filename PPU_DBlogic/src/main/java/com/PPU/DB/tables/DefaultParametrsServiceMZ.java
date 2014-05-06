@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -60,6 +61,8 @@ public class DefaultParametrsServiceMZ {
         this.idParametr = idParametr;
     }
 
+	@FieldType(type = 2, worker = "WorkWithDefaultParametrsServiceMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "“ËÔ Ã”")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_service_mz", insertable = false, updatable = false)
     public TypeServiceMZ getTypeServiceMZ() {

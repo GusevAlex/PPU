@@ -2,7 +2,7 @@
 		name="addObjectWindow"
 		class="com.PPU.composite.AddObjectWindow" ?>
 <zk>
-	<addObjectWindow title="Окно" border="normal" width="460px"
+	<addObjectWindow title="Окно" border="normal" width="600px" sizable="true"
 				position="center,center" closable="true"
 				action="show: slideDown;hide: slideUp">
 

@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -67,6 +69,8 @@ public class Parametrs {
         this.type = type;
     }
 
+	@FieldType(type = 3, worker="WorkWithValuesParametrForMZ")
+	@HeaderName(name = "Параметры МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
@@ -77,6 +81,8 @@ public class Parametrs {
         this.valuesParametrForMZ = valuesParametrForMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithValuesParametrForProject")
+	@HeaderName(name = "Параметры программ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForProject> getValuesParametrForProjects() {
@@ -87,6 +93,8 @@ public class Parametrs {
         this.valuesParametrForProjects = valuesParametrForProjects;
     }
 
+	@FieldType(type = 3, worker="WorkCorrectionMZ")
+	@HeaderName(name = "Корректировки")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
@@ -97,6 +105,8 @@ public class Parametrs {
         this.correctionsMZ = correctionsMZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithLimitsMz")
+	@HeaderName(name = "Лимиты МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsMZ> getLimitsMZs() {
@@ -107,6 +117,8 @@ public class Parametrs {
         this.limitsMZs = limitsMZs;
     }
 
+	@FieldType(type = 3, worker="WorkWithLimitsProject")
+	@HeaderName(name = "Лимиты проектов")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsProject> getLimitsProjects() {

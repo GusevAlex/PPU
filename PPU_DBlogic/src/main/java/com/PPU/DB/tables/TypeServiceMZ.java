@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -53,6 +55,8 @@ public class TypeServiceMZ {
         this.name = name;
     }
 
+	@FieldType(type = 3, worker="WorkWithMZ")
+	@HeaderName(name = "Муниципальные задания")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
@@ -63,6 +67,8 @@ public class TypeServiceMZ {
         this.MZ = MZ;
     }
 
+	@FieldType(type = 3, worker="WorkWithDefaultParametrsServiceMZ")
+	@HeaderName(name = "Стандартные параметры для типа МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<DefaultParametrsServiceMZ> getDefaultParametrsServiceMZs() {

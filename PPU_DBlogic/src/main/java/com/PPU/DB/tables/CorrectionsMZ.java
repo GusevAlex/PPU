@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -95,6 +96,8 @@ public class CorrectionsMZ {
         ValueAfter = valueAfter;
     }
 
+	@FieldType(type = 2, worker = "WorkWithMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Муниципально задание")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
@@ -105,6 +108,8 @@ public class CorrectionsMZ {
         this.MZ = MZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithParametrs")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {

@@ -1,6 +1,7 @@
 package com.PPU.DB.tables;
 
 import com.PPU.DB.security.MD5;
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -97,6 +98,8 @@ public class UsersComMan {
         this.idPartenerCommercial = idPartenerCommercial;
     }
 
+	@FieldType(type = 2, worker = "WorkWithPartnerCommerc")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник проектного управления")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_commercial", insertable = false, updatable = false)
     public PartnerCommercialMan getPartnerProject() {

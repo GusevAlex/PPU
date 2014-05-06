@@ -1,5 +1,7 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
@@ -35,7 +37,6 @@ public class ProgramMZ {
     private String description;
     private int idPartnerMz;
     private Set<MZ> MZ = new LinkedHashSet<MZ>();
-    private Set<Project> projects = new LinkedHashSet<Project>();
     private PartnersMZ partnersMZ;
 
     @Id
@@ -86,6 +87,8 @@ public class ProgramMZ {
         this.idPartnerMz = idPartnerMz;
     }
 
+	@FieldType(type = 3, worker="WorkWithMZ")
+	@HeaderName(name = "Муниципальные задания")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
@@ -96,16 +99,8 @@ public class ProgramMZ {
         this.MZ = MZ;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
-    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
-    public Set<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(Set<Project> projects) {
-        this.projects = projects;
-    }
-
+	@FieldType(type = 2, worker = "WorkWithPartnerMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Руководитель")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnersMZ() {

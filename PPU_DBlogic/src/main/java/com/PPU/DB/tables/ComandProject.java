@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -60,6 +61,8 @@ public class ComandProject {
         this.idPartnerProject = idPartnerProject;
     }
 
+	@FieldType(type = 2, worker = "WorkWithPartnerCommerc")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник проектного управления")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_project", insertable = false, updatable = false)
     public PartnersMZ getPartnerProject() {
@@ -70,6 +73,8 @@ public class ComandProject {
         this.partnerProject = partnerProject;
     }
 
+	@FieldType(type = 2, worker = "WorkWithProject")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Проект")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {

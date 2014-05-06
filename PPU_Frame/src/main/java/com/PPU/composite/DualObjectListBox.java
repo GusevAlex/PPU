@@ -136,10 +136,10 @@ public class DualObjectListBox extends Div implements IdSpace {
             if (id == 0)
             {
                 if (list.length != 1) {
-                    List list1 = Arrays.asList(list);
+                    Object [] objs = new Object[list.length-1];
 
-                    list1.remove(0);
-                    list = list1.toArray();
+					for (int i=0; i<list.length-1; i++)
+						objs[i] = list[i+1];
                 }
                 else
                 {

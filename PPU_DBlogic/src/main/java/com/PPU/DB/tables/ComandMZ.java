@@ -52,8 +52,8 @@ public class ComandMZ {
         this.idMZ = idMZ;
     }
 
-    @FieldType(type = 1)
-    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "РљРѕРјР°РЅРґР°")
+	@FieldType(type = 1)
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Команда")
     @Column(name="id_partner_mz")
     public int getIdPartnerMZ() {
         return idPartnerMZ;
@@ -63,6 +63,8 @@ public class ComandMZ {
         this.idPartnerMZ = idPartnerMZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithPartnerMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Команда")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnerMZ() {
@@ -73,6 +75,8 @@ public class ComandMZ {
         this.partnerMZ = partnersMZ;
     }
 
+	@FieldType(type = 2, worker = "WorkWithMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Муниципальные задания")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
