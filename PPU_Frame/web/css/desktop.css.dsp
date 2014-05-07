@@ -62,3 +62,17 @@ body
     background: url(../images/background/background.png);
 }
 
+.z-groupbox>.z-groupbox-header
+{
+    border-top: 1px solid #C31B1B;
+    border-left: 1px solid #C31B1B;
+    border-right: 1px solid #C31B1B;
+}
+
+.z-groupbox-content
+{
+    border-bottom: 1px solid #C31B1B;
+    border-left: 1px solid #C31B1B;
+    border-right: 1px solid #C31B1B;
+}
+

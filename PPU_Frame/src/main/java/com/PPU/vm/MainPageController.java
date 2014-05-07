@@ -1,18 +1,15 @@
 package com.PPU.vm;
 
 import java.util.*;
-import java.util.concurrent.Executors;
 
 import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpSession;
 
-import com.PPU.DB.tables.PartnerCommercialMan;
-import com.PPU.DB.tables.PartnersMZ;
+import com.PPU.DB.tables.ProgramMZ;
 import com.PPU.DB.tables.UsersComMan;
 import com.PPU.DB.tables.UsersMunMan;
-import com.PPU.DB.workLogic.WorkWithMZ;
+import com.PPU.DB.workLogic.WorkWithProgramMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
-import com.sun.org.apache.bcel.internal.generic.NEW;
+import com.PPU.windowControllers.PageMZ.GetMZ;
 import org.zkoss.bind.annotation.AfterCompose;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
@@ -23,7 +20,6 @@ import org.zkoss.bind.annotation.NotifyChange;
 import com.PPU.composite.Contact;
 import com.PPU.composite.MenuItem;
 import com.PPU.vo.AuthorBean;
-import com.PPU.vo.ContactBean;
 import com.PPU.vo.ContactGroupBean;
 import com.PPU.vo.MenuGroupBean;
 import com.PPU.vo.MenuItemBean;
@@ -34,7 +30,6 @@ import org.zkoss.zk.ui.*;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
-import org.zkoss.zul.Div;
 import org.zkoss.zul.ListModel;
 import org.zkoss.zul.ListModelArray;
 import org.zkoss.zul.ListModelList;
@@ -106,17 +101,44 @@ public class MainPageController {
 //    }
 
     public ListModel<String[]> getToolbarModel() {
+		String pathAdress = Executions.getCurrent().getDesktop().getRequestPath();
+
+		String name = new String();
+
+		if (pathAdress.equals("pages/pagesMZ/MZ.zul"))
+		{
+			int id = new Integer(Executions.getCurrent().getParameter("id"));
+
+			GetMZ getMZ = new GetMZ();
+
+			getMZ.setId(id);
+			name = getMZ.getMzName();
+		}
+		else
+			if (pathAdress.equals("/pages/pagesMZ/viewMz.zul"))
+			{
+				int id = new Integer(Executions.getCurrent().getParameter("id"));
+
+				ProgramMZ program = (ProgramMZ) new WorkWithProgramMZ().getEntity(id);
+
+				name = program.getName();
+			}
+
+		final String finalName = name;
 
         Map<String, String[][]> mapAdress = new HashMap<String, String [][]>()
         {
             {
+				put("/pages/pagesMZ/viewMz.zul", new String[][]{{finalName}, {"Муниципальные задания "}});
+				put("/index.zul", new String[][]{{""}});
                 put("1", new String[][]{{"Мои Программы > "}, {"Программа 1 > "}});
-                put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > "}, {"Программа 1 > "}});
+                put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > "}, {finalName}});
+				put("/pages/include/pages/reviewMyProgram.zul", new String[][]{{"Программы > "}});
             }
         };
 
         return 	new ListModelList<String[]>(
-                mapAdress.get(Executions.getCurrent().getDesktop().getRequestPath())
+                mapAdress.get(pathAdress)
         );
     }
 

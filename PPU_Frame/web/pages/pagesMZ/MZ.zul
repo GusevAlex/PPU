@@ -100,7 +100,7 @@
                                 <zk xmlns:n="native">
 
                                     <div apply="org.zkoss.bind.BindComposer"
-                                            viewModel="@id('vm') @init('com.PPU.windowControllers.PageMZ.getMZ')"
+                                            viewModel="@id('vm') @init('com.PPU.windowControllers.PageMZ.GetMZ')"
                                             height="100%" width="100%" >
 
                                     <zscript>
@@ -242,19 +242,25 @@
 															<groupbox >
 															<caption label="Параметры" />
 																<hbox>
-																	<grid id="valuesParametrForMZ" model="@load(vm.valuesParametrForMZ)" >
-																		<columns>
-																			<column hflex="1" label="Параметр" align="left" />
-																			<column hflex="1" label="Значение" align="left" />
-																		</columns>
-																		<rows>
-																			<template name="model">
-																				<row>
-																					<label value="${each.getParametr().getName()}" />   <textbox value="@bind(each.value)" />
-																				</row>
-																			</template>
-																		</rows>
-																	</grid>
+																	<vlayout>
+																		<toolbar style="margin-bottom: -5px;">
+																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр"/>
+																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение"/>
+																		</toolbar>
+																		<grid id="valuesParametrForMZ" model="@load(vm.valuesParametrForMZ)" >
+																			<columns>
+																				<column hflex="1" label="Параметр" align="left" />
+																				<column hflex="1" label="Значение" align="left" />
+																			</columns>
+																			<rows>
+																				<template name="model">
+																					<row>
+																						<label value="${each.getParametr().getName()}" />   <textbox value="@bind(each.value)" />
+																					</row>
+																				</template>
+																			</rows>
+																		</grid>
+																	</vlayout>
 																</hbox>
 
 															</groupbox>

@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * Created by Alex on 05.05.2014.
  */
-public class getMZ {
+public class GetMZ {
 
     private int id;
 
@@ -55,7 +55,7 @@ public class getMZ {
     Object resourcesMZ;
     Object correctionsMZ;
 
-    public getMZ()
+    public GetMZ()
     {
 
     }
