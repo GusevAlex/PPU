@@ -4,6 +4,7 @@ import com.PPU.DB.tables.LimitsMZ;
 import com.PPU.DB.tables.MZ;
 import com.PPU.DB.tables.Parametrs;
 import com.PPU.DB.workLogic.WorkWithMZ;
+import com.PPU.DB.workLogic.WorkWithParametrs;
 import com.PPU.DB.workLogic.WorkWithProgramMZ;
 import com.PPU.DB.workLogic.WorkWithTypeServiceMZ;
 import com.PPU.composite.Contact;
@@ -13,14 +14,17 @@ import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.ContextParam;
 import org.zkoss.bind.annotation.ContextType;
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Execution;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Listitem;
 import org.zkoss.zul.Toolbarbutton;
+import org.zkoss.zul.Window;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Alex on 05.05.2014.
@@ -239,6 +243,34 @@ public class GetMZ {
 
     @Command
     public void onClickBtn1(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        Window wind = new Window();
+        Map arg = new HashMap<String, Object>(){
+            {
+                put("obj", new WorkWithParametrs().getListRows().toArray());
+                put("getter", this);
+            }
+        };
+        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+
+        wind.doModal();
+    }
+
+    @Command
+    public void onAddNewParamByList(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        Window wind = new Window();
+        Map arg = new HashMap<String, Object>(){
+            {
+                put("obj", new WorkWithParametrs().getListRows().toArray());
+                put("getter", this);
+            }
+        };
+        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+        wind.doModal();
+    }
+
+    public void saveParam(int index)
     {
         int y = 0;
     }
