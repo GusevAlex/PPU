@@ -15,92 +15,104 @@
                ]]>
     </zscript>
 
-    <listhead sizable="true" if="${listObj.loadHandler}">
-        <zk forEach="${listObj.header}">
-            <listheader label="${each}"></listheader>
-        </zk>
-    </listhead>
+    <zk if="${listObj.loadList == true}">
+        <listhead sizable="true" if="${listObj.loadHandler}">
+            <zk forEach="${listObj.header}">
+                <listheader label="${each}"></listheader>
+            </zk>
+        </listhead>
 
-    <zk forEach="${listObj.objs}">
-        <custom-attributes objs="${each}"/>
+        <zk forEach="${listObj.objs}">
+            <custom-attributes objs="${each}"/>
 
-        <zscript>
-        <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, "getId");
-                    Integer intBol = (Integer) objEach;
+            <zscript>
+            <![CDATA[
+                        Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, "getId");
+                        Integer intBol = (Integer) objEach;
 
-                    boolean bolLoad = (intBol == 0) ? false : true;
-                ]]>
-        </zscript>
+                        boolean bolLoad = (intBol == 0) ? false : true;
+                    ]]>
+            </zscript>
 
-        <myListItem if="${bolLoad}" idObj="${intBol}" >
-            <zk forEach="${listObj.listCellContant}">
-                <zscript>
-                    <![CDATA[
-                    Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, each.methodList);
+            <myListItem if="${bolLoad}" idObj="${intBol}" >
+                <zk forEach="${listObj.listCellContant}">
+                    <zscript>
+                        <![CDATA[
+                        Object objEach = com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objs, each.methodList);
 
-                    Integer valType = each.colymnType;
-                    Integer type1 = 1;
-                    Integer type2 = 2;
-                    Integer type3 = 3;
-                ]]>
-                </zscript>
-                <zk switch="${valType}">
-                    <zk case="${type1}">
-                        <listcell label="${objEach}"/>
-                    </zk>
+                        Integer valType = each.colymnType;
+                        Integer type1 = 1;
+                        Integer type2 = 2;
+                        Integer type3 = 3;
+                    ]]>
+                    </zscript>
+                    <zk switch="${valType}">
+                        <zk case="${type1}">
+                            <listcell label="${objEach}"/>
+                        </zk>
 
-                    <zk case="${type2}">
-                        <zscript>
-                         <![CDATA[
-                            import com.PPU.DB.tables.*;
-                            boolean loadField = false;
+                        <zk case="${type2}">
+                            <zscript>
+                             <![CDATA[
+                                import com.PPU.DB.tables.*;
+                                boolean loadField = false;
 
-                            String objEachName = new String();
-                            if (objEach instanceof Parametrs)
-                            {
-                                loadField = true;
+                                String objEachName = new String();
+                                if (objEach instanceof Parametrs)
+                                {
+                                    loadField = true;
 
-                                objEachName = (String) com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objEach, "getName");
-                            }
-                        ]]>
-                        </zscript>
+                                    objEachName = (String) com.PPU.DB.workLogic.WorkWithTable.invokeCallMethode(objEach, "getName");
+                                }
+                            ]]>
+                            </zscript>
 
-                        <listcell unless="${loadField}">
-                            <buttonOpenList label="Просмотр" obj="${objEach}" workerName="${each.workerName}" >
-                                <attribute name="onClick">   <![CDATA[
-                                 import com.PPU.DB.workLogic.*;
+                            <listcell unless="${loadField}">
+                                <buttonOpenList label="Просмотр" obj="${objEach}" workerName="${each.workerName}" >
+                                    <attribute name="onClick">   <![CDATA[
+                                     import com.PPU.DB.workLogic.*;
 
-                                 AddObject add = new AddObject();
-                                 add.setObj(self.getObj());
-                                 add.setWorker((WorkWithTable) ClassInvokeCall.returnWorkerByName(self.getWorkerName()));
+                                     AddObject add = new AddObject();
+                                     add.setObj(self.getObj());
+                                     add.setWorker((WorkWithTable) ClassInvokeCall.returnWorkerByName(self.getWorkerName()));
 
-                                 add.showWindow();
-                            ]]>  </attribute>
-                            </buttonOpenList>
+                                     add.showWindow();
+                                ]]>  </attribute>
+                                </buttonOpenList>
 
-                        </listcell>
+                            </listcell>
 
-                        <listcell if="${loadField}" label="${objEachName}" />
-                    </zk>
+                            <listcell if="${loadField}" label="${objEachName}" />
+                        </zk>
 
-                    <zk case="${type3}">
-                        <listcell >
-                            <buttonOpenList label="Все значения" obj="${objEach}" >
-                                <attribute name="onClick">   <![CDATA[
-                                import com.PPU.composite.ObjectListBox;
-                                 ObjectListBox.showViewObject(self.getObj());
-                            ]]>  </attribute>
-                            </buttonOpenList>
-                        </listcell>
+                        <zk case="${type3}">
+                            <listcell >
+                                <buttonOpenList label="Все значения" obj="${objEach}" >
+                                    <attribute name="onClick">   <![CDATA[
+                                    import com.PPU.composite.ObjectListBox;
+                                     ObjectListBox.showViewObject(self.getObj());
+                                ]]>  </attribute>
+                                </buttonOpenList>
+                            </listcell>
+                        </zk>
+
                     </zk>
 
                 </zk>
 
-            </zk>
+            </myListItem>
 
+        </zk>
+    </zk>
+    <zk if="${listObj.loadList == false}">
+        <!--<listhead sizable="true">-->
+                <!--<listheader label="Ошибка"></listheader>-->
+        <!--</listhead>-->
+        <myListItem>
+            <listcell>
+              <label value="А вот вывести мне нечего!)" />
+            </listcell>
         </myListItem>
-
     </zk>
 <!--</listbox>-->
 </zk>

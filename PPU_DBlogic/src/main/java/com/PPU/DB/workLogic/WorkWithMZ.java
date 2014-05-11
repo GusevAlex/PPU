@@ -99,31 +99,38 @@ public class WorkWithMZ extends WorkWithTable{
 	/** определяем уровень доступа для юзера
 	 * 1 - заказчик
 	 * 2 - руководитель
-	 * 3 - команда (исполнитель)
+     * 3 - заказчик, руководитель
+	 * 4 - команда (исполнитель)
 	 * @param mz
 	 * @param user
 	 */
 	public int getUserRole(MZ mz, UsersMunMan user)
 	{
 		int id = user.getId();
+        int role = 0;
 
 		PartnersMZ partnerMZ = user.getPartnerMZ();
 
 		PartnersMZ progrPartner = mz.getProgram().getPartnersMZ();
 
-		if (progrPartner.equals(partnerMZ)) return 1;
+		if (progrPartner.equals(partnerMZ)) role+=1;
 
 		PartnersMZ leaderPartner = mz.getLeader();
 
-		if (leaderPartner.equals(partnerMZ)) return 2;
+		if (leaderPartner.equals(partnerMZ)) role+=2;
 
 		boolean isFind = false;
 		for (ComandMZ com : mz.getComandMZ())
 			if (com.getPartnerMZ().equals(partnerMZ))
 				isFind = true;
 
-		if (isFind) return 3;
+		if (isFind) role+=3;
 
-		return 0;
+		return role;
 	}
+
+    public List<NotificationMU> find1()
+    {
+        return ppuDao.find1();
+    }
 }

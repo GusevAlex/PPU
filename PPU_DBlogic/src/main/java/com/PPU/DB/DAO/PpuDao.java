@@ -47,6 +47,8 @@ public class PpuDao implements PpuDaoInterface {
     private static String VALUES_PARAMETR_FOR_PROJECT_TABLE = "ValuesParametrForProject";
     private static String USERS_MUN_MAN_TABLE = "UsersMunMan";
     private static String USERS_COM_MAN_TABLE = "UsersComMan";
+    private static String NOTIFICATION_MU_TABLE = "NotificationMU";
+    private static String NOTIFICATION_COM_TABLE = "NotificationCom";
 
     private static SessionFactory sessionFactory;
 
@@ -371,11 +373,85 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
+    public NotificationCom getNotificationCom(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (NotificationCom) session.get(NotificationCom.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new NotificationCom();
+        }
+    }
+
+    @Override
+    public NotificationMU getNotificationMU(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (NotificationMU) session.get(NotificationMU.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new NotificationMU();
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean saveMz(MZ MZ) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+
+            MZ.setIdLeader(MZ.getLeader().getId());
+            MZ.setIdProgram(MZ.getProgram().getId());
+            MZ.setService_type(MZ.getTypeServiceMZ().getId());
+
+
             session.save(MZ);
+
+            for (LimitsMZ limitsMZ : MZ.getLimitsMZ())
+            {
+                limitsMZ.setIdMZ(MZ.getId());
+
+                if (limitsMZ.getId() == 0)
+                    this.saveLimitsMz(limitsMZ);
+                else
+                    this.updateLimitsMz(limitsMZ);
+            }
+
+            for (ValuesParametrForMZ valuesParametrForMZ : MZ.getValuesParametrForMZ())
+            {
+                valuesParametrForMZ.setIdMZ(MZ.getId());
+
+                if (valuesParametrForMZ.getId() == 0)
+                    this.saveValuesParametrForMz(valuesParametrForMZ);
+                else
+                    this.updateValuesParametrForMz(valuesParametrForMZ);
+            }
+
+            for (ComandMZ comandMZ : MZ.getComandMZ())
+            {
+                comandMZ.setIdMZ(MZ.getId());
+
+                if (comandMZ.getId() == 0)
+                    this.saveComandMZ(comandMZ);
+                else
+                    this.updateComandMZ(comandMZ);
+            }
+
+            for (ResourcesMZ resourcesMZ : MZ.getResourcesMZ())
+            {
+                resourcesMZ.setIdMZ(MZ.getId());
+
+                if (resourcesMZ.getId() == 0)
+                    this.saveResourcesMz(resourcesMZ);
+                else
+                    this.updateResourcesMz(resourcesMZ);
+            }
+
             return true;
         } catch (Exception e)
         {
@@ -550,6 +626,7 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean saveProgramCommerc(ProgramCommerc programCommerc) {
         try
         {
@@ -714,11 +791,46 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean saveUsersComMan(UsersComMan UsersComMan) {
         try
         {
             Session session = sessionFactory.getCurrentSession();
             session.save(UsersComMan);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean saveNotificationCom(NotificationCom notificationCom) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            notificationCom.setReceiver(notificationCom.getPartners().getId());
+
+            session.save(notificationCom);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean saveNotificationMU(NotificationMU notificationMU) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            notificationMU.setReceiver(notificationMU.getPartners().getId());
+
+            session.save(notificationMU);
             return true;
         } catch (Exception e)
         {
@@ -1088,6 +1200,36 @@ public class PpuDao implements PpuDaoInterface {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteNotificationCom(NotificationCom notificationCom) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(notificationCom);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteNotificationMU(NotificationMU notificationMU) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(notificationMU);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean updateMz(MZ MZ) {
         try
         {
@@ -1437,6 +1579,36 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             session.update(UsersComMan);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateNotificationCom(NotificationCom notificationCom) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(notificationCom);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateNotificationMU(NotificationMU notificationMU) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(notificationMU);
             return true;
         } catch (Exception e)
         {
@@ -1797,6 +1969,34 @@ public class PpuDao implements PpuDaoInterface {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
             return session.createQuery("from "+USERS_COM_MAN_TABLE + s).list();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<NotificationCom> findNotificationCom(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery("from "+NOTIFICATION_MU_TABLE + s).list();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<NotificationMU> findNotificationMU(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery("from "+NOTIFICATION_COM_TABLE + s).list();
         } catch (Exception e)
         {
             System.out.println(e);

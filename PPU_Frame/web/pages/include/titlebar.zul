@@ -28,10 +28,69 @@
         </div>
     </cell>
 
-    <popup id="status" width="150px">
+    <timer id="timer" delay="1000" repeats="true">
+        <attribute name="onTimer">
+            import com.PPU.DB.tables.*;
+            import com.PPU.DB.workLogic.*;
+
+            String typeOrg = (String) session.getAttribute("type");
+            private String [] notification1 = new String[]{"ghj","yjhg"};
+
+            if (typeOrg != null &amp;&amp; typeOrg.equals("Mun"))
+            {
+                UsersMunMan user = (UsersMunMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+                notification1 = new String[user.getPartnerMZ().getNotificationMU().size()];
+
+                int i = 0;
+                for (Object not : new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()))
+                    notification1[i++] = ((NotificationMU)not).getText();
+
+                notif.setModel(new ListModelList(notification1));
+            }
+            else
+            {
+                if (typeOrg != null)
+                {
+                    UsersComMan user = (UsersComMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+                    notification1 = new String[user.getPartnerProject().getNotificationComs().size()];
+
+                    int i = 0;
+                    for (Object not : new WorkWithNotificationCom().getLatestNotification(user.getPartnerProject()))
+                        notification1[i++] = ((NotificationCom)not).getText();
+
+                notif.setModel(new ListModelList(notification1));
+                }
+            }
+        </attribute>
+    </timer>
+
+    <zk xmlns:n="native">
+    <popup id="status" width="200px">
         <vlayout>
+            <groupbox>
+            <caption label="Оповещения" />
+                <hbox>
+                    <vlayout>
+                        <grid id="notif" model="${notification1}">
+                        <!--<vlayout id="vlayout" children="@load(notification1)">-->
+                            <!--<zk forEach="${notification1}" >-->
+                            <template name="model">
+                                <row>
+                                <html content="${each}" />
+                                </row>
+                                <!--<n:hr />-->
+                            </template>
+                            <!--</zk>-->
+
+                        <!--</vlayout>-->
+                        </grid>
+                    <a href="/pages/notification/myNotification.zul">Все оповещения</a>
+                    </vlayout>
+                </hbox>
+            </groupbox>
         <a href="/pages/include/pages/userConfigPage.zul">Выйти</a>
         </vlayout>
     </popup>
+    </zk>
 
 </hbox>

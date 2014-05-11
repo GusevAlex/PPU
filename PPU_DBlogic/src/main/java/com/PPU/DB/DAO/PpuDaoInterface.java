@@ -37,6 +37,8 @@ public interface PpuDaoInterface {
     public ValuesParametrForProject getValuesParametrForProject(int id);
     public UsersMunMan getUsersMunMan(int id);
     public UsersComMan getUsersComMan(int id);
+    public NotificationMU getNotificationMU(int id);
+    public NotificationCom getNotificationCom(int id);
 
     public boolean saveMz(MZ MZ);
     public boolean saveComandMZ(ComandMZ comandMZ);
@@ -62,6 +64,8 @@ public interface PpuDaoInterface {
     public boolean saveValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
     public boolean saveUsersMunMan(UsersMunMan UsersMunMan);
     public boolean saveUsersComMan(UsersComMan UsersComMan);
+    public boolean saveNotificationMU(NotificationMU notificationMU);
+    public boolean saveNotificationCom(NotificationCom notificationCom);
 
     public boolean deleteMz(MZ MZ);
     public boolean deleteComandMZ(ComandMZ comandMZ);
@@ -87,6 +91,8 @@ public interface PpuDaoInterface {
     public boolean deleteValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
     public boolean deleteUsersMunMan(UsersMunMan UsersMunMan);
     public boolean deleteUsersComMan(UsersComMan UsersComMan);
+    public boolean deleteNotificationMU(NotificationMU notificationMU);
+    public boolean deleteNotificationCom(NotificationCom notificationCom);
 
     public boolean updateMz(MZ MZ);
     public boolean updateComandMZ(ComandMZ comandMZ);
@@ -112,6 +118,8 @@ public interface PpuDaoInterface {
     public boolean updateValuesParametrForProject(ValuesParametrForProject valuesParametrForProject);
     public boolean updateUsersMunMan(UsersMunMan UsersMunMan);
     public boolean updateUsersComMan(UsersComMan UsersComMan);
+    public boolean updateNotificationCom(NotificationCom notificationCom);
+    public boolean updateNotificationMU(NotificationMU notificationMU);
 
     public List<MZ> findMz(String fields, String fieldValue);
     public List<ComandMZ> findComandMZ(String fields, String fieldValue);
@@ -137,4 +145,6 @@ public interface PpuDaoInterface {
     public List<ValuesParametrForProject> findValuesParametrForProject(String fields, String fieldValue);
     public List<UsersMunMan> findUsersMunMan(String fields, String fieldValue);
     public List<UsersComMan> findUsersComMan(String fields, String fieldValue);
+    public List<NotificationMU> findNotificationMU(String fields, String fieldValue);
+    public List<NotificationCom> findNotificationCom(String fields, String fieldValue);
 }

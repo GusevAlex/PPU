@@ -1,0 +1,10 @@
+<zk>
+    <window title="Окно" border="normal" width="460px"
+                position="center,center" closable="true"
+                action="show: slideDown;hide: slideUp">
+
+    <textbox id="inputTextBox" value="" rows="10" cols="30" />
+
+    </window>
+
+</zk>

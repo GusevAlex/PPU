@@ -35,7 +35,7 @@
                     <column hflex="2" />
                 </columns>
                 <rows>
-                    <row>Логин : <textbox id="name" value="zk" c:onFocus="this.select()" /></row>
+                    <row>Логин : <textbox id="name" value="" c:onFocus="this.select()" /></row>
                     <row>Пароль : <textbox id="pwd" type="password" /></row>
                     <row><cell sclass="loginRegCtl" colspan="2"><a href="/pages/authoriz/register.zul" >Регистрация</a></cell></row>
                     <row><cell sclass="loginCtl" colspan="2"><vlayout>

@@ -35,6 +35,7 @@ public class ObjectListBox extends Listbox implements IdSpace {
     private boolean loadHandler;
 
     private boolean loadAllSecondFildInRows = true;
+    private boolean loadList = true;
 
     public ObjectListBox()
     {
@@ -66,32 +67,8 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
         if (objs.length!=0)
             setParamForList(objs[0]);
-
-
-
-//		MZ MZ =  new MZ();
-//		Object comandMZ = (Object) MZ.getComandMZ().toArray();
-//		Object[] program1 = new Object[1];
-//		program1[0] = (Object) MZ.getProgram();
-//		WorkWithProgramMZ workerProgr = new WorkWithProgramMZ();
-//
-//		String typeServiceMZ = (String) MZ.getTypeServiceMZ().getName();
-//
-//		List listTypeService = new WorkWithTypeServiceMZ().getListRows();
-//
-//		LimitsMZ [] limitsMZ = (LimitsMZ []) MZ.getLimitsMZ().toArray();
-//
-//		List parametrsList = new ArrayList();
-//
-//		for (LimitsMZ l:limitsMZ)
-//			parametrsList.add(l.getParametr());
-//
-//		Object [] parametr = parametrsList.toArray();
-//
-//		Object valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
-//		Object resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
-//		Object correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
-
+        else
+            loadList = false;
     }
 
     public Object getSelectedObjs() {
@@ -122,11 +99,16 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
         setHeader(annotHelper.getHeader());
         setListCellContant(annotHelper.getListCellContant());
+
+
     }
 
     public void setLoad(boolean load) {
         this.load = load;
         removeChild();
+
+        if (objs.length != 0)
+            loadList = true;
 
         Executions.createComponents("/pages/composite/ObjectListBox.zul", this, null);
         Selectors.wireComponents(this, this, false);
@@ -147,16 +129,6 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setLoadAllSecondFildInRows(boolean loadAllSecondFildInRows) {
         this.loadAllSecondFildInRows = loadAllSecondFildInRows;
-    }
-
-    public void yu()
-    {
-        ListModel l = this.getListModel();
-        List l2 = this.getItems();
-        Object [] ok = new Object[2];
-        ok[1] = objs[0];
-        ok[0] = objs[0];
-        objs = ok;
     }
 
     public void removeChild()
@@ -195,6 +167,14 @@ public class ObjectListBox extends Listbox implements IdSpace {
 
     public void setLoadHandler(boolean loadHandler) {
         this.loadHandler = loadHandler;
+    }
+
+    public boolean isLoadList() {
+        return loadList;
+    }
+
+    public void setLoadList(boolean loadList) {
+        this.loadList = loadList;
     }
 
     public int findAndGetEqObject(Object obj)
@@ -250,5 +230,6 @@ public class ObjectListBox extends Listbox implements IdSpace {
         view.setLoad(true);
 
         view.doModal();
+
     }
 }

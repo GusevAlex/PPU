@@ -78,7 +78,7 @@ public class WorkWithPartnerCommerc extends WorkWithTable {
 
 	@Override
 	public Object getEntity(int id) {
-		return ppuDao.getComandProject(id);
+		return ppuDao.getPartnerCommercialMan(id);
 	}
 
 	@Override

@@ -40,6 +40,8 @@ public class PartnersMZ {
     private Set<UsersMunMan> user;
     private Set<ProgramMZ> programMZs = new LinkedHashSet<ProgramMZ>();
 	private Set<MZ> mzs = new LinkedHashSet<MZ>();
+    private Set<NotificationMU> notificationMU = new LinkedHashSet<NotificationMU>();
+    private TypeMU typesMU;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -142,7 +144,46 @@ public class PartnersMZ {
 		this.mzs = mzs;
 	}
 
-	@Override
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partners")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<NotificationMU> getNotificationMU() {
+        return notificationMU;
+    }
+
+    public void setNotificationMU(Set<NotificationMU> notificationMU) {
+        this.notificationMU = notificationMU;
+    }
+
+    public Set<NotificationMU> notificationMUSet() {
+        Set set = new LinkedHashSet();
+
+        int [] masId = new int[notificationMU.size()];
+
+        int i = 0;
+        for (NotificationMU not : notificationMU)
+            masId[i++] = not.getId();
+
+        Arrays.sort(masId);
+
+        for (int id : masId)
+            for (NotificationMU not : notificationMU)
+                if (not.getId() == id)
+                    set.add(not);
+
+        return set;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "type_mu", insertable = false, updatable = false)
+    public TypeMU getTypesMU() {
+        return typesMU;
+    }
+
+    public void setTypesMU(TypeMU typesMU) {
+        this.typesMU = typesMU;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof PartnersMZ)) return false;
 

@@ -12,6 +12,9 @@
 <?component
         name="ObjectListBox"
         class="com.PPU.composite.ObjectListBox" ?>
+<?component
+        name="myTextBox"
+        class="com.PPU.composite.MyTextBox" ?>
 
 <zk xmlns:ca="client/attribute">
     <window
@@ -112,7 +115,6 @@
 										int idMz = new Integer(execution.getParameter("id"));
 										vm.setId(new Integer(execution.getParameter("id")));
 
-										alert(execution.getDesktop().getRequestPath());
 
                                    ]]>
                                     </zscript>
@@ -128,31 +130,45 @@
                                     border-left: 5px solid #eee;background-color: #f0f7fd;
                                     border-color: #d0e3f0; ">
                                         <label value="@load(vm.program)" />
+                                        <n:br />
+                                        <label value="@load(vm.nameLevel)" />
                                     </div>
 
                                     <panel width="100%" border="normal"
                                            title="Редактирование и просмотр">
                                         <panelchildren>
-
                                             <grid sclass="loginGrid">
                                                 <columns>
                                                     <column width="50%" />
                                                     <column width="50%" />
                                                 </columns>
                                                 <rows>
-                                                    <row>Название : <textbox id="name" value="@bind(vm.name)" cols="30" /></row>
-                                                    <row>Дата начала : <datebox id="startDate" value="@bind(vm.startDate)" cols="12" format="short"/></row>
-                                                    <row>Дата окончания : <datebox id="expirationDate" value="@bind(vm.expirationDate)" cols="12" format="short"/></row>
-                                                    <row>Описание : <textbox id="description" value="@bind(vm.description)" rows="6" /></row>
-                                                    <row>Бюджет : <doublespinner id="budget" value="@bind(vm.budget)" cols="12" /></row>
+                                                    <row>Название : <textbox id="name" value="@bind(vm.mz.name)" cols="30" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3)) ? false : true}" /></row>
+                                                    <row>Дата начала : <datebox id="startDate" value="@bind(vm.mz.startDate)" cols="12" format="short" disabled="${((vm.level == 1) ||(vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
+                                                    <row>Дата окончания : <datebox id="expirationDate" value="@bind(vm.mz.expirationDate)" cols="12" format="short" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
+                                                    <row>Описание : <textbox id="description" value="@bind(vm.mz.description)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
+                                                    <row>Бюджет : <doublespinner id="budget" value="@bind(vm.mz.budget)" cols="12" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
+
+                                                    <row>
+                                                        <cell colspan="2">
+                                                            <groupbox >
+                                                                <caption label="Руководитель муниципального задания" />
+                                                                <hbox>
+                                                                    <ObjectListBox objs="${vm.allLeader}" selectedObjs="${vm.leaders}"
+                                                                                   id="leaderMZ1" mold="paging" hflex="1" vflex="true" rows="8" load="true"/>
+                                                                </hbox>
+                                                            </groupbox>
+                                                        </cell>
+
+                                                    </row>
 
                                                     <row>
                                                         <cell colspan="2">
 															<groupbox >
 															<caption label="Команда, выполняющая МЗ" />
 																<hbox>
-																	<dualObjectListBox worker="WorkWithCommandMz"
-																					   id="comandMZ"  rightList="@bind(vm.comandMZ)" load="true" />
+																	<dualObjectListBox worker="WorkWithCommandMz" rightList="@bind(vm.comandMZ)"  disabled="${((vm.level == 2) || (vm.level == 3)) ? false : true}"
+																					   id="comandMZ1"   load="true" />
 																</hbox>
 															</groupbox>
                                                         </cell>
@@ -164,8 +180,8 @@
 															<groupbox >
 															<caption label="Программа" />
 																<hbox>
-																	<ObjectListBox objs="@load(vm.workerProgr.getListRows().toArray())" selectedObjs="@load(vm.program1[0])"
-																				   id="program" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+																	<ObjectListBox objs="${vm.programs}" selectedObjs="${vm.program1[0]}"
+																				   id="program2" mold="paging" hflex="1" vflex="true" rows="8" load="true"/>
 																</hbox>
 															</groupbox>
 
@@ -175,7 +191,7 @@
 
 													<row>Тип муниципального задания :
 
-														<combobox id="typeService">
+														<combobox id="typeService1" disabled="${((vm.level == 0) || (vm.level == 1)) ? false : true}">
 
 															<zk forEach="${vm.listTypeService}" >
 																<comboitem label="${each.name}">
@@ -187,7 +203,7 @@
 																		  import com.PPU.vm.*;
 
 																		  if (each.name.equals(vm.typeServiceMZ))
-																		  	 typeService.setSelectedItem(self);
+																		  	 typeService1.setSelectedItem(self);
 																	   ]]>
 																	</zscript>
 
@@ -214,19 +230,27 @@
 														<groupbox >
 															<caption label="Лимиты" />
 															<hbox>
-																<grid id="limitsMZ" model="@load(vm.limitsMZ)" >
-																	<columns>
-																		<column hflex="1" label="Параметр" align="left" />
-																		<column hflex="1" label="Значение" align="left" />
-																	</columns>
-																	<rows>
-																		<template name="model">
-																			<row>
-																				<label value="${each.getParametr().getName()}" />   <textbox value="@bind(each.value)" />
-																			</row>
-																		</template>
-																	</rows>
-																</grid>
+                                                                <vlayout>
+                                                                    <toolbar style="margin-bottom: -5px;">
+                                                                        <toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новое ограничение" onClick='@command("onAddNewLimitByList")' disabled="${(vm.level == 4) ? false : true}" />
+                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новое ограничение, уже имеющее значение" onClick='@command("onAddOldLimitByList")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                    </toolbar>
+                                                                    <grid id="limitsMZ1" model="@bind(vm.limitModelList)" >
+                                                                        <columns>
+                                                                            <column hflex="1" label="Параметр" align="left" />
+                                                                            <column hflex="1" label="Значение" align="left" />
+                                                                        </columns>
+                                                                        <rows>
+                                                                            <template name="model">
+                                                                                <row>
+                                                                                    <label value="${each.getParametr().getName()}" />
+                                                                                    <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${(vm.level == 4) ? false : true}"  />
+                                                                                </row>
+                                                                            </template>
+                                                                        </rows>
+                                                                    </grid>
+                                                                </vlayout>
 															</hbox>
 
 														</groupbox>
@@ -244,18 +268,22 @@
 																<hbox>
 																	<vlayout>
 																		<toolbar style="margin-bottom: -5px;">
-																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр"/>
-																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение"/>
-																		</toolbar>
-																		<grid id="valuesParametrForMZ" model="@load(vm.valuesParametrForMZ)" >
+																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParamByList")' disabled="${(vm.level == 4) ? false : true}" />
+																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение" onClick='@command("onAddOldParamByList")' disabled="${(vm.level == 4) ? false : true}" />
+                                                                            <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                        </toolbar>
+																		<grid id="valuesParametrForMZ1" model="@bind(vm.valModelList)" >
 																			<columns>
 																				<column hflex="1" label="Параметр" align="left" />
 																				<column hflex="1" label="Значение" align="left" />
+                                                                                <column hflex="1" label="Дата ввода параметра" align="left" />
 																			</columns>
 																			<rows>
 																				<template name="model">
 																					<row>
-																						<label value="${each.getParametr().getName()}" />   <textbox value="@bind(each.value)" />
+																						<label value="${each.getParametr().getName()}" />
+                                                                                        <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${(vm.level == 4) ? false : true}" />
+                                                                                        <datebox value="${each.getDateRecValue()}" disabled="true" format="dd-MM-yy" />
 																					</row>
 																				</template>
 																			</rows>
@@ -276,8 +304,8 @@
 															<groupbox >
 															<caption label="Ресурсы МЗ" />
 																<hbox>
-																	<dualObjectListBox worker="WorkWithResourcesMZ"
-																					   id="resourcesMZ"  rightList="@bind(vm.resourcesMZ)" load="true" />
+																	<dualObjectListBox worker="WorkWithProviders" rightList="@bind(vm.providers)" disabled="${(vm.level == 4) ? false : true}"
+                                                                                       id="resourcesMZ1" load="true" />
 																</hbox>
 
 															</groupbox>
@@ -292,8 +320,38 @@
 												</rows>
 											</grid>
 
-                                            <button id="btn1" label="sdfgdfgdfg" onClick='@command("onClickBtn1")' />
+                                            <div style="margin: 20px 0;
+                                                        padding: 15px 30px 15px 15px;
+                                                        border-left: 5px solid #eee;background-color: #f0f7fd;
+                                                        border-color: #d0e3f0; ">
+                                                <label value="Файлы приложенные к заданию" />
+                                                <button label="Добавить"  upload="true">
+                                                    <attribute name="onUpload"><![CDATA[
+                                                    org.zkoss.util.media.Media media = event.getMedia();
+                                                    org.zkoss.zhtml.Filedownload.save(media);
+                                                     ]]></attribute>
+                                                        </button>
 
+                                                <grid model="@bind(vm.valModelList)">
+                                                    <rows>
+                                                        <row>
+                                                            <template name="model">
+                                                                <cell>
+                                                                    <a href="${each.value}" >dfgdfg</a>
+                                                                </cell>
+                                                            </template>
+
+                                                        </row>
+                                                    </rows>
+                                                </grid>
+
+                                            </div>
+
+                                            <hlayout>
+                                                <button id="btn1" label="Сохранить" onClick='@command("onClickBtn1")' />
+                                                <button id="btn2" label="${vm.nameNextLevel}" onClick='@command("onClickBtn2")' if='${!vm.nameNextLevel.equals("")}' />
+                                                <button id="btn3" label="${vm.namePrevisLevel}" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
+                                            </hlayout>
                                         </panelchildren>
                                     </panel>
 

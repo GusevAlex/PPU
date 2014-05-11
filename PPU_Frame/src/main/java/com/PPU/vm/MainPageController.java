@@ -4,9 +4,9 @@ import java.util.*;
 
 import javax.servlet.ServletRequest;
 
-import com.PPU.DB.tables.ProgramMZ;
-import com.PPU.DB.tables.UsersComMan;
-import com.PPU.DB.tables.UsersMunMan;
+import com.PPU.DB.tables.*;
+import com.PPU.DB.workLogic.WorkWithNotificationCom;
+import com.PPU.DB.workLogic.WorkWithNotificationMU;
 import com.PPU.DB.workLogic.WorkWithProgramMZ;
 import com.PPU.DB.workLogic.WorkWithUser;
 import com.PPU.windowControllers.PageMZ.GetMZ;
@@ -30,14 +30,7 @@ import org.zkoss.zk.ui.*;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
-import org.zkoss.zul.ListModel;
-import org.zkoss.zul.ListModelArray;
-import org.zkoss.zul.ListModelList;
-import org.zkoss.zul.Listbox;
-import org.zkoss.zul.Listitem;
-import org.zkoss.zul.Popup;
-import org.zkoss.zul.Toolbarbutton;
-import org.zkoss.zul.Window;
+import org.zkoss.zul.*;
 
 public class MainPageController {
     @Wire
@@ -49,6 +42,7 @@ public class MainPageController {
 
     private String css;
     private String nameUser;
+    private String [] notification;
 
     public String getCss() {
         return css;
@@ -134,6 +128,8 @@ public class MainPageController {
                 put("1", new String[][]{{"Мои Программы > "}, {"Программа 1 > "}});
                 put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > "}, {finalName}});
 				put("/pages/include/pages/reviewMyProgram.zul", new String[][]{{"Программы > "}});
+                put("/pages/notification/myNotification.zul", new String[][]{{"Муниципальные задания > ", "Мои оповещения"}});
+                put("/pages/partners/partnersMU.zul", new String[][]{{finalName}, {"Участники системы "}});
             }
         };
 
@@ -219,6 +215,14 @@ public class MainPageController {
         this.nameUser = nameUser;
     }
 
+    public String[] getNotification() {
+        return notification;
+    }
+
+    public void setNotification(String[] notification) {
+        this.notification = notification;
+    }
+
     private ServletRequest request = ServletFns.getCurrentRequest();
 
     @Init
@@ -256,6 +260,9 @@ public class MainPageController {
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2VJREFUeNqsVl9IU2EUv1v7v8mcZbOxESgS+GI+mCDknxmob66nEgyCBCUfDNZT7EVGxFxIMOxBEtxLOoimswcHimn0MrAymbkedLiMmbatzbV/bp0j3x13624l88Dhu9/3ne/3u+d855x7OSsrKxRTWlpaBDBUgMpAI6A/wSZBsQibLWiOLTfvAAeG8+Pj48+Xl5e/4Ihzsk79jy1oji2HkEjIW1AajabWarW+5XK5nHQ6nenr62vz+Xwe2OLlcaSK2FLEoygeKuvv77/Z2Nh4h8fjpSYnJ+144MQ9GOvq6q6NjIwY4vG4iIkuFApjhWxTqRTP5XJZJyYmXiPBhZ6enqdSqVSBhmKx2JUA4fP5gmQymZBIJOrq6uobbHfAYquhbdVqdQMQrJ7DqIAHD+hDAoGAPzs76wBCzszMzJvW1tbrVSBsBOCF0G63Z207OjraLoLgHpCKpqamXqB7V5eWlj4wD+7s7Hj9fv93lUqlhjirqSKyu7vr29vb87HZarXahpOLy2QyOYcuE2Hbyxc1kUK2WYJoNBqLRCJBDoeTpkoQwOLKZLJyuA9RDoHH4/mk1+sfwtRPlSZKs9k8Wl9f35QlgBymIEXj8Li9sLDgOw1aZ2dn/lIUsRAzxwM6fsw4dnV18WFQMFpBilSrlJgcg4ZAf4D+ZoQpi1OQoLu7W4h3aDAYHjU3N99dW1t7Nj09/cpkMuU0r0Ag8KW3t1d7agKscIvFMgqFo8O1o6OjsmAwmIQUdobD4XK5XI5pqdrf398mnlBsBFz6DugFfM7Gj8ejHA6Hjd7HnB8cHLw3NjZmBgLx1tbW++HhYT0JUw4BjcFl84A8hwcGBu57vd5VMs+QMCSGhoZuQRrK5+fnLViXoPGiHrARzM3N4aGASCSKMvbRvqKmpkZ7cHDwbXFx8SMz9qcioN8auyY+Q29Bwkx7e/slaHLloVDoKwlNphjBX60ir9yPDw8PP29sbDyBfvMO5rHKysrA+vq6Ce4D+9evIhX97zpAAqfT6QF9TGogYbPZ3KBGkjmxQuBMggxO4COBRVWl0+lK7BRUFWLRIUaCOCwklUrlFaPRaIHUTJaCjuCAVYuYiI0Egc3NTRt87m4rFIom6gwE3j7tdrtfIjZ+cASk3+Dvh5A6G4mTX5jAHwEGAEF2JdGXXHDPAAAAAElFTkSuQmCC",
                                         "События",	 0, ""),
+                                new MenuItemBean(
+                                        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5JREFUeNq0VVFoUlEY9k6didvUajUXJBujgh70NQhb9OSL4mYNWQ972cMGwh6rhw0yo4eBD/ZgCYPFGgzU2DTGHqLYQzFh1ghiMgeDpjTnnBs6U6f2/eMaardgagc+7j33nvP95//O95/D4/3nxiwvL9dFoNFo/h2AhQQ4B7QCglPw54EkEANSQKF6AJFJDAbDnYGBgWednZ3XTptBNBrd8nq9lunpaTe6B1wZKOfm5pY6Ojqu1ipTMpmMm0ymm4eHh+voFsv/NZEs7e3tPcVikVcrJBLJWbVafR1cl4Eu4DzQXJKIzzAMnwbW046OjhRut/t9Op3OQbbVycnJp5FIZIMyYOpZfQm5XK5VLpd3YR+vIBvT+Pi4nYxz4ph6V89yNJXzKJXKG3jIGhagmkcoFIrocRKgUCg0hJyDh2lYBiKRqJmLhwIUGhFALBYL/xYgjQLZb2lpkddKDmnye2hcUpNN436//0UerVaLrqysvIb/96q/k/qUwQGKwra2tvZRpVJpstnspd7eXiNcICxfSTAY/Lq5uRkiO5atPIN5qwiwPjIycrc8A8oKj2NmYWGBp9PpGLa0zwDdDofDhYLpLg0OBAJvnU6ne2Ji4iGfz29FEOa3TRimiA0WtbW1VUi8vb39eXR0VCegVObn5ymfDEGv1/9AqX9TKBTdtArcFy9tNpvDbrc/IKeQlFKp9EJ1hsSDeTtYwDH2NDQ1NfWI5BdwbEwqHo9/ymQyt5Hdk5mZmVcko9lsHmPvC7FWq701ODhoxSEnLU1KJBLx4eHh+3jdYu+GBPBTwGGtdCgUehOLxfwg/4L+vsfjybOTon19fU2Li4vhVCq1MzQ09Fwmk12kSbu7u3RUB4HvFS7i2Pljn8+3AfIPeN/DCVnhLvQp5QSkW7JYLPfC4fA6fUeAAB2qf5QyJtTk/f7+ftpoMeqnx2q1PoaTnLOzs+9IlooALperrgo2Go10qImBLMlbfaMJGnCIZlhwtl8CDAA8PQ/NwxQAIgAAAABJRU5ErkJggg==",
+                                        "Оповещения",  0, ""),
                         }
                 )
         );
@@ -317,9 +324,32 @@ public class MainPageController {
         };
 
         if (typeOrg != null && typeOrg.equals("Mun"))
+        {                 
+//            UsersMunMan user = (UsersMunMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+//            notification = new String[user.getPartnerMZ().getNotificationMU().size()];
+//
+//            int i = 0;
+//            for (Object not : new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()))
+//                notification[i++] = ((NotificationMU)not).getText();
+
             menuGroups[0] = munGroup;
+        }
         else
+        {
+            if (typeOrg != null)
+            {
+//                UsersComMan user = (UsersComMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+//                notification = new String[user.getPartnerProject().getNotificationComs().size()];
+//
+//                int i = 0;
+//                for (Object not : new WorkWithNotificationCom().getLatestNotification(user.getPartnerProject()))
+//                    notification[i++] = ((NotificationCom)not).getText();
+            }
+
             menuGroups[0] = commercGroup;
+        }
+        
+        
         // -------------------------------------------------------------------------------
 
         // Contacts in the Contact Panel

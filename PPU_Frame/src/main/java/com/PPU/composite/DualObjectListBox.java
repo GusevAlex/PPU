@@ -1,6 +1,5 @@
 package com.PPU.composite;
 
-import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import com.PPU.DB.workLogic.WorkWithTable;
 import org.zkoss.zk.ui.Executions;
@@ -9,12 +8,10 @@ import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Div;
-import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Listitem;
 
 import java.lang.String;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,6 +30,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     private Object [] rightList;
     private boolean load;
     private int rows;
+
+    private boolean disabled = false;
 
     @Wire
     ObjectListBox leftListbox;
@@ -127,6 +126,14 @@ public class DualObjectListBox extends Div implements IdSpace {
         this.rows = rows;
     }
 
+    public boolean isDisabled() {
+        return disabled;
+    }
+
+    public void setDisabled(boolean disabled) {
+        this.disabled = disabled;
+    }
+
     public void reloadList(Object [] list)
     {
         if (list != null && list.length != 0)
@@ -140,6 +147,11 @@ public class DualObjectListBox extends Div implements IdSpace {
 
 					for (int i=0; i<list.length-1; i++)
 						objs[i] = list[i+1];
+
+                    if (list.equals(leftList))
+                        leftList = objs;
+                    else
+                        rightList = objs;
                 }
                 else
                 {
@@ -217,6 +229,7 @@ public class DualObjectListBox extends Div implements IdSpace {
         leftList = list.toArray();
 
         reloadList(leftList);
+        reloadList(rightList);
 
         if (leftListbox!=null && rightListbox!=null) {
             leftListbox.setObjs(leftList);
@@ -239,6 +252,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     @Listen("onClick = #chooseBtn")
     public void onChooseBtn()
     {
+        if (disabled) return;
+
         leftList = leftListbox.getObjs();
         rightList = rightListbox.getObjs();
 
@@ -303,6 +318,8 @@ public class DualObjectListBox extends Div implements IdSpace {
     @Listen("onClick = #removeBtn")
     public void onRemoveBtn()
     {
+        if (disabled) return;
+
         leftList = leftListbox.getObjs();
         rightList = rightListbox.getObjs();
 

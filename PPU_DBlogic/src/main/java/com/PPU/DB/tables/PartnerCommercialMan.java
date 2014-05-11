@@ -7,8 +7,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,6 +38,7 @@ public class PartnerCommercialMan {
     private Set<ComandProject> comandProject = new LinkedHashSet<ComandProject>();
     private Set<UsersComMan> user;
     private Set<ProgramCommerc> programCommercs = new LinkedHashSet<ProgramCommerc>();
+    private Set<NotificationCom> notificationComs = new LinkedHashSet<NotificationCom>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -80,7 +80,7 @@ public class PartnerCommercialMan {
     }
 
 	@FieldType(type = 3, worker="WorkWithCorrectionProject")
-	@HeaderName(name = "Команда проекта")
+	@HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerProject")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
@@ -111,6 +111,35 @@ public class PartnerCommercialMan {
 
     public void setProgramCommercs(Set<ProgramCommerc> programCommercs) {
         this.programCommercs = programCommercs;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "partners")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<NotificationCom> getNotificationComs() {
+        return notificationComs;
+    }
+
+    public void setNotificationComs(Set<NotificationCom> notificationComs) {
+        this.notificationComs = notificationComs;
+    }
+
+    public Set<NotificationCom> notificationComs() {
+        Set set = new LinkedHashSet();
+
+        int [] masId = new int[notificationComs.size()];
+
+        int i = 0;
+        for (NotificationCom not : notificationComs)
+            masId[i++] = not.getId();
+
+        Arrays.sort(masId);
+
+        for (int id : masId)
+            for (NotificationCom not : notificationComs)
+                if (not.getId() == id)
+                    set.add(not);
+
+        return set;
     }
 
     @Override

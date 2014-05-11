@@ -1,33 +1,36 @@
 <?component
         name="ObjectListBox"
         class="com.PPU.composite.ObjectListBox" ?>
+
+<?component
+		name="buttonOpenList"
+		class="com.PPU.composite.ButtonOpenList" ?>
 <zk>
 
     <window title="Окно" border="normal" width="600px" sizable="true"
             position="center,center" closable="true"
             action="show: slideDown;hide: slideUp">
-        <zscript>
-        <![CDATA[
-                alert(arg.get("getter"));
 
-                ]]>
-        </zscript>
         <vlayout>
-        <ObjectListBox objs='${arg.get("obj")}'
-                       id="paarametrs" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+			<ObjectListBox objs='${arg.get("obj")}'
+						   id="paarametrs" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
 
-            <hlayout>
-                <button label="ОК" >
-                <attribute name="onClick">
-                <![CDATA[
-                alert(arg.get("getter"));
-                     com.PPU.windowControllers.PageMZ.GetMZ getter = (com.PPU.windowControllers.PageMZ.GetMZ) arg.get("getter");
-                     getter.saveParam(paarametrs.getSelectedIndex());
-                ]]>
-                </attribute>
-                </button>
-                <button label="Отмена" />
-            </hlayout>
+				<hlayout>
+					<buttonOpenList label="ОК" obj='${arg}' >
+						<attribute name="onClick">
+						<![CDATA[
+						import java.util.Map;
+							 com.PPU.windowControllers.GetListParam getter = (com.PPU.windowControllers.GetListParam) ((Map)self.getObj()).get("getter");
+
+							 if (((Map)self.getObj()).get("type").equals("1"))
+							    getter.saveParam(paarametrs.getSelectedIndex());
+							 else
+							    getter.saveParam2(paarametrs.getSelectedIndex());
+						]]>
+						</attribute>
+					</buttonOpenList>
+					<button label="Отмена" />
+				</hlayout>
         </vlayout>
 
     </window>

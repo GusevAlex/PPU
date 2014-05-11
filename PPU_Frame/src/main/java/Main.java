@@ -1,10 +1,15 @@
 import com.PPU.DB.security.MD5;
-import com.PPU.DB.tables.MZ;
-import com.PPU.DB.tables.ProgramMZ;
-import com.PPU.DB.workLogic.WorkWithMZ;
-import com.PPU.DB.workLogic.WorkWithProgramCommerc;
-import com.PPU.DB.workLogic.WorkWithProgramMZ;
-import com.PPU.DB.workLogic.WorkWithUser;
+import com.PPU.DB.tables.*;
+import com.PPU.DB.workLogic.*;
+import org.zkoss.util.media.Media;
+import org.zkoss.zhtml.Filedownload;
+import org.zkoss.zk.ui.Sessions;
+
+import java.io.InputStream;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,10 +20,9 @@ import com.PPU.DB.workLogic.WorkWithUser;
  */
 public class Main {
     public static void main(String[] args) {
-		WorkWithMZ work = new WorkWithMZ();
 
-		int y = work.getUserRole((MZ)work.getEntity(1),new WorkWithUser().getUserMunManEntity(1));
+        List list = new WorkWithMZ().find1();
 
-		int u = 0;
+        int y = 0;
     }
 }

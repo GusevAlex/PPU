@@ -3,7 +3,14 @@ package com.PPU.DB.tables;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
+import com.PPU.DB.tables.TableAnnot.HeaderName;
+import com.PPU.DB.workLogic.ClassInvokeCall;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +33,7 @@ public class TypeMU {
 
     private int id;
     private String name;
+    private Set<PartnersMZ> partners;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -46,6 +54,16 @@ public class TypeMU {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "typesMU")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<PartnersMZ> getPartners() {
+        return partners;
+    }
+
+    public void setPartners(Set<PartnersMZ> partners) {
+        this.partners = partners;
     }
 
     @Override
