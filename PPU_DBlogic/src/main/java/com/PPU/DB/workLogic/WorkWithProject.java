@@ -1,8 +1,6 @@
 package com.PPU.DB.workLogic;
 
-import com.PPU.DB.tables.CorrectionsMZ;
-import com.PPU.DB.tables.PartnerCommercialMan;
-import com.PPU.DB.tables.Project;
+import com.PPU.DB.tables.*;
 
 import java.util.Date;
 import java.util.Set;
@@ -38,7 +36,7 @@ public class WorkWithProject extends WorkWithTable  {
 	public Object getColumnValue(Object obj, String columnName) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ partnersCommercial");
+			throw new IllegalAccessException("?? ???? ???????? ????????? ? partnersCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "get"+columnName);
@@ -48,7 +46,7 @@ public class WorkWithProject extends WorkWithTable  {
 	public Object setColumnValueFromList(Object obj, String columnName, Object ... listValue) throws IllegalAccessException {
 		if (obj == null)
 		{
-			throw new IllegalAccessException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ userMunCommercial");
+			throw new IllegalAccessException("?? ???? ???????? ????????? ? userMunCommercial");
 		}
 		else
 			return ClassInvokeCall.callMethod(obj, "set"+columnName, listValue);
@@ -59,7 +57,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.saveProject((Project) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("? ????? Project.addEntity ??????? ???????? ????????");
 	}
 
 	@Override
@@ -67,7 +65,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.updateProject((Project) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("? ????? Project.addEntity ??????? ???????? ????????");
 	}
 
 	@Override
@@ -75,7 +73,7 @@ public class WorkWithProject extends WorkWithTable  {
 		if (obj instanceof Project)
 			ppuDao.deleteProject((Project) obj);
 		else
-			throw new Exception("пїЅ пїЅпїЅпїЅпїЅпїЅ Project.addEntity пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			throw new Exception("? ????? Project.addEntity ??????? ???????? ????????");
 	}
 
 	@Override
@@ -87,4 +85,37 @@ public class WorkWithProject extends WorkWithTable  {
 	public Object getEmptyEntity() {
 		return new Project();
 	}
+
+    /** определяем уровень доступа для юзера
+     * 1 - заказчик
+     * 2 - руководитель
+     * 3 - заказчик, руководитель
+     * 4 - команда (исполнитель)
+     * @param project
+     * @param user
+     */
+    public int getUserRole(Project project, UsersComMan user)
+    {
+        int id = user.getId();
+        int role = 0;
+
+        PartnerCommercialMan partnerCom = user.getPartnerProject();
+
+        PartnerCommercialMan progrPartner = project.getProgram().getPartnerCommercialMan();
+
+        if (progrPartner.equals(partnerCom)) role+=1;
+
+        PartnerCommercialMan leaderPartner = project.getLeader();
+
+        if (leaderPartner.equals(partnerCom)) role+=2;
+
+        boolean isFind = false;
+        for (ComandProject com : project.getComandProject())
+            if (com.getPartnerProject().equals(partnerCom))
+                isFind = true;
+
+        if (isFind) role+=3;
+
+        return role;
+    }
 }

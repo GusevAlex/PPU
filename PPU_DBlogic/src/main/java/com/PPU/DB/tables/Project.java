@@ -54,6 +54,7 @@ public class Project {
     private Set<ValuesParametrForProject> valuesParametrForProject = new LinkedHashSet<ValuesParametrForProject>();
     private Set<ResourcesProject> resourcesProject = new LinkedHashSet<ResourcesProject>();
     private Set<CorrectionsProject> correctionsProject = new LinkedHashSet<CorrectionsProject>();
+    private PartnerCommercialMan leader;
 
     @Id
     @GeneratedValue(generator="increment")
@@ -218,6 +219,18 @@ public class Project {
 
     public void setCorrectionsProject(Set<CorrectionsProject> correctionsProject) {
         this.correctionsProject = correctionsProject;
+    }
+
+    @FieldType(type = 2, worker = "WorkWithPartnerCommerc")
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Руководитель")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_leader", insertable = false, updatable = false)
+    public PartnerCommercialMan getLeader() {
+        return leader;
+    }
+
+    public void setLeader(PartnerCommercialMan leader) {
+        this.leader = leader;
     }
 
     @Override

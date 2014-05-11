@@ -1,7 +1,6 @@
 package com.PPU.DB.workLogic;
 
-import com.PPU.DB.tables.ProgramCommerc;
-import com.PPU.DB.tables.ProgramMZ;
+import com.PPU.DB.tables.*;
 
 import java.util.List;
 
@@ -79,4 +78,33 @@ public class WorkWithProgramCommerc extends WorkWithTable {
 	public Object getEmptyEntity() {
 		return new ProgramCommerc();
 	}
+
+    /**
+     * Проверка на участие в программе
+     * 1 - участвие
+     * 0 - нет
+     * @param programCommerc
+     * @param user
+     * @return
+     */
+    public boolean isRoleByProject(ProgramCommerc programCommerc, UsersComMan user)
+    {
+        boolean isFind = false;
+
+        PartnerCommercialMan part = programCommerc.getPartnerCommercialMan();
+
+        if (part.equals(user.getPartnerProject()))
+            isFind = true;
+        else
+            for (Project project : programCommerc.getProjects())
+            {
+                if (new WorkWithProject().getUserRole(project,user)>0)
+                {
+                    isFind = true;
+                    break;
+                }
+            }
+
+        return isFind;
+    }
 }

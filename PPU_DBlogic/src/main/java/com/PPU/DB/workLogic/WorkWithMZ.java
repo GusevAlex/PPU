@@ -128,9 +128,4 @@ public class WorkWithMZ extends WorkWithTable{
 
 		return role;
 	}
-
-    public List<NotificationMU> find1()
-    {
-        return ppuDao.find1();
-    }
 }

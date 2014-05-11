@@ -7,13 +7,51 @@
 
 	<cell align="center" valign="middle" width="100%">
 
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Участники системы"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Участники системы">
+            <attribute name="onClick">   <![CDATA[
+                      Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                     if (((List)obj).size()!=0)
+                        if (((List) obj).get(0) instanceof UsersMunMan)
+                        {
+                            Executions.sendRedirect("/pages/partners/partnersMU.zul");
+                        }
+                        else
+                        if (((List) obj).get(0) instanceof UsersComMan)
+                        {
+                            Executions.sendRedirect("/pages/partners/partnersCommerc.zul");
+                        }
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Программы"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Программы">
+            <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/programs/reviewProgram.zul?loadAll=1");
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Проекты"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Проекты">
+            <attribute name="onClick">   <![CDATA[
+                     Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                     if (((List)obj).size()!=0)
+                        if (((List) obj).get(0) instanceof UsersMunMan)
+                        {
+                            Executions.sendRedirect("/pages/pagesMZ/viewMz.zul?loadAll=1");
+                        }
+                        else
+                        if (((List) obj).get(0) instanceof UsersComMan)
+                        {
+                            Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
+                        }
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ">
+            <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
+           ]]>  </attribute>
+                </toolbarbutton>
     </cell>
 
     <cell align="right" valign="middle" width="100%" style="padding-right: 3px;">

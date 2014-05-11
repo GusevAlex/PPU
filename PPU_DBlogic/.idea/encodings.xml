@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" charset="UTF-8" />
@@ -17,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProviders.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithResourcesProject.java" charset="UTF-8" />

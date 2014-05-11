@@ -4,8 +4,8 @@
         name="Contact"
         class="com.PPU.composite.Contact" ?>
 <?component
-        name="gridReviewMZ"
-        class="com.PPU.composite.GridReviewMZ" ?>
+        name="gridReviewProgramMz"
+        class="com.PPU.composite.GridReviewProgramMz" ?>
 
 <zk xmlns:ca="client/attribute">
     <window
@@ -15,7 +15,7 @@
             onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
             height="100%" width="100%" >
 
-		<style src="../../css/desktop.css.dsp" />
+        <style src="../../../css/desktop.css.dsp" />
 
         <style>
             .contentPanel table.z-caption
@@ -91,37 +91,67 @@
                         <!-- Newsfeed Posts -->
                         <div>
                             <vlayout>
-                                <zk xmlns:n="native">
+                             //контент тут
+                                <!--<toolbar>-->
+                                    <!--<toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="New"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_undo.png" tooltiptext="Undo"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_cut.png" tooltiptext="Cut"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>-->
+                                <!--</toolbar>-->
+                                <zscript>
+                                    <![CDATA[
+                                    import com.PPU.vm.*;
+                                    import com.PPU.DB.tables.*;
+                                    import com.PPU.DB.workLogic.*;
 
-                                <div height="30px"></div>
+                                    Object obj = new Object();
 
-                                <label value="Муниципальные задания для организации" style="font-size: 26px;" />
-                                    <n:hr />
-                                    <zscript>
-                                        <![CDATA[
-                                      import com.PPU.DB.tables.*;
-                                      import com.PPU.DB.workLogic.*;
-                                      import com.PPU.vm.*;
+                                    Object partn = MainPageController.getPartner();
+                                    String loadAll = Executions.getCurrent().getParameter("loadAll");
+                                    boolean mu = true;
 
-                                      String name = MainPageController.getPartnerName();
+                                    if (loadAll == null)
+                                    {
+                                        if (partn instanceof PartnersMZ)
+                                        {
+                                            obj = Arrays.asList(((PartnersMZ) partn).getProgramMZs().toArray());
+                                            mu = true;
+                                        }
+                                        else
+                                        if (partn instanceof PartnerCommercialMan)
+                                        {
+                                            obj = Arrays.asList(((PartnerCommercialMan) partn).getProgramCommercs().toArray());
+                                             mu = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                         if (partn instanceof PartnersMZ)
+                                         {
+                                            obj = new WorkWithProgramMZ().getListRows();
+                                            mu = true;
+                                         }
+                                        else
+                                        if (partn instanceof PartnerCommercialMan)
+                                        {
+                                            obj = new WorkWithProgramCommerc().getListRows();
+                                            mu = false;
+                                        }
+                                    }
 
-                                      Object obj = MainPageController.getProjectOrMz();
-                                   ]]>
-                                    </zscript>
 
-                                <div style="margin: 20px 0;
-                                padding: 15px 30px 15px 15px;
-                                border-left: 5px solid #eee;background-color: #f0f7fd;
-                                border-color: #d0e3f0; ">
-                                   <label value="Для организации: ${name}" />
-                                </div>
+                             ]]></zscript>
 
-                                    <gridReviewMZ model = "${obj}">
+                                <gridReviewProgramMz model = "${obj}" if="${mu}" >
 
-                                    </gridReviewMZ>
+                                </gridReviewProgramMz>
 
+                                <gridReviewProgramMz model = "${obj}" if="${!mu}" >
 
-                                </zk>
+                                </gridReviewProgramMz>
+
+                             //
                             </vlayout>
 
                             <popup

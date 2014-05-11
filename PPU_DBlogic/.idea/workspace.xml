@@ -40,7 +40,7 @@
     <file path="/NotificationMU.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399713227187" ignored="false" />
     <file path="/NotificationCom.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399656371953" ignored="false" />
     <file path="/PartnersMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399748208953" ignored="false" />
-    <file path="/PartnerCommercialMan.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399721413390" ignored="false" />
+    <file path="/PartnerCommercialMan.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399834075045" ignored="false" />
     <file path="/WorkWithNotificationMU.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399710129812" ignored="false" />
     <file path="/PpuDaoInterface.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399656663750" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399657551296" ignored="false" />
@@ -71,6 +71,10 @@
     <file path="/TypeMU.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399748188578" ignored="false" />
     <file path="$PROJECT_DIR$/../PPU_Frame/web/pages/composite/GridReviewProgramMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399748764609" ignored="false" />
     <file path="/GridReviewProgramMz.zul" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399748763640" ignored="false" />
+    <file path="/WorkWithProject.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399834946485" ignored="false" />
+    <file path="/Project.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399833865709" ignored="false" />
+    <file path="/WorkWithProgramMZ.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399834637353" ignored="false" />
+    <file path="/WorkWithProgramCommerc.java" changelist="deb3a9e8-7ba9-4c8e-915b-66a4a5fd232e" time="1399835325355" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -136,7 +139,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" line="405" class="com.PPU.DB.DAO.PpuDao" package="com.PPU.DB.DAO">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" line="481" class="com.PPU.DB.DAO.PpuDao" package="com.PPU.DB.DAO">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -151,6 +154,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -163,19 +167,10 @@
       <file leaf-file-name="PartnerCommercialMan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="0" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0">
+            <state line="116" column="48" selection-start="3410" selection-end="3410" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1188#1205#0" expanded="true" />
+                <element signature="e#1262#1271#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PpuDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2004" column="5" selection-start="59698" selection-end="59698" vertical-scroll-proportion="-19.48">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -183,7 +178,16 @@
       <file leaf-file-name="WorkWithMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="5" selection-start="3600" selection-end="3600" vertical-scroll-proportion="0.0">
+            <state line="123" column="51" selection-start="3527" selection-end="3536" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkWithProject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="55" selection-start="2682" selection-end="2693" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,19 +196,17 @@
       <file leaf-file-name="PpuDaoInterface.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="67" selection-start="7540" selection-end="7540" vertical-scroll-proportion="0.0">
+            <state line="140" column="67" selection-start="8357" selection-end="8357" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartnersMZ.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PartnersMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="94" selection-start="4860" selection-end="4860" vertical-scroll-proportion="0.48953974">
-              <folding>
-                <element signature="e#1163#1179#0" expanded="true" />
-              </folding>
+            <state line="137" column="112" selection-start="3531" selection-end="3784" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,42 +220,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultParametrsServiceMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java">
+      <file leaf-file-name="ProgramCommerc.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
+            <state line="36" column="106" selection-start="931" selection-end="931" vertical-scroll-proportion="34.84">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeMU.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
+      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="75" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgramMZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+            <state line="220" column="53" selection-start="6626" selection-end="6626" vertical-scroll-proportion="-4.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MZ.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
+      <file leaf-file-name="WorkWithProgramMZ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="28" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="92" column="29" selection-start="2430" selection-end="2440" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkWithProgramCommerc.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="77" selection-start="2443" selection-end="2454" vertical-scroll-proportion="0.12903225">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -268,22 +266,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithPartnerCommerc.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/NotificationCom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/NotificationMU.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithNotificationMU.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithNotificationCom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java" />
       </list>
     </option>
   </component>
@@ -328,10 +326,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1374" />
-    <option name="height" value="746" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -362,6 +360,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -377,6 +376,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PPU_DBlogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -598,7 +611,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -613,12 +625,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -708,19 +720,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -747,6 +746,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -824,7 +836,7 @@
     <option name="totallyTimeSpent" value="17648000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="746" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -841,11 +853,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2659091" sideWeight="0.5817875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35530302" sideWeight="0.57240206" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2621212" sideWeight="0.5817875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41821247" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2969697" sideWeight="0.57240206" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42759797" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -925,20 +937,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/NotificationCom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="105" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.17252396">
@@ -946,44 +944,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithNotificationMU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="36" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-4.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithNotificationCom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="67" selection-start="2921" selection-end="2921" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/NotificationMU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="5" selection-start="3600" selection-end="3600" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2004" column="5" selection-start="59698" selection-end="59698" vertical-scroll-proportion="-19.48">
+        <state line="2006" column="0" selection-start="59701" selection-end="59701" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/DAO/PpuDaoInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="67" selection-start="7540" selection-end="7540" vertical-scroll-proportion="0.0">
+        <state line="140" column="67" selection-start="8357" selection-end="8357" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1002,46 +972,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1188#1205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="28" selection-end="289" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="75" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="21" column="75" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+        <state line="41" column="53" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-1.9836735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="50" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="106" selection-start="931" selection-end="931" vertical-scroll-proportion="34.84">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="94" selection-start="4860" selection-end="4860" vertical-scroll-proportion="0.48953974">
+        <state line="137" column="112" selection-start="3531" selection-end="3784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="53" selection-start="6626" selection-end="6626" vertical-scroll-proportion="-4.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="48" selection-start="3410" selection-end="3410" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1163#1179#0" expanded="true" />
+            <element signature="e#1262#1271#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="51" selection-start="3527" selection-end="3536" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="55" selection-start="2682" selection-end="2693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="29" selection-start="2430" selection-end="2440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithProgramCommerc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="77" selection-start="2443" selection-end="2454" vertical-scroll-proportion="0.12903225">
+          <folding />
         </state>
       </provider>
     </entry>

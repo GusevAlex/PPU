@@ -128,9 +128,9 @@
 
                                             <columns  menupopup="auto" sizable="true">
                                                 <column sort="auto(name)"  label="Цель" width="${gridMZ.width}"></column>
-                                                <column sort="auto(address)"  label="Описание" width="${gridMZ.width}"></column>
+                                                <column sort="auto(address)"  label="Адрес" width="${gridMZ.width}"></column>
                                                 <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
-                                                <column sort="auto(typeMU)"  label="Описание" width="${gridMZ.width}"></column>
+                                                <column sort="auto(typeMU)"  label="Тип муниципального учреждения" width="${gridMZ.width}"></column>
                                                 <column label="Просмотр всех программ" width="${gridMZ.width}"></column>
                                             </columns>
 
@@ -147,7 +147,7 @@
 
                                                     <buttonOpenList label="Открыть" obj="${each.id}">
                                                         <attribute name="onClick">   <![CDATA[
-                                                            Executions.sendRedirect("/pages/pagesMZ/viewMz.zul?id="+self.getObj());
+                                                            Executions.sendRedirect("/pages/programs/reviewProgram.zul?part="+self.getObj());
                                                    ]]>  </attribute>
                                                     </buttonOpenList>
                                                 </row>

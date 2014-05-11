@@ -10,7 +10,7 @@
     <zscript>
         <![CDATA[
                   import com.PPU.composite.*;
-                  GridReviewProgramMz gridMZ = self;
+                  GridReviewProgramCommerc gridMZ = self;
                ]]>
     </zscript>
     <vlayout>
@@ -21,16 +21,16 @@
             <toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>
             <toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>
         </toolbar>
-    <grid  id="gridProgramMz" mold="paging" pageSize="10">
+    <grid  id="gridProgramCommerc" mold="paging" pageSize="10">
 
     <columns  menupopup="auto" sizable="true">
-        <column label="Просмотр" width="${gridMZ.width}"></column>
-        <column label="Изменить" width="${gridMZ.width}"></column>
-        <column label="Просмотр всех муниципальных заданий" width="${gridMZ.width}"></column>
-        <column sort="auto(name)"  label="Название" width="${gridMZ.width}"></column>
-        <column sort="auto(target)"  label="Цель" width="${gridMZ.width}"></column>
-        <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
-        <column label="Заказчик" width="${gridMZ.width}"></column>
+        <column label="Просмотр" width="${gridProgramCommerc.width}"></column>
+        <column label="Изменить" width="${gridProgramCommerc.width}"></column>
+        <column label="Просмотр всех муниципальных заданий" width="${gridProgramCommerc.width}"></column>
+        <column sort="auto(name)"  label="Название" width="${gridProgramCommerc.width}"></column>
+        <column sort="auto(target)"  label="Цель" width="${gridProgramCommerc.width}"></column>
+        <column sort="auto(description)"  label="Описание" width="${gridProgramCommerc.width}"></column>
+        <column label="Заказчик" width="${gridProgramCommerc.width}"></column>
         <column label="Участвую ли я в программе?" width="${gridMZ.width}"></column>
     </columns>
 
@@ -42,26 +42,26 @@
                     String name = objs.getName();
                     String target = objs.getTarget();
                     String description = objs.getDescription();
-                    Object partnersMZ = (Object) objs.getPartnersMZ();
+                    Object partnersCommerc = (Object) objs.getPartnerCommercialMan();
                 ]]>
         </zscript>
 
         <row >
-            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+            <buttonOpenList label="12" image=""  obj="${partnersCommerc}"  >
                 <attribute name="onClick">   <![CDATA[
                   Executions.sendRedirect("/pages/programs/Program.zul?progr="+self.getObj().getId());
            ]]>  </attribute>
                     </buttonOpenList>
-            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+            <buttonOpenList label="12" image=""  obj="${partnersCommerc}"  >
                 <attribute name="onClick">   <![CDATA[
                     AddObject add = new AddObject();
 
-                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
                     add.setObj(self.getObj());
                     add.showWindow();
            ]]>  </attribute>
             </buttonOpenList>
-            <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+            <buttonOpenList label="12" image=""  obj="${partnersCommerc}"  >
                 <attribute name="onClick">   <![CDATA[
                     Executions.sendRedirect("/pages/pagesMZ/viewMz.zul?progr="+self.getObj().getId());
            ]]>  </attribute>
@@ -69,11 +69,11 @@
             <label value="${name}" />
             <label value="${target}" />
             <label value="${description}" />
-            <buttonOpenList label="Все значения" obj="${partnersMZ}" >
+            <buttonOpenList label="Все значения" obj="${partnersCommerc}" >
                 <attribute name="onClick">   <![CDATA[
                     AddObject add = new AddObject();
 
-                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
                     add.setObj(self.getObj());
                     add.showWindow();
                             ]]>  </attribute>
@@ -84,12 +84,13 @@
                     import com.PPU.DB.workLogic.*;
 
                     Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
-                    boolean level = new WorkWithProgramMZ().isRoleByMZ((MZ) objs, (UsersMunMan) obj.get(0));
+                    boolean level = new WorkWithProgramCommerc().isRoleByProject((ProgramCommerc) objs, (UsersComMan) obj.get(0));
                ]]>
             </zscript>
 
             <label value="Нет" if="${level}" />
             <label value="Да" if="${level}" />
+
         </row>
 
     </template>

@@ -10,36 +10,27 @@
     <zscript>
     <![CDATA[
                     import com.PPU.composite.*;
-                    GridReviewMZ gridMZ = self;
+                    GridReviewProject gridProject = self;
     ]]>
     </zscript>
 
-    <vlayout>
-    <toolbar>
-        <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="New"/>
-        <toolbarbutton image="/images/tollbar/edit_undo.png" tooltiptext="Undo"/>
-        <toolbarbutton image="/images/tollbar/edit_cut.png" tooltiptext="Cut"/>
-        <toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>
-        <toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>
-    </toolbar>
 
-    <grid  id="gridMz" mold="paging" pageSize="10">
+    <grid  id="gridProject" mold="paging" pageSize="10">
 
         <columns  menupopup="auto" sizable="true">
-            <column label="Просмотр" width="${gridMZ.width}"></column>
-            <column label="Изменить" width="${gridMZ.width}"></column>
-            <column sort="auto(name)"  label="Название" width="${gridMZ.width}"></column>
-            <column sort="auto(startDate)"  label="Дата начала" width="${gridMZ.width}"></column>
-            <column sort="auto(expirationDate)"  label="Дата окончания" width="${gridMZ.width}"></column>
-            <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
-            <column sort="auto(budget)"  label="Бюджет" width="${gridMZ.width}"></column>
-            <column label="Команда" width="${gridMZ.width}"></column>
-            <column label="Программа" width="${gridMZ.width}"></column>
-            <column label="Тип" width="${gridMZ.width}"></column>
-            <column label="Ограничения" width="${gridMZ.width}"></column>
-            <column label="Значения параметры" width="${gridMZ.width}"></column>
-            <column label="Ресурсы" width="${gridMZ.width}"></column>
-            <column label="Корректировки" width="${gridMZ.width}"></column>
+            <column label="Просмотр" width="${gridProject.width}"></column>
+            <column label="Изменить" width="${gridProject.width}"></column>
+            <column sort="auto(name)"  label="Название" width="${gridProject.width}"></column>
+            <column sort="auto(startDate)"  label="Дата начала" width="${gridProject.width}"></column>
+            <column sort="auto(expirationDate)"  label="Дата окончания" width="${gridProject.width}"></column>
+            <column sort="auto(description)"  label="Описание" width="${gridProject.width}"></column>
+            <column sort="auto(budget)"  label="Бюджет" width="${gridProject.width}"></column>
+            <column label="Команда" width="${gridProject.width}"></column>
+            <column label="Программа" width="${gridProject.width}"></column>
+            <column label="Ограничения" width="${gridProject.width}"></column>
+            <column label="Значения параметры" width="${gridProject.width}"></column>
+            <column label="Ресурсы" width="${gridProject.width}"></column>
+            <column label="Корректировки" width="${gridProject.width}"></column>
             <column label="Участвую ли я в МЗ?" width="${gridMZ.width}"></column>
         </columns>
 
@@ -48,35 +39,32 @@
 
             <zscript>
                 <![CDATA[
-                    import com.PPU.DB.workLogic.*;
-
                     String name = objs.getName();
                     Date startDate = objs.getStartDate();
                     Date expirationDate = objs.getExpirationDate();
                     String description = objs.getDescription();
                     float budget = objs.getBudget();
 
-                    Object comandMZ = (Object) objs.getComandMZ().toArray();
+                    Object comandProject = (Object) objs.getComandProject().toArray();
                     Object[] program = new Object[1];
                     program[0] = (Object) objs.getProgram();
 
-                    String typeServiceMZ = (String) objs.getTypeServiceMZ().getName();
-
-                    Object limitsMZ = (Object) objs.getLimitsMZ().toArray();
-                    Object valuesParametrForMZ = (Object) objs.getValuesParametrForMZ().toArray();
-                    Object resourcesMZ = (Object) objs.getResourcesMZ().toArray();
-                    Object correctionsMZ = (Object) objs.getCorrectionsMZ().toArray();
+                    Object limitsProject = (Object) objs.getLimitsProject().toArray();
+                    Object valuesParametrForProject = (Object) objs.getValuesParametrForProject().toArray();
+                    Object resourcesProject = (Object) objs.getResourcesProject().toArray();
+                    Object correctionsProject = (Object) objs.getCorrectionsProject().toArray();
 
                     Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
-                    int level = new WorkWithMZ().getUserRole((MZ) objs, (UsersMunMan) obj.get(0));
+
+                    int level = new WorkWithProject().getUserRole((Project) objs, (UsersComMan) obj.get(0));
                 ]]>
             </zscript>
 
-            <row >
+            <row>
 
                 <buttonOpenList label="12" image=""  obj="${objs.getId()}"  >
                     <attribute name="onClick">   <![CDATA[
-                    Executions.sendRedirect("/pages/pagesMZ/MZ.zul?id="+self.getObj());
+                    Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
            ]]>  </attribute>
                 </buttonOpenList>
 
@@ -84,7 +72,7 @@
                     <attribute name="onClick">   <![CDATA[
                     AddObject add = new AddObject();
 
-                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
                     add.setObj(self.getObj());
                     add.showWindow();
            ]]>  </attribute>
@@ -96,7 +84,7 @@
                 <label value="${description}" />
                 <label value="${budget}" />
 
-                <buttonOpenList label="Все значения" obj="${comandMZ}" >
+                <buttonOpenList label="Все значения" obj="${comandProject}" >
                     <attribute name="onClick">   <![CDATA[
                                 import com.PPU.composite.ObjectListBox;
                                  ObjectListBox.showViewObject(self.getObj());
@@ -107,36 +95,35 @@
                     <attribute name="onClick">   <![CDATA[
                     AddObject add = new AddObject();
 
-                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramMZ());
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
                     add.setObj(self.getObj());
                     add.showWindow();
                 ]]> </attribute>
                 </buttonOpenList>
 
-                <label value="${typeServiceMZ}" />
 
-                <buttonOpenList label="Все значения" obj="${limitsMZ}" >
+                <buttonOpenList label="Все значения" obj="${limitsProject}" >
                     <attribute name="onClick">   <![CDATA[
                                 import com.PPU.composite.ObjectListBox;
                                  ObjectListBox.showViewObject(self.getObj());
                 ]]> </attribute>
                 </buttonOpenList>
 
-                <buttonOpenList label="Все значения" obj="${valuesParametrForMZ}" >
+                <buttonOpenList label="Все значения" obj="${valuesParametrForProject}" >
                     <attribute name="onClick">   <![CDATA[
                                 import com.PPU.composite.ObjectListBox;
                                  ObjectListBox.showViewObject(self.getObj());
                 ]]> </attribute>
                 </buttonOpenList>
 
-                <buttonOpenList label="Все значения" obj="${resourcesMZ}" >
+                <buttonOpenList label="Все значения" obj="${resourcesProject}" >
                     <attribute name="onClick">   <![CDATA[
                                 import com.PPU.composite.ObjectListBox;
                                  ObjectListBox.showViewObject(self.getObj());
                 ]]> </attribute>
                 </buttonOpenList>
 
-                <buttonOpenList label="Все значения" obj="${correctionsMZ}" >
+                <buttonOpenList label="Все значения" obj="${correctionsProject}" >
                     <attribute name="onClick">   <![CDATA[
                                 import com.PPU.composite.ObjectListBox;
                                  ObjectListBox.showViewObject(self.getObj());
@@ -151,5 +138,5 @@
         </template>
         <!--</listbox>-->
     </grid>
-    </vlayout>
+
 </zk>

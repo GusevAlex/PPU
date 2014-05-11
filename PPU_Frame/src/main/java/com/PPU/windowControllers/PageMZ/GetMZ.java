@@ -461,7 +461,12 @@ public class GetMZ implements GetListParam {
 
             comandMZ = (Object) new Object []{new ComandMZ()};
             program1 = new Object[1];
-            program1[0] = new Object();
+
+            String progr = Executions.getCurrent().getParameter("progr");
+            if (progr == null)
+                program1[0] = new Object();
+            else
+                program1[0] = new WorkWithProgramMZ().getEntity(new Integer(progr));
 
             typeServiceMZ = "";
 

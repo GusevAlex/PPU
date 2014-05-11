@@ -1,6 +1,9 @@
 package com.PPU.DB.workLogic;
 
+import com.PPU.DB.tables.MZ;
+import com.PPU.DB.tables.PartnersMZ;
 import com.PPU.DB.tables.ProgramMZ;
+import com.PPU.DB.tables.UsersMunMan;
 
 import java.util.List;
 
@@ -78,4 +81,33 @@ public class WorkWithProgramMZ extends WorkWithTable {
 	public Object getEmptyEntity() {
 		return new ProgramMZ();
 	}
+
+    /**
+     * Проверка на участие в программе
+     * 1 - участвие
+     * 0 - нет
+     * @param programMZmz
+     * @param user
+     * @return
+     */
+    public boolean isRoleByMZ(ProgramMZ programMZmz, UsersMunMan user)
+    {
+        boolean isFind = false;
+
+        PartnersMZ part = programMZmz.getPartnersMZ();
+
+        if (part.equals(user.getPartnerMZ()))
+            isFind = true;
+        else
+            for (MZ mz : programMZmz.getMZ())
+            {
+                if (new WorkWithMZ().getUserRole(mz,user)>0)
+                {
+                    isFind = true;
+                    break;
+                }
+            }
+
+        return isFind;
+    }
 }

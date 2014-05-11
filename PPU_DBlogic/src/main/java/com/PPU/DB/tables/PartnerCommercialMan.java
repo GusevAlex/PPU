@@ -39,6 +39,7 @@ public class PartnerCommercialMan {
     private Set<UsersComMan> user;
     private Set<ProgramCommerc> programCommercs = new LinkedHashSet<ProgramCommerc>();
     private Set<NotificationCom> notificationComs = new LinkedHashSet<NotificationCom>();
+    private Set<Project> projects = new LinkedHashSet<Project>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -111,6 +112,18 @@ public class PartnerCommercialMan {
 
     public void setProgramCommercs(Set<ProgramCommerc> programCommercs) {
         this.programCommercs = programCommercs;
+    }
+
+    @FieldType(type = 3, worker="WorkWithProject")
+    @HeaderName(name = "Муниципальные задания")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "leader")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partners")
