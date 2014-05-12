@@ -20,8 +20,8 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
+		Object o = new WorkWithCorrectionMZ().getEntity(1);
 
-
-        int y = 0;
+		int y = 0;
     }
 }

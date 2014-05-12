@@ -35,6 +35,7 @@ public class GetMZ implements GetListParam {
     private int id;
 
 	MZ mz;
+	MZ oldMz;
 
     String mzName;
 
@@ -335,9 +336,15 @@ public class GetMZ implements GetListParam {
         MZ MZ;
 
         if (id!=0)
+		{
             MZ = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEntity(id));
+			oldMz = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEntity(id));
+		}
         else
+		{
             MZ = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEmptyEntity());
+			oldMz = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEmptyEntity());
+		}
 
 		mz = MZ;
         
@@ -381,13 +388,25 @@ public class GetMZ implements GetListParam {
                 parametrsList.add(((LimitsMZ)l).getParametr());
 
             parametr = parametrsList.toArray();
+			valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
 
-            valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
+			List val = new ArrayList();
+
+			for (Object v : (Object []) valuesParametrForMZ)
+				if (((ValuesParametrForMZ)v).getParametr().getId()!=1)
+					val.add(v);
+			valModelList = new ListModelList<Object>((Object []) val.toArray());
+
             resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
             correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
 
-            limitModelList = new ListModelList<Object>(limitsMZ);
-            valModelList = new ListModelList<Object>((Object []) valuesParametrForMZ);
+			val = new ArrayList();
+			for (Object v : limitsMZ)
+				if (((LimitsMZ)v).getParametr().getId()!=1)
+					val.add(v);
+
+            limitModelList = new ListModelList<Object>(val.toArray());
+
 
             List user = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
             setLevel(new WorkWithMZ().getUserRole(mz, (UsersMunMan) user.get(0)));
@@ -497,6 +516,116 @@ public class GetMZ implements GetListParam {
 //        setLevel(3);
     }
 
+	private void compareAndSaveCorrection()
+	{
+		WorkWithCorrectionMZ worker = new WorkWithCorrectionMZ();
+
+		if (oldMz.getStatus() != mz.getStatus())
+		{
+			try {
+				CorrectionsMZ val = new CorrectionsMZ();
+				val.setIdParametr(((Parametrs) new WorkWithParametrs().getEntity(1)).getId());
+				String levelName = "";
+
+				switch (mz.getStatus()+1)
+				{
+					case 1 : levelName = "Создается";
+						break;
+					case 2 : levelName = "Создан";
+						break;
+					case 3 : levelName = "Планирование";
+						break;
+					case 4 : levelName = "На согласовании";
+						break;
+					case 5 : levelName = "Выполняется";
+						break;
+				}
+
+				val.setValueAfter(levelName);
+				val.setLimts(false);
+
+				worker.addEntity(val);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		List listLimitList = limitModelList.getInnerList();
+		List listValList = valModelList.getInnerList();
+
+		for (Object listO : listLimitList)
+		{
+			boolean isFind = false;
+
+			for (Object o : limitsMZ)
+				if (((LimitsMZ)listO).getParametr().equals((((LimitsMZ)o)).getParametr()))
+				{
+					isFind = true;
+
+					if (!o.equals(listO))
+					{
+						try {
+							CorrectionsMZ val = new CorrectionsMZ();
+							val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
+							val.setValueBefore(((LimitsMZ)listO).getValue());
+
+							worker.addEntity(val);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				}
+
+			if (!isFind)
+			{
+				try {
+					CorrectionsMZ val = new CorrectionsMZ();
+					val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
+					val.setValueBefore(((LimitsMZ)listO).getValue());
+
+					worker.addEntity(val);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+		for (int i=0; i<listValList.size(); i++)
+		{
+			if (i<((Object[]) valuesParametrForMZ).length)
+			{
+				if (!((ValuesParametrForMZ)listValList.get(i)).getValue().equals(((ValuesParametrForMZ)(((Object [])valuesParametrForMZ)[i])).getValue()))
+				{
+					try {
+						CorrectionsMZ val = new CorrectionsMZ();
+						val.setIdParametr(((ValuesParametrForMZ) listValList.get(i)).getParametr().getId());
+						val.setValueBefore(((ValuesParametrForMZ) listValList.get(i)).getValue());
+
+						worker.addEntity(val);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+			else
+			{
+				try {
+					CorrectionsMZ val = new CorrectionsMZ();
+					val.setIdParametr(((ValuesParametrForMZ) listValList.get(i)).getParametr().getId());
+					val.setValueBefore(((ValuesParametrForMZ) listValList.get(i)).getValue());
+
+					worker.addEntity(val);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+
+
+	}
+
     @Command
     public void onClickBtn1(@ContextParam(ContextType.COMPONENT) Component comp)
     {
@@ -559,6 +688,8 @@ public class GetMZ implements GetListParam {
                 e.printStackTrace();
             }
         }
+
+		compareAndSaveCorrection();
 
         Clients.clearBusy();
     }

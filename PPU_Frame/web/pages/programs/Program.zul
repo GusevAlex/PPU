@@ -30,7 +30,7 @@
             onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
             height="100%" width="100%" >
 
-        <style src="../../css/desktop.css.dsp" />
+		<style src="../../css/desktop.css.dsp" />
 
         <style>
             .contentPanel table.z-caption

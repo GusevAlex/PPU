@@ -249,26 +249,48 @@ public class MainPageController {
 
         currentUser = new AuthorBean("ZK Team", "images/avatars/zk.jpg");
 
+		int countMyMZ = 0;
+		int countMessage = 0;
+		int countMyEvent = 0;
+		int countMyNotif = 0;
+		int countProgram = 0;
 
-        MenuGroupBean munGroup = new MenuGroupBean(
+		Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+		if (((List)obj).size()!=0)
+			if (((List) obj).get(0) instanceof UsersMunMan)
+			{
+				countMyMZ = ((UsersMunMan)((List) obj).get(0)).getPartnerMZ().getMzs().size();
+				countMyNotif = ((UsersMunMan)((List) obj).get(0)).getPartnerMZ().getNotificationMU().size();
+				countProgram = ((UsersMunMan)((List) obj).get(0)).getPartnerMZ().getProgramMZs().size();
+			}
+			else
+				if (((List) obj).get(0) instanceof UsersComMan)
+				{
+
+				}
+
+
+
+		MenuGroupBean munGroup = new MenuGroupBean(
                 "Муниципальные задания",
                 new ListModelArray<MenuItemBean>(
                         new MenuItemBean[] {
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0VU1IG0EUdmOi6yYmIT9EKaU1JFg0hxIJVEQNJPbixdKUFjw0OQg59OClQqmHgBJKPbSn2KSC0LMX8ZCLgSLUetCDYq6VnkoJarL9cdfort+TbFmSVDYGH3wsM7PzvXnvfTOvpeWGjdnY2GiKYGRk5Mp1fZ0NrfiYAQfA0SEa9CkDInAIHOtlWa7+oXN6ejo2Pj4+19bWxl0nqvPz8/Lm5ubi7OzsHFOJwgTQyf8AXSsrK58dDsedZlJXLpeFsbGx+0RuTSaTL51O5710Ov16e3tbZhiGpciOjo6Os9nsR0EQvmNOrpzOGgwGJ71ebz/mxbW1teVSqbSv0+kkkNpAGnW73R69Xs/id5Yc2Px+/wtKBzZ+gYN1Iifs7e3llpaWMvjnh+pwphOYx+N5x/P871QqlcPcN0AC7N3d3YGenh6PIiJy0A6yViI8PT01UqoUBzAeKOVyub8KeygUkgwGwy9aRxrtq6ury/DHX7IxTCvmXOq6XqpIIVQWqsZyHSH8mzMajSaCaqFWpmpy9fjs7IzyaAqHwyeqPRxyz9F6sVgszcAODg7yFXlaE4nEzNDQ0KimCHp7e0cnJiaecRzHKxuQRnZgYOBR5V8d6nd3cHCQeGSkysSybEdNiiRJuoTaAY1dLteteDz+pp4Mab0TNjU19aremtYayIVC4SdJUNMVlmXGarU6IALDlREo46+w+fn5t5gqaLxfllgs9jwSiTzVFEFfX58PNZyE/Ioaby/r8/mC/5VptYqQYvPw8PCTRp8JzfcAN5Xf3d1dRwSHWoghaw4RPMRlc15VA0YZ5/P5/YWFhU+N1CAajbZD2pGafkDkoihSH7ArzwX0/iCTyXxoREUWi8VRnSJZSUkgEHhss9n6zWazncYg1iHcriZqIJEDEdUX8by24yW8Taj3pjRqyAb1FkFHrW1ra+s9Jk7UxW4GeE6EnZ2dReJWOpqlkvuOa/Tgej1ZqPTkYstN24UAAwCE6hRrSCrxTwAAAABJRU5ErkJggg==",
-                                        "Мои муниципальные задания", 8, "/pages/pagesMZ/viewMz.zul"),
+                                        "Мои муниципальные задания", countMyMZ, "/pages/pagesMZ/viewMz.zul"),
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5JREFUeNq0VVFoUlEY9k6didvUajUXJBujgh70NQhb9OSL4mYNWQ972cMGwh6rhw0yo4eBD/ZgCYPFGgzU2DTGHqLYQzFh1ghiMgeDpjTnnBs6U6f2/eMaardgagc+7j33nvP95//O95/D4/3nxiwvL9dFoNFo/h2AhQQ4B7QCglPw54EkEANSQKF6AJFJDAbDnYGBgWednZ3XTptBNBrd8nq9lunpaTe6B1wZKOfm5pY6Ojqu1ipTMpmMm0ymm4eHh+voFsv/NZEs7e3tPcVikVcrJBLJWbVafR1cl4Eu4DzQXJKIzzAMnwbW046OjhRut/t9Op3OQbbVycnJp5FIZIMyYOpZfQm5XK5VLpd3YR+vIBvT+Pi4nYxz4ph6V89yNJXzKJXKG3jIGhagmkcoFIrocRKgUCg0hJyDh2lYBiKRqJmLhwIUGhFALBYL/xYgjQLZb2lpkddKDmnye2hcUpNN436//0UerVaLrqysvIb/96q/k/qUwQGKwra2tvZRpVJpstnspd7eXiNcICxfSTAY/Lq5uRkiO5atPIN5qwiwPjIycrc8A8oKj2NmYWGBp9PpGLa0zwDdDofDhYLpLg0OBAJvnU6ne2Ji4iGfz29FEOa3TRimiA0WtbW1VUi8vb39eXR0VCegVObn5ymfDEGv1/9AqX9TKBTdtArcFy9tNpvDbrc/IKeQlFKp9EJ1hsSDeTtYwDH2NDQ1NfWI5BdwbEwqHo9/ymQyt5Hdk5mZmVcko9lsHmPvC7FWq701ODhoxSEnLU1KJBLx4eHh+3jdYu+GBPBTwGGtdCgUehOLxfwg/4L+vsfjybOTon19fU2Li4vhVCq1MzQ09Fwmk12kSbu7u3RUB4HvFS7i2Pljn8+3AfIPeN/DCVnhLvQp5QSkW7JYLPfC4fA6fUeAAB2qf5QyJtTk/f7+ftpoMeqnx2q1PoaTnLOzs+9IlooALperrgo2Go10qImBLMlbfaMJGnCIZlhwtl8CDAA8PQ/NwxQAIgAAAABJRU5ErkJggg==",
-                                        "Сообщения",  0, ""),
+                                        "Сообщения",  countMessage, ""),
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJJREFUeNqcVl9IU2EU35xtc7P9Y6z1JBUISSvpLUQkAiEECXG0t6CB+mRpQY+NNinSnA/2MJtC6ktCU0ZRCVo4EElQwbUHna621FrTtTZtztz6fXIv3G73zusO/GDfvec7v9853/nOnTiXy4mIicViEY9JACWgAkqBY0AWSAO/KGSAHNfmYhG/ianAJ1tbW82VlZXX9Hr9KY1Go89kMrubm5tr4XD44+DgYN/i4uIn+G0Bf/4LwpMBWWhqa2svW63Wx0aj8QyfCkI2NTXlttvtT7Bco7I5lEBVX19f19LS0qdQKErph1AdXVpamkUWJ8rLyy9KJJIi+t38/Ly3ra3tNn5GmJlwEUgNBoPJ5XK9JeWgH0aj0TUQ3ojH48tYKpqbm60Wi+UuU9XExMRTh8PxAD9/0GdSxJG1Bkra1Wq1npDTmJubG0fwAN6HgSAEvEgmkymmT1VV1U2TyXSWagQRFwFJQ1dRUVHH3EigUqkMeCenuqpYq9WqZDKZnOkjlUpLGhoaLFS3cRJIqqurTyuVSjWbAF10xWw2X4fPeZ1Od8lmszlwBsVsPzTEBVJCvjaVlJWVGelzYRrUyZuamh42NjbegYBSWj3b5HK5lhmXTbC/vr4e5dpIG0pzcPB8Pul0OsHsInaJ9icnJ5djsdhGNpsVFYJgMOhDnBQfAZEVw818xa6tEOzs7KRGRkZeIsY2HwGx5PDw8ABaMHlU9bhsnkgkspqvRMT24BScnp4eOIp63PINp9NJxkWcOfi4CMjLnz09PS7c3i9CgkN9bmxszJ5KpT4TgcxgRTzNQlL86vV6O/ZhhxH4/f53Ho/nNfNwDyMgtg1VbxYWFrz56p5IJLb6+/s74P+d+k4IJiDO0a6uLhtKFeJSTrIbHR29v7Ky4mePaSEEB+MedV0dGhq6hwuUZhPMzMw8R2k81FctVwjBQal8Pt8HjGInM3goFJrt7Ox8RI3mLN9mIQREWdztdj8LBALjJDjG9rfu7u5b1MdlL/9uSpEAk2HInevt7X1fU1NzFevj1HjPa2IB/yr+GZZACbAL/Oare6EZFGR/BRgALZ+XGZ2aoKsAAAAASUVORK5CYII=",
-                                        "Создать муниципальное задание",	 5, "/pages/pagesMZ/MZ.zul?id=0"),
+                                        "Создать муниципальное задание",	 0, "/pages/pagesMZ/MZ.zul?id=0"),
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2VJREFUeNqsVl9IU2EUv1v7v8mcZbOxESgS+GI+mCDknxmob66nEgyCBCUfDNZT7EVGxFxIMOxBEtxLOoimswcHimn0MrAymbkedLiMmbatzbV/bp0j3x13624l88Dhu9/3ne/3u+d855x7OSsrKxRTWlpaBDBUgMpAI6A/wSZBsQibLWiOLTfvAAeG8+Pj48+Xl5e/4Ihzsk79jy1oji2HkEjIW1AajabWarW+5XK5nHQ6nenr62vz+Xwe2OLlcaSK2FLEoygeKuvv77/Z2Nh4h8fjpSYnJ+144MQ9GOvq6q6NjIwY4vG4iIkuFApjhWxTqRTP5XJZJyYmXiPBhZ6enqdSqVSBhmKx2JUA4fP5gmQymZBIJOrq6uobbHfAYquhbdVqdQMQrJ7DqIAHD+hDAoGAPzs76wBCzszMzJvW1tbrVSBsBOCF0G63Z207OjraLoLgHpCKpqamXqB7V5eWlj4wD+7s7Hj9fv93lUqlhjirqSKyu7vr29vb87HZarXahpOLy2QyOYcuE2Hbyxc1kUK2WYJoNBqLRCJBDoeTpkoQwOLKZLJyuA9RDoHH4/mk1+sfwtRPlSZKs9k8Wl9f35QlgBymIEXj8Li9sLDgOw1aZ2dn/lIUsRAzxwM6fsw4dnV18WFQMFpBilSrlJgcg4ZAf4D+ZoQpi1OQoLu7W4h3aDAYHjU3N99dW1t7Nj09/cpkMuU0r0Ag8KW3t1d7agKscIvFMgqFo8O1o6OjsmAwmIQUdobD4XK5XI5pqdrf398mnlBsBFz6DugFfM7Gj8ejHA6Hjd7HnB8cHLw3NjZmBgLx1tbW++HhYT0JUw4BjcFl84A8hwcGBu57vd5VMs+QMCSGhoZuQRrK5+fnLViXoPGiHrARzM3N4aGASCSKMvbRvqKmpkZ7cHDwbXFx8SMz9qcioN8auyY+Q29Bwkx7e/slaHLloVDoKwlNphjBX60ir9yPDw8PP29sbDyBfvMO5rHKysrA+vq6Ce4D+9evIhX97zpAAqfT6QF9TGogYbPZ3KBGkjmxQuBMggxO4COBRVWl0+lK7BRUFWLRIUaCOCwklUrlFaPRaIHUTJaCjuCAVYuYiI0Egc3NTRt87m4rFIom6gwE3j7tdrtfIjZ+cASk3+Dvh5A6G4mTX5jAHwEGAEF2JdGXXHDPAAAAAElFTkSuQmCC",
-                                        "События",	 0, ""),
+                                        "События",	 countMyEvent, ""),
                                 new MenuItemBean(
                                         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5JREFUeNq0VVFoUlEY9k6didvUajUXJBujgh70NQhb9OSL4mYNWQ972cMGwh6rhw0yo4eBD/ZgCYPFGgzU2DTGHqLYQzFh1ghiMgeDpjTnnBs6U6f2/eMaardgagc+7j33nvP95//O95/D4/3nxiwvL9dFoNFo/h2AhQQ4B7QCglPw54EkEANSQKF6AJFJDAbDnYGBgWednZ3XTptBNBrd8nq9lunpaTe6B1wZKOfm5pY6Ojqu1ipTMpmMm0ymm4eHh+voFsv/NZEs7e3tPcVikVcrJBLJWbVafR1cl4Eu4DzQXJKIzzAMnwbW046OjhRut/t9Op3OQbbVycnJp5FIZIMyYOpZfQm5XK5VLpd3YR+vIBvT+Pi4nYxz4ph6V89yNJXzKJXKG3jIGhagmkcoFIrocRKgUCg0hJyDh2lYBiKRqJmLhwIUGhFALBYL/xYgjQLZb2lpkddKDmnye2hcUpNN436//0UerVaLrqysvIb/96q/k/qUwQGKwra2tvZRpVJpstnspd7eXiNcICxfSTAY/Lq5uRkiO5atPIN5qwiwPjIycrc8A8oKj2NmYWGBp9PpGLa0zwDdDofDhYLpLg0OBAJvnU6ne2Ji4iGfz29FEOa3TRimiA0WtbW1VUi8vb39eXR0VCegVObn5ymfDEGv1/9AqX9TKBTdtArcFy9tNpvDbrc/IKeQlFKp9EJ1hsSDeTtYwDH2NDQ1NfWI5BdwbEwqHo9/ymQyt5Hdk5mZmVcko9lsHmPvC7FWq701ODhoxSEnLU1KJBLx4eHh+3jdYu+GBPBTwGGtdCgUehOLxfwg/4L+vsfjybOTon19fU2Li4vhVCq1MzQ09Fwmk12kSbu7u3RUB4HvFS7i2Pljn8+3AfIPeN/DCVnhLvQp5QSkW7JYLPfC4fA6fUeAAB2qf5QyJtTk/f7+ftpoMeqnx2q1PoaTnLOzs+9IlooALperrgo2Go10qImBLMlbfaMJGnCIZlhwtl8CDAA8PQ/NwxQAIgAAAABJRU5ErkJggg==",
-                                        "Оповещения",  0, "/pages/notification/myNotification.zul"),
+                                        "Оповещения",  countMyNotif, "/pages/notification/myNotification.zul"),
                         }
                 )
         );
@@ -302,14 +324,14 @@ public class MainPageController {
                                 new MenuItemBean[] {
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAddJREFUeNq0lt9HQ2EYx8/ajIhxGBEjYolSoqvmXI1RdrPuuolSN1E3XaTrka66SBcR6R/I0t252ayr6eIwxhhjjIgYY4y2vi/f5d3r3Wm/zsPHOWfv6/n9Pu983W7X8FIC+Xx+IgWxWMx1fcbwWALK9y04A9dgm7gKMrCLxxtogA1EVO0zoNTgFcyCAvgGpSGcrIEHGvhSF33ZbLb3vgpOp5SZO8uyimoEO+BY2dhiJCF6OgeaIEKPFwYYEJEUdSkyNAaEIj8VB/kUxiouBvy6GrQ0G00iZF5ZW3FxrPFnoNPp9N5Fod6nVIOSLoIkeGYH5cDVGIqF5/vgw7btcjweX5YjEEV5Ym4rjGhUaUltW5MjEL1/AB7BIVgaQ/kL2BK1SiQSJ2oNNsEFcDSt2mTK6mzTRSq7UfaJE7xHI/agk9zQeBaU2i5EI8GhZxEjEJ6npfwNkjqJaPYVaDjXNyoymUxvyDkcbusTtOcRdZ0nk0lHTpGYoJcgynrIHodBG3xKh61J1GYQ6bNAgg73HTRDE3KZJ7nKOpisg8N03v9bA5dZFKVHJiftLIeYyTS2R7lwivKAkjompPwWHkLnj25UrPE7PWpVU6mU6y3p+Z3s8/pvy68AAwD4ZZoWZfZ1ZwAAAABJRU5ErkJggg==",
-                                                "Мои программы", 0, "/pages/programs/reviewProgram.zul"),
+                                                "Мои программы", countProgram, "/pages/programs/reviewProgram.zul"),
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5JREFUeNq0VVFoUlEY9k6didvUajUXJBujgh70NQhb9OSL4mYNWQ972cMGwh6rhw0yo4eBD/ZgCYPFGgzU2DTGHqLYQzFh1ghiMgeDpjTnnBs6U6f2/eMaardgagc+7j33nvP95//O95/D4/3nxiwvL9dFoNFo/h2AhQQ4B7QCglPw54EkEANSQKF6AJFJDAbDnYGBgWednZ3XTptBNBrd8nq9lunpaTe6B1wZKOfm5pY6Ojqu1ipTMpmMm0ymm4eHh+voFsv/NZEs7e3tPcVikVcrJBLJWbVafR1cl4Eu4DzQXJKIzzAMnwbW046OjhRut/t9Op3OQbbVycnJp5FIZIMyYOpZfQm5XK5VLpd3YR+vIBvT+Pi4nYxz4ph6V89yNJXzKJXKG3jIGhagmkcoFIrocRKgUCg0hJyDh2lYBiKRqJmLhwIUGhFALBYL/xYgjQLZb2lpkddKDmnye2hcUpNN436//0UerVaLrqysvIb/96q/k/qUwQGKwra2tvZRpVJpstnspd7eXiNcICxfSTAY/Lq5uRkiO5atPIN5qwiwPjIycrc8A8oKj2NmYWGBp9PpGLa0zwDdDofDhYLpLg0OBAJvnU6ne2Ji4iGfz29FEOa3TRimiA0WtbW1VUi8vb39eXR0VCegVObn5ymfDEGv1/9AqX9TKBTdtArcFy9tNpvDbrc/IKeQlFKp9EJ1hsSDeTtYwDH2NDQ1NfWI5BdwbEwqHo9/ymQyt5Hdk5mZmVcko9lsHmPvC7FWq701ODhoxSEnLU1KJBLx4eHh+3jdYu+GBPBTwGGtdCgUehOLxfwg/4L+vsfjybOTon19fU2Li4vhVCq1MzQ09Fwmk12kSbu7u3RUB4HvFS7i2Pljn8+3AfIPeN/DCVnhLvQp5QSkW7JYLPfC4fA6fUeAAB2qf5QyJtTk/f7+ftpoMeqnx2q1PoaTnLOzs+9IlooALperrgo2Go10qImBLMlbfaMJGnCIZlhwtl8CDAA8PQ/NwxQAIgAAAABJRU5ErkJggg==",
                                                 "Сообщения", 23, ""),
 
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJJREFUeNqcVl9IU2EU35xtc7P9Y6z1JBUISSvpLUQkAiEECXG0t6CB+mRpQY+NNinSnA/2MJtC6ktCU0ZRCVo4EElQwbUHna621FrTtTZtztz6fXIv3G73zusO/GDfvec7v9853/nOnTiXy4mIicViEY9JACWgAkqBY0AWSAO/KGSAHNfmYhG/ianAJ1tbW82VlZXX9Hr9KY1Go89kMrubm5tr4XD44+DgYN/i4uIn+G0Bf/4LwpMBWWhqa2svW63Wx0aj8QyfCkI2NTXlttvtT7Bco7I5lEBVX19f19LS0qdQKErph1AdXVpamkUWJ8rLyy9KJJIi+t38/Ly3ra3tNn5GmJlwEUgNBoPJ5XK9JeWgH0aj0TUQ3ojH48tYKpqbm60Wi+UuU9XExMRTh8PxAD9/0GdSxJG1Bkra1Wq1npDTmJubG0fwAN6HgSAEvEgmkymmT1VV1U2TyXSWagQRFwFJQ1dRUVHH3EigUqkMeCenuqpYq9WqZDKZnOkjlUpLGhoaLFS3cRJIqqurTyuVSjWbAF10xWw2X4fPeZ1Od8lmszlwBsVsPzTEBVJCvjaVlJWVGelzYRrUyZuamh42NjbegYBSWj3b5HK5lhmXTbC/vr4e5dpIG0pzcPB8Pul0OsHsInaJ9icnJ5djsdhGNpsVFYJgMOhDnBQfAZEVw818xa6tEOzs7KRGRkZeIsY2HwGx5PDw8ABaMHlU9bhsnkgkspqvRMT24BScnp4eOIp63PINp9NJxkWcOfi4CMjLnz09PS7c3i9CgkN9bmxszJ5KpT4TgcxgRTzNQlL86vV6O/ZhhxH4/f53Ho/nNfNwDyMgtg1VbxYWFrz56p5IJLb6+/s74P+d+k4IJiDO0a6uLhtKFeJSTrIbHR29v7Ky4mePaSEEB+MedV0dGhq6hwuUZhPMzMw8R2k81FctVwjBQal8Pt8HjGInM3goFJrt7Ox8RI3mLN9mIQREWdztdj8LBALjJDjG9rfu7u5b1MdlL/9uSpEAk2HInevt7X1fU1NzFevj1HjPa2IB/yr+GZZACbAL/Oare6EZFGR/BRgALZ+XGZ2aoKsAAAAASUVORK5CYII=",
-                                                "Создать программу",	 5, "/pages/programs/Program.zul"),
+                                                "Создать программу",	 0, "/pages/programs/Program.zul"),
                                 }
                         )
                 ),

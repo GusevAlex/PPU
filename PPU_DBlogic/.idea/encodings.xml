@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/ClassInvokeCall.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkCorrectionMZ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" charset="UTF-8" />
