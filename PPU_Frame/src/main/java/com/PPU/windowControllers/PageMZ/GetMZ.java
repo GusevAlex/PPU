@@ -516,6 +516,61 @@ public class GetMZ implements GetListParam {
 //        setLevel(3);
     }
 
+    private boolean checkAllFields()
+    {
+        boolean success = true;
+
+        String name = mz.getName();
+        Date startDate = mz.getStartDate();
+        Date expirationDate = mz.getExpirationDate();
+        String description = mz.getDescription();
+        float budget = mz.getBudget();
+
+        if (name.equals(""))
+        {
+            Messagebox.show("Не введено название!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (description.equals(""))
+        {
+            Messagebox.show("Не введено описание!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (budget == 0)
+        {
+            Messagebox.show("Бюджет не должен быть равен 0!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (leaderMZ1.getSelectedIndex() == -1)
+        {
+            Messagebox.show("Не выбран руководитель проекта!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (comandMZ1.getRightListbox().getObjs().length == 0)
+        {
+            Messagebox.show("Не выбрана комманда проекта!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (typeService1.getSelectedIndex() == -1)
+        {
+            Messagebox.show("не выбаран тип задания!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        if (resourcesMZ1.getRightListbox().getObjs().length == 0)
+        {
+            Messagebox.show("Не выбраны ресурся!", "Error", Messagebox.OK, Messagebox.ERROR);
+            success = false;
+        }
+
+        return success;
+    }
+
 	private void compareAndSaveCorrection()
 	{
 		WorkWithCorrectionMZ worker = new WorkWithCorrectionMZ();
@@ -542,7 +597,8 @@ public class GetMZ implements GetListParam {
 				}
 
 				val.setValueAfter(levelName);
-				val.setLimts(false);
+				val.setLimits(false);
+                val.setIdMZ(mz.getId());
 
 				worker.addEntity(val);
 			} catch (Exception e) {
@@ -558,23 +614,23 @@ public class GetMZ implements GetListParam {
 			boolean isFind = false;
 
 			for (Object o : limitsMZ)
-				if (((LimitsMZ)listO).getParametr().equals((((LimitsMZ)o)).getParametr()))
-				{
-					isFind = true;
+            if (((LimitsMZ)listO).getId() == (((LimitsMZ)o).getId())) {
+                isFind = true;
+                if (((LimitsMZ) listO).getParametr().equals((((LimitsMZ) o)).getParametr())) {
+                    if (!((LimitsMZ) listO).getValue().equals(((LimitsMZ) o).getValue())) {
+                        try {
+                            CorrectionsMZ val = new CorrectionsMZ();
+                            val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
+                            val.setValueBefore(((LimitsMZ) listO).getValue());
+                            val.setIdMZ(mz.getId());
 
-					if (!o.equals(listO))
-					{
-						try {
-							CorrectionsMZ val = new CorrectionsMZ();
-							val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
-							val.setValueBefore(((LimitsMZ)listO).getValue());
-
-							worker.addEntity(val);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				}
+                            worker.addEntity(val);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
 
 			if (!isFind)
 			{
@@ -582,6 +638,7 @@ public class GetMZ implements GetListParam {
 					CorrectionsMZ val = new CorrectionsMZ();
 					val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
 					val.setValueBefore(((LimitsMZ)listO).getValue());
+                    val.setIdMZ(mz.getId());
 
 					worker.addEntity(val);
 				} catch (Exception e) {
@@ -591,44 +648,52 @@ public class GetMZ implements GetListParam {
 
 		}
 
-		for (int i=0; i<listValList.size(); i++)
+		for (Object listO : listValList)
 		{
-			if (i<((Object[]) valuesParametrForMZ).length)
-			{
-				if (!((ValuesParametrForMZ)listValList.get(i)).getValue().equals(((ValuesParametrForMZ)(((Object [])valuesParametrForMZ)[i])).getValue()))
-				{
-					try {
-						CorrectionsMZ val = new CorrectionsMZ();
-						val.setIdParametr(((ValuesParametrForMZ) listValList.get(i)).getParametr().getId());
-						val.setValueBefore(((ValuesParametrForMZ) listValList.get(i)).getValue());
+            boolean isFind = false;
 
-						worker.addEntity(val);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}
-			else
-			{
-				try {
-					CorrectionsMZ val = new CorrectionsMZ();
-					val.setIdParametr(((ValuesParametrForMZ) listValList.get(i)).getParametr().getId());
-					val.setValueBefore(((ValuesParametrForMZ) listValList.get(i)).getValue());
+            for (Object o : (Object [])valuesParametrForMZ)
 
-					worker.addEntity(val);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+                if (((ValuesParametrForProject)listO).getId() == (((ValuesParametrForProject)o).getId())) {
+                    isFind = true;
+                    if (((ValuesParametrForProject) listO).getParametr().equals((((ValuesParametrForProject) o)).getParametr())) {
+                        if (!((ValuesParametrForProject) listO).getValue().equals(((ValuesParametrForProject) o).getValue())) {
+                            try {
+                                CorrectionsMZ val = new CorrectionsMZ();
+                                val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
+                                val.setValueBefore(((ValuesParametrForProject) listO).getValue());
+                                val.setIdMZ(mz.getId());
+
+                                worker.changeEntity(val);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+
+            if (!isFind)
+            {
+                try {
+                    CorrectionsMZ val = new CorrectionsMZ();
+                    val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
+                    val.setValueBefore(((ValuesParametrForProject)listO).getValue());
+                    val.setIdMZ(mz.getId());
+
+                    worker.addEntity(val);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
 		}
-
-
-
 	}
 
     @Command
     public void onClickBtn1(@ContextParam(ContextType.COMPONENT) Component comp)
     {
+        if (!checkAllFields()) return;
+
         Clients.showBusy("Идет сохранение...");
 
         if (level == 1 || level == 0)
@@ -697,6 +762,8 @@ public class GetMZ implements GetListParam {
     @Command
     public void onClickBtn2(@ContextParam(ContextType.COMPONENT) Component comp)
     {
+        if (!checkAllFields()) return;
+
         mz.setStatus(mz.getStatus()+1);
         onClickBtn1(comp);
         PartnersMZ partnersMZ = new PartnersMZ();
@@ -721,11 +788,15 @@ public class GetMZ implements GetListParam {
                     NotificationService.addNotifHtmlForAdd(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
                 }
         }
+
+        compareAndSaveCorrection();
     }
 
     @Command
     public void onClickBtn3(@ContextParam(ContextType.COMPONENT) Component comp)
     {
+        if (!checkAllFields()) return;
+
         mz.setStatus(2);
         onClickBtn1(comp);
 
@@ -740,6 +811,8 @@ public class GetMZ implements GetListParam {
         });
 
         wind1.doModal();
+
+        compareAndSaveCorrection();
     }
 
     @Command

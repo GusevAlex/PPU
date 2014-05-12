@@ -36,6 +36,7 @@ public class CorrectionsProject {
     private int idParametr;
     private String ValueBefore;
     private String ValueAfter;
+    public boolean isLimits;
     private Project project;
     private Parametrs parametr;
 
@@ -96,8 +97,17 @@ public class CorrectionsProject {
         ValueAfter = valueAfter;
     }
 
-	@FieldType(type = 2, worker = "WorkWithProject")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Проект")
+    @Column(name="is_limits")
+    public boolean getLimits() {
+        return isLimits;
+    }
+
+    public void setLimits(boolean limits) {
+        isLimits = limits;
+    }
+
+    @FieldType(type = 2, worker = "WorkWithProject")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
@@ -109,7 +119,7 @@ public class CorrectionsProject {
     }
 
 	@FieldType(type = 2, worker = "WorkWithParametrs")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {

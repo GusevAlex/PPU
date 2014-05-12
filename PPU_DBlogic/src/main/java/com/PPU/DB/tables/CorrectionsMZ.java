@@ -36,6 +36,7 @@ public class CorrectionsMZ {
     private int idParametr;
     private String ValueBefore;
     private String ValueAfter;
+    private boolean isLimits;
     private MZ MZ;
     private Parametrs parametr;
 
@@ -96,8 +97,17 @@ public class CorrectionsMZ {
         ValueAfter = valueAfter;
     }
 
-	@FieldType(type = 2, worker = "WorkWithMZ")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Муниципально задание")
+    @Column(name="is_limits")
+    public boolean getLimits() {
+        return isLimits;
+    }
+
+    public void setLimits(boolean limits) {
+        isLimits = limits;
+    }
+
+    @FieldType(type = 2, worker = "WorkWithMZ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
@@ -109,7 +119,7 @@ public class CorrectionsMZ {
     }
 
 	@FieldType(type = 2, worker = "WorkWithParametrs")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {
