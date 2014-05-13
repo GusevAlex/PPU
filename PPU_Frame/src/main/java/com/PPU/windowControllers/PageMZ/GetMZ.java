@@ -348,11 +348,12 @@ public class GetMZ implements GetListParam {
 
 		mz = MZ;
         
-        mzName = "Муниципальное задание: " + MZ.getName();
+
 
 
         if (id!=0)
         {
+            mzName = "Муниципальное задание: " + MZ.getName();
             program = "Программа" + MZ.getProgram().getName();
 
             name = MZ.getName();
@@ -458,7 +459,8 @@ public class GetMZ implements GetListParam {
         }
         else
         {
-            program = "Программа ";
+            mzName = "Создание муниципального задания";
+            program = "";
 
             name = "";
             startDate = Calendar.getInstance().getTime();
@@ -484,8 +486,11 @@ public class GetMZ implements GetListParam {
             String progr = Executions.getCurrent().getParameter("progr");
             if (progr == null)
                 program1[0] = new Object();
-            else
+            else {
                 program1[0] = new WorkWithProgramMZ().getEntity(new Integer(progr));
+
+                program = "Программа: "+((ProgramMZ) program1[0]).getName();
+            }
 
             typeServiceMZ = "";
 
@@ -801,8 +806,8 @@ public class GetMZ implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        mz.setStatus(2);
         onClickBtn1(comp);
+        mz.setStatus(2);
 
 		Map arg = new HashMap<String, Object>(){
 			{

@@ -49,6 +49,7 @@
             <zscript>
                 <![CDATA[
                     import com.PPU.DB.workLogic.*;
+                    import com.PPU.DB.tables.*;
 
                     String name = objs.getName();
                     Date startDate = objs.getStartDate();

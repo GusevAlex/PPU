@@ -31,7 +31,7 @@
             <column label="Значения параметры" width="${gridProject.width}"></column>
             <column label="Ресурсы" width="${gridProject.width}"></column>
             <column label="Корректировки" width="${gridProject.width}"></column>
-            <column label="Участвую ли я в МЗ?" width="${gridMZ.width}"></column>
+            <column label="Учавствую ли я в МЗ?" width="${gridMZ.width}"></column>
         </columns>
 
         <template name="model">
@@ -39,6 +39,9 @@
 
             <zscript>
                 <![CDATA[
+                    import com.PPU.DB.workLogic.*;
+                    import com.PPU.DB.tables.*;
+
                     String name = objs.getName();
                     Date startDate = objs.getStartDate();
                     Date expirationDate = objs.getExpirationDate();
