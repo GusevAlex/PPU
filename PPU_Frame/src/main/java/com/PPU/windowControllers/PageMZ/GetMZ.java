@@ -582,7 +582,7 @@ public class GetMZ implements GetListParam {
 				val.setIdParametr(((Parametrs) new WorkWithParametrs().getEntity(1)).getId());
 				String levelName = "";
 
-				switch (mz.getStatus()+1)
+				switch (mz.getStatus())
 				{
 					case 1 : levelName = "Создается";
 						break;
@@ -623,6 +623,7 @@ public class GetMZ implements GetListParam {
                             val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
                             val.setValueBefore(((LimitsMZ) listO).getValue());
                             val.setIdMZ(mz.getId());
+							val.setLimits(true);
 
                             worker.addEntity(val);
                         } catch (Exception e) {
@@ -639,6 +640,7 @@ public class GetMZ implements GetListParam {
 					val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
 					val.setValueBefore(((LimitsMZ)listO).getValue());
                     val.setIdMZ(mz.getId());
+					val.setLimits(true);
 
 					worker.addEntity(val);
 				} catch (Exception e) {
@@ -654,15 +656,16 @@ public class GetMZ implements GetListParam {
 
             for (Object o : (Object [])valuesParametrForMZ)
 
-                if (((ValuesParametrForProject)listO).getId() == (((ValuesParametrForProject)o).getId())) {
+                if (((ValuesParametrForMZ)listO).getId() == (((ValuesParametrForMZ)o).getId())) {
                     isFind = true;
-                    if (((ValuesParametrForProject) listO).getParametr().equals((((ValuesParametrForProject) o)).getParametr())) {
-                        if (!((ValuesParametrForProject) listO).getValue().equals(((ValuesParametrForProject) o).getValue())) {
+                    if (((ValuesParametrForMZ) listO).getParametr().equals((((ValuesParametrForMZ) o)).getParametr())) {
+                        if (!((ValuesParametrForMZ) listO).getValue().equals(((ValuesParametrForMZ) o).getValue())) {
                             try {
                                 CorrectionsMZ val = new CorrectionsMZ();
-                                val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
-                                val.setValueBefore(((ValuesParametrForProject) listO).getValue());
+                                val.setIdParametr(((ValuesParametrForMZ) listO).getParametr().getId());
+                                val.setValueBefore(((ValuesParametrForMZ) listO).getValue());
                                 val.setIdMZ(mz.getId());
+								val.setLimits(false);
 
                                 worker.changeEntity(val);
                             } catch (Exception e) {
@@ -676,9 +679,10 @@ public class GetMZ implements GetListParam {
             {
                 try {
                     CorrectionsMZ val = new CorrectionsMZ();
-                    val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
-                    val.setValueBefore(((ValuesParametrForProject)listO).getValue());
+                    val.setIdParametr(((ValuesParametrForMZ) listO).getParametr().getId());
+                    val.setValueBefore(((ValuesParametrForMZ)listO).getValue());
                     val.setIdMZ(mz.getId());
+					val.setLimits(false);
 
                     worker.addEntity(val);
                 } catch (Exception e) {
@@ -764,7 +768,7 @@ public class GetMZ implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        mz.setStatus(mz.getStatus()+1);
+        mz.setStatus(mz.getStatus() + 1);
         onClickBtn1(comp);
         PartnersMZ partnersMZ = new PartnersMZ();
 
@@ -789,7 +793,7 @@ public class GetMZ implements GetListParam {
                 }
         }
 
-        compareAndSaveCorrection();
+//        compareAndSaveCorrection();
     }
 
     @Command
@@ -800,7 +804,14 @@ public class GetMZ implements GetListParam {
         mz.setStatus(2);
         onClickBtn1(comp);
 
-        final Window wind1 = (Window) Executions.createComponents("/pages/window/inputTextDialog.zul", null,null);
+		Map arg = new HashMap<String, Object>(){
+			{
+				put("mz", mz);
+			}
+		};
+
+        final Window wind1 = (Window) Executions.createComponents("/pages/window/inputTextDialog.zul", null,arg);
+		wind1.setTitle("Нипишите причину отказа");
         wind1.addEventListener("onClose", new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
@@ -812,7 +823,7 @@ public class GetMZ implements GetListParam {
 
         wind1.doModal();
 
-        compareAndSaveCorrection();
+//        compareAndSaveCorrection();
     }
 
     @Command

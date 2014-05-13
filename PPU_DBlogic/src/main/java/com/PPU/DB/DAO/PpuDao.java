@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -496,6 +497,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+			correctionsMZ.setCorrectionDate(Calendar.getInstance().getTime());
+
             session.save(correctionsMZ);
             return true;
         } catch (Exception e)
@@ -511,6 +514,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+			correctionsProject.setCorrectionDate(Calendar.getInstance().getTime());
+
             session.save(correctionsProject);
             return true;
         } catch (Exception e)
@@ -1279,6 +1284,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+			correctionsMZ.setCorrectionDate(Calendar.getInstance().getTime());
+
             session.update(correctionsMZ);
             return true;
         } catch (Exception e)
@@ -1294,6 +1301,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+			correctionsProject.setCorrectionDate(Calendar.getInstance().getTime());
+
             session.update(correctionsProject);
             return true;
         } catch (Exception e)

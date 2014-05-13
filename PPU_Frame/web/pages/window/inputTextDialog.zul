@@ -1,9 +1,27 @@
+<?component
+		name="buttonOpenList"
+		class="com.PPU.composite.ButtonOpenList" ?>
+
 <zk>
-    <window title="Окно" border="normal" width="460px"
+    <window id="revertWind" border="normal" width="460px"
                 position="center,center" closable="true"
                 action="show: slideDown;hide: slideUp">
 
     <textbox id="inputTextBox" value="" rows="10" cols="30" />
+
+		<buttonOpenList label="ОК" obj='${arg}' >
+			<attribute name="onClick">
+				<![CDATA[
+						import java.util.Map;
+						import com.PPU.funcControl.*;
+
+						String text = inputTextBox.getText();
+
+                		NotificationService.revertNotifHtmlForAdd(self.getObj().get("mz").getLeader(), "/pages/pagesMZ/MZ.zul", self.getObj().get("mz"), self.getObj().get("mz").getStatus(), text);
+						revertWind.onClose();
+						]]>
+			</attribute>
+				</buttonOpenList>
 
     </window>
 
