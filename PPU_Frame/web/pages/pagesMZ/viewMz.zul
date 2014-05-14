@@ -116,9 +116,18 @@
                                    <label value="Для организации: ${name}" />
                                 </div>
 
-                                    <gridReviewMZ model = "${obj}">
+                                    <vlayout>
+                                        <toolbar>
+                                            <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="Создать новое МЗ" >
+                                                <attribute name="onClick">   <![CDATA[
+                                                    Executions.sendRedirect("/pages/pagesMZ/MZ.zul?id=0");
+                                           ]]>  </attribute>
+                                            </toolbarbutton>
+                                        </toolbar>
+                                        <gridReviewMZ model = "${obj}">
 
-                                    </gridReviewMZ>
+                                        </gridReviewMZ>
+                                    </vlayout>
 
 
                                 </zk>

@@ -47,6 +47,8 @@ public class TypeMU {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;

@@ -53,6 +53,8 @@ public class PartnerCommercialMan {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -62,6 +64,8 @@ public class PartnerCommercialMan {
         this.name = name;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Адрес")
     @Column(name="address")
     public String getAddress() {
         return address;
@@ -71,6 +75,8 @@ public class PartnerCommercialMan {
         this.address = address;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;

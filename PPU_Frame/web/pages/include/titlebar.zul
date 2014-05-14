@@ -77,7 +77,7 @@
             if (typeOrg != null &amp;&amp; typeOrg.equals("Mun"))
             {
                 UsersMunMan user = (UsersMunMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
-                notification1 = new String[user.getPartnerMZ().getNotificationMU().size()];
+                notification1 = new String[new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()).size()];
 
                 int i = 0;
                 for (Object not : new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()))
@@ -126,7 +126,8 @@
                     </vlayout>
                 </hbox>
             </groupbox>
-        <a href="/pages/include/pages/userConfigPage.zul">Выйти</a>
+            <a href="/pages/authoriz/authoriz.zul">Выйти</a>
+            <a href="/pages/include/pages/userConfigPage.zul">Личный кабинет</a>
         </vlayout>
     </popup>
     </zk>

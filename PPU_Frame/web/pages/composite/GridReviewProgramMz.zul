@@ -15,11 +15,11 @@
     </zscript>
     <vlayout>
         <toolbar>
-            <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="New"/>
-            <toolbarbutton image="/images/tollbar/edit_undo.png" tooltiptext="Undo"/>
-            <toolbarbutton image="/images/tollbar/edit_cut.png" tooltiptext="Cut"/>
-            <toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>
-            <toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>
+            <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="Новая программа">
+                <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/programs/Program.zul");
+                ]]>  </attribute>
+            </toolbarbutton>
         </toolbar>
     <grid  id="gridProgramMz" mold="paging" pageSize="10">
 

@@ -106,7 +106,6 @@
           <element id="library" level="project" name="Maven: org.zkoss.zkforge:timelinez:2.3.1_50" />
           <element id="library" level="project" name="Maven: org.zkoss.zkforge:timeplotz:1.1_50" />
           <element id="library" level="project" name="Maven: org.zkoss.zkforge:gmapsz:3.0.1" />
-          <element id="library" level="project" name="Maven: org.zkoss.zkforge:ckez:4.0.1.0" />
           <element id="library" level="project" name="PPU_DBlogic-1.0-SNAPSHOT" />
         </element>
       </element>

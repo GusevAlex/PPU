@@ -15,19 +15,13 @@
     </zscript>
 
     <vlayout>
-    <toolbar>
-        <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="New"/>
-        <toolbarbutton image="/images/tollbar/edit_undo.png" tooltiptext="Undo"/>
-        <toolbarbutton image="/images/tollbar/edit_cut.png" tooltiptext="Cut"/>
-        <toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>
-        <toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>
-    </toolbar>
+
 
     <grid  id="gridMz" mold="paging" pageSize="10">
 
         <columns  menupopup="auto" sizable="true">
             <column label="Просмотр" width="${gridMZ.width}"></column>
-            <column label="Изменить" width="${gridMZ.width}"></column>
+            <column label="Диаграмма" width="${gridMZ.width}"></column>
             <column sort="auto(name)"  label="Название" width="${gridMZ.width}"></column>
             <column sort="auto(startDate)"  label="Дата начала" width="${gridMZ.width}"></column>
             <column sort="auto(expirationDate)"  label="Дата окончания" width="${gridMZ.width}"></column>
@@ -75,13 +69,13 @@
 
             <row >
 
-                <buttonOpenList label="12" image=""  obj="${objs.getId()}"  >
+                <buttonOpenList label="12" image=""  obj="${objs.getId()}" >
                     <attribute name="onClick">   <![CDATA[
                     Executions.sendRedirect("/pages/pagesMZ/MZ.zul?id="+self.getObj());
            ]]>  </attribute>
                 </buttonOpenList>
 
-                <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+                <buttonOpenList image="/images/tollbar/report.png"  obj="${partnersMZ}" width="30px" height="30px" >
                     <attribute name="onClick">   <![CDATA[
                     AddObject add = new AddObject();
 

@@ -231,6 +231,18 @@ public class registrAuthoriz extends SelectorComposer<Component> {
         add.showWindow();
     }
 
+    @Listen("onClick = #addComMan")
+    public void onClickAddComMan()
+    {
+        AddObject add = new AddObject();
+
+        add.setWorker(new WorkWithPartnerCommerc());
+
+        add.setObjectListBox(listboxCom1);
+
+        add.showWindow();
+    }
+
     public boolean checkRegister()
     {
         boolean success = true;
@@ -327,6 +339,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
                 int selectedIndex = listboxMun1.getSelectedIndex();
 
                 ((UsersMunMan)objUser).setPartnerMZ( (PartnersMZ) listboxMun1.getObjs()[selectedIndex]);
+                ((UsersMunMan)objUser).setIdPartnerMZ(((UsersMunMan)objUser).getPartnerMZ().getId());
             }
 
             if (groupboxCommerc.isOpen())
@@ -340,6 +353,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
                 int selectedIndex = listboxCom1.getSelectedIndex();
 
                 ((UsersComMan)objUser).setPartnerProject((PartnerCommercialMan) listboxCom1.getObjs()[selectedIndex]);
+                ((UsersComMan)objUser).setIdPartenerCommercial(((UsersComMan)objUser).getPartnerProject().getId());
             }
 
             try {
@@ -348,6 +362,8 @@ public class registrAuthoriz extends SelectorComposer<Component> {
                 e.printStackTrace();
             }
         }
+
+        Executions.sendRedirect("/pages/authoriz/authoriz.zul");
     }
 
 }

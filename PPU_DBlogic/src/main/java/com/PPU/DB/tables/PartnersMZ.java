@@ -56,7 +56,7 @@ public class PartnersMZ {
     }
 
     @FieldType(type = 1)
-    @HeaderName(name = "РќР°Р·РІР°РЅРёРµ")
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -67,7 +67,7 @@ public class PartnersMZ {
     }
 
     @FieldType(type = 1)
-    @HeaderName(name = "РђРґСЂРµСЃ")
+    @HeaderName(name = "Адрес")
     @Column(name="address")
     public String getAddress() {
         return address;
@@ -78,7 +78,7 @@ public class PartnersMZ {
     }
 
     @FieldType(type = 1)
-    @HeaderName(name = "РћРїРёСЃР°РЅРёРµ")
+    @HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;
@@ -98,8 +98,8 @@ public class PartnersMZ {
     }
 
 
-    @FieldType(type = 3, worker="WorkWithCommandMz")
-    @HeaderName(name = "РљРѕРјР°РЅРґР°")
+//    @FieldType(type = 3, worker="WorkWithCommandMz")
+//    @HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
@@ -120,8 +120,8 @@ public class PartnersMZ {
         this.user = user;
     }
 
-	@FieldType(type = 3, worker="WorkWithProgramMZ")
-	@HeaderName(name = "РџСЂРѕРіСЂР°РјРјС‹")
+//	@FieldType(type = 3, worker="WorkWithProgramMZ")
+//	@HeaderName(name = "Программы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnersMZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ProgramMZ> getProgramMZs() {
@@ -132,8 +132,8 @@ public class PartnersMZ {
         this.programMZs = programMZs;
     }
 
-	@FieldType(type = 3, worker="WorkWithMZ")
-	@HeaderName(name = "РњСѓРЅРёС†РёРїР°Р»СЊРЅС‹Рµ Р·Р°РґР°РЅРёСЏ")
+//	@FieldType(type = 3, worker="WorkWithMZ")
+//	@HeaderName(name = "Муниципальные задания")
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "leader")
 	@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
 	public Set<MZ> getMzs() {
@@ -173,6 +173,8 @@ public class PartnersMZ {
         return set;
     }
 
+    @FieldType(type = 2, worker = "WorkWithTypeMU")
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Тип МУ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "type_mu", insertable = false, updatable = false)
     public TypeMU getTypesMU() {

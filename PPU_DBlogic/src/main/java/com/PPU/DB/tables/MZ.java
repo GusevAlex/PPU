@@ -81,6 +81,8 @@ public class MZ {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -108,6 +110,8 @@ public class MZ {
         this.idLeader = idLeader;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Дата начала")
     @Column(name="start_date")
     public Date getStartDate() {
         return startDate;
@@ -117,6 +121,8 @@ public class MZ {
         this.startDate = startDate;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Дата окончания")
     @Column(name="expiration_date")
     public Date getExpirationDate() {
         return expirationDate;
@@ -126,6 +132,8 @@ public class MZ {
         this.expirationDate = expirationDate;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;
@@ -135,6 +143,8 @@ public class MZ {
         this.description = description;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Бюджет")
     @Column(name="budget")
     public float getBudget() {
         return budget;
@@ -222,8 +232,8 @@ public class MZ {
         this.valuesParametrForMZ = valuesParametrForMZ;
     }
 
-	@FieldType(type = 3, worker="WorkWithResourcesMZ")
-	@HeaderName(name = "Ресурсы")
+//	@FieldType(type = 3, worker="WorkWithResourcesMZ")
+//	@HeaderName(name = "Ресурсы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesMZ> getResourcesMZ() {
@@ -234,8 +244,8 @@ public class MZ {
         this.resourcesMZ = resourcesMZ;
     }
 
-	@FieldType(type = 3, worker="WorkWithCorrectionProject")
-	@HeaderName(name = "Корректировки МЗ")
+//	@FieldType(type = 3, worker="WorkWithCorrectionProject")
+//	@HeaderName(name = "Корректировки МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {

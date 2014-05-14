@@ -21,7 +21,7 @@ public class TimelineController extends SelectorComposer<Component> {
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
 		
-		Date currentDate = dateFormat.parse("2010-06-29");
+		Date currentDate = dateFormat.parse("2014-06-29");
 		bandinfoMonth.setDate(currentDate);
 		bandinfoYear.setDate(currentDate);
 		bandinfoMonth.setEventSourceUrl("/timeline_data.xml");

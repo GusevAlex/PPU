@@ -59,7 +59,7 @@
                     </caption>
 
                     <hbox spacing="15px">
-                    <groupbox id="groupboxMZ" width="100%">
+                    <groupbox id="groupboxMZ" width="100%" open="false">
                         <caption width="100%">
                             <radio id="cb"  radiogroup="sv1" />
                             Муниципальное управление
@@ -74,15 +74,15 @@
                         </zscript>
                         <div>
 
-							<!--<ObjectListBox objs="${objs}"-->
-										   <!--id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"-->
-                                           <!--vflex="true" multiple="true" rows="8" load="true"/>-->
+							<ObjectListBox objs="${objs}"
+										   id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" multiple="true" rows="8" load="true"/>
 
 
 
-                            <FilterAndSortedObjectList objs="${objs}"
-                                           id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
-                                           vflex="true" load="true"/>
+                            <!--<FilterAndSortedObjectList objs="${objs}"-->
+                                           <!--id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"-->
+                                           <!--vflex="true" load="true"/>-->
 
                             <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
                                 <!--<listhead>-->
@@ -159,7 +159,7 @@
                     </hbox>
 
                     <hbox spacing="15px">
-                        <groupbox id="groupboxCommerc" width="100%">
+                        <groupbox id="groupboxCommerc" width="100%" open="false">
                             <caption>
                                 <radio id="cb2"  radiogroup="sv1" />
                                 Коммерческое управление
@@ -182,13 +182,26 @@
 								<!--</template>-->
 							<!--</listbox>-->
 
-                            <button label="Добавить новую организацию"/>
+                            <zscript>
+                                <![CDATA[
+                        import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
+                        WorkWithPartnerCommerc work2 = new WorkWithPartnerCommerc();
+                        Object [] objs2 = work2.getListRows().toArray();
+                        ]]>
+                            </zscript>
+                            <div>
+
+                                <ObjectListBox objs="${objs2}"
+                                               id="listboxCom1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" multiple="true" rows="8" load="true"/>
+                            </div>
+
+                            <button id="addComMan" label="Добавить новую организацию"/>
                         </groupbox>
                     </hbox>
                 </groupbox>
 
                 <button id="registation" label="Регистрация" />
-
                 </panelchildren>
             </panel>
            </div>
