@@ -1,0 +1,52 @@
+<data>
+	<event start="July 24 2010 18:00:00 GMT" 
+		title="iPhone 4 released">
+		iPhone 4 released in US, UK, Japan, France, and Germany
+  	</event>
+  	<event start="October 26 2009 00:00:00 GMT" 
+		title="Android Eclair Released">
+		Android 2.0 is released with new Browser UI and HTML 5 support.
+  	</event>
+	<event start="May 20 2010 00:00:00 GMT" 
+		title="Android Froyo Released">
+		Android 2.2 is released with integration of Chrome's V8 
+		JavaScript engine into the Browser application.
+  	</event>
+	<event start="March 15 2010 11:00:00 GMT" end="July 15 2010 09:00:00 GMT"
+		isDuration="true" title="ZK Docs to ZK Books" image="http://simile.mit.edu/images/csail-logo.gif">
+		ZK documentation is moving to a new <a href="http://books.zkoss.org/wiki/Documentation">ZK Books</a>
+		site where pages are laid out in a book format
+		and are downloadable as PDF files.
+	</event>
+	<event start="January 26 2010 08:10:00 GMT" title="ZK 5.0 Released"
+		link="http://www.zkoss.org/release/rn-5.0.0.dsp">
+		ZK 5.0 marks ZK's new architectural advancements with the introduction of the
+		Server+client Fusion paradigm and the Ajax-as-a-Service feature.
+	</event>
+	<event start="March 16 2010 08:45:00 GMT" title="ZK 5.0.1 Released"
+		link="http://www.zkoss.org/release/rn-5.0.1.dsp">
+		ZK 5.0.1 is a maintenance release focusing on fixing some issues and 
+		introducing requested features, including 
+		jQuery 1.4.2 integration and JasperReport advancements.    
+	</event>
+	<event start="May 12 2010 08:00:00 GMT" title="ZK 5.0.2 Released"
+		link="http://www.zkoss.org/release/rn-5.0.2.dsp">
+		ZK 5.0.2 is a maintenance release focusing on fixing some issues and 
+		introducing requested features, including enhanced jQuery selectors to enable ZTL 
+		testing, auto setting of pageSize when using a paging mold and introduction of a method 
+		to track Ajax requests in Google Analytics.  
+	</event>
+	<event start="June 29 2010 09:30:00 GMT" title="ZK 5.0.3 Released"
+		link="http://www.zkoss.org/release/rn-5.0.3.dsp">
+		ZK 5.0.3 is a maintenance release focusing on fixing some 
+		issues and introducing requested features, including Calendar day rendering along 
+		with hflex and vflex improvements. 
+	</event>
+	<event start="August 4 2010 08:50:00 GMT" title="New ZK Theme: Breeze, Released"
+		link="http://www.zkoss.org/release/zkthemebreeze-5.0.3.dsp">
+		Breeze is a brand new ZK theme which features a light, 
+		relaxed look and feel that brings you coolness in the summer. 
+		It supports dynamic theme switching between Breeze, Silver Gray and Classic Blue. 
+		Breeze is compatible with ZK 5.0.3 and above.
+	</event>
+</data>

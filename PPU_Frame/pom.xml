@@ -310,6 +310,34 @@
             <version>1.8.2</version>
         </dependency>
 
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>timelinez</artifactId>
+			<version>2.3.1_50</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>timeplotz</artifactId>
+			<version>1.1_50</version>
+			<!-- to avoid version conflict -->
+			<exclusions>
+				<exclusion>
+					<artifactId>timelinez</artifactId>
+					<groupId>org.zkoss.zkforge</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>gmapsz</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>ckez</artifactId>
+			<version>4.0.1.0</version>
+		</dependency>
+
 
 
     </dependencies>
