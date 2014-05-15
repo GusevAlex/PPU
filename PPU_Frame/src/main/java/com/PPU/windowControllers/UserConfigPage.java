@@ -79,6 +79,7 @@ public class UserConfigPage  extends SelectorComposer<Component> {
         this.loginStr = loginStr;
     }
 
+
     public UserConfigPage()
     {
         Session session = Sessions.getCurrent();

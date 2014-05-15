@@ -137,6 +137,7 @@ public class MainPageController {
                 put("/pages/notification/myNotification.zul", new String[][]{{"Муниципальные задания > ", "Мои оповещения"}});
                 put("/pages/partners/partnersMU.zul", new String[][]{{finalName}, {"Участники системы "}});
                 put("/pages/programs/Program.zul", new String[][]{{"Программа"}});
+                put("/pages/pagesMZ/timeline.zul", new String[][]{{"ПВременная линия муниципального задания"}});
             }
         };
 
@@ -270,20 +271,6 @@ public class MainPageController {
 				{
 
 				}
-
-		MZ mz = (MZ) new WorkWithMZ().getEntity(new Integer(1));
-
-		ParseCorrection parseCorrection = new ParseCorrection();
-		Object [] o = mz.getCorrectionsMZ().toArray();
-
-		CorrectionsMZ [] cor = new CorrectionsMZ[o.length];
-
-		for (int i=0; i<o.length; i++)
-			cor[i] = (CorrectionsMZ) o[i];
-
-		parseCorrection.saveReportToXML(cor);
-
-
 
 		MenuGroupBean munGroup = new MenuGroupBean(
                 "Муниципальные задания",

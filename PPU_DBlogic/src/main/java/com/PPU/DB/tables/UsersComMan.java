@@ -38,6 +38,7 @@ public class UsersComMan {
     private String name;
     private String email;
     private int idPartenerCommercial;
+    private boolean sendMail;
     private PartnerCommercialMan partnerProject;
 
     @Id
@@ -98,8 +99,17 @@ public class UsersComMan {
         this.idPartenerCommercial = idPartenerCommercial;
     }
 
-	@FieldType(type = 2, worker = "WorkWithPartnerCommerc")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник проектного управления")
+    @Column(name="sendMail")
+    public boolean isSendMail() {
+        return sendMail;
+    }
+
+    public void setSendMail(boolean sendMail) {
+        this.sendMail = sendMail;
+    }
+
+    @FieldType(type = 2, worker = "WorkWithPartnerCommerc")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник муниципального управления")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_commercial", insertable = false, updatable = false)
     public PartnerCommercialMan getPartnerProject() {

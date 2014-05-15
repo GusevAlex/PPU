@@ -35,6 +35,7 @@ public class UsersMunMan {
     private String name;
     private String email;
     private int idPartnerMZ;
+    private boolean sendMail;
     private PartnersMZ partnerMZ;
 
     @Id
@@ -95,8 +96,17 @@ public class UsersMunMan {
         this.email = email;
     }
 
+    @Column(name="sendMail")
+    public boolean isSendMail() {
+        return sendMail;
+    }
+
+    public void setSendMail(boolean sendMail) {
+        this.sendMail = sendMail;
+    }
+
 	@FieldType(type = 2, worker = "WorkWithPartnerMZ")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник муниципального управления")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник коммерчесого управления")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnerMZ() {
