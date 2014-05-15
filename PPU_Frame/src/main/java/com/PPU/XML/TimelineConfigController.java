@@ -91,10 +91,10 @@ public class TimelineConfigController extends SelectorComposer<Component> {
 		Radio radio = (Radio) event.getTarget();
 
 		if("zk_development".equals(radio.getValue())) {
-			bandinfoMonth.setEventSourceUrl("/timeline_data.xml");
+			bandinfoMonth.setEventSourceUrl("/report/timeline_data.xml");
 			bandinfoMonth.scrollToCenter(dateFormat.parse("2010-06-29"));
 		} else {
-			bandinfoMonth.setEventSourceUrl("/timeline_ex1.xml");
+			bandinfoMonth.setEventSourceUrl("/report/timeline_data.xml");
 			bandinfoMonth.scrollToCenter(dateFormat.parse("2008-10-15"));
 		}
 	}

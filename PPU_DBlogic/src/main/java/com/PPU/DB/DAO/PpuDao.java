@@ -2005,7 +2005,7 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
-            return session.createQuery("from "+NOTIFICATION_COM_TABLE + s).list();
+            return session.createQuery(	"from "+NOTIFICATION_COM_TABLE + s).list();
         } catch (Exception e)
         {
             System.out.println(e);

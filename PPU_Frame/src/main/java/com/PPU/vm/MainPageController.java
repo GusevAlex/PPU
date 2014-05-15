@@ -8,6 +8,7 @@ import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.*;
 import com.PPU.DB.workLogic.WorkWithNotificationCom;
 import com.PPU.DB.workLogic.WorkWithNotificationMU;
+import com.PPU.XML.ParseCorrection;
 import com.PPU.windowControllers.PageMZ.GetMZ;
 import org.zkoss.bind.annotation.AfterCompose;
 import org.zkoss.bind.annotation.BindingParam;
@@ -269,6 +270,18 @@ public class MainPageController {
 				{
 
 				}
+
+		MZ mz = (MZ) new WorkWithMZ().getEntity(new Integer(1));
+
+		ParseCorrection parseCorrection = new ParseCorrection();
+		Object [] o = mz.getCorrectionsMZ().toArray();
+
+		CorrectionsMZ [] cor = new CorrectionsMZ[o.length];
+
+		for (int i=0; i<o.length; i++)
+			cor[i] = (CorrectionsMZ) o[i];
+
+		parseCorrection.saveReportToXML(cor);
 
 
 

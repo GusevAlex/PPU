@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Alex on 13.05.2014.
  */
 public class ParseCorrection {
-    private String fileName = "/rep.xml";
+    private String fileName = "/report/timeline_data.xml";
 
     public String getFileName() {
         return fileName;

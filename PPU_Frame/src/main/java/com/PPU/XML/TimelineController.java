@@ -24,7 +24,7 @@ public class TimelineController extends SelectorComposer<Component> {
 		Date currentDate = dateFormat.parse("2014-06-29");
 		bandinfoMonth.setDate(currentDate);
 		bandinfoYear.setDate(currentDate);
-		bandinfoMonth.setEventSourceUrl("/timeline_data.xml");
-		bandinfoYear.setEventSourceUrl("/timeline_data.xml");
+		bandinfoMonth.setEventSourceUrl("/report/timeline_data.xml");
+		bandinfoYear.setEventSourceUrl("/report/timeline_data.xml");
 	}
 }
