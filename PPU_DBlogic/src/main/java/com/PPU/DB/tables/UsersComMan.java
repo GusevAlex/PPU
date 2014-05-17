@@ -67,7 +67,12 @@ public class UsersComMan {
         return hash;
     }
 
-    public void setHash(String password) {
+    public void setHash(String hash) {
+
+        this.hash = hash;
+    }
+
+    public void setHashByPassword(String password) {
 
         this.hash = MD5.getMD5(password);
     }

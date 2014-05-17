@@ -12,6 +12,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ModalDialog.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/TimeLine.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/UserConfigPage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/notification/MyNotification.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/programs/Program.java" charset="windows-1251" />
   </component>

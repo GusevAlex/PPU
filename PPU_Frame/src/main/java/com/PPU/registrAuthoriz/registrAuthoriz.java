@@ -332,7 +332,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
             {
                 objUser = new UsersMunMan();
                 ((UsersMunMan)objUser).setLogin(loginVal);
-                ((UsersMunMan)objUser).setHash(password);
+                ((UsersMunMan)objUser).setHashByPassword(password);
                 ((UsersMunMan)objUser).setName(userName);
                 ((UsersMunMan)objUser).setEmail(email);
 
@@ -346,7 +346,7 @@ public class registrAuthoriz extends SelectorComposer<Component> {
             {
                 objUser = new UsersComMan();
                 ((UsersComMan)objUser).setLogin(loginVal);
-                ((UsersComMan)objUser).setHash(password);
+                ((UsersComMan)objUser).setHashByPassword(password);
                 ((UsersComMan)objUser).setName(userName);
                 ((UsersComMan)objUser).setEmail(email);
 

@@ -1,5 +1,6 @@
 package com.PPU.DB.DAO;
 
+import com.PPU.DB.MailService.MailSender;
 import com.PPU.DB.tables.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -818,6 +819,10 @@ public class PpuDao implements PpuDaoInterface {
             Session session = sessionFactory.getCurrentSession();
             notificationCom.setReceiver(notificationCom.getPartners().getId());
 
+            for (UsersComMan user : notificationCom.getPartners().getUser())
+                if (user.isSendMail())
+                    MailSender.sendMessage(user.getEmail(), "", notificationCom.getText());
+
             session.save(notificationCom);
             return true;
         } catch (Exception e)
@@ -834,6 +839,10 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             notificationMU.setReceiver(notificationMU.getPartners().getId());
+
+            for (UsersMunMan user : notificationMU.getPartners().getUser())
+                if (user.isSendMail())
+                    MailSender.sendMessage(user.getEmail(), "", notificationMU.getText());
 
             session.save(notificationMU);
             return true;

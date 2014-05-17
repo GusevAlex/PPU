@@ -18,8 +18,8 @@
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -123,6 +123,9 @@
     <orderEntry type="library" name="Maven: org.zkoss.zkforge:timelinez:2.3.1_50" level="project" />
     <orderEntry type="library" name="Maven: org.zkoss.zkforge:timeplotz:1.1_50" level="project" />
     <orderEntry type="library" name="Maven: org.zkoss.zkforge:gmapsz:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.zkforge:ckez:4.0.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.zkoss.chart:zkcharts:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.1" level="project" />
   </component>
 </module>
 

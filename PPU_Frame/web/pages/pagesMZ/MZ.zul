@@ -271,6 +271,7 @@
 																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParamByList")' disabled="${(vm.level == 4) ? false : true}" />
 																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение" onClick='@command("onAddOldParamByList")' disabled="${(vm.level == 4) ? false : true}" />
                                                                             <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                            <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="График параметров" onClick='@command("onShowChartParam")' />
                                                                         </toolbar>
 																		<grid id="valuesParametrForMZ1" model="@bind(vm.valModelList)" >
 																			<columns>
@@ -288,9 +289,9 @@
 																				</template>
 																			</rows>
 																		</grid>
+
 																	</vlayout>
 																</hbox>
-
 															</groupbox>
 
                                                         </cell>
@@ -351,6 +352,7 @@
                                                 <button id="btn1" label="Сохранить" onClick='@command("onClickBtn1")' />
                                                 <button id="btn2" label="${vm.nameNextLevel}" onClick='@command("onClickBtn2")' if='${!vm.nameNextLevel.equals("")}' />
                                                 <button id="btn3" label="${vm.namePrevisLevel}" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
+                                                <button id="btn4" label="Закрыть задание" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
                                             </hlayout>
                                         </panelchildren>
                                     </panel>

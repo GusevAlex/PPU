@@ -105,13 +105,24 @@
 										<label value="Для муниципального задания: ${vm2.discrName}" />
 									</div>
 
-                                    <vbox >
-                                            <timeline id="timeline" height="300px" width="850px">
-                                                <bandinfo width="70%" id="bandinfoMonth" intervalUnit="month" intervalPixels="100" />
-                                                <bandinfo width="30%" id="bandinfoYear" intervalUnit="year" intervalPixels="200"
-                                                          syncWith="bandinfoMonth" />
-                                            </timeline>
-                                    </vbox>
+                                    <vlayout>
+                                        <groupbox>
+                                        <caption label="Временная линия проекта" />
+                                            <vbox >
+                                                    <timeline id="timeline" height="400px" width="950px" style="margin-left: 5%;" >
+                                                        <bandinfo width="70%" id="bandinfoMonth" intervalUnit="month" intervalPixels="100" />
+                                                        <bandinfo width="30%" id="bandinfoYear" intervalUnit="year" intervalPixels="200"
+                                                                  syncWith="bandinfoMonth" />
+                                                    </timeline>
+                                            </vbox>
+                                        </groupbox>
+
+                                        <groupbox>
+                                        <caption label="Диаграмма выполнения" />
+                                            <charts id="chart" type="pie" title="Диаграмма выполнения Муниципального задания" />
+                                        </groupbox>
+
+                                    </vlayout>
 
 								</zk>
 							</vlayout>

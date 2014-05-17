@@ -11,6 +11,7 @@ import com.PPU.vm.MainPageController;
 import com.PPU.windowControllers.GetListParam;
 import org.hibernate.collection.PersistentSet;
 import org.zkoss.bind.annotation.*;
+import org.zkoss.chart.Charts;
 import org.zkoss.web.servlet.Servlets;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Execution;
@@ -22,7 +23,10 @@ import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.*;
+import org.zkoss.chart.model.CategoryModel;
+import org.zkoss.chart.model.DefaultCategoryModel;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Calendar;
 import java.util.regex.Pattern;
@@ -331,6 +335,32 @@ public class GetMZ implements GetListParam {
         this.nameLevel = nameLevel;
     }
 
+    private CategoryModel getModelChartParam()
+    {
+        CategoryModel model;
+        model = new DefaultCategoryModel();
+//        model.setValue("Tokyo", "Jan", 7.0);
+        Integer [] numMas = new Integer[valModelList.size()];
+
+        int i = 0;
+        for (Object val : valModelList)
+            if (((ValuesParametrForMZ) val).getParametr().getType() == 'd')
+                numMas[i++] = ((ValuesParametrForMZ) val).getId();
+
+        Arrays.sort(numMas);
+
+        for (Integer intObj : numMas)
+            for (Object val : valModelList)
+            if (((ValuesParametrForMZ) val).getId() == intObj)
+                if (((ValuesParametrForMZ) val).getParametr().getType() == 'd')
+                {
+                    model.setValue(((ValuesParametrForMZ) val).getParametr().getName(), new SimpleDateFormat("dd.MM.yyyy").format(((ValuesParametrForMZ) val).getDateRecValue()), new Float(((ValuesParametrForMZ) val).getValue()));
+                    break;
+                }
+
+        return model;
+    }
+
     public void setId(int id) {
         this.id = id;
         MZ MZ;
@@ -347,9 +377,6 @@ public class GetMZ implements GetListParam {
 		}
 
 		mz = MZ;
-        
-
-
 
         if (id!=0)
         {
@@ -455,6 +482,7 @@ public class GetMZ implements GetListParam {
                     }
                 }
             }
+
 
         }
         else
@@ -958,6 +986,21 @@ public class GetMZ implements GetListParam {
                 new WorkWithParametrs().addEntity(parametrs);
             }
         });
+
+        wind1.doModal();
+    }
+
+    @Command
+    public void onShowChartParam()
+    {
+        Map arg = new HashMap<String, Object>(){
+            {
+                put("nameMz", mz.getName());
+                put("model", getModelChartParam());
+            }
+        };
+
+        final Window wind1 = (Window) Executions.createComponents("/pages/window/chartWindow.zul", null,arg);
 
         wind1.doModal();
     }

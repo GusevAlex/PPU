@@ -1,13 +1,7 @@
 <vlayout>
 
     <vbox >
-		<div apply="com.PPU.XML.TimelineController">
-			<timeline id="timeline" height="300px" width="850px">
-				<bandinfo width="70%" id="bandinfoMonth" intervalUnit="month" intervalPixels="100" />
-				<bandinfo width="30%" id="bandinfoYear" intervalUnit="year" intervalPixels="200"
-						  syncWith="bandinfoMonth" />
-			</timeline>
-		</div>
+
     </vbox>
 
 </vlayout>

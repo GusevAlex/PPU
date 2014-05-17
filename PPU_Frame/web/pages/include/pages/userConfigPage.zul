@@ -26,9 +26,17 @@
                                                     <column hflex="2" />
                                                 </columns>
                                                 <rows>
-                                                    <row>Логин : <textbox id="login" value="@load(loginStr)" /></row>
-                                                    <row>Имя : <textbox id="name" value="@load(nameUser)" /></row>
-                                                    <row>Электронная почта : <textbox id="email" value="@load(emailStr)" /></row>
+                                                    <row>Логин : <textbox id="login" value="@bind(vm.loginStr)" /></row>
+                                                    <row>Имя : <textbox id="name" value="@bind(vm.nameUser)" /></row>
+                                                    <row>Электронная почта : <textbox id="email" value="@bind(vm.emailStr)" >
+                                                        <attribute name="onChange"><![CDATA[
+                                                         import com.PPU.registrAuthoriz.*;
+
+                                                         if (!registrAuthoriz.checkEmail(self.value))
+			                                                Clients.showNotification("Введен неверный email","info", email, "end_before", 3000);
+                                                        ]]></attribute>
+                                                    </textbox></row>
+                                                    <row><cell colspan="2" ><checkbox id="sendNotif" label="Получать оповещения на почту" checked="${vm.sendMail}" /></cell></row>
                                                 </rows>
                                             </grid>
 
@@ -42,15 +50,33 @@
                                                             <column hflex="2" />
                                                         </columns>
                                                         <rows>
-                                                            <row>Старый пароль : <textbox id="oldPasword" /></row>
-                                                            <row>Новый пароль : <textbox id="pasword" /></row>
+                                                            <row>Старый пароль : <textbox id="oldPasword" type="password" value="@bind(vm.oldPassword)" >
+                                                                <attribute name="onChange"><![CDATA[
+                                                                 if (!vm.checkMailUser(self.value))
+                                                                     Clients.showNotification("Данный пароль не соответствует текущему","info", oldPasword, "end_before", 3000);
+                                                                ]]></attribute>
+                                                            </textbox></row>
+                                                            <row>Новый пароль : <textbox id="paswordText" type="password" value="@bind(vm.newPassword)" >
+                                                                <attribute name="onChange"><![CDATA[
+                                                                   if (vm.newPassword.length()<=4)
+			                                                            Clients.showNotification("Введена короткая почта","info", paswordText, "end_before", 3000);
+                                                                 ]]></attribute>
+                                                            </textbox>
+                                                            </row>
                                                         </rows>
                                                     </grid>
 
                                                 </hlayout>
                                             </groupbox>
 
-                                        <button label="Сохранить" id="saveBtn" />
+                                        <hlayout>
+                                            <button label="Сохранить" id="saveBtn" />
+                                            <button label="На главную" >
+                                                <attribute name="onClick"><![CDATA[
+                                                   Executions.sendRedirect("/index.zul");
+                                                ]]></attribute>
+                                            </button>
+                                        </hlayout>
                                     </tabpanel>
                                 </tabpanels>
                             </tabbox>
