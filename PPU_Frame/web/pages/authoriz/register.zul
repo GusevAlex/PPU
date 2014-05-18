@@ -1,3 +1,4 @@
+<?page title="Регистрация" contentType="text/html;charset=UTF-8" ?>
 <?component
         name="ObjectListBox"
         class="com.PPU.composite.ObjectListBox" ?>

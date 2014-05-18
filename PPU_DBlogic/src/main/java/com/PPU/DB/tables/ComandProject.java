@@ -28,6 +28,7 @@ public class ComandProject {
     private int id;
     private int idProject;
     private int idPartnerProject;
+    private boolean work;
     private PartnersMZ partnerProject;
     private Project project;
 
@@ -59,6 +60,15 @@ public class ComandProject {
 
     public void setIdPartnerProject(int idPartnerProject) {
         this.idPartnerProject = idPartnerProject;
+    }
+
+    @Column(name="work")
+    public boolean isWork() {
+        return work;
+    }
+
+    public void setWork(boolean work) {
+        this.work = work;
     }
 
 	@FieldType(type = 2, worker = "WorkWithPartnerCommerc")

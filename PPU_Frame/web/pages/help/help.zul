@@ -1,0 +1,187 @@
+<?page title="Портал проектного управления" contentType="text/html;charset=UTF-8" ?>
+
+<?component
+        name="Contact"
+        class="com.PPU.composite.Contact" ?>
+<?component
+        name="gridReviewMZ"
+        class="com.PPU.composite.GridReviewMZ" ?>
+
+<zk xmlns:ca="client/attribute">
+    <window
+            id="mainWindow"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
+            onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
+            height="100%" width="100%" >
+
+        <style src="../../css/desktop.css.dsp" />
+
+        <style>
+            .contentPanel table.z-caption
+            {
+            width:30%;
+            font-size: 12px;
+            }
+        </style>
+
+        <div
+                sclass="modal"
+                visible="@load(vm.modalShow)"
+                onClick='@command("hideModal")'>
+        </div>
+
+        <div id="handler" style="width : 100; height : 100">
+
+        </div>
+        <!--  -->
+
+        <caption>
+            <include src="/pages/include/titlebar.zul" />
+        </caption>
+
+        <!-- Divide the main layout into Menu Panel and Content Panel -->
+        <borderlayout
+                animationDisabled="true">
+
+            <!-- Menu Panel -->
+            <west
+                    sclass="menuPanel"
+                    ca:data-swipeable="true"
+                    autoscroll="true"
+                    collapsible="true"
+                    open="@bind(vm.menuOpen)"
+                    >
+
+                <!-- Provide a way to access zkdemo -->
+                <caption>
+
+                </caption>
+                <!-- -->
+
+                <include src="/pages/include/navigation.zul" />
+            </west>
+            <!--  -->
+
+            <!-- Content Panel -->
+            <center
+                    id="contentPanel"
+                    sclass="contentPanel"
+                    border="0"
+                    hflex="1"
+                    onSwipe='@command("contentSwipe", dir=event.swipeDirection)'>
+
+                <!-- Title Bar -->
+
+                <!--  -->
+
+                <!-- Content Area -->
+                <borderlayout>
+                    <!-- Newsfeed Panel  -->
+                    <center
+                            sclass="newsfeedPanel"
+                            autoscroll="true" >
+
+                        <!-- Toolbar -->
+                        <caption>
+                            <include src="/pages/include/toolbar.zul" />
+                        </caption>
+                        <!--  -->
+
+                        <!-- Newsfeed Posts -->
+                        <div>
+                            <vlayout>
+                                <zk xmlns:n="native">
+
+                                    <div height="30px"></div>
+
+                                    <label value="Помощь" style="font-size: 26px;" />
+                                    <n:hr />
+                                    <zscript>
+                                        <![CDATA[
+                                      import com.PPU.DB.tables.*;
+                                      import com.PPU.DB.workLogic.*;
+                                      import com.PPU.vm.*;
+
+                                      String name = MainPageController.getPartnerName();
+
+                                      Object obj = MainPageController.getProjectOrMz();
+                                   ]]>
+                                    </zscript>
+
+                                    <div style="margin: 20px 0;
+                                padding: 15px 30px 15px 15px;
+                                border-left: 5px solid #eee;background-color: #f0f7fd;
+                                border-color: #d0e3f0; ">
+                                        <label value="Здесь вы можете ознакомиться с основными документами,
+                                        которые могут понадобиться в проектном управлении" />
+                                    </div>
+
+                                    <vlayout>
+                                        <grid id="helpGroup">
+                                            <columns>
+                                                <column hflex="1" >Название документа</column>
+                                            </columns>
+                                            <rows>
+                                                    <row>
+                                                        <button label="ГОСТ-54869-2011 Проектный менеджмент, требования к управлению проектом" >
+                                                            <attribute name="onClick">{
+                                                                if (media != null)
+                                                                iframe.setSrc("/pages/help/gost_r_54869-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_proektom_.pdf");
+                                                           }</attribute>
+                                                        </button>
+                                                    </row>
+                                                <row>
+                                                    <button label="ГОСТ-54870-2011 Проектный менеджмент, требования к управлению портфелем проектов" >
+                                                        <attribute name="onClick">{
+                                                            if (media != null)
+                                                            iframe.setSrc("/pages/help/gost_r_54870-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_portfelem_proektov_.pdf");
+                                                            }</attribute>
+                                                    </button>
+                                                </row>
+                                                <row>
+                                                    <button label="ГОСТ-54871-2011 Управление программой проектов" >
+                                                        <attribute name="onClick">{
+                                                            if (media != null)
+                                                            iframe.setSrc("/pages/help/ГОСТ-54871-2011-Управление-программой-проектов.pdf");
+                                                            }</attribute>
+                                                    </button>
+                                                </row>
+                                            </rows>
+                                        </grid>
+
+                                        <div height="600px">
+                                            <iframe id="iframe" src="" vflex="1" width="100%"
+                                                    style="border: 1px solid gray" />
+                                        </div>
+                                    </vlayout>
+
+
+                                </zk>
+                            </vlayout>
+
+                            <popup
+                                    id="feedbackPopup"
+                                    width="250px"
+                                    height="50%"
+                                    sclass="feedback"
+                                    onOpen='@command("hideModal")' >
+                                <include src="/pages/include/comment.zul"/>
+                            </popup>
+                        </div>
+                        <!--  -->
+                    </center>
+                    <!--  -->
+
+                    <!-- Contact Panel -->
+
+                    <!--  -->
+                </borderlayout>
+                <!--  -->
+            </center>
+            <!--  -->
+        </borderlayout>
+        <!--  -->
+    </window>
+    <!--  -->
+</zk>

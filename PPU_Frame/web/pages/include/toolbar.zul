@@ -1,11 +1,20 @@
+<zk>
+<?component
+        name="tullbarButtonObject"
+        class="com.PPU.composite.TullbarButtonObject" ?>
+
 <hbox sclass="toolbarr">
 	<!--<template name="children">-->
     <zk forEach="${vm.getToolbarModel()}">
 		<cell align="left">
-			<toolbarbutton
-				label="${each[0]}"
-				onClick='@command("showMessage", pos="after_center")' />
+			<tullbarButtonObject
+				label="${each[0]}" obj="${each[1]}" >
+                <attribute name="onClick">{
+                    Executions.sendRedirect(self.getObj());
+               }</attribute>
+            </tullbarButtonObject>
 		</cell>
     </zk>
 	<!--</template>-->
 </hbox>
+</zk>

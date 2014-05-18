@@ -39,6 +39,8 @@ public interface PpuDaoInterface {
     public UsersComMan getUsersComMan(int id);
     public NotificationMU getNotificationMU(int id);
     public NotificationCom getNotificationCom(int id);
+    public FileMZ getFileMZ(int id);
+    public FileProject getFileProject(int id);
 
     public boolean saveMz(MZ MZ);
     public boolean saveComandMZ(ComandMZ comandMZ);
@@ -66,6 +68,8 @@ public interface PpuDaoInterface {
     public boolean saveUsersComMan(UsersComMan UsersComMan);
     public boolean saveNotificationMU(NotificationMU notificationMU);
     public boolean saveNotificationCom(NotificationCom notificationCom);
+    public boolean saveFileMZ(FileMZ fileMZ);
+    public boolean saveFileProject(FileProject fileProject);
 
     public boolean deleteMz(MZ MZ);
     public boolean deleteComandMZ(ComandMZ comandMZ);
@@ -93,6 +97,8 @@ public interface PpuDaoInterface {
     public boolean deleteUsersComMan(UsersComMan UsersComMan);
     public boolean deleteNotificationMU(NotificationMU notificationMU);
     public boolean deleteNotificationCom(NotificationCom notificationCom);
+    public boolean deleteFileMZ(FileMZ fileMZ);
+    public boolean deleteFileProject(FileProject fileProject);
 
     public boolean updateMz(MZ MZ);
     public boolean updateComandMZ(ComandMZ comandMZ);
@@ -120,6 +126,8 @@ public interface PpuDaoInterface {
     public boolean updateUsersComMan(UsersComMan UsersComMan);
     public boolean updateNotificationCom(NotificationCom notificationCom);
     public boolean updateNotificationMU(NotificationMU notificationMU);
+    public boolean updateFileMZ(FileMZ fileMZ);
+    public boolean updateFileProject(FileProject fileProject);
 
     public List<MZ> findMz(String fields, String fieldValue);
     public List<ComandMZ> findComandMZ(String fields, String fieldValue);
@@ -147,4 +155,6 @@ public interface PpuDaoInterface {
     public List<UsersComMan> findUsersComMan(String fields, String fieldValue);
     public List<NotificationMU> findNotificationMU(String fields, String fieldValue);
     public List<NotificationCom> findNotificationCom(String fields, String fieldValue);
+    public List<FileMZ> findFileMZ(String fields, String fieldValue);
+    public List<FileProject> findFileProject(String fields, String fieldValue);
 }

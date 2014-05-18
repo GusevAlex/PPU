@@ -30,6 +30,7 @@ import org.zkoss.zk.ui.*;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.zkex.zul.Jasperreport;
 import org.zkoss.zul.*;
 
 public class MainPageController {
@@ -99,7 +100,9 @@ public class MainPageController {
 
 		String name = new String();
 
-		if (pathAdress.equals("pages/pagesMZ/MZ.zul"))
+        int idParam = 0;
+
+		if (pathAdress.equals("pages/pagesMZ/MZ.zul") || pathAdress.equals("pages/pagesMZ/timeline.zul") )
 		{
 			int id = new Integer(Executions.getCurrent().getParameter("id"));
 
@@ -107,6 +110,8 @@ public class MainPageController {
 
 			getMZ.setId(id);
 			name = getMZ.getMzName();
+
+            idParam = id;
 		}
 		else
 			if (pathAdress.equals("/pages/pagesMZ/viewMz.zul"))
@@ -118,26 +123,47 @@ public class MainPageController {
                     int id = new Integer(idStr);
                     ProgramMZ program = (ProgramMZ) new WorkWithProgramMZ().getEntity(id);
                     name = program.getName();
+
+                    idParam = id;
                 }
                 else
                     name = "Мои программы";
 
 			}
+            else
+                if (pathAdress.equals("/pages/pagesMZ/MZ.zul"))
+                {
+
+                    String idStr =Executions.getCurrent().getParameter("id");
+
+                    if ((idStr != null) && (!idStr.equals("0"))) {
+                        int id = new Integer(idStr);
+                        MZ mz = (MZ) new WorkWithMZ().getEntity(id);
+                        name = mz.getName();
+
+                        idParam = id;
+                    }
+                    else
+                        name = "Новое муниципальное задание";
+
+                }
 
 		final String finalName = name;
+        final int finalId = idParam;
 
         Map<String, String[][]> mapAdress = new HashMap<String, String [][]>()
         {
             {
-				put("/pages/pagesMZ/viewMz.zul", new String[][]{{finalName}, {"Муниципальные задания "}});
-				put("/index.zul", new String[][]{{""}});
-                put("1", new String[][]{{"Мои Программы > "}, {"Программа 1 > "}});
-                put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > "}, {finalName}});
-				put("/pages/programs/reviewProgram.zul", new String[][]{{"Программы > "}});
-                put("/pages/notification/myNotification.zul", new String[][]{{"Муниципальные задания > ", "Мои оповещения"}});
-                put("/pages/partners/partnersMU.zul", new String[][]{{finalName}, {"Участники системы "}});
-                put("/pages/programs/Program.zul", new String[][]{{"Программа"}});
-                put("/pages/pagesMZ/timeline.zul", new String[][]{{"ПВременная линия муниципального задания"}});
+				put("/pages/pagesMZ/viewMz.zul", new String[][]{{finalName,(finalId != 0)? "/pages/programs/Program.zul?progr="+finalId : "/pages/programs/reviewProgram.zul"}, {"Муниципальные задания ",""}});
+				put("/index.zul", new String[][]{{"",""}});
+                put("1", new String[][]{{"Мои Программы > ","/pages/programs/reviewProgram.zul"}, {"Программа 1 > ",""}});
+                put("/pages/pagesMZ/MZ.zul", new String[][]{{"Муниципальные задания > ","/pages/pagesMZ/viewMz.zul"}, {finalName,""}});
+				put("/pages/programs/reviewProgram.zul", new String[][]{{"Программы > ",""}});
+                put("/pages/notification/myNotification.zul", new String[][]{{"Муниципальные задания > ","/pages/pagesMZ/viewMz.zul", "Мои оповещения",""}});
+                put("/pages/partners/partnersMU.zul", new String[][]{{"Участники системы ",""}});
+                put("/pages/programs/Program.zul", new String[][]{{"Программы","/pages/programs/reviewProgram.zul"}, {"", ""}});
+                put("/pages/pagesMZ/timeline.zul", new String[][]{{finalName,"/pages/pagesMZ/MZ.zul?id="+finalId}, {"Временная линия муниципального задания",""}});
+                put("/pages/help/help.zul", new String[][]{{"Помощь",""}});
             }
         };
 
@@ -331,7 +357,7 @@ public class MainPageController {
 
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJJREFUeNqcVl9IU2EU35xtc7P9Y6z1JBUISSvpLUQkAiEECXG0t6CB+mRpQY+NNinSnA/2MJtC6ktCU0ZRCVo4EElQwbUHna621FrTtTZtztz6fXIv3G73zusO/GDfvec7v9853/nOnTiXy4mIicViEY9JACWgAkqBY0AWSAO/KGSAHNfmYhG/ianAJ1tbW82VlZXX9Hr9KY1Go89kMrubm5tr4XD44+DgYN/i4uIn+G0Bf/4LwpMBWWhqa2svW63Wx0aj8QyfCkI2NTXlttvtT7Bco7I5lEBVX19f19LS0qdQKErph1AdXVpamkUWJ8rLyy9KJJIi+t38/Ly3ra3tNn5GmJlwEUgNBoPJ5XK9JeWgH0aj0TUQ3ojH48tYKpqbm60Wi+UuU9XExMRTh8PxAD9/0GdSxJG1Bkra1Wq1npDTmJubG0fwAN6HgSAEvEgmkymmT1VV1U2TyXSWagQRFwFJQ1dRUVHH3EigUqkMeCenuqpYq9WqZDKZnOkjlUpLGhoaLFS3cRJIqqurTyuVSjWbAF10xWw2X4fPeZ1Od8lmszlwBsVsPzTEBVJCvjaVlJWVGelzYRrUyZuamh42NjbegYBSWj3b5HK5lhmXTbC/vr4e5dpIG0pzcPB8Pul0OsHsInaJ9icnJ5djsdhGNpsVFYJgMOhDnBQfAZEVw818xa6tEOzs7KRGRkZeIsY2HwGx5PDw8ABaMHlU9bhsnkgkspqvRMT24BScnp4eOIp63PINp9NJxkWcOfi4CMjLnz09PS7c3i9CgkN9bmxszJ5KpT4TgcxgRTzNQlL86vV6O/ZhhxH4/f53Ho/nNfNwDyMgtg1VbxYWFrz56p5IJLb6+/s74P+d+k4IJiDO0a6uLhtKFeJSTrIbHR29v7Ky4mePaSEEB+MedV0dGhq6hwuUZhPMzMw8R2k81FctVwjBQal8Pt8HjGInM3goFJrt7Ox8RI3mLN9mIQREWdztdj8LBALjJDjG9rfu7u5b1MdlL/9uSpEAk2HInevt7X1fU1NzFevj1HjPa2IB/yr+GZZACbAL/Oare6EZFGR/BRgALZ+XGZ2aoKsAAAAASUVORK5CYII=",
-                                                "Создать программу",	 0, "/pages/programs/Program.zul"),
+                                                "Создать программу", 0, "/pages/programs/Program.zul"),
                                 }
                         )
                 ),
@@ -342,10 +368,10 @@ public class MainPageController {
                                 new MenuItemBean[] {
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAg5JREFUeNqklV9EQ1Ecx9cf0VOMMUYPvYyIEXuIu4f1MmpsJqWn3hJRIvaQHmI2MopI9NBTj6X00Mu4+0PGItLDXnoYY0/jEmNq6/tbv8txd++5p/rxca9zf7/vOef3+51zR0qlkuc/pmma9PuoS7wXbIE7UAOfTI3HtsrlslcmMFIsFu3GJ8EOSIMpl0UYIAdOI5FIR2UHfqCDrIK4h33IV0e6/UMT9Pt9j0AAVEHYMq4CxVSRkYDTBBPgBkz/QdyEYm90XZ8wJxinD2x7ICxJxRV4Ah+AVrkBZm38wqyVGxS5UCiYeXznrrFaFyyCimV8DJyAbZuYNpiJRqOGmaIl4HXY9hGogCB46//YAxgDu+DVJoa01sUarErySrWZB3kwKywoBL7As0NcbFCDXq9Hz6Ak94eMaHR4Xvh9ziFuXiyy/xe3wz1Y4drkTSEb81m7SMWo0GssnuVucbKuOEFL8dSegg4Lp118m2IN6i51MK3Fz6SCb13solvFk7oPLiQtLfJoneBDIegYbIKiix9pXYsTGCCjMEGQz4TPxS8Tj8cNaxdRAVdBSJLXS4Xcv7DW0GVH3bEMqnyZ/cWoc5YTiUTH6X/QBAuS4y+DYhYg3pT9cIgG0MAB18ZN2GBfLZlMNqxbcjrJtMUMOAd0K8Y4bSEhz7RSasXrVCrVdsrZuEtOKfCMsTWISwW+BRgAOqXRoo+2QCAAAAAASUVORK5CYII=",
-                                                "Помощь",	  0, ""),
+                                                "Помощь", 0, "/pages/help/help.zul"),
                                         new MenuItemBean(
                                                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAi5JREFUeNqklVEoQ1EYx8e8rJSaiFarqZWIFBFZs4c1NS8rT0oRT1Ie1jx55EmeKE+iPClttfawtj3MEnlSUyKiRG7UsqyUsvl/+pbjuPe6s1O/7r3/853vnHvO952vJpPJmKppLpdLt7+2Al8d4B68gH6jg+pKpZJR2zVg4/d1MGBkkNofWMEoaJI0r/BNf2AXB2GrvcAmO6tJp9PiNw06ZYdvYAW0gAnWxJYH++ABzHM/aX1ut/taa4u6BEcWsKzz9w1gRkXrBZoTHIICqP9nUL2Dgx9nQBMI5MGKpFXCqsfjUfQmIGwq2jOYBm3ACWZZk+3sv6JIMmgBE5KmgG6wA8zMFmu3ku14KpVy/JigWCyawCA4AY/AylqZIFDAMrgCF2CdtUXJ1gJuEolEFri/wjQej9PzSYp7sTUDM3iU9HYO0VeNcTmfz9dYjqIPncgwa/R/cJ9Wy4lnMAIiGpHh5QNdEqMFXHOf2hjyNfa1RbFYTJyVtulCytpbMAQU7jfzO2X4ERAPlXLI6ff7Fa0oopVuSpoDZMEUqGdmWHNItruic63btKCyn7TybQOZ/PZXHlhAqIpMXohGoza9CXqBtYoJKAmH9bboTjhAurg2WJ9UyRMKwz22D/EF+cAX5nc9CIfDatcwFZRj4TysnIxi3HeC80AgYIpEIjSmB5zhO/fXIVPRSKqsNsmVjtolOS93wmlevqb/U5ODvEoqRHOGi34FxYRW3FppBfoUYACFWIRGhlH1RgAAAABJRU5ErkJggg==",
-                                                "Настройки",		  0, ""),
+                                                "Настройки", 0, "/pages/include/pages/userConfigPage.zul"),
                                 }
                         )
                 )

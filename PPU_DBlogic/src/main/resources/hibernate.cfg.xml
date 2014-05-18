@@ -32,6 +32,8 @@
         <mapping class="com.PPU.DB.tables.UsersComMan" />
         <mapping class="com.PPU.DB.tables.NotificationMU" />
         <mapping class="com.PPU.DB.tables.NotificationCom" />
+        <mapping class="com.PPU.DB.tables.FileMZ" />
+        <mapping class="com.PPU.DB.tables.FileProject" />
 
     </session-factory>
 </hibernate-configuration>

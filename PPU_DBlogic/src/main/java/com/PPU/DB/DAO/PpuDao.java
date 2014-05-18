@@ -51,6 +51,8 @@ public class PpuDao implements PpuDaoInterface {
     private static String USERS_COM_MAN_TABLE = "UsersComMan";
     private static String NOTIFICATION_MU_TABLE = "NotificationMU";
     private static String NOTIFICATION_COM_TABLE = "NotificationCom";
+    private static String FILE_MZ_TABLE = "FileMZ";
+    private static String FILE_PROJECT_TABLE = "FileProject";
 
     private static SessionFactory sessionFactory;
 
@@ -401,6 +403,32 @@ public class PpuDao implements PpuDaoInterface {
     }
 
     @Override
+    public FileMZ getFileMZ(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (FileMZ) session.get(FileMZ.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new FileMZ();
+        }
+    }
+
+    @Override
+    public FileProject getFileProject(int id) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            return (FileProject) session.get(FileProject.class, id);
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return new FileProject();
+        }
+    }
+
+    @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
     public boolean saveMz(MZ MZ) {
         try
@@ -454,6 +482,16 @@ public class PpuDao implements PpuDaoInterface {
                     this.updateResourcesMz(resourcesMZ);
             }
 
+            for (FileMZ fileMZ : MZ.getFileMZs())
+            {
+                fileMZ.setIdMz(MZ.getId());
+
+                if (fileMZ.getId() == 0)
+                    this.saveFileMZ(fileMZ);
+                else
+                    this.updateFileMZ(fileMZ);
+            }
+
             return true;
         } catch (Exception e)
         {
@@ -468,6 +506,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+            comandMZ.setWork(true);
+
             session.save(comandMZ);
             return true;
         } catch (Exception e)
@@ -483,6 +523,8 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+            comandProject.setWork(true);
+
             session.save(comandProject);
             return true;
         } catch (Exception e)
@@ -818,6 +860,7 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             notificationCom.setReceiver(notificationCom.getPartners().getId());
+            notificationCom.setDate(Calendar.getInstance().getTime());
 
             for (UsersComMan user : notificationCom.getPartners().getUser())
                 if (user.isSendMail())
@@ -839,12 +882,43 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             notificationMU.setReceiver(notificationMU.getPartners().getId());
+            notificationMU.setDate(Calendar.getInstance().getTime());
 
             for (UsersMunMan user : notificationMU.getPartners().getUser())
                 if (user.isSendMail())
                     MailSender.sendMessage(user.getEmail(), "", notificationMU.getText());
 
             session.save(notificationMU);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean saveFileMZ(FileMZ fileMZ) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.save(fileMZ);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean saveFileProject(FileProject fileProject) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.save(fileProject);
             return true;
         } catch (Exception e)
         {
@@ -1234,6 +1308,36 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             session.delete(notificationMU);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteFileMZ(FileMZ fileMZ) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(fileMZ);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean deleteFileProject(FileProject fileProject) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.delete(fileProject);
             return true;
         } catch (Exception e)
         {
@@ -1635,6 +1739,36 @@ public class PpuDao implements PpuDaoInterface {
         }
     }
 
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateFileMZ(FileMZ fileMZ) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(fileMZ);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public boolean updateFileProject(FileProject fileProject) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            session.update(fileProject);
+            return true;
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return false;
+        }
+    }
+
     private String getSQLForFindByParam(String fields, String fieldValue)
     {
 
@@ -2015,6 +2149,34 @@ public class PpuDao implements PpuDaoInterface {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
             return session.createQuery(	"from "+NOTIFICATION_COM_TABLE + s).list();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<FileMZ> findFileMZ(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery(	"from "+FILE_MZ_TABLE + s).list();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            return Collections.emptyList();
+        }
+    }
+
+    @Override
+    public List<FileProject> findFileProject(String fields, String fieldValue) {
+        try
+        {
+            Session session = sessionFactory.getCurrentSession();
+            String s = getSQLForFindByParam(fields, fieldValue);
+            return session.createQuery(	"from "+FILE_PROJECT_TABLE + s).list();
         } catch (Exception e)
         {
             System.out.println(e);

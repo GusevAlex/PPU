@@ -2,8 +2,11 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java" charset="windows-1251" />
@@ -17,6 +20,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionMZ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithCorrectionProject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithFileMZ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithFileProject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsMz.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithLimitsProject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/workLogic/WorkWithParametrs.java" charset="UTF-8" />

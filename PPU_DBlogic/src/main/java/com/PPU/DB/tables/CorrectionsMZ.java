@@ -107,7 +107,7 @@ public class CorrectionsMZ {
     }
 
     @FieldType(type = 2, worker = "WorkWithMZ")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Муниципальное задание")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
@@ -119,7 +119,7 @@ public class CorrectionsMZ {
     }
 
 	@FieldType(type = 2, worker = "WorkWithParametrs")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {

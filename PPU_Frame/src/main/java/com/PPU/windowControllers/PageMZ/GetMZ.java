@@ -2,19 +2,18 @@ package com.PPU.windowControllers.PageMZ;
 
 import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.*;
-import com.PPU.composite.Contact;
 import com.PPU.composite.DualObjectListBox;
-import com.PPU.composite.MenuItem;
 import com.PPU.composite.ObjectListBox;
 import com.PPU.funcControl.NotificationService;
-import com.PPU.vm.MainPageController;
+import com.PPU.windowControllers.FileController;
 import com.PPU.windowControllers.GetListParam;
-import org.hibernate.collection.PersistentSet;
+import com.PPU.windowControllers.report.ComandMZDataSource;
+import com.PPU.windowControllers.report.LimitsMZDataSource;
+import com.PPU.windowControllers.report.MZDataSource;
+import com.PPU.windowControllers.report.ValuesMZDataSource;
 import org.zkoss.bind.annotation.*;
-import org.zkoss.chart.Charts;
-import org.zkoss.web.servlet.Servlets;
+import org.zkoss.util.media.Media;
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Execution;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.event.*;
@@ -22,13 +21,17 @@ import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.zkex.zul.Jasperreport;
 import org.zkoss.zul.*;
 import org.zkoss.chart.model.CategoryModel;
 import org.zkoss.chart.model.DefaultCategoryModel;
+import org.zkoss.zul.Messagebox;
 
+import java.lang.Object;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Calendar;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -69,6 +72,7 @@ public class GetMZ implements GetListParam {
     private String nameNextLevel;
     private String namePrevisLevel;
     private String nameLevel;
+    private String notWorkString = new String();
 
     Object valuesParametrForMZ;
     Object resourcesMZ;
@@ -76,6 +80,7 @@ public class GetMZ implements GetListParam {
 
     ListModelList<Object> limitModelList;
     ListModelList<Object> valModelList;
+    ListModelList<Object> fileModelList;
 
 	Window wind = new Window();
 
@@ -101,6 +106,9 @@ public class GetMZ implements GetListParam {
 
     @Wire
     private DualObjectListBox resourcesMZ1;
+
+    @Wire
+    private Grid fileList;
 
     public GetMZ()
     {
@@ -335,6 +343,14 @@ public class GetMZ implements GetListParam {
         this.nameLevel = nameLevel;
     }
 
+    public String getNotWorkString() {
+        return notWorkString;
+    }
+
+    public void setNotWorkString(String notWorkString) {
+        this.notWorkString = notWorkString;
+    }
+
     private CategoryModel getModelChartParam()
     {
         CategoryModel model;
@@ -359,6 +375,14 @@ public class GetMZ implements GetListParam {
                 }
 
         return model;
+    }
+
+    public ListModelList<Object> getFileModelList() {
+        return fileModelList;
+    }
+
+    public void setFileModelList(ListModelList<Object> fileModelList) {
+        this.fileModelList = fileModelList;
     }
 
     public void setId(int id) {
@@ -434,7 +458,7 @@ public class GetMZ implements GetListParam {
 					val.add(v);
 
             limitModelList = new ListModelList<Object>(val.toArray());
-
+            fileModelList = new ListModelList<Object>(mz.getFileMZs());
 
             List user = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
             setLevel(new WorkWithMZ().getUserRole(mz, (UsersMunMan) user.get(0)));
@@ -483,7 +507,8 @@ public class GetMZ implements GetListParam {
                 }
             }
 
-
+            if (getEndCommandMZ().size() != 0)
+                notWorkString = "Имеются исполнители, закончившие работу";
         }
         else
         {
@@ -538,6 +563,7 @@ public class GetMZ implements GetListParam {
             correctionsMZ = (Object) new Object [0];
 
             limitModelList = new ListModelList<Object>(limitsMZ);
+            fileModelList = new ListModelList<Object>(new ArrayList<FileMZ>());
             valModelList = new ListModelList<Object>((Object []) valuesParametrForMZ);
 
             namePrevisLevel = "";
@@ -860,6 +886,34 @@ public class GetMZ implements GetListParam {
     }
 
     @Command
+    public void onClickBtn4(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        Map arg = new HashMap<String, Object>(){
+            {
+                put("mz", mz);
+            }
+        };
+
+        final Window wind1 = (Window) Executions.createComponents("/pages/window/inputTextDialog.zul", null,arg);
+        wind1.setTitle("Прчичина завершения");
+        wind1.addEventListener("onClose", new EventListener<Event>() {
+            @Override
+            public void onEvent(Event event) throws Exception {
+                String text = ((Textbox) wind1.getChildren().get(0)).getText();
+
+                NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+            }
+        });
+        wind1.doModal();
+    }
+
+    @Command
+    public void onClickBtn5(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+
+    }
+
+    @Command
     public void onAddNewParamByList(@ContextParam(ContextType.COMPONENT) Component comp)
     {
         final List<Parametrs> listParam = new ArrayList<Parametrs>();
@@ -1091,5 +1145,123 @@ public class GetMZ implements GetListParam {
     @AfterCompose
     public void afterCompose(@ContextParam(ContextType.VIEW) Component view) {
         Selectors.wireComponents(view, this, false);
+    }
+
+    @Command
+    public void showReport(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        Window win = (Window) Executions.createComponents("/report/report1.zul", null, null);
+
+        Map<String, Object> params = new HashMap<String, Object>();
+        // Add parameters used in this report
+        params.put("reportTitle", "Муниципальное задание");
+        params.put("title2", mz.getName());
+        params.put("hand1", "My Food List2");
+        params.put("MZSource", new MZDataSource(new WorkWithMZ().getListRows()));
+
+        List<ComandMZ> comList = new ArrayList<ComandMZ>();
+
+        for (ComandMZ com : mz.getComandMZ())
+            comList.add(com);
+
+        params.put("comandMZ", new ComandMZDataSource(comList));
+
+        List<LimitsMZ> limList = new ArrayList<LimitsMZ>();
+
+        for (LimitsMZ com : mz.getLimitsMZ())
+            limList.add(com);
+
+        params.put("limitsMZ", new LimitsMZDataSource(limList));
+//        params.put("seafoodDataSource", new DataSource(seafoods));
+
+        List<ValuesParametrForMZ> valList = new ArrayList<ValuesParametrForMZ>();
+
+        for (ValuesParametrForMZ com : mz.getValuesParametrForMZ())
+            valList.add(com);
+
+        params.put("valuesParamMZ", new ValuesMZDataSource(valList));
+
+        Jasperreport report = (Jasperreport) win.getFellow("report");
+        report.setType("rtf");
+        report.setSrc("/jaspreport/report1.jasper");
+        report.setParameters(params);
+    }
+    
+    public void fileUpload()
+    {
+        org.zkoss.zhtml.Fileupload fileupload = new org.zkoss.zhtml.Fileupload();
+        fileupload.get(new EventListener<UploadEvent>() {
+            @Override
+            public void onEvent(UploadEvent uploadEvent) throws Exception {
+                Clients.showBusy("Идет прием файла...");
+
+                Media media = uploadEvent.getMedias()[0];
+
+                FileController.saveMediaToFile(media);
+
+                FileMZ fileMZ = new FileMZ();
+                fileMZ.setIdMz(mz.getId());
+                fileMZ.setFile(media.getName());
+
+                mz.getFileMZs().add(fileMZ);
+                fileModelList.add(fileMZ);
+
+                fileList.setModel(fileModelList);
+
+                Clients.clearBusy();
+            }
+        });
+    }
+
+    public ListModelList getEndCommandMZ()
+    {
+        ListModelList modelList = new ListModelList();
+
+        for (ComandMZ com : mz.getComandMZ())
+        {
+            if (!com.isWork())
+                modelList.add(com);
+        }
+
+        return modelList;
+    }
+
+    public void revertPartnerComandInWork(Object obj)
+    {
+        final ComandMZ com = (ComandMZ) obj;
+
+        for (ComandMZ comandMZ2 : mz.getComandMZ())
+        {
+            if (comandMZ2.equals(com))
+            {
+                com.setWork(true);
+                comandMZ2.setWork(true);
+
+                try {
+                    new WorkWithCommandMz().changeEntity(comandMZ2);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                Map arg = new HashMap<String, Object>(){
+                    {
+                        put("mz", mz);
+                    }
+                };
+
+                final Window wind1 = (Window) Executions.createComponents("/pages/window/inputTextDialog.zul", null,arg);
+                wind1.setTitle("Напишите причину возврата");
+                wind1.addEventListener("onClose", new EventListener<Event>() {
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
+
+                        NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+                    }
+                });
+
+                wind1.doModal();
+            }
+        }
     }
 }

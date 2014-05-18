@@ -48,6 +48,7 @@ public class Project {
     private String description;
     private float budget;
     private int status;
+    private String consumers;
     private Set<ComandProject> comandProject = new LinkedHashSet<ComandProject>();
     private ProgramCommerc program;
     private Set<LimitsProject> limitsProject = new LinkedHashSet<LimitsProject>();
@@ -55,6 +56,7 @@ public class Project {
     private Set<ResourcesProject> resourcesProject = new LinkedHashSet<ResourcesProject>();
     private Set<CorrectionsProject> correctionsProject = new LinkedHashSet<CorrectionsProject>();
     private PartnerCommercialMan leader;
+    private Set<FileProject> fileProjects = new LinkedHashSet<FileProject>();
 
     @Id
     @GeneratedValue(generator="increment")
@@ -149,6 +151,17 @@ public class Project {
         this.status = status;
     }
 
+    @FieldType(type = 1)
+    @HeaderName(name = "Потребители МУ")
+    @Column(name="consumers")
+    public String getConsumers() {
+        return consumers;
+    }
+
+    public void setConsumers(String consumers) {
+        this.consumers = consumers;
+    }
+
 	@FieldType(type = 3, worker="WorkWithComandProject")
 	@HeaderName(name = "Команда проекта")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
@@ -231,6 +244,16 @@ public class Project {
 
     public void setLeader(PartnerCommercialMan leader) {
         this.leader = leader;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<FileProject> getFileProjects() {
+        return fileProjects;
+    }
+
+    public void setFileProjects(Set<FileProject> fileProjects) {
+        this.fileProjects = fileProjects;
     }
 
     @Override

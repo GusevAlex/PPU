@@ -15,6 +15,9 @@
 <?component
         name="myTextBox"
         class="com.PPU.composite.MyTextBox" ?>
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
 
 <zk xmlns:ca="client/attribute">
     <window
@@ -114,8 +117,6 @@
 
 										int idMz = new Integer(execution.getParameter("id"));
 										vm.setId(new Integer(execution.getParameter("id")));
-
-
                                    ]]>
                                     </zscript>
 
@@ -132,11 +133,14 @@
                                         <label value="@load(vm.program)" />
                                         <n:br />
                                         <label value="@load(vm.nameLevel)" />
+                                        <n:br />
+                                        <label value="@load(vm.notWorkString)" />
                                     </div>
 
                                     <panel width="100%" border="normal"
                                            title="Редактирование и просмотр">
                                         <panelchildren>
+                                            <button id="showReport" onClick='@command("showReport")' />
                                             <grid sclass="loginGrid">
                                                 <columns>
                                                     <column width="50%" />
@@ -147,6 +151,7 @@
                                                     <row>Дата начала : <datebox id="startDate" value="@bind(vm.mz.startDate)" cols="12" format="short" disabled="${((vm.level == 1) ||(vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
                                                     <row>Дата окончания : <datebox id="expirationDate" value="@bind(vm.mz.expirationDate)" cols="12" format="short" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
                                                     <row>Описание : <textbox id="description" value="@bind(vm.mz.description)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
+                                                    <row>Потребитель муниципальной услуги : <textbox id="consumers" value="@bind(vm.mz.consumers)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
                                                     <row>Бюджет : <doublespinner id="budget" value="@bind(vm.mz.budget)" cols="12" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
 
                                                     <row>
@@ -167,8 +172,38 @@
 															<groupbox >
 															<caption label="Команда, выполняющая МЗ" />
 																<hbox>
-																	<dualObjectListBox worker="WorkWithCommandMz" rightList="@bind(vm.comandMZ)"  disabled="${((vm.level == 2) || (vm.level == 3)) ? false : true}"
-																					   id="comandMZ1"   load="true" />
+                                                                    <vlayout>
+                                                                        <dualObjectListBox worker="WorkWithCommandMz" rightList="@bind(vm.comandMZ)"  disabled="${((vm.level == 2) || (vm.level == 3)) ? false : true}"
+                                                                                           id="comandMZ1"   load="true" />
+
+                                                                        <groupbox mold="3d" width="100%" style="margin-top: 100px;" open="false">
+                                                                        <caption label="Исполнители закончившие выполнение муниципального задания" />
+
+                                                                            <grid id="endCommand" model="@bind(vm.getEndCommandMZ())">
+                                                                                <columns>
+                                                                                    <column hflex="1" >Название</column>
+                                                                                    <column hflex="1" >Тип учреждения</column>
+                                                                                    <column hflex="1" >Вернуть на выполнение</column>
+                                                                                </columns>
+                                                                                <rows>
+                                                                                    <template name="model">
+                                                                                        <row>
+                                                                                            <label value="${each.getPartnerMZ().name}" />
+                                                                                            <label value="${each.getPartnerMZ().getTypesMU().name}" />
+
+                                                                                                <buttonOpenList label="Вернуть" obj="${each}" >
+                                                                                                    <attribute name="onClick">   <![CDATA[
+                                                                                                        vm.revertPartnerComandInWork(self.getObj());
+                                                                                                        endCommand.setModel(vm.getEndCommandMZ());
+                                                                                               ]]>  </attribute>
+                                                                                                </buttonOpenList>
+                                                                                        </row>
+                                                                                    </template>
+                                                                                </rows>
+                                                                            </grid>
+
+                                                                        </groupbox>
+                                                                    </vlayout>
 																</hbox>
 															</groupbox>
                                                         </cell>
@@ -326,23 +361,28 @@
                                                         border-left: 5px solid #eee;background-color: #f0f7fd;
                                                         border-color: #d0e3f0; ">
                                                 <label value="Файлы приложенные к заданию" />
-                                                <button label="Добавить"  upload="true">
-                                                    <attribute name="onUpload"><![CDATA[
-                                                    org.zkoss.util.media.Media media = event.getMedia();
-                                                    org.zkoss.zhtml.Filedownload.save(media);
+                                                <button label="Добавить" image="/images/tollbar/attach.gif" >
+                                                    <attribute name="onClick"><![CDATA[
+                                                       vm.fileUpload();
                                                      ]]></attribute>
                                                         </button>
 
-                                                <grid model="@bind(vm.valModelList)">
+                                                <grid id="fileList" model="@bind(vm.fileModelList)">
+                                                    <columns>
+                                                        <column hflex="1" />
+                                                    </columns>
                                                     <rows>
-                                                        <row>
-                                                            <template name="model">
-                                                                <cell>
-                                                                    <a href="${each.value}" >dfgdfg</a>
-                                                                </cell>
-                                                            </template>
-
-                                                        </row>
+                                                        <template name="model">
+                                                            <row>
+                                                                    <cell>
+                                                                        <buttonOpenList label="${each.getFile()}" obj="${each}" >
+                                                                            <attribute name="onClick">   <![CDATA[
+                                                                                com.PPU.windowControllers.FileController.downloadFile(self.getObj().getFile());
+                                                                       ]]>  </attribute>
+                                                                            </buttonOpenList>
+                                                                    </cell>
+                                                            </row>
+                                                        </template>
                                                     </rows>
                                                 </grid>
 
@@ -352,7 +392,8 @@
                                                 <button id="btn1" label="Сохранить" onClick='@command("onClickBtn1")' />
                                                 <button id="btn2" label="${vm.nameNextLevel}" onClick='@command("onClickBtn2")' if='${!vm.nameNextLevel.equals("")}' />
                                                 <button id="btn3" label="${vm.namePrevisLevel}" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
-                                                <button id="btn4" label="Закрыть задание" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
+                                                <button id="btn4" label="Завершить задание" onClick='@command("onClickBtn4")' if='${((vm.level==4) &amp;&amp; (vm.mz.status==4))}' />
+                                                <button id="btn5" label="Закрыть задание" onClick='@command("onClickBtn5")' if='${(vm.level==2 || vm.level==3) &amp;&amp; vm.mz.status==4}' />
                                             </hlayout>
                                         </panelchildren>
                                     </panel>

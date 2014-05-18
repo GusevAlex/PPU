@@ -1,3 +1,4 @@
+<?page title="Настройки" contentType="text/html;charset=UTF-8" ?>
 <zk>
     <div apply="org.zkoss.bind.BindComposer"
          viewModel="@id('vm') @init('com.PPU.windowControllers.UserConfigPage')">

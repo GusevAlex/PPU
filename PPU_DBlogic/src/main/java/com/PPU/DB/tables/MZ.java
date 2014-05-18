@@ -51,6 +51,7 @@ public class MZ {
     private float budget;
     private int status;
     private int serviceType;
+    private String consumers;
     private Set<ComandMZ> comandMZ = new LinkedHashSet<ComandMZ>();
     private ProgramMZ program;
     private TypeServiceMZ typeServiceMZ;
@@ -59,6 +60,7 @@ public class MZ {
     private Set<ResourcesMZ> resourcesMZ = new LinkedHashSet<ResourcesMZ>();
     private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
 	private PartnersMZ leader;
+    private Set<FileMZ> fileMZs = new LinkedHashSet<FileMZ>();
 
     @Column(name="id_program")
     public int getIdProgram() {
@@ -172,7 +174,18 @@ public class MZ {
         this.serviceType = serviceType;
     }
 
-	@FieldType(type = 3, worker="WorkWithCommandMz")
+    @FieldType(type = 1)
+    @HeaderName(name = "Потребители МУ")
+    @Column(name="consumers")
+    public String getConsumers() {
+        return consumers;
+    }
+
+    public void setConsumers(String consumers) {
+        this.consumers = consumers;
+    }
+
+    @FieldType(type = 3, worker="WorkWithCommandMz")
 	@HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
@@ -268,7 +281,17 @@ public class MZ {
 		this.leader = leader;
 	}
 
-	@Override
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "mz")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    public Set<FileMZ> getFileMZs() {
+        return fileMZs;
+    }
+
+    public void setFileMZs(Set<FileMZ> fileMZs) {
+        this.fileMZs = fileMZs;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof MZ)) return false;
 

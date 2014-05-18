@@ -33,6 +33,7 @@ public class Parametrs {
     private int id;
     private String name;
     private char type;
+    private String dimensions;
     private Set<ValuesParametrForMZ> valuesParametrForMZ = new LinkedHashSet<ValuesParametrForMZ>();
     private Set<ValuesParametrForProject> valuesParametrForProjects = new LinkedHashSet<ValuesParametrForProject>();
     private Set<CorrectionsMZ> correctionsMZ = new LinkedHashSet<CorrectionsMZ>();
@@ -69,8 +70,17 @@ public class Parametrs {
         this.type = type;
     }
 
-	@FieldType(type = 3, worker="WorkWithValuesParametrForMZ")
-	@HeaderName(name = "Параметры МЗ")
+    @Column(name="dimensions")
+    public String getDimensions() {
+        return dimensions;
+    }
+
+    public void setDimensions(String dimensions) {
+        this.dimensions = dimensions;
+    }
+
+    @FieldType(type = 3, worker="WorkWithValuesParametrForMZ")
+	@HeaderName(name = "Значения параметров МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
@@ -82,7 +92,7 @@ public class Parametrs {
     }
 
 	@FieldType(type = 3, worker="WorkWithValuesParametrForProject")
-	@HeaderName(name = "Параметры программ")
+	@HeaderName(name = "Значения параметров Проекта")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForProject> getValuesParametrForProjects() {
@@ -94,7 +104,7 @@ public class Parametrs {
     }
 
 	@FieldType(type = 3, worker="WorkCorrectionMZ")
-	@HeaderName(name = "Корректировки")
+	@HeaderName(name = "Корректировки МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
@@ -118,7 +128,7 @@ public class Parametrs {
     }
 
 	@FieldType(type = 3, worker="WorkWithLimitsProject")
-	@HeaderName(name = "Лимиты проектов")
+	@HeaderName(name = "Лимиты проекта")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parametr")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsProject> getLimitsProjects() {

@@ -107,7 +107,7 @@ public class CorrectionsProject {
     }
 
     @FieldType(type = 2, worker = "WorkWithProject")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Проект")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
@@ -119,7 +119,7 @@ public class CorrectionsProject {
     }
 
 	@FieldType(type = 2, worker = "WorkWithParametrs")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {
