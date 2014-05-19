@@ -7,17 +7,6 @@
         name="gridReviewMZ"
         class="com.PPU.composite.GridReviewMZ" ?>
 <?component
-        name="dualObjectListBox"
-        class="com.PPU.composite.DualObjectListBox" ?>
-<?component
-        name="ObjectListBox"
-        class="com.PPU.composite.ObjectListBox" ?>
-
-<?component
-        name="myTextBox"
-        class="com.PPU.composite.MyTextBox" ?>
-
-<?component
         name="buttonOpenList"
         class="com.PPU.composite.ButtonOpenList" ?>
 
@@ -106,54 +95,51 @@
                         <div>
                             <vlayout>
                                 <zk xmlns:n="native">
-
                                     <div apply="org.zkoss.bind.BindComposer"
-                                         viewModel="@id('vm') @init('com.PPU.windowControllers.partners.PartnersCommerc')"
-                                         height="100%" width="100%" >
+                                         viewModel="@id('vm2') @init('com.PPU.windowControllers.PageMZ.Events')" >
 
-                                        <div height="30px"></div>
+                                    <div height="30px"></div>
 
-                                        <label value="" style="font-size: 26px;" />
-                                        <n:hr />
+                                    <label value="События для всех ваших муниципальных заданий" style="font-size: 26px;" />
+                                    <n:hr />
 
+                                    <div style="margin: 20px 0;
+                                padding: 15px 30px 15px 15px;
+                                border-left: 5px solid #eee;background-color: #f0f7fd;
+                                border-color: #d0e3f0; ">
+                                        <label value="${vm2.description}" />
+                                    </div>
 
-                                        <div style="margin: 20px 0;
-                                    padding: 15px 30px 15px 15px;
-                                    border-left: 5px solid #eee;background-color: #f0f7fd;
-                                    border-color: #d0e3f0; ">
-                                            <label value="" />
-                                        </div>
-
-                                        <grid  id="partnersMU" mold="paging" pageSize="10" model="@load(vm.partnersCommerc)" >
-
-                                            <columns  menupopup="auto" sizable="true">
-                                                <column sort="auto(name)"  label="Цель" width="${gridMZ.width}"></column>
-                                                <column sort="auto(address)"  label="Адрес" width="${gridMZ.width}"></column>
-                                                <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
-                                                <column label="Просмотр всех программ" width="${gridMZ.width}"></column>
+                                    <vlayout>
+                                        <grid id="eventGrid">
+                                            <columns>
+                                                <column hflex="1" >Перейти к муниципальному заданию</column>
+                                                <column hflex="1" >Текст</column>
+                                                <column hflex="1" >Дата</column>
                                             </columns>
+                                            <rows>
+                                                <zk forEach="${vm2.getCorList()}">
+                                                <custom-attributes objs="${each}"/>
 
-
-                                            <template name="model">
-                                                <row>
-                                                    <label value="${each.name}" />
-
-                                                    <label value="${each.address}" />
-
-                                                    <label value="${each.description}" />
-
-                                                    <buttonOpenList label="Открыть" obj="${each.id}">
-                                                        <attribute name="onClick">   <![CDATA[
-                                                            Executions.sendRedirect("/pages/programs/reviewProgram.zul?part="+self.getObj());
-                                                   ]]>  </attribute>
-                                                    </buttonOpenList>
-                                                </row>
-                                            </template>
-                                            <!--</listbox>-->
+                                                    <group label="${objs[0][0]}" />
+                                                    <zk forEach="${objs}" >
+                                                        <row>
+                                                            <buttonOpenList label="Перейти" obj="${each[1]}" >
+                                                                <attribute name="onClick">   <![CDATA[
+                                                                    Executions.sendRedirect(self.getObj());
+                                                            ]]> </attribute>
+                                                            </buttonOpenList>
+                                                            <label value="${each[2]}" />
+                                                            <label value="${each[3]}" />
+                                                        </row>
+                                                    </zk>
+                                                </zk>
+                                            </rows>
                                         </grid>
 
+                                    </vlayout>
 
-                                    </div>
+                                </div>
                                 </zk>
                             </vlayout>
 
@@ -165,7 +151,6 @@
                                     onOpen='@command("hideModal")' >
                                 <include src="/pages/include/comment.zul"/>
                             </popup>
-
                         </div>
                         <!--  -->
                     </center>

@@ -7,6 +7,10 @@
         name="gridReviewProgramMz"
         class="com.PPU.composite.GridReviewProgramMz" ?>
 
+<?component
+        name="gridReviewProgramCommerc"
+        class="com.PPU.composite.GridReviewProgramCommerc" ?>
+
 <zk xmlns:ca="client/attribute">
     <window
             id="mainWindow"
@@ -147,9 +151,9 @@
 
                                 </gridReviewProgramMz>
 
-                                <gridReviewProgramMz model = "${obj}" if="${!mu}" >
+                                <gridReviewProgramCommerc model = "${obj}" if="${!mu}" >
 
-                                </gridReviewProgramMz>
+                                </gridReviewProgramCommerc>
 
                              //
                             </vlayout>

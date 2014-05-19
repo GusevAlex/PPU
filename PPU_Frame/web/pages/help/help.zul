@@ -118,37 +118,49 @@
                                     </div>
 
                                     <vlayout>
-                                        <grid id="helpGroup">
-                                            <columns>
-                                                <column hflex="1" >Название документа</column>
-                                            </columns>
-                                            <rows>
+                                        <groupbox id="groupBox" mold="3d" width="100%" open="true">
+                                        <caption label="Список документов" />
+                                            <grid id="helpGroup">
+                                                <columns>
+                                                    <column hflex="1" >Название документа</column>
+                                                </columns>
+                                                <rows>
+                                                        <row>
+                                                            <button label="ГОСТ-54869-2011 Проектный менеджмент, требования к управлению проектом" >
+                                                                <attribute name="onClick">{
+                                                                    if (media != null)
+                                                                    iframe.setSrc("/pages/help/gost_r_54869-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_proektom_.pdf");
+
+                                                                    groupBox.setOpen(false);
+                                                                    Executions.sendRedirect("#"+groupBox.getUuid());
+                                                               }</attribute>
+                                                            </button>
+                                                        </row>
                                                     <row>
-                                                        <button label="ГОСТ-54869-2011 Проектный менеджмент, требования к управлению проектом" >
+                                                        <button label="ГОСТ-54870-2011 Проектный менеджмент, требования к управлению портфелем проектов" >
                                                             <attribute name="onClick">{
                                                                 if (media != null)
-                                                                iframe.setSrc("/pages/help/gost_r_54869-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_proektom_.pdf");
-                                                           }</attribute>
+                                                                iframe.setSrc("/pages/help/gost_r_54870-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_portfelem_proektov_.pdf");
+
+                                                                groupBox.setOpen(false);
+                                                                Executions.sendRedirect("#"+groupBox.getUuid());
+                                                                }</attribute>
                                                         </button>
                                                     </row>
-                                                <row>
-                                                    <button label="ГОСТ-54870-2011 Проектный менеджмент, требования к управлению портфелем проектов" >
-                                                        <attribute name="onClick">{
-                                                            if (media != null)
-                                                            iframe.setSrc("/pages/help/gost_r_54870-2011_proektnyy_menedzhment_trebovaniya_k_upravleniyu_portfelem_proektov_.pdf");
-                                                            }</attribute>
-                                                    </button>
-                                                </row>
-                                                <row>
-                                                    <button label="ГОСТ-54871-2011 Управление программой проектов" >
-                                                        <attribute name="onClick">{
-                                                            if (media != null)
-                                                            iframe.setSrc("/pages/help/ГОСТ-54871-2011-Управление-программой-проектов.pdf");
-                                                            }</attribute>
-                                                    </button>
-                                                </row>
-                                            </rows>
-                                        </grid>
+                                                    <row>
+                                                        <button label="ГОСТ-54871-2011 Управление программой проектов" >
+                                                            <attribute name="onClick">{
+                                                                if (media != null)
+                                                                iframe.setSrc("/pages/help/ГОСТ-54871-2011-Управление-программой-проектов.pdf");
+
+                                                                groupBox.setOpen(false);
+                                                                Executions.sendRedirect("#"+groupBox.getUuid());
+                                                                }</attribute>
+                                                        </button>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
 
                                         <div height="600px">
                                             <iframe id="iframe" src="" vflex="1" width="100%"

@@ -29,7 +29,7 @@ public class ComandProject {
     private int idProject;
     private int idPartnerProject;
     private boolean work;
-    private PartnersMZ partnerProject;
+    private PartnerCommercialMan partnerProject;
     private Project project;
 
     @Id
@@ -72,19 +72,19 @@ public class ComandProject {
     }
 
 	@FieldType(type = 2, worker = "WorkWithPartnerCommerc")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "�������� ���������� ����������")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "???????? ?????????? ??????????")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_project", insertable = false, updatable = false)
-    public PartnersMZ getPartnerProject() {
+    public PartnerCommercialMan getPartnerProject() {
         return partnerProject;
     }
 
-    public void setPartnerProject(PartnersMZ partnerProject) {
+    public void setPartnerProject(PartnerCommercialMan partnerProject) {
         this.partnerProject = partnerProject;
     }
 
 	@FieldType(type = 2, worker = "WorkWithProject")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "������")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "??????")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {

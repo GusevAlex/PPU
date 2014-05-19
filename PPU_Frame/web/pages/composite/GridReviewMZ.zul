@@ -64,6 +64,7 @@
 
                     Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
                     int level = new WorkWithMZ().getUserRole((MZ) objs, (UsersMunMan) obj.get(0));
+                    alert(level);
                 ]]>
             </zscript>
 

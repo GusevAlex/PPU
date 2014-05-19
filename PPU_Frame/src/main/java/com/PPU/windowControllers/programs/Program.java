@@ -65,11 +65,28 @@ public class Program {
                     listProject = Arrays.asList(programCom.getProjects().toArray());
 
                     PartnerCommercialMan part = ((UsersComMan) ((List)obj).get(0)).getPartnerProject();
-                    if (programMU.getPartnersMZ().equals(part))
+                    if (programCom.getPartnerCommercialMan().equals(part))
                         enableAll = true;
                     else
                         enableAll = false;
                 }
+        }
+        else
+        {
+            Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+            if (((List)obj).size()!=0)
+                if (((List) obj).get(0) instanceof UsersMunMan)
+                {
+                    mu = true;
+                }
+                else
+                if (((List) obj).get(0) instanceof UsersComMan)
+                {
+                    mu = false;
+                }
+
+            enableAll = true;
         }
     }
 
@@ -186,7 +203,7 @@ public class Program {
         if (programMU.getId() == 0)
             Messagebox.show("Сначала сохраните программу!", "Ошибка", Messagebox.OK, Messagebox.ERROR);
         else
-            Executions.sendRedirect("/pages/pagesProject/project.zul?id=0&progr="+programMU.getId());
+            Executions.sendRedirect("/pages/pagesProject/Project.zul?id=0&progr="+programMU.getId());
     }
 
     @AfterCompose

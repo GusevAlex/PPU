@@ -1,6 +1,7 @@
 package com.PPU.XML;
 
 import com.PPU.DB.tables.CorrectionsMZ;
+import com.PPU.DB.tables.CorrectionsProject;
 import org.zkforge.timeline.data.OccurEvent;
 import org.zkoss.zul.ListModel;
 import org.zkoss.zul.ListModelList;
@@ -62,7 +63,40 @@ public class ParseCorrection {
             rep.setEndDate(cor.getCorrectionDate());
 
             if (cor.getParametr().getId() == 1) {
-                String descr = "Муниципальное задание перешло на статус " + cor.getValueAfter();
+                String descr = "Муниципальное задание \""+cor.getMZ().getName()+"\" перешло на статус " + cor.getValueAfter();
+                rep.setTitle(descr);
+                rep.setDescription(descr);
+            }
+            else {
+                String descr = "Введен параметр \"" + cor.getParametr().getName() + "\" со значением " + cor.getValueAfter();
+                rep.setTitle(descr);
+                rep.setDescription(descr);
+            }
+
+            OccurEvent event = new OccurEvent();
+            event.setStart(rep.getStartDate());
+            event.setEnd(rep.getEndDate());
+            event.setDuration(true);
+            event.setDescription(rep.getDescription());
+            event.setText(rep.getTitle());
+
+            list.add(event);
+        }
+
+        return list;
+    }
+
+    public ListModelList getModelByCorrection(CorrectionsProject[] corrections)
+    {
+        ListModelList list = new ListModelList();
+
+        for (CorrectionsProject cor : corrections) {
+            ReportEntity rep = new ReportEntity();
+            rep.setStartDate(cor.getCorrectionDate());
+            rep.setEndDate(cor.getCorrectionDate());
+
+            if (cor.getParametr().getId() == 1) {
+                String descr = "Проект \""+cor.getProject().getName()+"\" перешел на статус " + cor.getValueAfter();
                 rep.setTitle(descr);
                 rep.setDescription(descr);
             }

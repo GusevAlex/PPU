@@ -1,4 +1,4 @@
-package com.PPU.windowControllers.PageMZ;
+package com.PPU.windowControllers.PageProject;
 
 import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.*;
@@ -7,44 +7,45 @@ import com.PPU.composite.ObjectListBox;
 import com.PPU.funcControl.NotificationService;
 import com.PPU.windowControllers.FileController;
 import com.PPU.windowControllers.GetListParam;
-import com.PPU.windowControllers.report.ComandMZDataSource;
-import com.PPU.windowControllers.report.LimitsMZDataSource;
-import com.PPU.windowControllers.report.MZDataSource;
-import com.PPU.windowControllers.report.ValuesMZDataSource;
-import org.zkoss.bind.annotation.*;
+import com.PPU.windowControllers.report.ComandProjectDataSource;
+import com.PPU.windowControllers.report.LimitsProjectDataSource;
+import com.PPU.windowControllers.report.ProjectDataSource;
+import com.PPU.windowControllers.report.ValuesProjectDataSource;
+import org.zkoss.bind.annotation.AfterCompose;
+import org.zkoss.bind.annotation.Command;
+import org.zkoss.bind.annotation.ContextParam;
+import org.zkoss.bind.annotation.ContextType;
+import org.zkoss.chart.model.CategoryModel;
+import org.zkoss.chart.model.DefaultCategoryModel;
 import org.zkoss.util.media.Media;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Sessions;
-import org.zkoss.zk.ui.event.*;
+import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.UploadEvent;
 import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zkex.zul.Jasperreport;
 import org.zkoss.zul.*;
-import org.zkoss.chart.model.CategoryModel;
-import org.zkoss.chart.model.DefaultCategoryModel;
-import org.zkoss.zul.Messagebox;
 
-import java.lang.Object;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Calendar;
-import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
  * Created by Alex on 05.05.2014.
  */
-public class GetMZ implements GetListParam {
+public class GetProject implements GetListParam {
 
     private int id;
 
-	MZ mz;
-	MZ oldMz;
+	Project project;
+    Project oldProject;
 
-    String mzName;
+    String projectName;
 
     String program;
 
@@ -54,15 +55,15 @@ public class GetMZ implements GetListParam {
     String description;
     float budget;
 
-    Object comandMZ;
+    Object comandProject;
     Object[] program1;
-    WorkWithProgramMZ workerProgr = new WorkWithProgramMZ();
+    WorkWithProgramCommerc workerProgr = new WorkWithProgramCommerc();
 
-    String typeServiceMZ;
+    String typeServiceProject;
 
     List listTypeService;
 
-    Object [] limitsMZ;
+    Object [] limitsProject;
     Object [] parametr;
     private Object [] programs;
     private Object leaders;
@@ -75,9 +76,9 @@ public class GetMZ implements GetListParam {
     private String notWorkString = new String();
     private String statusName;
 
-    Object valuesParametrForMZ;
-    Object resourcesMZ;
-    Object correctionsMZ;
+    Object valuesParametrForProject;
+    Object resourcesProject;
+    Object correctionsProject;
 
     ListModelList<Object> limitModelList;
     ListModelList<Object> valModelList;
@@ -88,16 +89,16 @@ public class GetMZ implements GetListParam {
     private int level;
 
     @Wire
-    private Grid valuesParametrForMZ1;
+    private Grid valuesParametrForProject1;
 
     @Wire
-    private Grid limitsMZ1;
+    private Grid limitsProject1;
 
     @Wire
-    private ObjectListBox leaderMZ1;
+    private ObjectListBox leaderProject1;
 
     @Wire
-    private DualObjectListBox comandMZ1;
+    private DualObjectListBox comandProject1;
 
     @Wire
     private ObjectListBox program2;
@@ -106,7 +107,7 @@ public class GetMZ implements GetListParam {
     private Combobox typeService1;
 
     @Wire
-    private DualObjectListBox resourcesMZ1;
+    private DualObjectListBox resourcesProject1;
 
     @Wire
     private Grid fileList;
@@ -114,17 +115,17 @@ public class GetMZ implements GetListParam {
     @Wire
     private Jasperreport report;
 
-    public GetMZ()
+    public GetProject()
     {
 
     }
 
-    public String getMzName() {
-        return mzName;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setMzName(String mzName) {
-        this.mzName = mzName;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
     public String getProgram() {
@@ -175,12 +176,12 @@ public class GetMZ implements GetListParam {
         this.budget = budget;
     }
 
-    public Object getComandMZ() {
-        return comandMZ;
+    public Object getComandProject() {
+        return comandProject;
     }
 
-    public void setComandMZ(Object comandMZ) {
-        this.comandMZ = comandMZ;
+    public void setComandProject(Object comandProject) {
+        this.comandProject = comandProject;
     }
 
     public Object[] getProgram1() {
@@ -191,20 +192,20 @@ public class GetMZ implements GetListParam {
         this.program1 = program1;
     }
 
-    public WorkWithProgramMZ getWorkerProgr() {
+    public WorkWithProgramCommerc getWorkerProgr() {
         return workerProgr;
     }
 
-    public void setWorkerProgr(WorkWithProgramMZ workerProgr) {
+    public void setWorkerProgr(WorkWithProgramCommerc workerProgr) {
         this.workerProgr = workerProgr;
     }
 
-    public String getTypeServiceMZ() {
-        return typeServiceMZ;
+    public String getTypeServiceProject() {
+        return typeServiceProject;
     }
 
-    public void setTypeServiceMZ(String typeServiceMZ) {
-        this.typeServiceMZ = typeServiceMZ;
+    public void setTypeServiceProject(String typeServiceProject) {
+        this.typeServiceProject = typeServiceProject;
     }
 
     public List getListTypeService() {
@@ -215,12 +216,12 @@ public class GetMZ implements GetListParam {
         this.listTypeService = listTypeService;
     }
 
-    public Object[] getLimitsMZ() {
-        return limitsMZ;
+    public Object[] getLimitsProject() {
+        return limitsProject;
     }
 
-    public void setLimitsMZ(Object[] limitsMZ) {
-        this.limitsMZ = limitsMZ;
+    public void setLimitsProject(Object[] limitsProject) {
+        this.limitsProject = limitsProject;
     }
 
     public Object[] getParametr() {
@@ -231,28 +232,28 @@ public class GetMZ implements GetListParam {
         this.parametr = parametr;
     }
 
-    public Object getValuesParametrForMZ() {
-        return valuesParametrForMZ;
+    public Object getValuesParametrForProject() {
+        return valuesParametrForProject;
     }
 
-    public void setValuesParametrForMZ(Object valuesParametrForMZ) {
-        this.valuesParametrForMZ = valuesParametrForMZ;
+    public void setValuesParametrForProject(Object valuesParametrForProject) {
+        this.valuesParametrForProject = valuesParametrForProject;
     }
 
-    public Object getResourcesMZ() {
-        return resourcesMZ;
+    public Object getResourcesProject() {
+        return resourcesProject;
     }
 
-    public void setResourcesMZ(Object resourcesMZ) {
-        this.resourcesMZ = resourcesMZ;
+    public void setResourcesProject(Object resourcesProject) {
+        this.resourcesProject = resourcesProject;
     }
 
-    public Object getCorrectionsMZ() {
-        return correctionsMZ;
+    public Object getCorrectionsProject() {
+        return correctionsProject;
     }
 
-    public void setCorrectionsMZ(Object correctionsMZ) {
-        this.correctionsMZ = correctionsMZ;
+    public void setCorrectionsProject(Object correctionsProject) {
+        this.correctionsProject = correctionsProject;
     }
 
     public int getId() {
@@ -307,12 +308,12 @@ public class GetMZ implements GetListParam {
         this.level = level;
     }
 
-    public MZ getMz() {
-        return mz;
+    public Project getProject() {
+        return project;
     }
 
-    public void setMz(MZ mz) {
-        this.mz = mz;
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public Object[] getProviders() {
@@ -372,17 +373,17 @@ public class GetMZ implements GetListParam {
 
         int i = 0;
         for (Object val : valModelList)
-            if (((ValuesParametrForMZ) val).getParametr().getType() == 'd')
-                numMas[i++] = ((ValuesParametrForMZ) val).getId();
+            if (((ValuesParametrForProject) val).getParametr().getType() == 'd')
+                numMas[i++] = ((ValuesParametrForProject) val).getId();
 
         Arrays.sort(numMas);
 
         for (Integer intObj : numMas)
             for (Object val : valModelList)
-            if (((ValuesParametrForMZ) val).getId() == intObj)
-                if (((ValuesParametrForMZ) val).getParametr().getType() == 'd')
+            if (((ValuesParametrForProject) val).getId() == intObj)
+                if (((ValuesParametrForProject) val).getParametr().getType() == 'd')
                 {
-                    model.setValue(((ValuesParametrForMZ) val).getParametr().getName(), new SimpleDateFormat("dd.MM.yyyy").format(((ValuesParametrForMZ) val).getDateRecValue()), new Float(((ValuesParametrForMZ) val).getValue()));
+                    model.setValue(((ValuesParametrForProject) val).getParametr().getName(), new SimpleDateFormat("dd.MM.yyyy").format(((ValuesParametrForProject) val).getDateRecValue()), new Float(((ValuesParametrForProject) val).getValue()));
                     break;
                 }
 
@@ -399,111 +400,111 @@ public class GetMZ implements GetListParam {
 
     public void setId(int id) {
         this.id = id;
-        MZ MZ;
+        Project Project;
 
         if (id!=0)
 		{
-            MZ = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEntity(id));
-			oldMz = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEntity(id));
+            Project = ((com.PPU.DB.tables.Project) new WorkWithProject().getEntity(id));
+			oldProject = ((com.PPU.DB.tables.Project) new WorkWithProject().getEntity(id));
 		}
         else
 		{
-            MZ = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEmptyEntity());
-			oldMz = ((com.PPU.DB.tables.MZ) new WorkWithMZ().getEmptyEntity());
+            Project = ((com.PPU.DB.tables.Project) new WorkWithProject().getEmptyEntity());
+			oldProject = ((com.PPU.DB.tables.Project) new WorkWithProject().getEmptyEntity());
 		}
 
-		mz = MZ;
+		project = Project;
 
         if (id!=0)
         {
-            mzName = "Муниципальное задание: " + MZ.getName();
-            program = "Программа: " + MZ.getProgram().getName();
+            projectName = "Проект: " + Project.getName();
+            program = "Программа: " + Project.getProgram().getName();
 
-            name = MZ.getName();
-            startDate = MZ.getStartDate();
-            expirationDate = MZ.getExpirationDate();
-            description = MZ.getDescription();
-            budget = MZ.getBudget();
+            name = Project.getName();
+            startDate = Project.getStartDate();
+            expirationDate = Project.getExpirationDate();
+            description = Project.getDescription();
+            budget = Project.getBudget();
 
-            providers = new Object[mz.getResourcesMZ().size()];
+            providers = new Object[project.getResourcesProject().size()];
 
             int a = 0;
-            for (ResourcesMZ r : mz.getResourcesMZ())
+            for (ResourcesProject r : project.getResourcesProject())
                 providers[a++] = r.getProviders();
 
-            programs = mz.getProgram().getPartnersMZ().getProgramMZs().toArray();
+            programs = project.getProgram().getPartnerCommercialMan().getProgramCommercs().toArray();
 
-            allLeader = new WorkWithPartnerMZ().getListRows().toArray();
-            leaders = mz.getLeader();
+            allLeader = new WorkWithPartnerCommerc().getListRows().toArray();
+            leaders = project.getLeader();
 
-            comandMZ = (Object) MZ.getComandMZ().toArray();
+            comandProject = (Object) Project.getComandProject().toArray();
             program1 = new Object[1];
-            program1[0] = (Object) MZ.getProgram();
+            program1[0] = (Object) Project.getProgram();
 
-            typeServiceMZ = (String) MZ.getTypeServiceMZ().getName();
+//            typeServiceProject = (String) Project.getTypeServiceProject().getName();
 
-            listTypeService = new WorkWithTypeServiceMZ().getListRows();
+//            listTypeService = new WorkWithTypeServiceProject().getListRows();
 
-            limitsMZ =  MZ.getLimitsMZ().toArray();
+            limitsProject =  Project.getLimitsProject().toArray();
 
             List parametrsList = new ArrayList();
 
-            for (Object l : limitsMZ)
-                parametrsList.add(((LimitsMZ)l).getParametr());
+            for (Object l : limitsProject)
+                parametrsList.add(((LimitsProject)l).getParametr());
 
             parametr = parametrsList.toArray();
-			valuesParametrForMZ = (Object) MZ.getValuesParametrForMZ().toArray();
+			valuesParametrForProject = (Object) Project.getValuesParametrForProject().toArray();
 
 			List val = new ArrayList();
 
-			for (Object v : (Object []) valuesParametrForMZ)
-				if (((ValuesParametrForMZ)v).getParametr().getId()!=1)
+			for (Object v : (Object []) valuesParametrForProject)
+				if (((ValuesParametrForProject)v).getParametr().getId()!=1)
 					val.add(v);
 			valModelList = new ListModelList<Object>((Object []) val.toArray());
 
-            resourcesMZ = (Object) MZ.getResourcesMZ().toArray();
-            correctionsMZ = (Object) MZ.getCorrectionsMZ().toArray();
+            resourcesProject = (Object) Project.getResourcesProject().toArray();
+            correctionsProject = (Object) Project.getCorrectionsProject().toArray();
 
 			val = new ArrayList();
-			for (Object v : limitsMZ)
-				if (((LimitsMZ)v).getParametr().getId()!=1)
+			for (Object v : limitsProject)
+				if (((LimitsProject)v).getParametr().getId()!=1)
 					val.add(v);
 
             limitModelList = new ListModelList<Object>(val.toArray());
-            fileModelList = new ListModelList<Object>(mz.getFileMZs());
+            fileModelList = new ListModelList<Object>(project.getFileProjects());
 
             List user = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
-            setLevel(new WorkWithMZ().getUserRole(mz, (UsersMunMan) user.get(0)));
+            setLevel(new WorkWithProject().getUserRole(project, (UsersComMan) user.get(0)));
 //            setLevel(4);
 
             String levelName = new String();
             namePrevisLevel = "";
 
-            switch (mz.getStatus()+1)
+            switch (project.getStatus()+1)
             {
                 case 1 : levelName = "Создан";
-                    nameLevel = "Статус МЗ: Создается";
+                    nameLevel = "Статус проекта: Создается";
                     break;
                 case 2 : levelName = "Планирование";
-                    nameLevel = "Статус МЗ: Создан";
+                    nameLevel = "Статус проекта: Создан";
                     break;
                 case 3 : levelName = "На согласовании";
-                    nameLevel = "Статус МЗ: Планирование";
+                    nameLevel = "Статус проекта: Планирование";
                     break;
                 case 4 : levelName = "Выполняется";
-                    nameLevel = "Статус МЗ: На согласовании";
+                    nameLevel = "Статус проекта: На согласовании";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
                     break;
                 case 5 : levelName = "";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
-                    nameLevel = "Статус МЗ: Выполняется";
+                    nameLevel = "Статус проекта: Выполняется";
                     break;
             }
 
             if (!levelName.equals(""))
                 nameNextLevel = "Сохранить и перевести на статус \"" + levelName + "\"";
 
-            for (NotificationMU not : ((UsersMunMan)user.get(0)).getPartnerMZ().getNotificationMU())
+            for (NotificationCom not : ((UsersComMan)user.get(0)).getPartnerProject().getNotificationComs())
             {
                 Pattern pattern = Pattern.compile("\\Q"+Executions.getCurrent().getDesktop().getRequestPath()+"?id="+Executions.getCurrent().getParameter("id")+"\\E");
 
@@ -512,7 +513,7 @@ public class GetMZ implements GetListParam {
                     not.setRead(true);
 
                     try {
-                        new WorkWithNotificationMU().changeEntity(not);
+                        new WorkWithNotificationCom().changeEntity(not);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -521,26 +522,25 @@ public class GetMZ implements GetListParam {
 
             statusName = "";
 
-            int levelUser = new WorkWithMZ().getUserRole(mz, ((UsersMunMan)user.get(0)));
+            int levelUser = new WorkWithProject().getUserRole(project, ((UsersComMan)user.get(0)));
             if (levelUser != 0)
                 if (levelUser == 1)
                     statusName = "Вы являетесь заказчиком";
-            else
+                else
                 if (levelUser == 2)
                     statusName = "Вы являетесь руководителем";
-            else
+                else
                 if (levelUser == 3)
                     statusName = "Вы являетесь заказчиком и руководиетелем";
-            else
+                else
                     statusName = "Вы являетесь исполнителем";
 
-
-            if (getEndCommandMZ().size() != 0)
+            if (getEndCommandProject().size() != 0)
                 notWorkString = "Имеются исполнители, закончившие работу";
         }
         else
         {
-            mzName = "Создание муниципального задания";
+            projectName = "Создание проекта";
             program = "";
 
             name = "";
@@ -549,55 +549,57 @@ public class GetMZ implements GetListParam {
             description = "";
             budget = 0;
 
-            mz.setName(name);
-            mz.setStartDate(startDate);
-            mz.setExpirationDate(expirationDate);
-            mz.setDescription(description);
-            mz.setBudget(budget);
+            project.setName(name);
+            project.setStartDate(startDate);
+            project.setExpirationDate(expirationDate);
+            project.setDescription(description);
+            project.setBudget(budget);
 
             providers = new Object[]{new Providers()};
-            programs = ((UsersMunMan)new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0)).getPartnerMZ().getProgramMZs().toArray();
+            programs = ((UsersComMan)new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0)).getPartnerProject().getProgramCommercs().toArray();
 
-            allLeader = new WorkWithPartnerMZ().getListRows().toArray();
-            leaders = new PartnersMZ();
+            allLeader = new WorkWithPartnerCommerc().getListRows().toArray();
+            leaders = new PartnerCommercialMan();
 
-            comandMZ = (Object) new Object []{new ComandMZ()};
+            comandProject = (Object) new Object []{new ComandProject()};
             program1 = new Object[1];
 
             String progr = Executions.getCurrent().getParameter("progr");
             if (progr == null)
                 program1[0] = new Object();
             else {
-                program1[0] = new WorkWithProgramMZ().getEntity(new Integer(progr));
+                program1[0] = new WorkWithProgramCommerc().getEntity(new Integer(progr));
 
-                program = "Программа: "+((ProgramMZ) program1[0]).getName();
+                program = "Программа: "+((ProgramCommerc) program1[0]).getName();
             }
 
-            typeServiceMZ = "";
+            typeServiceProject = "";
 
-            listTypeService = new WorkWithTypeServiceMZ().getListRows();
+//            listTypeService = new WorkWithTypeServiceProject().getListRows();
 
-            limitsMZ =  new Object [0];
+            limitsProject =  new Object [0];
 
             List parametrsList = new ArrayList();
 
-            for (Object l : limitsMZ)
-                parametrsList.add(((LimitsMZ)l).getParametr());
+            for (Object l : limitsProject)
+                parametrsList.add(((LimitsProject)l).getParametr());
 
             parametr = parametrsList.toArray();
 
-            valuesParametrForMZ = (Object) new Object [0];
-            resourcesMZ = (Object) new Object []{new ResourcesMZ()};
-            correctionsMZ = (Object) new Object [0];
+            valuesParametrForProject = (Object) new Object [0];
+            resourcesProject = (Object) new Object []{new ResourcesProject()};
+            correctionsProject = (Object) new Object [0];
 
-            limitModelList = new ListModelList<Object>(limitsMZ);
-            fileModelList = new ListModelList<Object>(new ArrayList<FileMZ>());
-            valModelList = new ListModelList<Object>((Object []) valuesParametrForMZ);
+            limitModelList = new ListModelList<Object>(limitsProject);
+            fileModelList = new ListModelList<Object>(new ArrayList<FileProject>());
+            valModelList = new ListModelList<Object>((Object []) valuesParametrForProject);
 
             namePrevisLevel = "";
             nameNextLevel = "Сохранить и перевести на статус \"Создан\"";
             statusName = "";
         }
+
+
 
 //        setLevel(3);
     }
@@ -606,11 +608,11 @@ public class GetMZ implements GetListParam {
     {
         boolean success = true;
 
-        String name = mz.getName();
-        Date startDate = mz.getStartDate();
-        Date expirationDate = mz.getExpirationDate();
-        String description = mz.getDescription();
-        float budget = mz.getBudget();
+        String name = project.getName();
+        Date startDate = project.getStartDate();
+        Date expirationDate = project.getExpirationDate();
+        String description = project.getDescription();
+        float budget = project.getBudget();
 
         if (name.equals(""))
         {
@@ -630,25 +632,25 @@ public class GetMZ implements GetListParam {
             success = false;
         }
 
-        if (leaderMZ1.getSelectedIndex() == -1)
+        if (leaderProject1.getSelectedIndex() == -1)
         {
             Messagebox.show("Не выбран руководитель проекта!", "Error", Messagebox.OK, Messagebox.ERROR);
             success = false;
         }
 
-        if (comandMZ1.getRightListbox().getObjs().length == 0)
+        if (comandProject1.getRightListbox().getObjs().length == 0)
         {
             Messagebox.show("Не выбрана комманда проекта!", "Error", Messagebox.OK, Messagebox.ERROR);
             success = false;
         }
 
-        if (typeService1.getSelectedIndex() == -1)
-        {
-            Messagebox.show("не выбаран тип задания!", "Error", Messagebox.OK, Messagebox.ERROR);
-            success = false;
-        }
+//        if (typeService1.getSelectedIndex() == -1)
+//        {
+//            Messagebox.show("не выбаран тип задания!", "Error", Messagebox.OK, Messagebox.ERROR);
+//            success = false;
+//        }
 
-        if (resourcesMZ1.getRightListbox().getObjs().length == 0)
+        if (resourcesProject1.getRightListbox().getObjs().length == 0)
         {
             Messagebox.show("Не выбраны ресурся!", "Error", Messagebox.OK, Messagebox.ERROR);
             success = false;
@@ -659,16 +661,16 @@ public class GetMZ implements GetListParam {
 
 	private void compareAndSaveCorrection()
 	{
-		WorkWithCorrectionMZ worker = new WorkWithCorrectionMZ();
+		WorkWithCorrectionProject worker = new WorkWithCorrectionProject();
 
-		if (oldMz.getStatus() != mz.getStatus())
+		if (oldProject.getStatus() != project.getStatus())
 		{
 			try {
-				CorrectionsMZ val = new CorrectionsMZ();
+				CorrectionsProject val = new CorrectionsProject();
 				val.setIdParametr(((Parametrs) new WorkWithParametrs().getEntity(1)).getId());
 				String levelName = "";
 
-				switch (mz.getStatus())
+				switch (project.getStatus())
 				{
 					case 1 : levelName = "Создается";
 						break;
@@ -684,7 +686,7 @@ public class GetMZ implements GetListParam {
 
 				val.setValueAfter(levelName);
 				val.setLimits(false);
-                val.setIdMZ(mz.getId());
+                val.setIdProject(project.getId());
 
 				worker.addEntity(val);
 			} catch (Exception e) {
@@ -699,16 +701,16 @@ public class GetMZ implements GetListParam {
 		{
 			boolean isFind = false;
 
-			for (Object o : limitsMZ)
-            if (((LimitsMZ)listO).getId() == (((LimitsMZ)o).getId())) {
+			for (Object o : limitsProject)
+            if (((LimitsProject)listO).getId() == (((LimitsProject)o).getId())) {
                 isFind = true;
-                if (((LimitsMZ) listO).getParametr().equals((((LimitsMZ) o)).getParametr())) {
-                    if (!((LimitsMZ) listO).getValue().equals(((LimitsMZ) o).getValue())) {
+                if (((LimitsProject) listO).getParametr().equals((((LimitsProject) o)).getParametr())) {
+                    if (!((LimitsProject) listO).getValue().equals(((LimitsProject) o).getValue())) {
                         try {
-                            CorrectionsMZ val = new CorrectionsMZ();
-                            val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
-                            val.setValueBefore(((LimitsMZ) listO).getValue());
-                            val.setIdMZ(mz.getId());
+                            CorrectionsProject val = new CorrectionsProject();
+                            val.setIdParametr(((LimitsProject) listO).getParametr().getId());
+                            val.setValueBefore(((LimitsProject) listO).getValue());
+                            val.setIdProject(project.getId());
 							val.setLimits(true);
 
                             worker.addEntity(val);
@@ -722,10 +724,10 @@ public class GetMZ implements GetListParam {
 			if (!isFind)
 			{
 				try {
-					CorrectionsMZ val = new CorrectionsMZ();
-					val.setIdParametr(((LimitsMZ) listO).getParametr().getId());
-					val.setValueBefore(((LimitsMZ)listO).getValue());
-                    val.setIdMZ(mz.getId());
+					CorrectionsProject val = new CorrectionsProject();
+					val.setIdParametr(((LimitsProject) listO).getParametr().getId());
+					val.setValueBefore(((LimitsProject)listO).getValue());
+                    val.setIdProject(project.getId());
 					val.setLimits(true);
 
 					worker.addEntity(val);
@@ -740,17 +742,17 @@ public class GetMZ implements GetListParam {
 		{
             boolean isFind = false;
 
-            for (Object o : (Object [])valuesParametrForMZ)
+            for (Object o : (Object [])valuesParametrForProject)
 
-                if (((ValuesParametrForMZ)listO).getId() == (((ValuesParametrForMZ)o).getId())) {
+                if (((ValuesParametrForProject)listO).getId() == (((ValuesParametrForProject)o).getId())) {
                     isFind = true;
-                    if (((ValuesParametrForMZ) listO).getParametr().equals((((ValuesParametrForMZ) o)).getParametr())) {
-                        if (!((ValuesParametrForMZ) listO).getValue().equals(((ValuesParametrForMZ) o).getValue())) {
+                    if (((ValuesParametrForProject) listO).getParametr().equals((((ValuesParametrForProject) o)).getParametr())) {
+                        if (!((ValuesParametrForProject) listO).getValue().equals(((ValuesParametrForProject) o).getValue())) {
                             try {
-                                CorrectionsMZ val = new CorrectionsMZ();
-                                val.setIdParametr(((ValuesParametrForMZ) listO).getParametr().getId());
-                                val.setValueBefore(((ValuesParametrForMZ) listO).getValue());
-                                val.setIdMZ(mz.getId());
+                                CorrectionsProject val = new CorrectionsProject();
+                                val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
+                                val.setValueBefore(((ValuesParametrForProject) listO).getValue());
+                                val.setIdProject(project.getId());
 								val.setLimits(false);
 
                                 worker.changeEntity(val);
@@ -764,10 +766,10 @@ public class GetMZ implements GetListParam {
             if (!isFind)
             {
                 try {
-                    CorrectionsMZ val = new CorrectionsMZ();
-                    val.setIdParametr(((ValuesParametrForMZ) listO).getParametr().getId());
-                    val.setValueBefore(((ValuesParametrForMZ)listO).getValue());
-                    val.setIdMZ(mz.getId());
+                    CorrectionsProject val = new CorrectionsProject();
+                    val.setIdParametr(((ValuesParametrForProject) listO).getParametr().getId());
+                    val.setValueBefore(((ValuesParametrForProject)listO).getValue());
+                    val.setIdProject(project.getId());
 					val.setLimits(false);
 
                     worker.addEntity(val);
@@ -788,49 +790,49 @@ public class GetMZ implements GetListParam {
 
         if (level == 1 || level == 0)
         {
-            PartnersMZ leaderLocal = (PartnersMZ) leaderMZ1.getObjs()[leaderMZ1.getSelectedIndex()];
-            mz.setLeader(leaderLocal);
+            PartnerCommercialMan leaderLocal = (PartnerCommercialMan) leaderProject1.getObjs()[leaderProject1.getSelectedIndex()];
+            project.setLeader(leaderLocal);
         }
 
-        Object[] objs = comandMZ1.getRightListbox().getObjs();
-        ComandMZ [] comLocal = new ComandMZ [objs.length] ;
+        Object[] objs = comandProject1.getRightListbox().getObjs();
+        ComandProject [] comLocal = new ComandProject [objs.length] ;
 
         for (int i=0; i<objs.length; i++)
-            comLocal[i] = (ComandMZ) objs[i];
+            comLocal[i] = (ComandProject) objs[i];
 
-        mz.setComandMZ(new LinkedHashSet<ComandMZ>(Arrays.asList(comLocal)));
+        project.setComandProject(new LinkedHashSet<ComandProject>(Arrays.asList(comLocal)));
 
-        mz.setValuesParametrForMZ(new LinkedHashSet<ValuesParametrForMZ>((List) valModelList.getInnerList()));
+        project.setValuesParametrForProject(new LinkedHashSet<ValuesParametrForProject>((List) valModelList.getInnerList()));
 
         if (program2.getSelectedIndex()!=-1 && (level==1 || level == 0))
-            mz.setProgram((ProgramMZ) program2.getObjs()[program2.getSelectedIndex()]);
+            project.setProgram((ProgramCommerc) program2.getObjs()[program2.getSelectedIndex()]);
 
-        mz.setLimitsMZ(new LinkedHashSet<LimitsMZ>((List) limitModelList.getInnerList()));
+        project.setLimitsProject(new LinkedHashSet<LimitsProject>((List) limitModelList.getInnerList()));
 
-        if (typeService1.getSelectedIndex()!=-1)
-        {
-            TypeServiceMZ typeServiceMZLocal = (TypeServiceMZ) new WorkWithTypeServiceMZ().getListRows().get(typeService1.getSelectedIndex());
-            mz.setTypeServiceMZ(typeServiceMZLocal);
-        }
+//        if (typeService1.getSelectedIndex()!=-1)
+//        {
+//            TypeServiceProject typeServiceProjectLocal = (TypeServiceProject) new WorkWithTypeServiceProject().getListRows().get(typeService1.getSelectedIndex());
+//            project.setTypeServiceProject(typeServiceProjectLocal);
+//        }
 
-        objs = resourcesMZ1.getRightListbox().getObjs();
-        ResourcesMZ [] res = new ResourcesMZ[objs.length];
+        objs = resourcesProject1.getRightListbox().getObjs();
+        ResourcesProject [] res = new ResourcesProject[objs.length];
 
         for (int i=0; i<objs.length; i++)
         {
-            res[i] = new ResourcesMZ();
+            res[i] = new ResourcesProject();
             res[i].setProviders((Providers) objs[i]);
         }
 
-        mz.setResourcesMZ(new LinkedHashSet<ResourcesMZ>(Arrays.asList(res)));
+        project.setResourcesProject(new LinkedHashSet<ResourcesProject>(Arrays.asList(res)));
 
         if (id == 0)
-            mz.setStatus(1);
+            project.setStatus(1);
 
         if (id !=0)
         {
             try {
-                new WorkWithMZ().changeEntity(mz);
+                new WorkWithProject().changeEntity(project);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -838,7 +840,7 @@ public class GetMZ implements GetListParam {
         else
         {
             try {
-                new WorkWithMZ().addEntity(mz);
+                new WorkWithProject().addEntity(project);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -854,28 +856,28 @@ public class GetMZ implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        mz.setStatus(mz.getStatus() + 1);
+        project.setStatus(project.getStatus() + 1);
         onClickBtn1(comp);
-        PartnersMZ partnersMZ = new PartnersMZ();
+        PartnerCommercialMan partnersProject = new PartnerCommercialMan();
 
-        switch (mz.getStatus())
+        switch (project.getStatus())
         {
             case 1 :
-                NotificationService.addNotifHtmlForAdd(mz.getProgram().getPartnersMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
+                NotificationService.addNotifHtmlForAddCom(project.getProgram().getPartnerCommercialMan(), "/pages/pagesProject/Project.zul", project, project.getStatus());
                 break;
             case 2 :
-                NotificationService.addNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
+                NotificationService.addNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus());
                 break;
             case 3 :
-                for (ComandMZ com : mz.getComandMZ())
+                for (ComandProject com : project.getComandProject())
                 {
-                    NotificationService.addNotifHtmlForAdd(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
+                    NotificationService.addNotifHtmlForAddCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus());
                 }
                 break;
             case 4 :
-                for (ComandMZ com : mz.getComandMZ())
+                for (ComandProject com : project.getComandProject())
                 {
-                    NotificationService.addNotifHtmlForAdd(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
+                    NotificationService.addNotifHtmlForAddCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus());
                 }
         }
 
@@ -888,11 +890,11 @@ public class GetMZ implements GetListParam {
         if (!checkAllFields()) return;
 
         onClickBtn1(comp);
-        mz.setStatus(2);
+        project.setStatus(2);
 
 		Map arg = new HashMap<String, Object>(){
 			{
-				put("mz", mz);
+				put("project", project);
 			}
 		};
 
@@ -903,7 +905,7 @@ public class GetMZ implements GetListParam {
             public void onEvent(Event event) throws Exception {
                 String text = ((Textbox) wind1.getChildren().get(0)).getText();
 
-                NotificationService.revertNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+                NotificationService.revertNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
             }
         });
 
@@ -917,7 +919,7 @@ public class GetMZ implements GetListParam {
     {
         Map arg = new HashMap<String, Object>(){
             {
-                put("mz", mz);
+                put("project", project);
             }
         };
 
@@ -928,7 +930,7 @@ public class GetMZ implements GetListParam {
             public void onEvent(Event event) throws Exception {
                 String text = ((Textbox) wind1.getChildren().get(0)).getText();
 
-                NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+                NotificationService.addNotifHtmlForRevertComandWorkCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
             }
         });
         wind1.doModal();
@@ -947,8 +949,8 @@ public class GetMZ implements GetListParam {
 
         for (Object value : (Object []) new WorkWithParametrs().getListRows().toArray())
         {
-            for (int i=0; i<((Object [])valuesParametrForMZ).length; i++)
-                if (!((Parametrs)value).equals(((ValuesParametrForMZ)((Object [])valuesParametrForMZ)[i]).getParametr()))
+            for (int i=0; i<((Object [])valuesParametrForProject).length; i++)
+                if (!((Parametrs)value).equals(((ValuesParametrForProject)((Object [])valuesParametrForProject)[i]).getParametr()))
                 {
                     listParam.add((Parametrs)value);
                 }
@@ -957,11 +959,11 @@ public class GetMZ implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("obj", listParam.toArray());
-                put("getter", GetMZ.this);
+                put("getter", GetProject.this);
                 put("type", "1");
             }
         };
-        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+        wind = (Window) Executions.createComponents("/pages/pagesProject/selectParamsWindow.zul", null, arg );
 
         wind.doModal();
     }
@@ -973,8 +975,8 @@ public class GetMZ implements GetListParam {
 
         for (Object value : (Object []) new WorkWithParametrs().getListRows().toArray())
         {
-            for (int i=0; i<((Object [])valuesParametrForMZ).length; i++)
-                if (((Parametrs)value).equals(((ValuesParametrForMZ)((Object [])valuesParametrForMZ)[i]).getParametr()))
+            for (int i=0; i<((Object [])valuesParametrForProject).length; i++)
+                if (((Parametrs)value).equals(((ValuesParametrForProject)((Object [])valuesParametrForProject)[i]).getParametr()))
                 {
                     listParam.add((Parametrs)value);
                 }
@@ -983,11 +985,11 @@ public class GetMZ implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("obj", listParam.toArray());
-                put("getter", GetMZ.this);
+                put("getter", GetProject.this);
                 put("type", "1");
             }
         };
-        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+        wind = (Window) Executions.createComponents("/pages/pagesProject/selectParamsWindow.zul", null, arg );
 
         wind.doModal();
     }
@@ -999,8 +1001,8 @@ public class GetMZ implements GetListParam {
 
         for (Object value : (Object []) new WorkWithParametrs().getListRows().toArray())
         {
-            for (int i=0; i<((Object [])limitsMZ).length; i++)
-                if (!((Parametrs)value).equals(((LimitsMZ) ((Object[]) limitsMZ)[i]).getParametr()))
+            for (int i=0; i<((Object [])limitsProject).length; i++)
+                if (!((Parametrs)value).equals(((LimitsProject) ((Object[]) limitsProject)[i]).getParametr()))
                 {
                     listParam.add((Parametrs)value);
                 }
@@ -1009,11 +1011,11 @@ public class GetMZ implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("obj", listParam.toArray());
-                put("getter", GetMZ.this);
+                put("getter", GetProject.this);
                 put("type", "2");
             }
         };
-        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+        wind = (Window) Executions.createComponents("/pages/pagesProject/selectParamsWindow.zul", null, arg );
 
         wind.doModal();
     }
@@ -1025,8 +1027,8 @@ public class GetMZ implements GetListParam {
 
         for (Object value : (Object []) new WorkWithParametrs().getListRows().toArray())
         {
-            for (int i=0; i<((Object [])limitsMZ).length; i++)
-                if (((Parametrs)value).equals(((LimitsMZ) ((Object[]) limitsMZ)[i]).getParametr()))
+            for (int i=0; i<((Object [])limitsProject).length; i++)
+                if (((Parametrs)value).equals(((LimitsProject) ((Object[]) limitsProject)[i]).getParametr()))
                 {
                     listParam.add((Parametrs)value);
                 }
@@ -1035,11 +1037,11 @@ public class GetMZ implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("obj", listParam.toArray());
-                put("getter", GetMZ.this);
+                put("getter", GetProject.this);
                 put("type", "2");
             }
         };
-        wind = (Window) Executions.createComponents("/pages/pagesMZ/selectParamsWindow.zul", null, arg );
+        wind = (Window) Executions.createComponents("/pages/pagesProject/selectParamsWindow.zul", null, arg );
 
         wind.doModal();
     }
@@ -1076,7 +1078,7 @@ public class GetMZ implements GetListParam {
     {
         Map arg = new HashMap<String, Object>(){
             {
-                put("nameMz", mz.getName());
+                put("nameMz", project.getName());
                 put("model", getModelChartParam());
             }
         };
@@ -1093,8 +1095,8 @@ public class GetMZ implements GetListParam {
 			ObjectListBox listBox = (ObjectListBox) wind.getChildren().get(0).getChildren().get(0);
 			Object obj = listBox.getObjs()[index];
 
-			Object [] objs = new Object [((Object [])valuesParametrForMZ).length+1];
-			Object [] objVal = (Object [])valuesParametrForMZ;
+			Object [] objs = new Object [((Object [])valuesParametrForProject).length+1];
+			Object [] objVal = (Object [])valuesParametrForProject;
 
 			for (int i=0; i<objVal.length; i++)
 			{
@@ -1102,19 +1104,19 @@ public class GetMZ implements GetListParam {
 			}
 
 
-			objs[((Object [])valuesParametrForMZ).length] = new WorkWithValuesParametrForMZ().getEmptyEntity();
-            ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setParametr((Parametrs)obj);
-            ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setValue("");
-            ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setDateRecValue(Calendar.getInstance().getTime());
+			objs[((Object [])valuesParametrForProject).length] = new WorkWithValuesParametrForProject().getEmptyEntity();
+            ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setParametr((Parametrs)obj);
+            ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setValue("");
+            ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setDateRecValue(Calendar.getInstance().getTime());
 
-            setValuesParametrForMZ(objs);
+            setValuesParametrForProject(objs);
 
-            setValModelList(new ListModelList<Object>((Object []) valuesParametrForMZ));
-            valuesParametrForMZ1.setModel(valModelList);
+            setValModelList(new ListModelList<Object>((Object []) valuesParametrForProject));
+            valuesParametrForProject1.setModel(valModelList);
 
             try
             {
-            mz.getValuesParametrForMZ().add(((ValuesParametrForMZ [])objs)[objs.length-1]);
+            project.getValuesParametrForProject().add(((ValuesParametrForProject [])objs)[objs.length-1]);
             }
             catch (Exception e)
             {
@@ -1133,8 +1135,8 @@ public class GetMZ implements GetListParam {
             ObjectListBox listBox = (ObjectListBox) wind.getChildren().get(0).getChildren().get(0);
             Object obj = listBox.getObjs()[index];
 
-            Object [] objs = new Object [((Object [])limitsMZ).length+1];
-            Object [] objVal = (Object [])limitsMZ;
+            Object [] objs = new Object [((Object [])limitsProject).length+1];
+            Object [] objVal = (Object [])limitsProject;
 
             for (int i=0; i<objVal.length; i++)
             {
@@ -1142,18 +1144,18 @@ public class GetMZ implements GetListParam {
             }
 
 
-            objs[((Object [])limitsMZ).length] = new WorkWithLimitsMz().getEmptyEntity();
-            ((LimitsMZ)(objs[((Object [])limitsMZ).length])).setParametr((Parametrs) obj);
-            ((LimitsMZ)(objs[((Object [])limitsMZ).length])).setValue("");
+            objs[((Object [])limitsProject).length] = new WorkWithLimitsMz().getEmptyEntity();
+            ((LimitsProject)(objs[((Object [])limitsProject).length])).setParametr((Parametrs) obj);
+            ((LimitsProject)(objs[((Object [])limitsProject).length])).setValue("");
 
-            setLimitsMZ(objs);
-            setLimitModelList(new ListModelList<Object>(limitsMZ));
+            setLimitsProject(objs);
+            setLimitModelList(new ListModelList<Object>(limitsProject));
 
-            limitsMZ1.setModel(limitModelList);
+            limitsProject1.setModel(limitModelList);
 
             try
             {
-                mz.getLimitsMZ().add(((LimitsMZ [])objs)[objs.length-1]);
+                project.getLimitsProject().add(((LimitsProject [])objs)[objs.length-1]);
             }
             catch (Exception e)
             {
@@ -1181,36 +1183,36 @@ public class GetMZ implements GetListParam {
 
         Map<String, Object> params = new HashMap<String, Object>();
         // Add parameters used in this report
-        params.put("reportTitle", "Муниципальное задание");
-        params.put("title2", mz.getName());
+        params.put("reportTitle", "Проект");
+        params.put("title2", project.getName());
         params.put("hand1", "My Food List2");
-        params.put("MZSource", new MZDataSource(new WorkWithMZ().getListRows()));
+        params.put("ProjectSource", new ProjectDataSource(new WorkWithProject().getListRows()));
 
-        List<ComandMZ> comList = new ArrayList<ComandMZ>();
+        List<ComandProject> comList = new ArrayList<ComandProject>();
 
-        for (ComandMZ com : mz.getComandMZ())
+        for (ComandProject com : project.getComandProject())
             comList.add(com);
 
-        params.put("comandMZ", new ComandMZDataSource(comList));
+        params.put("comandProject", new ComandProjectDataSource(comList));
 
-        List<LimitsMZ> limList = new ArrayList<LimitsMZ>();
+        List<LimitsProject> limList = new ArrayList<LimitsProject>();
 
-        for (LimitsMZ com : mz.getLimitsMZ())
+        for (LimitsProject com : project.getLimitsProject())
             limList.add(com);
 
-        params.put("limitsMZ", new LimitsMZDataSource(limList));
+        params.put("limitsProject", new LimitsProjectDataSource(limList));
 //        params.put("seafoodDataSource", new DataSource(seafoods));
 
-        List<ValuesParametrForMZ> valList = new ArrayList<ValuesParametrForMZ>();
+        List<ValuesParametrForProject> valList = new ArrayList<ValuesParametrForProject>();
 
-        for (ValuesParametrForMZ com : mz.getValuesParametrForMZ())
+        for (ValuesParametrForProject com : project.getValuesParametrForProject())
             valList.add(com);
 
-        params.put("valuesParamMZ", new ValuesMZDataSource(valList));
+        params.put("valuesParamProject", new ValuesProjectDataSource(valList));
 
 //        final Jasperreport report = (Jasperreport) win.getFellow("report");
         report.setType("rtf");
-        report.setSrc("/jaspreport/report1.jasper");
+        report.setSrc("/jaspreport/report2.jasper");
         report.setParameters(params);
 
 //        org.zkoss.zk.ui.util.Clients.showBusy(report, "Идет генерирование отчета ...");
@@ -1220,7 +1222,7 @@ public class GetMZ implements GetListParam {
         report.addEventListener(h,new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
-                org.zkoss.zk.ui.util.Clients.clearBusy(report);
+                Clients.clearBusy(report);
             }
         });
     }
@@ -1228,7 +1230,7 @@ public class GetMZ implements GetListParam {
     @Command
     public void showTimeline(@ContextParam(ContextType.COMPONENT) Component comp)
     {
-        Executions.sendRedirect("/pages/pagesMZ/timeline.zul?id="+mz.getId());
+        Executions.sendRedirect("/pages/pagesProject/timeline.zul?id="+project.getId());
     }
     
     public void fileUpload()
@@ -1243,12 +1245,12 @@ public class GetMZ implements GetListParam {
 
                 FileController.saveMediaToFile(media);
 
-                FileMZ fileMZ = new FileMZ();
-                fileMZ.setIdMz(mz.getId());
-                fileMZ.setFile(media.getName());
+                FileProject fileProject = new FileProject();
+                fileProject.setIdProject(project.getId());
+                fileProject.setFile(media.getName());
 
-                mz.getFileMZs().add(fileMZ);
-                fileModelList.add(fileMZ);
+                project.getFileProjects().add(fileProject);
+                fileModelList.add(fileProject);
 
                 fileList.setModel(fileModelList);
 
@@ -1257,11 +1259,11 @@ public class GetMZ implements GetListParam {
         });
     }
 
-    public ListModelList getEndCommandMZ()
+    public ListModelList getEndCommandProject()
     {
         ListModelList modelList = new ListModelList();
 
-        for (ComandMZ com : mz.getComandMZ())
+        for (ComandProject com : project.getComandProject())
         {
             if (!com.isWork())
                 modelList.add(com);
@@ -1272,24 +1274,24 @@ public class GetMZ implements GetListParam {
 
     public void revertPartnerComandInWork(Object obj)
     {
-        final ComandMZ com = (ComandMZ) obj;
+        final ComandProject com = (ComandProject) obj;
 
-        for (ComandMZ comandMZ2 : mz.getComandMZ())
+        for (ComandProject comandProject2 : project.getComandProject())
         {
-            if (comandMZ2.equals(com))
+            if (comandProject2.equals(com))
             {
                 com.setWork(true);
-                comandMZ2.setWork(true);
+                comandProject2.setWork(true);
 
                 try {
-                    new WorkWithCommandMz().changeEntity(comandMZ2);
+                    new WorkWithCommandMz().changeEntity(comandProject2);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
                 Map arg = new HashMap<String, Object>(){
                     {
-                        put("mz", mz);
+                        put("project", project);
                     }
                 };
 
@@ -1300,7 +1302,7 @@ public class GetMZ implements GetListParam {
                     public void onEvent(Event event) throws Exception {
                         String text = ((Textbox) wind1.getChildren().get(0)).getText();
 
-                        NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+                        NotificationService.revertNotifHtmlForRevertComandWorkCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
                     }
                 });
 

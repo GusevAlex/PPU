@@ -46,7 +46,7 @@
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout> <textbox id="name"/></row>
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout> <textbox id="email"/></row>
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout> <textbox id="login"/></row>
-							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password" type="password"/></row>
 						</rows>
 					</grid>
                 </hlayout>

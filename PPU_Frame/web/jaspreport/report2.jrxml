@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5403e4e-2ee9-4c34-9942-34b541981ace">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5403e4e-2ee9-4c34-9942-34b541981ace">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -253,6 +253,169 @@
 		</field>
 		<field name="num" class="java.lang.Integer"/>
 	</subDataset>
+	<subDataset name="descrProject" uuid="24c5cf0b-d59d-404d-92fc-a78ffb5cb114">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="budget" class="java.lang.Float">
+			<fieldDescription><![CDATA[budget]]></fieldDescription>
+		</field>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="comandProject" class="java.util.Set">
+			<fieldDescription><![CDATA[comandProject]]></fieldDescription>
+		</field>
+		<field name="consumers" class="java.lang.String">
+			<fieldDescription><![CDATA[consumers]]></fieldDescription>
+		</field>
+		<field name="correctionsProject" class="java.util.Set">
+			<fieldDescription><![CDATA[correctionsProject]]></fieldDescription>
+		</field>
+		<field name="description" class="java.lang.String">
+			<fieldDescription><![CDATA[description]]></fieldDescription>
+		</field>
+		<field name="expirationDate" class="java.util.Date">
+			<fieldDescription><![CDATA[expirationDate]]></fieldDescription>
+		</field>
+		<field name="fileProjects" class="java.util.Set">
+			<fieldDescription><![CDATA[fileProjects]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="id_customer" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id_customer]]></fieldDescription>
+		</field>
+		<field name="id_leader" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id_leader]]></fieldDescription>
+		</field>
+		<field name="id_program" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id_program]]></fieldDescription>
+		</field>
+		<field name="leader" class="com.PPU.DB.tables.PartnerCommercialMan">
+			<fieldDescription><![CDATA[leader]]></fieldDescription>
+		</field>
+		<field name="limitsProject" class="java.util.Set">
+			<fieldDescription><![CDATA[limitsProject]]></fieldDescription>
+		</field>
+		<field name="name" class="java.lang.String">
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="program" class="com.PPU.DB.tables.ProgramCommerc">
+			<fieldDescription><![CDATA[program]]></fieldDescription>
+		</field>
+		<field name="resourcesProject" class="java.util.Set">
+			<fieldDescription><![CDATA[resourcesProject]]></fieldDescription>
+		</field>
+		<field name="startDate" class="java.util.Date">
+			<fieldDescription><![CDATA[startDate]]></fieldDescription>
+		</field>
+		<field name="status" class="java.lang.Integer">
+			<fieldDescription><![CDATA[status]]></fieldDescription>
+		</field>
+		<field name="valuesParametrForProject" class="java.util.Set">
+			<fieldDescription><![CDATA[valuesParametrForProject]]></fieldDescription>
+		</field>
+		<field name="stat" class="java.lang.String"/>
+		<field name="num" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="comandProject" uuid="dd7c3c0a-c91f-491d-b2b5-3f4d214ddf95">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="comandProject" class="java.util.Set">
+			<fieldDescription><![CDATA[comandProject]]></fieldDescription>
+		</field>
+		<field name="address" class="java.lang.String">
+			<fieldDescription><![CDATA[address]]></fieldDescription>
+		</field>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="comandProject_1" class="java.util.Set">
+			<fieldDescription><![CDATA[comandProject]]></fieldDescription>
+		</field>
+		<field name="description" class="java.lang.String">
+			<fieldDescription><![CDATA[description]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="name" class="java.lang.String">
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="notificationComs" class="java.util.Set">
+			<fieldDescription><![CDATA[notificationComs]]></fieldDescription>
+		</field>
+		<field name="programCommercs" class="java.util.Set">
+			<fieldDescription><![CDATA[programCommercs]]></fieldDescription>
+		</field>
+		<field name="projects" class="java.util.Set">
+			<fieldDescription><![CDATA[projects]]></fieldDescription>
+		</field>
+		<field name="user" class="java.util.Set">
+			<fieldDescription><![CDATA[user]]></fieldDescription>
+		</field>
+		<field name="num" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="limitsProject" uuid="09295841-ee04-4d47-87db-4189add2342a">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="idParametr" class="java.lang.Integer">
+			<fieldDescription><![CDATA[idParametr]]></fieldDescription>
+		</field>
+		<field name="idProject" class="java.lang.Integer">
+			<fieldDescription><![CDATA[idProject]]></fieldDescription>
+		</field>
+		<field name="parametr" class="com.PPU.DB.tables.Parametrs">
+			<fieldDescription><![CDATA[parametr]]></fieldDescription>
+		</field>
+		<field name="project" class="com.PPU.DB.tables.Project">
+			<fieldDescription><![CDATA[project]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<fieldDescription><![CDATA[value]]></fieldDescription>
+		</field>
+		<field name="num" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="valuesParamProject" uuid="eeb2f6cd-ed81-48ff-ac48-99da60d23723">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="dateRecValue" class="java.util.Date">
+			<fieldDescription><![CDATA[dateRecValue]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="idParametr" class="java.lang.Integer">
+			<fieldDescription><![CDATA[idParametr]]></fieldDescription>
+		</field>
+		<field name="idProject" class="java.lang.Integer">
+			<fieldDescription><![CDATA[idProject]]></fieldDescription>
+		</field>
+		<field name="parametr" class="com.PPU.DB.tables.Parametrs">
+			<fieldDescription><![CDATA[parametr]]></fieldDescription>
+		</field>
+		<field name="project" class="com.PPU.DB.tables.Project">
+			<fieldDescription><![CDATA[project]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<fieldDescription><![CDATA[value]]></fieldDescription>
+		</field>
+		<field name="num" class="java.lang.Integer"/>
+	</subDataset>
 	<parameter name="reportTitle" class="java.lang.String"/>
 	<parameter name="hand1" class="java.lang.String"/>
 	<parameter name="MZSource" class="net.sf.jasperreports.engine.JRDataSource">
@@ -262,6 +425,10 @@
 	<parameter name="limitsMZ" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="valuesParamMZ" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="title2" class="java.lang.String"/>
+	<parameter name="ProjectSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="comandProject" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="limitsProject" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="valuesParamProject" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -270,13 +437,13 @@
 			<componentElement>
 				<reportElement key="table" style="table" x="0" y="60" width="802" height="158" uuid="7c1f4700-fd9c-4b36-9ae2-871044a0eba5"/>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="descrMZ" uuid="88db3951-8f3c-4fa7-8feb-9050a1c4aefb">
-						<dataSourceExpression><![CDATA[$P{MZSource}]]></dataSourceExpression>
+					<datasetRun subDataset="descrProject" uuid="a22302b1-75f8-4e10-bbc5-db1504488dab">
+						<dataSourceExpression><![CDATA[$P{ProjectSource}]]></dataSourceExpression>
 					</datasetRun>
-					<jr:column width="90" uuid="c18be1a5-38d5-4b6c-bcd3-92b4df04c091">
+					<jr:column width="102" uuid="c18be1a5-38d5-4b6c-bcd3-92b4df04c091">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="b0c10f85-946e-4528-a463-f3ccdf06abd9"/>
+								<reportElement x="0" y="0" width="102" height="30" uuid="b0c10f85-946e-4528-a463-f3ccdf06abd9"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -293,10 +460,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="27a59d8e-9a75-4696-83de-a054c8d50e41">
+					<jr:column width="97" uuid="27a59d8e-9a75-4696-83de-a054c8d50e41">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="df1abfc3-5b9b-4c1c-b24a-ccbaa0b8339a"/>
+								<reportElement x="0" y="0" width="97" height="30" uuid="df1abfc3-5b9b-4c1c-b24a-ccbaa0b8339a"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -313,10 +480,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="dc9aa7e9-f0ad-404c-8b3c-d48440316a00">
+					<jr:column width="98" uuid="dc9aa7e9-f0ad-404c-8b3c-d48440316a00">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="540b99f9-7e9a-4345-8cfb-0e779872af58"/>
+								<reportElement x="0" y="0" width="98" height="30" uuid="540b99f9-7e9a-4345-8cfb-0e779872af58"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -333,10 +500,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="42116562-c0b9-4863-8a8e-b0057e75e7df">
+					<jr:column width="103" uuid="42116562-c0b9-4863-8a8e-b0057e75e7df">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="03e3a15b-7082-4570-9e5f-d6e2ec499a52"/>
+								<reportElement x="0" y="0" width="103" height="30" uuid="03e3a15b-7082-4570-9e5f-d6e2ec499a52"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -353,30 +520,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="eb39d44f-1eb7-49b1-bd6f-80c451370708">
+					<jr:column width="101" uuid="b85840af-9ce3-4ae7-882d-26c15e623191">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="5a5b63e2-ae42-4fd8-a8f1-effce46750c4"/>
-								<textElement textAlignment="Center">
-									<font fontName="Times New Roman" size="12"/>
-								</textElement>
-								<text><![CDATA[Тип услуги]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:detailCell style="table_TD" height="30" rowSpan="1">
-							<textField>
-								<reportElement x="0" y="0" width="90" height="20" uuid="bf5b50b5-62c0-4a21-b9c3-97a5043ac6fe"/>
-								<textElement>
-									<font fontName="Times New Roman" size="12"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{typeServiceMZ}.getName()]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-					<jr:column width="90" uuid="b85840af-9ce3-4ae7-882d-26c15e623191">
-						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
-							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="8e1b673a-32ab-4e4b-bb7f-8c156ed70efe"/>
+								<reportElement x="0" y="0" width="101" height="30" uuid="8e1b673a-32ab-4e4b-bb7f-8c156ed70efe"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -389,14 +536,14 @@
 								<textElement>
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{program}.getPartnersMZ().getName()]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{program}.getPartnerCommercialMan().getName()]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="eaa39669-b5f3-4a85-a2a5-23e71e2fabda">
+					<jr:column width="103" uuid="eaa39669-b5f3-4a85-a2a5-23e71e2fabda">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="46f92923-409c-499f-8e68-19c50e247dbf"/>
+								<reportElement x="0" y="0" width="103" height="30" uuid="46f92923-409c-499f-8e68-19c50e247dbf"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -413,10 +560,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="5594c478-33a8-4b21-843e-fb0b8b7c1c44">
+					<jr:column width="97" uuid="5594c478-33a8-4b21-843e-fb0b8b7c1c44">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="51e69a3e-2ecf-4d25-a888-fbf0eafd3a50"/>
+								<reportElement x="0" y="0" width="97" height="30" uuid="51e69a3e-2ecf-4d25-a888-fbf0eafd3a50"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -433,10 +580,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="90" uuid="43e4ed1d-39bf-4b55-8333-441f265a140a">
+					<jr:column width="98" uuid="43e4ed1d-39bf-4b55-8333-441f265a140a">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="c0395c3f-7396-4ec5-aaac-6d236bda9b38"/>
+								<reportElement x="0" y="0" width="98" height="30" uuid="c0395c3f-7396-4ec5-aaac-6d236bda9b38"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -490,13 +637,13 @@
 			<componentElement>
 				<reportElement key="table 1" style="table 1" x="0" y="32" width="802" height="140" uuid="fd0e0ac8-8aef-49c4-a737-61947ac25fb4"/>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="comandMZ" uuid="ba1fea32-4999-4e24-902c-90485daaa45a">
-						<dataSourceExpression><![CDATA[$P{comandMZ}]]></dataSourceExpression>
+					<datasetRun subDataset="comandProject" uuid="181a6a2d-463f-40f7-a2ef-ee3f5c7a96a0">
+						<dataSourceExpression><![CDATA[$P{comandProject}]]></dataSourceExpression>
 					</datasetRun>
-					<jr:column width="149" uuid="8181fbf8-583e-4112-82b1-a009eec78145">
+					<jr:column width="163" uuid="8181fbf8-583e-4112-82b1-a009eec78145">
 						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="149" height="30" uuid="7cfe3fde-6567-407f-ac71-6ba793f8ffb3"/>
+								<reportElement x="0" y="0" width="163" height="30" uuid="7cfe3fde-6567-407f-ac71-6ba793f8ffb3"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -513,10 +660,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="140" uuid="853b9760-c57b-4d7c-b672-a693574c9938">
+					<jr:column width="166" uuid="853b9760-c57b-4d7c-b672-a693574c9938">
 						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="140" height="30" uuid="c6b4e46c-5a10-4ce3-9be1-cc1d1bb00f8d"/>
+								<reportElement x="0" y="0" width="166" height="30" uuid="c6b4e46c-5a10-4ce3-9be1-cc1d1bb00f8d"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -533,10 +680,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="165" uuid="0c52d1e8-3bcd-4316-8d21-493cb928328c">
+					<jr:column width="237" uuid="0c52d1e8-3bcd-4316-8d21-493cb928328c">
 						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="165" height="30" uuid="03816f52-f7d1-4627-8086-1417fa8fc990"/>
+								<reportElement x="0" y="0" width="237" height="30" uuid="03816f52-f7d1-4627-8086-1417fa8fc990"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -553,10 +700,10 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="159" uuid="8b863327-15b9-4ed5-8857-4054369226d2">
+					<jr:column width="235" uuid="8b863327-15b9-4ed5-8857-4054369226d2">
 						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="159" height="30" uuid="18b2e2ab-4af1-4b85-a531-5ec40f90f489"/>
+								<reportElement x="0" y="0" width="235" height="30" uuid="18b2e2ab-4af1-4b85-a531-5ec40f90f489"/>
 								<textElement textAlignment="Center">
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
@@ -570,26 +717,6 @@
 									<font fontName="Times New Roman" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-					<jr:column width="187" uuid="d3c11245-be02-499f-88b6-bbabd3db48c9">
-						<jr:columnHeader style="table_CH" height="35" rowSpan="1">
-							<staticText>
-								<reportElement x="0" y="0" width="187" height="30" uuid="38ea0fca-a2b4-4f70-92b9-57280509753e"/>
-								<textElement textAlignment="Center">
-									<font fontName="Times New Roman" size="12"/>
-								</textElement>
-								<text><![CDATA[Тип муниципального учреждения]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:detailCell style="table 1_TD" height="30" rowSpan="1">
-							<textField>
-								<reportElement x="0" y="0" width="90" height="20" uuid="c6eac722-3e44-416a-b6c9-ed78bcf4590d"/>
-								<textElement textAlignment="Left">
-									<font fontName="Times New Roman" size="12"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{typesMU}.getName()]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
@@ -607,8 +734,8 @@
 			<componentElement>
 				<reportElement key="table 2" style="table 2" x="0" y="56" width="802" height="140" uuid="c2cb38a2-723c-41d4-8992-66c57b4147f2"/>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="limitsMZ" uuid="b74e23f4-fa71-4c2a-a8cb-d6628836c8a8">
-						<dataSourceExpression><![CDATA[$P{limitsMZ}]]></dataSourceExpression>
+					<datasetRun subDataset="limitsProject" uuid="1446bb76-55ff-484e-86fc-e310bbd5849b">
+						<dataSourceExpression><![CDATA[$P{limitsProject}]]></dataSourceExpression>
 					</datasetRun>
 					<jr:column width="198" uuid="50a53f7d-6ee0-4cfc-bf88-2c70f5aae82a">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
@@ -688,8 +815,8 @@
 			<componentElement>
 				<reportElement key="table 3" style="table 3" x="0" y="55" width="802" height="140" uuid="35845b65-51cf-44a2-9b84-0a75a50b59cf"/>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="valuesParamMZ" uuid="0db47eaa-4b71-4e0c-917e-05626acd8957">
-						<dataSourceExpression><![CDATA[$P{valuesParamMZ}]]></dataSourceExpression>
+					<datasetRun subDataset="valuesParamProject" uuid="f95509a0-6c57-40bd-a2ed-983727922e23">
+						<dataSourceExpression><![CDATA[$P{valuesParamProject}]]></dataSourceExpression>
 					</datasetRun>
 					<jr:column width="151" uuid="e3bff57c-ebf4-4fa8-82f7-7db538a8f1c5">
 						<jr:columnHeader style="table_CH" height="30" rowSpan="1">

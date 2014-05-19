@@ -44,14 +44,14 @@
                         else
                         if (((List) obj).get(0) instanceof UsersComMan)
                         {
-                            Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
+                            Executions.sendRedirect("/pages/pagesProject/viewProject.zul?loadAll=1");
                         }
            ]]>  </attribute>
                 </toolbarbutton>
         <toolbarbutton label="/"/>
         <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ">
             <attribute name="onClick">   <![CDATA[
-                    Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
+                    Executions.sendRedirect("/pages/pagesProject/Project.zul?id="+self.getObj());
            ]]>  </attribute>
                 </toolbarbutton>
     </cell>

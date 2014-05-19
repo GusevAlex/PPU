@@ -43,8 +43,8 @@ public class Project {
     private String name;
     private int id_customer;
     private int id_leader;
-    private Date start_date;
-    private Date expiration_date;
+    private Date startDate;
+    private Date expirationDate;
     private String description;
     private float budget;
     private int status;
@@ -107,21 +107,21 @@ public class Project {
     }
 
     @Column(name="start_date")
-    public Date getStart_date() {
-        return start_date;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setStartDate(Date start_date) {
+        this.startDate = start_date;
     }
 
     @Column(name="expiration_date")
-    public Date getExpiration_date() {
-        return expiration_date;
+    public Date getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setExpiration_date(Date expiration_date) {
-        this.expiration_date = expiration_date;
+    public void setExpirationDate(Date expiration_date) {
+        this.expirationDate = expiration_date;
     }
 
     @Column(name="description")

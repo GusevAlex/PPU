@@ -4,8 +4,11 @@
         name="Contact"
         class="com.PPU.composite.Contact" ?>
 <?component
-        name="gridReviewMZ"
-        class="com.PPU.composite.GridReviewMZ" ?>
+        name="gridReviewProject"
+        class="com.PPU.composite.gridReviewProject" ?>
+<?component
+        name="gridReviewProject"
+        class="com.PPU.composite.GridReviewProject" ?>
 
 <zk xmlns:ca="client/attribute">
     <window
@@ -95,16 +98,17 @@
 
                                 <div height="30px"></div>
 
-                                <label value="Муниципальные задания для организации" style="font-size: 26px;" />
+                                <label value="Проекты организации" style="font-size: 26px;" />
                                     <n:hr />
                                     <zscript>
                                         <![CDATA[
                                       import com.PPU.DB.tables.*;
                                       import com.PPU.DB.workLogic.*;
                                       import com.PPU.vm.*;
-                                      import java.util.*;
 
                                       String name = MainPageController.getPartnerName();
+
+                                      Object obj = MainPageController.getProjectOrMz();
 
                                       Object obj = MainPageController.getProjectOrMz();
                                       Object objuser = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
@@ -116,7 +120,7 @@
 
                                       for (Object o : obj)
                                       {
-                                        int level = new WorkWithMZ().getUserRole((MZ) o, (UsersMunMan) objuser.get(0));
+                                        int level = new WorkWithProject().getUserRole((Project) o, (UsersComMan) objuser.get(0));
                                         if (level == 1 || level == 3)
                                             list1.add(o);
                                         else
@@ -138,57 +142,56 @@
                                    <label value="Для организации: ${name}" />
                                 </div>
 
-                                    <vlayout>
-                                        <toolbar>
-                                            <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="Создать новое МЗ" label="Создать новое МЗ" >
-                                                <attribute name="onClick">   <![CDATA[
-                                                    Executions.sendRedirect("/pages/pagesMZ/MZ.zul?id=0");
-                                           ]]>  </attribute>
-                                            </toolbarbutton>
-                                        </toolbar>
+                                        <vlayout>
+                                            <toolbar>
+                                                <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="Создать новый проект" label="Создать новое МЗ" >
+                                                    <attribute name="onClick">   <![CDATA[
+                                                        Executions.sendRedirect("/pages/pagesProject/Project.zul?id=0");
+                                               ]]>  </attribute>
+                                                </toolbarbutton>
+                                            </toolbar>
+                                            <groupbox if="${list1.size() != 0}" >
+                                                <caption label="Вы я вляетесь заказчиком" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list1}">
 
-                                        <groupbox if="${list1.size() != 0}" >
-                                        <caption label="Вы я вляетесь заказчиком" />
-                                            <hbox>
-                                            <gridReviewMZ model = "${list1}">
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
 
-                                            </gridReviewMZ>
-                                            </hbox>
-                                        </groupbox>
+                                            <groupbox if="${list2.size() != 0}" >
+                                                <caption label="Вы я вляетесь руководителем" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list2}">
 
-                                        <groupbox if="${list2.size() != 0}" >
-                                        <caption label="Вы я вляетесь руководителем" />
-                                        <hbox>
-                                            <gridReviewMZ model = "${list2}">
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
 
-                                            </gridReviewMZ>
-                                            </hbox>
-                                        </groupbox>
+                                            <groupbox if="${list3.size() != 0}" >
+                                                <caption label="Вы являетесь исполнителем" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list3}">
 
-                                        <groupbox if="${list3.size() != 0}" >
-                                        <caption label="Вы являетесь исполнителем" />
-                                            <hbox>
-                                            <gridReviewMZ model = "${list3}">
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
 
-                                            </gridReviewMZ>
-                                            </hbox>
-                                        </groupbox>
+                                            <groupbox if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) != 0}" >
+                                                <caption label="Вы не работате с этими проектами" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list4}">
 
-                                        <groupbox if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) != 0}" >
-                                            <caption label="Вы не работате по этими муниципальными заданиями" />
-                                            <hbox>
-                                                <gridReviewMZ model = "${list4}">
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
 
-                                                </gridReviewMZ>
-                                            </hbox>
-                                        </groupbox>
+                                            <gridReviewProject model = "${list4}" if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) == 0}" >
 
-                                        <gridReviewMZ model = "${list4}" if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) == 0}" >
-
-                                        </gridReviewMZ>
-
-
-                                    </vlayout>
+                                            </gridReviewProject>
+                                            
+                                            
+                                        </vlayout>
 
 
                                 </zk>

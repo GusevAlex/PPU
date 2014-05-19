@@ -168,9 +168,9 @@
                                                                 <column width="50%" />
                                                             </columns>
                                                             <rows>
-                                                                <row>Название : <textbox id="name" value="@bind(vm.programCom.name)" cols="30" disabled="${!enableAll}" /></row>
-                                                                <row>Описание : <textbox id="description" value="@bind(vm.programCom.description)" rows="6" disabled="${!enableAll}"/></row>
-                                                                <row>Цель : <textbox id="target" value="@bind(vm.programCom.target)" rows="6" disabled="${!enableAll}"/></row>
+                                                                <row>Название : <textbox id="name" value="@bind(vm.programCom.name)" cols="30" disabled="${!vm.enableAll}" /></row>
+                                                                <row>Описание : <textbox id="description" value="@bind(vm.programCom.description)" rows="6" disabled="${!vm.enableAll}"/></row>
+                                                                <row>Цель : <textbox id="target" value="@bind(vm.programCom.target)" rows="6" disabled="${!vm.enableAll}"/></row>
                                                             </rows>
                                                             </grid>
                                                             <groupbox >

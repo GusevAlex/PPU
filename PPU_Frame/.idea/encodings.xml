@@ -13,13 +13,19 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ModalDialog.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/TimeLine.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/TimeLine.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/UserConfigPage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/notification/MyNotification.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/programs/Program.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/ComandMZDataSource.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/ComandProjectDataSource.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/LimitsMZDataSource.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/LimitsProjectDataSource.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/MZDataSource.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/ProjectDataSource.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/ValuesMZDataSource.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/report/ValuesProjectDataSource.java" charset="windows-1251" />
   </component>
 </project>
 

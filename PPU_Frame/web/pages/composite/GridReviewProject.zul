@@ -67,7 +67,7 @@
 
                 <buttonOpenList label="12" image=""  obj="${objs.getId()}"  >
                     <attribute name="onClick">   <![CDATA[
-                    Executions.sendRedirect("/pages/pagesProject/project.zul?id="+self.getObj());
+                    Executions.sendRedirect("/pages/pagesProject/Project.zul?id="+self.getObj());
            ]]>  </attribute>
                 </buttonOpenList>
 
