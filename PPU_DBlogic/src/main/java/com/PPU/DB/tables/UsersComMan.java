@@ -53,6 +53,8 @@ public class UsersComMan {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Логин")
     @Column(name="login")
     public String getLogin() {
         return login;
@@ -77,6 +79,8 @@ public class UsersComMan {
         this.hash = MD5.getMD5(password);
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Имя")
     @Column(name="name")
     public String getName() {
         return name;
@@ -86,6 +90,8 @@ public class UsersComMan {
         this.name = name;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Почта")
     @Column(name="email")
     public String getEmail() {
         return email;

@@ -1,7 +1,9 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
+import com.PPU.DB.workLogic.WorkWithTable;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -53,8 +55,7 @@ public class ComandMZ {
         this.idMZ = idMZ;
     }
 
-	@FieldType(type = 1)
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Команда")
+
     @Column(name="id_partner_mz")
     public int getIdPartnerMZ() {
         return idPartnerMZ;
@@ -90,6 +91,9 @@ public class ComandMZ {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        MZ = ppu.getMz(this.getIdMZ());
+
         return MZ;
     }
 

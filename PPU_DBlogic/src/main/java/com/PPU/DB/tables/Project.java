@@ -79,6 +79,8 @@ public class Project {
         this.id_program = id_program;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -106,6 +108,8 @@ public class Project {
         this.id_leader = id_leader;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Дата начала")
     @Column(name="start_date")
     public Date getStartDate() {
         return startDate;
@@ -115,6 +119,8 @@ public class Project {
         this.startDate = start_date;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Дата окончания")
     @Column(name="expiration_date")
     public Date getExpirationDate() {
         return expirationDate;
@@ -124,6 +130,8 @@ public class Project {
         this.expirationDate = expiration_date;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;
@@ -132,6 +140,8 @@ public class Project {
     public void setDescription(String description) {
         this.description = description;
     }
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Бюджет")
 
     @Column(name="budget")
     public float getBudget() {

@@ -75,4 +75,8 @@ public abstract class WorkWithTable {
 
         return obj1;
     }
+
+    public static PpuDaoInterface getPpuDao() {
+        return ppuDao;
+    }
 }

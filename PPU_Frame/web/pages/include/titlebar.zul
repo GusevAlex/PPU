@@ -59,7 +59,7 @@
     <cell align="right" valign="middle" width="100%" style="padding-right: 3px;">
         <div sclass="container" width="100%" >
             <!--<menubar >-->
-                    <toolbarbutton id="user" label="@load(vm.nameUser)" style="font-size: 14px;">
+                    <toolbarbutton image="/images/tollbar/notMark.png" id="userBut" label="@load(vm.nameUser)" style="font-size: 14px;">
                         <attribute name="onClick"><![CDATA[
                         status.open(self, "after_end");
                     ]]> </attribute>
@@ -86,6 +86,11 @@
                     notification1[i++] = ((NotificationMU)not).getText();
 
                 notif.setModel(new ListModelList(notification1));
+
+                if (notification1.length != 0)
+                    userBut.setImage("/images/tollbar/mark.png");
+                else
+                    userBut.setImage("/images/tollbar/notMark.png");
             }
             else
             {

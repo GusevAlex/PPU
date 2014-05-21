@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -43,6 +44,8 @@ public class Providers {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -52,6 +55,8 @@ public class Providers {
         this.name = name;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;
@@ -61,6 +66,8 @@ public class Providers {
         this.description = description;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Адрес")
     @Column(name="address")
     public String getAddress() {
         return address;

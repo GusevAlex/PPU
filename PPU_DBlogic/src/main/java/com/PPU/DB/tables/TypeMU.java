@@ -48,7 +48,7 @@ public class TypeMU {
     }
 
     @FieldType(type = 1)
-    @HeaderName(name = "РќР°Р·РІР°РЅРёРµ")
+    @HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;

@@ -7,21 +7,22 @@
                 position="center,center" closable="true"
                 action="show: slideDown;hide: slideUp">
 
-    <textbox id="inputTextBox" value="" rows="10" cols="30" />
+        <vlayout>
+            <textbox id="inputTextBox" value="" rows="10" cols="50" />
 
-		<buttonOpenList label="ОК" obj='${arg}' >
-			<attribute name="onClick">
-				<![CDATA[
-						import java.util.Map;
-						import com.PPU.funcControl.*;
+                <buttonOpenList label="ОК" obj='${arg}' >
+                    <attribute name="onClick">
+                        <![CDATA[
+                                import java.util.Map;
+                                import com.PPU.funcControl.*;
+                                import com.PPU.windowControllers.*;
 
-						String text = inputTextBox.getText();
-
-                		NotificationService.revertNotifHtmlForAdd(self.getObj().get("mz").getLeader(), "/pages/pagesMZ/MZ.zul", self.getObj().get("mz"), self.getObj().get("mz").getStatus(), text);
-						revertWind.onClose();
-						]]>
-			</attribute>
-				</buttonOpenList>
+                                ((ButtonClickInterf) self.getObj().get("clickBut")).click(inputTextBox);
+                                revertWind.onClose();
+                                ]]>
+                    </attribute>
+                </buttonOpenList>
+        </vlayout>
 
     </window>
 

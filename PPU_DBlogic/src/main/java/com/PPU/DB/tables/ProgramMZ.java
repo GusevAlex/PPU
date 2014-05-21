@@ -60,6 +60,8 @@ public class ProgramMZ {
         this.name = name;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Цель")
     @Column(name="target")
     public String getTarget() {
         return target;
@@ -69,6 +71,8 @@ public class ProgramMZ {
         this.target = target;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Описание")
     @Column(name="description")
     public String getDescription() {
         return description;

@@ -1,5 +1,6 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -41,6 +42,8 @@ public class TypeBudgetService {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;

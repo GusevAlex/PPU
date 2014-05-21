@@ -78,7 +78,8 @@ public class WorkWithProject extends WorkWithTable  {
 
 	@Override
 	public Object getEntity(int id) {
-		return ppuDao.getProject(id);
+        Project project = ppuDao.getProject(id);
+		return project;
 	}
 
 	@Override

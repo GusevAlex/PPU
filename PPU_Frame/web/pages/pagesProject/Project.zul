@@ -145,9 +145,9 @@
 
                                             <div style="width:100%">
                                                 <jasperreport id="report" height="0px" style="display: none;" />
-                                                <hlayout style="margin-left: 60%;" >
-                                                    <button id="showTimeline" image="/images/tollbar/report2.jpg" onClick='@command("showTimeline")' label="Временная линия проекта" />
-                                                    <button id="showReport" image="/images/tollbar/report2.jpg" onClick='@command("showReport")' label="Получить отчет по Проекту" />
+                                                <hlayout style="margin-left: 63%;" >
+                                                    <button id="showTimeline" onClick='@command("showTimeline")' label="Временная линия проекта" style='height: 38px;' />
+                                                    <button id="showReport" image="/images/tollbar/report2.png" onClick='@command("showReport")' label="Получить отчет по Проекту" />
                                                 </hlayout>
                                             </div>
 
@@ -279,7 +279,7 @@
                                                                     <toolbar style="margin-bottom: -5px;">
                                                                         <toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новое ограничение" onClick='@command("onAddNewLimitByList")' disabled="${(vm.level == 4) ? false : true}" />
                                                                         <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новое ограничение, уже имеющее значение" onClick='@command("onAddOldLimitByList")' disabled="${(vm.level == 4) ? false : true}"  />
-                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                        <toolbarbutton image="/images/tollbar/add-button.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
                                                                     </toolbar>
                                                                     <grid id="limitsProject1" model="@bind(vm.limitModelList)" >
                                                                         <columns>
@@ -315,8 +315,8 @@
 																		<toolbar style="margin-bottom: -5px;">
 																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParamByList")' disabled="${(vm.level == 4) ? false : true}" />
 																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение" onClick='@command("onAddOldParamByList")' disabled="${(vm.level == 4) ? false : true}" />
-                                                                            <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
-                                                                            <toolbarbutton image="/images/tollbar/graph2.jpg" tooltiptext="График параметров" onClick='@command("onShowChartParam")' />
+                                                                            <toolbarbutton image="/images/tollbar/add-button.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                            <toolbarbutton image="/images/tollbar/graph2.png" tooltiptext="График параметров" onClick='@command("onShowChartParam")' />
                                                                         </toolbar>
 																		<grid id="valuesParametrForProject1" model="@bind(vm.valModelList)" >
 																			<columns>
@@ -402,7 +402,7 @@
                                                 <button id="btn1" label="Сохранить" onClick='@command("onClickBtn1")' />
                                                 <button id="btn2" label="${vm.nameNextLevel}" onClick='@command("onClickBtn2")' if='${!vm.nameNextLevel.equals("")}' />
                                                 <button id="btn3" label="${vm.namePrevisLevel}" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
-                                                <button id="btn4" label="Завершить задание" onClick='@command("onClickBtn4")' if='${((vm.level==4) &amp;&amp; (vm.project.status==4))}' />
+                                                <button id="btn4" label="Завершить работу над проектом" onClick='@command("onClickBtn4")' if='${((vm.level==4) &amp;&amp; (vm.project.status==4))}' />
                                                 <button id="btn5" label="Закрыть задание" onClick='@command("onClickBtn5")' if='${(vm.level==2 || vm.level==3) &amp;&amp; vm.project.status==4}' />
                                             </hlayout>
                                         </panelchildren>

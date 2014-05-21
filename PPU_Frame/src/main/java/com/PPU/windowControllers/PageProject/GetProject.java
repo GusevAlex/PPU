@@ -5,6 +5,7 @@ import com.PPU.DB.workLogic.*;
 import com.PPU.composite.DualObjectListBox;
 import com.PPU.composite.ObjectListBox;
 import com.PPU.funcControl.NotificationService;
+import com.PPU.windowControllers.ButtonClickInterf;
 import com.PPU.windowControllers.FileController;
 import com.PPU.windowControllers.GetListParam;
 import com.PPU.windowControllers.report.ComandProjectDataSource;
@@ -501,6 +502,7 @@ public class GetProject implements GetListParam {
                     break;
             }
 
+            nameNextLevel = "";
             if (!levelName.equals(""))
                 nameNextLevel = "Сохранить и перевести на статус \"" + levelName + "\"";
 
@@ -531,9 +533,15 @@ public class GetProject implements GetListParam {
                     statusName = "Вы являетесь руководителем";
                 else
                 if (levelUser == 3)
-                    statusName = "Вы являетесь заказчиком и руководиетелем";
+                    statusName = "Вы являетесь заказчиком и руководителем";
                 else
+                if (levelUser == 4)
                     statusName = "Вы являетесь исполнителем";
+                else
+                if (levelUser == 6)
+                    statusName = "Вы являетесь заказчиком, руководиетелм и исполнителем";
+                else
+                    statusName = "Вы не работате по этому проекту";
 
             if (getEndCommandProject().size() != 0)
                 notWorkString = "Имеются исполнители, закончившие работу";
@@ -655,6 +663,32 @@ public class GetProject implements GetListParam {
             Messagebox.show("Не выбраны ресурся!", "Error", Messagebox.OK, Messagebox.ERROR);
             success = false;
         }
+
+        for (Object obj : new WorkWithParametrs().getListRows())
+            if (((Parametrs)obj).getType() == 'd')
+            {
+                Float res = 0f;
+                for (Object o : (Object[]) valuesParametrForProject)
+                {
+                    if (((ValuesParametrForProject)o).getParametr().equals(obj))
+                    {
+                        res+=new Float(((ValuesParametrForProject)o).getValue());
+                    }
+                }
+
+                for (Object lim : (Object[]) limitsProject)
+                {
+                    if (((LimitsProject)lim).getParametr().equals(obj))
+                    {
+                        Float limVal = new Float(((LimitsProject)lim).getValue());
+                        if (limVal<=res)
+                        {
+                            Messagebox.show("Сумма показателей параметра \""+((Parametrs) obj).getName()+"\" превышает ограничение ("+limVal+")", "Error", Messagebox.OK, Messagebox.ERROR);
+                            break;
+                        }
+                    }
+                }
+            }
 
         return success;
     }
@@ -788,7 +822,7 @@ public class GetProject implements GetListParam {
 
         Clients.showBusy("Идет сохранение...");
 
-        if (level == 1 || level == 0)
+        if (level == 1 || level == 0 || level == 5 || level == 6)
         {
             PartnerCommercialMan leaderLocal = (PartnerCommercialMan) leaderProject1.getObjs()[leaderProject1.getSelectedIndex()];
             project.setLeader(leaderLocal);
@@ -800,11 +834,30 @@ public class GetProject implements GetListParam {
         for (int i=0; i<objs.length; i++)
             comLocal[i] = (ComandProject) objs[i];
 
+        for (ComandProject com : oldProject.getComandProject())
+        {
+            boolean isFind = false;
+
+            for (ComandProject com2 : comLocal)
+                if (com2.equals(com))
+                {
+                    isFind = true;
+                    break;
+                }
+
+            if (!isFind)
+                try {
+                    new WorkWithCommandMz().deleteEntity(com);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+        }
+
         project.setComandProject(new LinkedHashSet<ComandProject>(Arrays.asList(comLocal)));
 
         project.setValuesParametrForProject(new LinkedHashSet<ValuesParametrForProject>((List) valModelList.getInnerList()));
 
-        if (program2.getSelectedIndex()!=-1 && (level==1 || level == 0))
+        if (program2.getSelectedIndex()!=-1 && (level==1 || level == 0 || level == 5 || level == 6))
             project.setProgram((ProgramCommerc) program2.getObjs()[program2.getSelectedIndex()]);
 
         project.setLimitsProject(new LinkedHashSet<LimitsProject>((List) limitModelList.getInnerList()));
@@ -821,7 +874,35 @@ public class GetProject implements GetListParam {
         for (int i=0; i<objs.length; i++)
         {
             res[i] = new ResourcesProject();
+            List list = new WorkWithResourcesProject().findAndGetAllRow("id_project;id_provider_resources", ""+project.getId()+";"+((Providers) objs[i]).getId());
+
+            if (list.size() != 0)
+            {
+                res[i].setId(((ResourcesProject)list.get(0)).getId());
+            }
+
             res[i].setProviders((Providers) objs[i]);
+            res[i].setIdProviderResources(((Providers) objs[i]).getId());
+            res[i].setIdProject(project.getId());
+        }
+
+        for (ResourcesProject com : oldProject.getResourcesProject())
+        {
+            boolean isFind = false;
+
+            for (ResourcesProject com2 : res)
+                if (com2.equals(com))
+                {
+                    isFind = true;
+                    break;
+                }
+
+            if (!isFind)
+                try {
+                    new WorkWithResourcesProject().deleteEntity(com);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
         }
 
         project.setResourcesProject(new LinkedHashSet<ResourcesProject>(Arrays.asList(res)));
@@ -895,6 +976,12 @@ public class GetProject implements GetListParam {
 		Map arg = new HashMap<String, Object>(){
 			{
 				put("project", project);
+                put("clickBut", new ButtonClickInterf() {
+                    @Override
+                    public void click(Textbox textbox) {
+                        NotificationService.revertNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), textbox.getText());
+                    }
+                });
 			}
 		};
 
@@ -903,9 +990,9 @@ public class GetProject implements GetListParam {
         wind1.addEventListener("onClose", new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
-                String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                NotificationService.revertNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
+//                String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                NotificationService.revertNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
             }
         });
 
@@ -920,6 +1007,12 @@ public class GetProject implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("project", project);
+                put("clickBut", new ButtonClickInterf() {
+                    @Override
+                    public void click(Textbox textbox) {
+                        NotificationService.addNotifHtmlForRevertComandWorkCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), textbox.getText());
+                    }
+                });
             }
         };
 
@@ -928,9 +1021,9 @@ public class GetProject implements GetListParam {
         wind1.addEventListener("onClose", new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
-                String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                NotificationService.addNotifHtmlForRevertComandWorkCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
+//                String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                NotificationService.addNotifHtmlForRevertComandWorkCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
             }
         });
         wind1.doModal();
@@ -1106,6 +1199,7 @@ public class GetProject implements GetListParam {
 
 			objs[((Object [])valuesParametrForProject).length] = new WorkWithValuesParametrForProject().getEmptyEntity();
             ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setParametr((Parametrs)obj);
+            ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setIdParametr(((Parametrs)obj).getId());
             ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setValue("");
             ((ValuesParametrForProject)(objs[((Object [])valuesParametrForProject).length])).setDateRecValue(Calendar.getInstance().getTime());
 
@@ -1116,7 +1210,7 @@ public class GetProject implements GetListParam {
 
             try
             {
-            project.getValuesParametrForProject().add(((ValuesParametrForProject [])objs)[objs.length-1]);
+                project.getValuesParametrForProject().add(((ValuesParametrForProject [])objs)[objs.length-1]);
             }
             catch (Exception e)
             {
@@ -1146,6 +1240,7 @@ public class GetProject implements GetListParam {
 
             objs[((Object [])limitsProject).length] = new WorkWithLimitsMz().getEmptyEntity();
             ((LimitsProject)(objs[((Object [])limitsProject).length])).setParametr((Parametrs) obj);
+            ((LimitsMZ)(objs[((Object [])limitsProject).length])).setIdParametr(((Parametrs) obj).getId());
             ((LimitsProject)(objs[((Object [])limitsProject).length])).setValue("");
 
             setLimitsProject(objs);
@@ -1292,6 +1387,12 @@ public class GetProject implements GetListParam {
                 Map arg = new HashMap<String, Object>(){
                     {
                         put("project", project);
+                        put("clickBut", new ButtonClickInterf() {
+                            @Override
+                            public void click(Textbox textbox) {
+                                NotificationService.revertNotifHtmlForRevertComandWorkCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus(), textbox.getText());
+                            }
+                        });
                     }
                 };
 
@@ -1300,9 +1401,9 @@ public class GetProject implements GetListParam {
                 wind1.addEventListener("onClose", new EventListener<Event>() {
                     @Override
                     public void onEvent(Event event) throws Exception {
-                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                        NotificationService.revertNotifHtmlForRevertComandWorkCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
+//                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                        NotificationService.revertNotifHtmlForRevertComandWorkCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus(), text);
                     }
                 });
 

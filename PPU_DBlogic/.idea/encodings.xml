@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ComandProject.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/DefaultParametrsServiceMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/LimitsMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/MZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Parametrs.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnerCommercialMan.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/PartnersMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramCommerc.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ProgramMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Project.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/Providers.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ResourcesMZ.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/ResourcesProject.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeBudgetService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeMU.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersComMan.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/PPU/DB/tables/UsersMunMan.java" charset="windows-1251" />

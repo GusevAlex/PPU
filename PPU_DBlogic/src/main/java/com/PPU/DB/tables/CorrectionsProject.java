@@ -61,6 +61,8 @@ public class CorrectionsProject {
         this.idProject = idProject;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Дата корректировки")
     @Column(name="correction_date")
     public Date getCorrectionDate() {
         return CorrectionDate;
@@ -88,6 +90,8 @@ public class CorrectionsProject {
         ValueBefore = valueBefore;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Значение")
     @Column(name="value_after")
     public String getValueAfter() {
         return ValueAfter;

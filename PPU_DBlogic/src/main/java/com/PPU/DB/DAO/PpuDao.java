@@ -694,7 +694,60 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+            project.setId_leader(project.getLeader().getId());
+            project.setId_program(project.getProgram().getId());
+
             session.save(project);
+
+            for (LimitsProject limitsMZ : project.getLimitsProject())
+            {
+                limitsMZ.setIdProject(project.getId());
+
+                if (limitsMZ.getId() == 0)
+                    this.saveLimitsProject(limitsMZ);
+                else
+                    this.updateLimitsProject(limitsMZ);
+            }
+
+            for (ValuesParametrForProject valuesParametrForMZ : project.getValuesParametrForProject())
+            {
+                valuesParametrForMZ.setIdProject(project.getId());
+
+                if (valuesParametrForMZ.getId() == 0)
+                    this.saveValuesParametrForProject(valuesParametrForMZ);
+                else
+                    this.updateValuesParametrForProject(valuesParametrForMZ);
+            }
+
+            for (ComandProject comandMZ : project.getComandProject())
+            {
+                comandMZ.setIdProject(project.getId());
+
+                if (comandMZ.getId() == 0)
+                    this.saveComandProject(comandMZ);
+                else
+                    this.updateComandProject(comandMZ);
+            }
+
+            for (ResourcesProject resourcesMZ : project.getResourcesProject())
+            {
+                resourcesMZ.setIdProject(project.getId());
+
+                if (resourcesMZ.getId() == 0)
+                    this.saveResourcesProject(resourcesMZ);
+                else
+                    this.updateResourcesProject(resourcesMZ);
+            }
+
+            for (FileProject fileMZ : project.getFileProjects())
+            {
+                fileMZ.setIdProject(project.getId());
+
+                if (fileMZ.getId() == 0)
+                    this.saveFileProject(fileMZ);
+                else
+                    this.updateFileProject(fileMZ);
+            }
             return true;
         } catch (Exception e)
         {
@@ -1352,7 +1405,64 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+
+            MZ.setIdLeader(MZ.getLeader().getId());
+            MZ.setIdProgram(MZ.getProgram().getId());
+            MZ.setService_type(MZ.getTypeServiceMZ().getId());
+
             session.update(MZ);
+
+            for (LimitsMZ limitsMZ : MZ.getLimitsMZ())
+            {
+                limitsMZ.setIdMZ(MZ.getId());
+
+                if (limitsMZ.getId() == 0)
+                    this.saveLimitsMz(limitsMZ);
+                else
+                    this.updateLimitsMz(limitsMZ);
+            }
+
+            for (ValuesParametrForMZ valuesParametrForMZ : MZ.getValuesParametrForMZ())
+            {
+                valuesParametrForMZ.setIdMZ(MZ.getId());
+
+                if (valuesParametrForMZ.getId() == 0)
+                    this.saveValuesParametrForMz(valuesParametrForMZ);
+                else
+                    this.updateValuesParametrForMz(valuesParametrForMZ);
+            }
+
+            for (ComandMZ comandMZ : MZ.getComandMZ())
+            {
+                comandMZ.setIdMZ(MZ.getId());
+
+                if (comandMZ.getId() == 0)
+                    this.saveComandMZ(comandMZ);
+                else
+                    this.updateComandMZ(comandMZ);
+            }
+
+            for (ResourcesMZ resourcesMZ : MZ.getResourcesMZ())
+            {
+                resourcesMZ.setIdMZ(MZ.getId());
+
+                if (resourcesMZ.getId() == 0)
+                    this.saveResourcesMz(resourcesMZ);
+                else
+                    this.updateResourcesMz(resourcesMZ);
+            }
+
+            for (FileMZ fileMZ : MZ.getFileMZs())
+            {
+                fileMZ.setIdMz(MZ.getId());
+
+                if (fileMZ.getId() == 0)
+                    this.saveFileMZ(fileMZ);
+                else
+                    this.updateFileMZ(fileMZ);
+            }
+
+            //session.update(MZ);
             return true;
         } catch (Exception e)
         {
@@ -1550,7 +1660,60 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
+            project.setId_leader(project.getLeader().getId());
+            project.setId_program(project.getProgram().getId());
+
             session.update(project);
+
+            for (LimitsProject limitsMZ : project.getLimitsProject())
+            {
+                limitsMZ.setIdProject(project.getId());
+
+                if (limitsMZ.getId() == 0)
+                    this.saveLimitsProject(limitsMZ);
+                else
+                    this.updateLimitsProject(limitsMZ);
+            }
+
+            for (ValuesParametrForProject valuesParametrForMZ : project.getValuesParametrForProject())
+            {
+                valuesParametrForMZ.setIdProject(project.getId());
+
+                if (valuesParametrForMZ.getId() == 0)
+                    this.saveValuesParametrForProject(valuesParametrForMZ);
+                else
+                    this.updateValuesParametrForProject(valuesParametrForMZ);
+            }
+
+            for (ComandProject comandMZ : project.getComandProject())
+            {
+                comandMZ.setIdProject(project.getId());
+
+                if (comandMZ.getId() == 0)
+                    this.saveComandProject(comandMZ);
+                else
+                    this.updateComandProject(comandMZ);
+            }
+
+            for (ResourcesProject resourcesMZ : project.getResourcesProject())
+            {
+                resourcesMZ.setIdProject(project.getId());
+
+                if (resourcesMZ.getId() == 0)
+                    this.saveResourcesProject(resourcesMZ);
+                else
+                    this.updateResourcesProject(resourcesMZ);
+            }
+
+            for (FileProject fileMZ : project.getFileProjects())
+            {
+                fileMZ.setIdProject(project.getId());
+
+                if (fileMZ.getId() == 0)
+                    this.saveFileProject(fileMZ);
+                else
+                    this.updateFileProject(fileMZ);
+            }
             return true;
         } catch (Exception e)
         {

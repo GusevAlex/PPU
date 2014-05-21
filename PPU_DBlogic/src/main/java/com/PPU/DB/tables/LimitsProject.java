@@ -55,6 +55,8 @@ public class LimitsProject {
         this.idParametr = idParametr;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Р—РЅР°С‡РµРЅРёРµ")
     @Column(name="value")
     public String getValue() {
         return value;
@@ -74,7 +76,7 @@ public class LimitsProject {
     }
 
 	@FieldType(type = 2, worker = "WorkWithProject")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Проект")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_project", insertable = false, updatable = false)
     public Project getProject() {
@@ -86,7 +88,7 @@ public class LimitsProject {
     }
 
 	@FieldType(type = 2, worker = "WorkWithParametrs")
-	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Параметр")
+	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_parametr", insertable = false, updatable = false)
     public Parametrs getParametr() {

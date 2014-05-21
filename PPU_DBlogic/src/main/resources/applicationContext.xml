@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/osgi
-       http://www.springframework.org/schema/osgi/spring-osgi.xsd
-       http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	   					   http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	   					   http://www.springframework.org/schema/tx
+	   					   http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
     <tx:annotation-driven transaction-manager="txManager" />
 
@@ -40,5 +38,31 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
+    <bean id="hibernateInterceptor"
+          class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!--<bean id="BeforeMethodBean" class="com.PPU.DB.BeforeMethod" />-->
+
+    <!--<bean id="Worker2" class="com.PPU.DB.workLogic.WorkWithTable" >-->
+        <!--<property name="ppuDao" ref="dataDao" />-->
+    <!--</bean>-->
+
+    <!--<bean id="testFacade" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--<property name="target" ref="Worker2"/>-->
+        <!--<property name="proxyInterfaces">-->
+            <!--<value>com.PPU.DB.workLogic.Interf</value>-->
+        <!--</property>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>BeforeMethodBean</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="Worker" class="com.PPU.DB.workLogic.WorkWithComandProject" >-->
+        <!--<property name="ppuDao" ref="testFacade" />-->
+    <!--</bean>-->
 
 </beans>

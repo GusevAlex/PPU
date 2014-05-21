@@ -86,7 +86,7 @@ public class TimeLine {
 
             MZ mz = (MZ) new WorkWithMZ().getEntity(new Integer(id));
 
-            discrName=mz.getName();
+            discrName="Для муниципального задания: "+mz.getName();
 
             ParseCorrection parseCorrection = new ParseCorrection();
             Object [] o = mz.getCorrectionsMZ().toArray();

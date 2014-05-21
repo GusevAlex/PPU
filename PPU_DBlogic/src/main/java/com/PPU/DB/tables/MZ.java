@@ -1,13 +1,16 @@
 package com.PPU.DB.tables;
 
+import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.tables.TableAnnot.HeaderName;
 import com.PPU.DB.workLogic.ClassInvokeCall;
+import com.PPU.DB.workLogic.WorkWithTable;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -190,6 +193,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        comandMZ = new HashSet<ComandMZ>(ppu.findComandMZ("id_mz",""+this.getId()));
+
         return comandMZ;
     }
 

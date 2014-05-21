@@ -56,6 +56,8 @@ public class LimitsMZ {
         this.idParametr = idParametr;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Значение")
     @Column(name="value")
     public String getValue() {
         return value;

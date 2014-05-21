@@ -52,6 +52,8 @@ public class Parametrs {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
@@ -70,6 +72,8 @@ public class Parametrs {
         this.type = type;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Единица измерения")
     @Column(name="dimensions")
     public String getDimensions() {
         return dimensions;

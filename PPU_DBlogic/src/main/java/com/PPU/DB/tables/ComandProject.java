@@ -29,8 +29,8 @@ public class ComandProject {
     private int idProject;
     private int idPartnerProject;
     private boolean work;
-    private PartnerCommercialMan partnerProject;
-    private Project project;
+    public PartnerCommercialMan partnerProject;
+    public Project project;
 
     @Id
     @GeneratedValue(generator="increment")

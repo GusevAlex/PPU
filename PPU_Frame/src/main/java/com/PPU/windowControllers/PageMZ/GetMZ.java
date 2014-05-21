@@ -2,9 +2,11 @@ package com.PPU.windowControllers.PageMZ;
 
 import com.PPU.DB.tables.*;
 import com.PPU.DB.workLogic.*;
+import com.PPU.composite.ButtonOpenList;
 import com.PPU.composite.DualObjectListBox;
 import com.PPU.composite.ObjectListBox;
 import com.PPU.funcControl.NotificationService;
+import com.PPU.windowControllers.ButtonClickInterf;
 import com.PPU.windowControllers.FileController;
 import com.PPU.windowControllers.GetListParam;
 import com.PPU.windowControllers.report.ComandMZDataSource;
@@ -474,7 +476,7 @@ public class GetMZ implements GetListParam {
 
             List user = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
             setLevel(new WorkWithMZ().getUserRole(mz, (UsersMunMan) user.get(0)));
-//            setLevel(4);
+           // setLevel(4);
 
             String levelName = new String();
             namePrevisLevel = "";
@@ -499,6 +501,7 @@ public class GetMZ implements GetListParam {
                     nameLevel = "Статус МЗ: Выполняется";
                     break;
             }
+            nameNextLevel = "";
 
             if (!levelName.equals(""))
                 nameNextLevel = "Сохранить и перевести на статус \"" + levelName + "\"";
@@ -530,9 +533,15 @@ public class GetMZ implements GetListParam {
                     statusName = "Вы являетесь руководителем";
             else
                 if (levelUser == 3)
-                    statusName = "Вы являетесь заказчиком и руководиетелем";
+                    statusName = "Вы являетесь заказчиком и руководителем";
             else
+                if (levelUser == 4)
                     statusName = "Вы являетесь исполнителем";
+            else
+                if (levelUser == 6)
+                    statusName = "Вы являетесь заказчиком, руководиетелм и исполнителем";
+            else
+                statusName = "Вы не работате по этому муниципальному заданию";
 
 
             if (getEndCommandMZ().size() != 0)
@@ -586,7 +595,18 @@ public class GetMZ implements GetListParam {
 
             parametr = parametrsList.toArray();
 
-            valuesParametrForMZ = (Object) new Object [0];
+//            Object [] valObj = new Object[mz.getTypeServiceMZ().getDefaultParametrsServiceMZs().size()];
+//
+//            int i = 0;
+//            for (DefaultParametrsServiceMZ def : mz.getTypeServiceMZ().getDefaultParametrsServiceMZs())
+//            {
+//                ValuesParametrForMZ valMZ = new ValuesParametrForMZ();
+//                valMZ.setIdParametr(def.getIdParametr());
+//                valMZ.setParametr((Parametrs) new WorkWithParametrs().getEntity(def.getIdParametr()));
+//                valObj[i++] = valMZ;
+//            }
+
+            valuesParametrForMZ = (Object) new Object[0];
             resourcesMZ = (Object) new Object []{new ResourcesMZ()};
             correctionsMZ = (Object) new Object [0];
 
@@ -650,9 +670,35 @@ public class GetMZ implements GetListParam {
 
         if (resourcesMZ1.getRightListbox().getObjs().length == 0)
         {
-            Messagebox.show("Не выбраны ресурся!", "Error", Messagebox.OK, Messagebox.ERROR);
+            Messagebox.show("Не выбраны ресурсы!", "Error", Messagebox.OK, Messagebox.ERROR);
             success = false;
         }
+
+        for (Object obj : new WorkWithParametrs().getListRows())
+            if (((Parametrs)obj).getType() == 'd')
+            {
+                Float res = 0f;
+                for (Object o : (Object[]) valuesParametrForMZ)
+                {
+                    if (((ValuesParametrForMZ)o).getParametr().equals(obj))
+                    {
+                        res+=new Float(((ValuesParametrForMZ)o).getValue());
+                    }
+                }
+
+                for (Object lim : (Object[]) limitsMZ)
+                {
+                    if (((LimitsMZ)lim).getParametr().equals(obj))
+                    {
+                        Float limVal = new Float(((LimitsMZ)lim).getValue());
+                        if (limVal<=res)
+                        {
+                            Messagebox.show("Сумма показателей параметра \""+((Parametrs) obj).getName()+"\" превышает ограничение ("+limVal+")", "Error", Messagebox.OK, Messagebox.ERROR);
+                            break;
+                        }
+                    }
+                }
+            }
 
         return success;
     }
@@ -776,7 +822,7 @@ public class GetMZ implements GetListParam {
                 }
             }
 
-		}
+        }
 	}
 
     @Command
@@ -786,7 +832,7 @@ public class GetMZ implements GetListParam {
 
         Clients.showBusy("Идет сохранение...");
 
-        if (level == 1 || level == 0)
+        if (level == 1 || level == 0  || level == 5 || level == 6)
         {
             PartnersMZ leaderLocal = (PartnersMZ) leaderMZ1.getObjs()[leaderMZ1.getSelectedIndex()];
             mz.setLeader(leaderLocal);
@@ -798,11 +844,30 @@ public class GetMZ implements GetListParam {
         for (int i=0; i<objs.length; i++)
             comLocal[i] = (ComandMZ) objs[i];
 
+        for (ComandMZ com : oldMz.getComandMZ())
+        {
+            boolean isFind = false;
+
+            for (ComandMZ com2 : comLocal)
+                if (com2.equals(com))
+                {
+                    isFind = true;
+                    break;
+                }
+
+            if (!isFind)
+                try {
+                    new WorkWithCommandMz().deleteEntity(com);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+        }
+
         mz.setComandMZ(new LinkedHashSet<ComandMZ>(Arrays.asList(comLocal)));
 
         mz.setValuesParametrForMZ(new LinkedHashSet<ValuesParametrForMZ>((List) valModelList.getInnerList()));
 
-        if (program2.getSelectedIndex()!=-1 && (level==1 || level == 0))
+        if (program2.getSelectedIndex()!=-1 && (level==1 || level == 0 || level == 5 || level == 6))
             mz.setProgram((ProgramMZ) program2.getObjs()[program2.getSelectedIndex()]);
 
         mz.setLimitsMZ(new LinkedHashSet<LimitsMZ>((List) limitModelList.getInnerList()));
@@ -819,7 +884,35 @@ public class GetMZ implements GetListParam {
         for (int i=0; i<objs.length; i++)
         {
             res[i] = new ResourcesMZ();
+            List list = new WorkWithResourcesMZ().findAndGetAllRow("id_mz;id_provider_resources", ""+mz.getId()+";"+((Providers) objs[i]).getId());
+
+            if (list.size() != 0)
+            {
+                res[i].setId(((ResourcesMZ)list.get(0)).getId());
+            }
+
             res[i].setProviders((Providers) objs[i]);
+            res[i].setIdProviderResources(((Providers) objs[i]).getId());
+            res[i].setIdMZ(mz.getId());
+        }
+
+        for (ResourcesMZ com : oldMz.getResourcesMZ())
+        {
+            boolean isFind = false;
+
+            for (ResourcesMZ com2 : res)
+                if (com2.equals(com))
+                {
+                    isFind = true;
+                    break;
+                }
+
+            if (!isFind)
+                try {
+                    new WorkWithResourcesMZ().deleteEntity(com);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
         }
 
         mz.setResourcesMZ(new LinkedHashSet<ResourcesMZ>(Arrays.asList(res)));
@@ -887,12 +980,20 @@ public class GetMZ implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        onClickBtn1(comp);
         mz.setStatus(2);
+        onClickBtn1(comp);
+
 
 		Map arg = new HashMap<String, Object>(){
 			{
 				put("mz", mz);
+                put("clickBut", new ButtonClickInterf() {
+                    @Override
+                    public void click(Textbox textbox) {
+                        NotificationService.revertNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                    }
+                });
+
 			}
 		};
 
@@ -901,9 +1002,9 @@ public class GetMZ implements GetListParam {
         wind1.addEventListener("onClose", new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
-                String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                NotificationService.revertNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+//                String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                NotificationService.revertNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
             }
         });
 
@@ -918,6 +1019,12 @@ public class GetMZ implements GetListParam {
         Map arg = new HashMap<String, Object>(){
             {
                 put("mz", mz);
+                put("clickBut", new ButtonClickInterf() {
+                    @Override
+                    public void click(Textbox textbox) {
+                        NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                    }
+                });
             }
         };
 
@@ -926,9 +1033,9 @@ public class GetMZ implements GetListParam {
         wind1.addEventListener("onClose", new EventListener<Event>() {
             @Override
             public void onEvent(Event event) throws Exception {
-                String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+//                String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
             }
         });
         wind1.doModal();
@@ -1104,6 +1211,7 @@ public class GetMZ implements GetListParam {
 
 			objs[((Object [])valuesParametrForMZ).length] = new WorkWithValuesParametrForMZ().getEmptyEntity();
             ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setParametr((Parametrs)obj);
+            ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setIdParametr(((Parametrs)obj).getId());
             ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setValue("");
             ((ValuesParametrForMZ)(objs[((Object [])valuesParametrForMZ).length])).setDateRecValue(Calendar.getInstance().getTime());
 
@@ -1114,7 +1222,7 @@ public class GetMZ implements GetListParam {
 
             try
             {
-            mz.getValuesParametrForMZ().add(((ValuesParametrForMZ [])objs)[objs.length-1]);
+                mz.getValuesParametrForMZ().add(((ValuesParametrForMZ [])objs)[objs.length-1]);
             }
             catch (Exception e)
             {
@@ -1144,6 +1252,7 @@ public class GetMZ implements GetListParam {
 
             objs[((Object [])limitsMZ).length] = new WorkWithLimitsMz().getEmptyEntity();
             ((LimitsMZ)(objs[((Object [])limitsMZ).length])).setParametr((Parametrs) obj);
+            ((LimitsMZ)(objs[((Object [])limitsMZ).length])).setIdParametr(((Parametrs) obj).getId());
             ((LimitsMZ)(objs[((Object [])limitsMZ).length])).setValue("");
 
             setLimitsMZ(objs);
@@ -1290,6 +1399,12 @@ public class GetMZ implements GetListParam {
                 Map arg = new HashMap<String, Object>(){
                     {
                         put("mz", mz);
+                        put("clickBut", new ButtonClickInterf() {
+                            @Override
+                            public void click(Textbox textbox) {
+                                NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                            }
+                        });
                     }
                 };
 
@@ -1298,9 +1413,9 @@ public class GetMZ implements GetListParam {
                 wind1.addEventListener("onClose", new EventListener<Event>() {
                     @Override
                     public void onEvent(Event event) throws Exception {
-                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
-
-                        NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+//                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                        NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
                     }
                 });
 

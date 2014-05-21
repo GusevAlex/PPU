@@ -146,9 +146,9 @@
                                             <div style="width:100%">
                                                 <jasperreport id="report" height="0px" style="display: none;" />
 
-                                                <hlayout style="margin-left: 65%;" >
-                                                    <button id="showTimeline" image="/images/tollbar/report2.jpg" onClick='@command("showTimeline")' label="Временная линия МЗ" />
-                                                    <button id="showReport" image="/images/tollbar/report2.jpg" onClick='@command("showReport")' label="Получить отчет по МЗ"  />
+                                                <hlayout style="margin-left: 68%;" >
+                                                    <button id="showTimeline" onClick='@command("showTimeline")' label="Временная линия МЗ" style='height: 38px;' />
+                                                    <button id="showReport" image="/images/tollbar/report2.png" onClick='@command("showReport")' label="Получить отчет по МЗ"  />
                                                 </hlayout>
                                             </div>
 
@@ -158,12 +158,12 @@
                                                     <column width="50%" />
                                                 </columns>
                                                 <rows>
-                                                    <row>Название : <textbox id="name" value="@bind(vm.mz.name)" cols="30" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3)) ? false : true}" /></row>
-                                                    <row>Дата начала : <datebox id="startDate" value="@bind(vm.mz.startDate)" cols="12" format="short" disabled="${((vm.level == 1) ||(vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
+                                                    <row>Название : <textbox id="name" value="@bind(vm.mz.name)" cols="30" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3) || (vm.level == 6)) ? false : true}" /></row>
+                                                    <row>Дата начала : <datebox id="startDate" value="@bind(vm.mz.startDate)" cols="12" format="short" disabled="${((vm.level == 1) ||(vm.level == 0) || (vm.level == 3) || (vm.level == 6)) ? false : true}"/></row>
                                                     <row>Дата окончания : <datebox id="expirationDate" value="@bind(vm.mz.expirationDate)" cols="12" format="short" disabled="${((vm.level == 1) || (vm.level == 0) || (vm.level == 3)) ? false : true}"/></row>
-                                                    <row>Описание : <textbox id="description" value="@bind(vm.mz.description)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
-                                                    <row>Потребитель муниципальной услуги : <textbox id="consumers" value="@bind(vm.mz.consumers)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
-                                                    <row>Бюджет : <doublespinner id="budget" value="@bind(vm.mz.budget)" cols="12" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0)) ? false : true}"/></row>
+                                                    <row>Описание : <textbox id="description" value="@bind(vm.mz.description)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0) || (vm.level == 5) || (vm.level == 6)) ? false : true}"/></row>
+                                                    <row>Потребитель муниципальной услуги : <textbox id="consumers" value="@bind(vm.mz.consumers)" rows="6" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0) || (vm.level == 5) || (vm.level == 6)) ? false : true}"/></row>
+                                                    <row>Бюджет : <doublespinner id="budget" value="@bind(vm.mz.budget)" cols="12" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 0) || (vm.level == 5) || (vm.level == 6)) ? false : true}"/></row>
 
                                                     <row>
                                                         <cell colspan="2">
@@ -184,7 +184,7 @@
 															<caption label="Команда, выполняющая МЗ" />
 																<hbox>
                                                                     <vlayout>
-                                                                        <dualObjectListBox worker="WorkWithCommandMz" rightList="@bind(vm.comandMZ)"  disabled="${((vm.level == 2) || (vm.level == 3)) ? false : true}"
+                                                                        <dualObjectListBox worker="WorkWithCommandMz" rightList="@bind(vm.comandMZ)"  disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 5) || (vm.level == 6)) ? false : true}"
                                                                                            id="comandMZ1"   load="true" />
 
                                                                         <groupbox mold="3d" width="100%" style="margin-top: 100px;" open="false">
@@ -237,7 +237,7 @@
 
 													<row>Тип муниципального задания :
 
-														<combobox id="typeService1" disabled="${((vm.level == 0) || (vm.level == 1)) ? false : true}">
+														<combobox id="typeService1" disabled="${((vm.level == 0) || (vm.level == 1) || (vm.level == 5) || (vm.level == 6)) ? false : true}">
 
 															<zk forEach="${vm.listTypeService}" >
 																<comboitem label="${each.name}">
@@ -278,9 +278,9 @@
 															<hbox>
                                                                 <vlayout>
                                                                     <toolbar style="margin-bottom: -5px;">
-                                                                        <toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новое ограничение" onClick='@command("onAddNewLimitByList")' disabled="${(vm.level == 4) ? false : true}" />
-                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новое ограничение, уже имеющее значение" onClick='@command("onAddOldLimitByList")' disabled="${(vm.level == 4) ? false : true}"  />
-                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                        <toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новое ограничение" onClick='@command("onAddNewLimitByList")' disabled="${(vm.level == 2 || vm.level == 3 || vm.level == 5 || vm.level == 6) ? false : true}" />
+                                                                        <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новое ограничение, уже имеющее значение" onClick='@command("onAddOldLimitByList")' disabled="${(vm.level == 2 || vm.level == 3 ||  vm.level == 5 || vm.level == 6) ? false : true}"  />
+                                                                        <toolbarbutton image="/images/tollbar/add-button.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 2 || vm.level == 3 ||  vm.level == 5 || vm.level == 6) ? false : true}"  />
                                                                     </toolbar>
                                                                     <grid id="limitsMZ1" model="@bind(vm.limitModelList)" >
                                                                         <columns>
@@ -291,7 +291,7 @@
                                                                             <template name="model">
                                                                                 <row>
                                                                                     <label value="${each.getParametr().getName()}" />
-                                                                                    <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${(vm.level == 4) ? false : true}"  />
+                                                                                    <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${((vm.level == 2) || (vm.level == 3) || (vm.level == 5) || (vm.level == 6)) ? false : true}"  />
                                                                                 </row>
                                                                             </template>
                                                                         </rows>
@@ -316,8 +316,8 @@
 																		<toolbar style="margin-bottom: -5px;">
 																			<toolbarbutton image="/images/tollbar/document_add.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParamByList")' disabled="${(vm.level == 4) ? false : true}" />
 																			<toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр, уже имеющий значение" onClick='@command("onAddOldParamByList")' disabled="${(vm.level == 4) ? false : true}" />
-                                                                            <toolbarbutton image="/images/tollbar/edit.gif" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
-                                                                            <toolbarbutton image="/images/tollbar/graph2.jpg" tooltiptext="График параметров" onClick='@command("onShowChartParam")' />
+                                                                            <toolbarbutton image="/images/tollbar/add-button.png" tooltiptext="Добавить новый параметр" onClick='@command("onAddNewParam")' disabled="${(vm.level == 4) ? false : true}"  />
+                                                                            <toolbarbutton image="/images/tollbar/graph2.png" tooltiptext="График параметров" onClick='@command("onShowChartParam")' />
                                                                         </toolbar>
 																		<grid id="valuesParametrForMZ1" model="@bind(vm.valModelList)" >
 																			<columns>
@@ -329,7 +329,7 @@
 																				<template name="model">
 																					<row>
 																						<label value="${each.getParametr().getName()}" />
-                                                                                        <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${(vm.level == 4) ? false : true}" />
+                                                                                        <myTextBox obj="${each}" value="@bind(self.obj.value)" disabled="${((vm.level == 4) || (vm.level == 5) || (vm.level == 6)) ? false : true}" />
                                                                                         <datebox value="${each.getDateRecValue()}" disabled="true" format="dd-MM-yy" />
 																					</row>
 																				</template>
@@ -351,7 +351,7 @@
 															<groupbox >
 															<caption label="Ресурсы МЗ" />
 																<hbox>
-																	<dualObjectListBox worker="WorkWithProviders" rightList="@bind(vm.providers)" disabled="${(vm.level == 4) ? false : true}"
+																	<dualObjectListBox worker="WorkWithProviders" rightList="@bind(vm.providers)" disabled="${((vm.level == 4) || (vm.level == 5) || (vm.level == 6)) ? false : true}"
                                                                                        id="resourcesMZ1" load="true" />
 																</hbox>
 
@@ -403,7 +403,7 @@
                                                 <button id="btn1" label="Сохранить" onClick='@command("onClickBtn1")' />
                                                 <button id="btn2" label="${vm.nameNextLevel}" onClick='@command("onClickBtn2")' if='${!vm.nameNextLevel.equals("")}' />
                                                 <button id="btn3" label="${vm.namePrevisLevel}" onClick='@command("onClickBtn3")' if='${!vm.namePrevisLevel.equals("")}' />
-                                                <button id="btn4" label="Завершить задание" onClick='@command("onClickBtn4")' if='${((vm.level==4) &amp;&amp; (vm.mz.status==4))}' />
+                                                <button id="btn4" label="Завершить работу над заданием" onClick='@command("onClickBtn4")' if='${((vm.level==4) &amp;&amp; (vm.mz.status==4))}' />
                                                 <button id="btn5" label="Закрыть задание" onClick='@command("onClickBtn5")' if='${(vm.level==2 || vm.level==3) &amp;&amp; vm.mz.status==4}' />
                                             </hlayout>
                                         </panelchildren>

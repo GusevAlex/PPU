@@ -102,7 +102,7 @@ public class MainPageController {
 
         int idParam = 0;
 
-		if (pathAdress.equals("pages/pagesMZ/MZ.zul") || pathAdress.equals("pages/pagesMZ/timeline.zul") )
+		if (pathAdress.equals("/pages/pagesMZ/MZ.zul") || pathAdress.equals("/pages/pagesMZ/timeline.zul") )
 		{
 			int id = new Integer(Executions.getCurrent().getParameter("id"));
 

@@ -84,7 +84,7 @@ public class TimeLine {
 
             Project Project = (Project) new WorkWithProject().getEntity(new Integer(id));
 
-            discrName=Project.getName();
+            discrName="Для проекта: "+Project.getName();
 
             ParseCorrection parseCorrection = new ParseCorrection();
             Object [] o = Project.getCorrectionsProject().toArray();

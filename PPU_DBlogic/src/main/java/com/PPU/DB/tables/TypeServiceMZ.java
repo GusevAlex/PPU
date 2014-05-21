@@ -46,6 +46,8 @@ public class TypeServiceMZ {
         this.id = id;
     }
 
+    @FieldType(type = 1)
+    @com.PPU.DB.tables.TableAnnot.HeaderName(name = "Название")
     @Column(name="name")
     public String getName() {
         return name;
