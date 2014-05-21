@@ -2,6 +2,10 @@
 		name="ObjectListBox"
 		class="com.PPU.composite.ObjectListBox" ?>
 
+<?component
+        name="dualObjectListBox"
+        class="com.PPU.composite.DualObjectListBox" ?>
+
 <zk>
 	<zscript>
 		<![CDATA[
@@ -12,23 +16,67 @@
 					Integer int2 = 2;
 					Integer int3 = 3;
 					Integer int4 = 4;
+                    Integer int5 = 5;
+
+					boolean visPrevis = (window.numPage == 0) ? true : false;
+					boolean visNext = (window.numPage == window.countPage-1) ? false : true;
                ]]>
 	</zscript>
 
-	<zk switch="${window.listCellContant.colymnType}">
-		<zk case="${int1}">
-			<textbox rows="6" value="" width="370px;" tabindex="11" />
-		</zk>
+	<grid sclass="loginGrid">
+		<rows>
+			<row>
 
-		<zk case="${int2}">
-			<ObjectListBox objs="${window.obj}"
-						   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
-		</zk>
+				<label value="${window.header}"/>
+
+				<label value="${window.numPage+1}/${window.countPage}"/>
+
+			</row>
+
+			<row width="Grid">
+				<cell colspan="2">
+					<zk switch="${window.listCellContant.colymnType}">
+
+						<zk case="${int1}">
+							<textbox id="text" rows="6" value="" width="370px;" tabindex="11" />
+						</zk>
 
 
-	</zk>
 
+						<zk case="${int2}">
+							<ObjectListBox objs="${window.objs}"
+										   id="listboxV" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+						</zk>
 
+                        <zk case="${int3}">
+                            <dualObjectListBox worker="${window.workerName}"
+                                               id="dualListBoxObject" load="true"/>
+                        </zk>
 
+                        <zk case="${int4}">
+                            <doublespinner id="doubleSpinnerBox" value="0" hflex="1" step="0.01" width="200px" />
+                        </zk>
+
+                        <zk case="${int5}">
+                            <spinner value="0" tabindex="10" />
+                        </zk>
+
+					</zk>
+				</cell>
+
+			</row>
+
+			<row>
+				<cell colspan="2">
+					<hlayout>
+						<button id="but1" label="Назад" disabled="${visPrevis}" />
+						<button id="but2" label="Далее" if="${visNext==true}" />
+						<button id="but3" label="Сохранить" if="${visNext==false}" />
+					</hlayout>
+				</cell>
+
+			</row>
+		</rows>
+	</grid>
 
 </zk>

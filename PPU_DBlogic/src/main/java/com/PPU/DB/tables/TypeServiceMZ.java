@@ -60,7 +60,7 @@ public class TypeServiceMZ {
 	@FieldType(type = 3, worker="WorkWithMZ")
 	@HeaderName(name = "Муниципальные задания")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
-    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
         return MZ;
     }
@@ -72,7 +72,7 @@ public class TypeServiceMZ {
 	@FieldType(type = 3, worker="WorkWithDefaultParametrsServiceMZ")
 	@HeaderName(name = "Стандартные параметры для типа МЗ")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "typeServiceMZ")
-    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<DefaultParametrsServiceMZ> getDefaultParametrsServiceMZs() {
         return defaultParametrsServiceMZs;
     }

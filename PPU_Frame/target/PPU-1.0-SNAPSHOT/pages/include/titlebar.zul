@@ -1,26 +1,142 @@
 <hbox width="100%">
 	<!-- Верхнее меню -->
-	<cell align="left" width="23%">
-        <label width="200px" style="font-size: 28px; color: blue;" >ППУ</label>
-        <label width="200px" style="margin-left: 10px; font-size: 14px;" >Портал проектного управления</label>
+	<cell align="left" width="30%">
+        <a href="/index.zul" >
+            <label style="font-size: 28px;color: blue;" >ППУ</label>
+            <label style="margin-left: 5px;font-size: 14px;margin-top: 3px;" >Портал проектного управления</label>
+        </a>
 	</cell>
 
 	<cell align="center" valign="middle" width="100%">
 
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Участники системы"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Участники системы">
+            <attribute name="onClick">   <![CDATA[
+                      Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                     if (((List)obj).size()!=0)
+                        if (((List) obj).get(0) instanceof UsersMunMan)
+                        {
+                            Executions.sendRedirect("/pages/partners/partnersMU.zul");
+                        }
+                        else
+                        if (((List) obj).get(0) instanceof UsersComMan)
+                        {
+                            Executions.sendRedirect("/pages/partners/partnersCommerc.zul");
+                        }
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Программы"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Программы">
+            <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/programs/reviewProgram.zul?loadAll=1");
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Проекты"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="Проекты">
+            <attribute name="onClick">   <![CDATA[
+                     Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                     if (((List)obj).size()!=0)
+                        if (((List) obj).get(0) instanceof UsersMunMan)
+                        {
+                            Executions.sendRedirect("/pages/pagesMZ/viewMz.zul?loadAll=1");
+                        }
+                        else
+                        if (((List) obj).get(0) instanceof UsersComMan)
+                        {
+                            Executions.sendRedirect("/pages/pagesProject/viewProject.zul?loadAll=1");
+                        }
+           ]]>  </attribute>
+                </toolbarbutton>
         <toolbarbutton label="/"/>
-        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ"/>
+        <toolbarbutton style="margin-left: 10px; height: 30px; font-size: 16px; font-style: oblique; font-family: cursive; " label="О ППУ">
+            <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/pagesProject/Project.zul?id="+self.getObj());
+           ]]>  </attribute>
+                </toolbarbutton>
     </cell>
 
-    <cell align="right" valign="middle" width="100%">
-        <div sclass="container">
-            <menubar width="160px">
-                <menu id="user" label="Васильев Евгений" content="#color=#999999" />
-            </menubar>
+    <cell align="right" valign="middle" width="100%" style="padding-right: 3px;">
+        <div sclass="container" width="100%" >
+            <!--<menubar >-->
+                    <toolbarbutton image="/images/tollbar/notMark.png" id="userBut" label="@load(vm.nameUser)" style="font-size: 14px;">
+                        <attribute name="onClick"><![CDATA[
+                        status.open(self, "after_end");
+                    ]]> </attribute>
+                            </toolbarbutton>
+            <!--</menubar>-->
         </div>
     </cell>
+
+    <timer id="timer" delay="1000" repeats="true">
+        <attribute name="onTimer">
+            import com.PPU.DB.tables.*;
+            import com.PPU.DB.workLogic.*;
+
+            String typeOrg = (String) session.getAttribute("type");
+            private String [] notification1 = new String[]{"ghj","yjhg"};
+
+            if (typeOrg != null &amp;&amp; typeOrg.equals("Mun"))
+            {
+                UsersMunMan user = (UsersMunMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+                notification1 = new String[new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()).size()];
+
+                int i = 0;
+                for (Object not : new WorkWithNotificationMU().getLatestNotification(user.getPartnerMZ()))
+                    notification1[i++] = ((NotificationMU)not).getText();
+
+                notif.setModel(new ListModelList(notification1));
+
+                if (notification1.length != 0)
+                    userBut.setImage("/images/tollbar/mark.png");
+                else
+                    userBut.setImage("/images/tollbar/notMark.png");
+            }
+            else
+            {
+                if (typeOrg != null)
+                {
+                    UsersComMan user = (UsersComMan) new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0);
+                    notification1 = new String[user.getPartnerProject().getNotificationComs().size()];
+
+                    int i = 0;
+                    for (Object not : new WorkWithNotificationCom().getLatestNotification(user.getPartnerProject()))
+                        notification1[i++] = ((NotificationCom)not).getText();
+
+                notif.setModel(new ListModelList(notification1));
+                }
+            }
+        </attribute>
+    </timer>
+
+    <zk xmlns:n="native">
+    <popup id="status" width="200px">
+        <vlayout>
+            <groupbox>
+            <caption label="Оповещения" />
+                <hbox>
+                    <vlayout>
+                        <grid id="notif" model="${notification1}">
+                        <!--<vlayout id="vlayout" children="@load(notification1)">-->
+                            <!--<zk forEach="${notification1}" >-->
+                            <template name="model">
+                                <row>
+                                <html content="${each}" />
+                                </row>
+                                <!--<n:hr />-->
+                            </template>
+                            <!--</zk>-->
+
+                        <!--</vlayout>-->
+                        </grid>
+                    <a href="/pages/notification/myNotification.zul">Все оповещения</a>
+                    </vlayout>
+                </hbox>
+            </groupbox>
+            <a href="/pages/authoriz/authoriz.zul">Выйти</a>
+            <a href="/pages/include/pages/userConfigPage.zul">Личный кабинет</a>
+        </vlayout>
+    </popup>
+    </zk>
+
 </hbox>

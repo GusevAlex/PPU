@@ -1,0 +1,13 @@
+<?component
+        name="viewObject"
+        class="com.PPU.composite.ViewObject" ?>
+<zk>
+    <viewObject title="Окно" border="normal" width="460px"
+                     position="center,center" closable="true"
+                     action="show: slideDown;hide: slideUp">
+
+
+
+    </viewObject>
+
+</zk>

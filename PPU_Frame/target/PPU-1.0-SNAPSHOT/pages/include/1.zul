@@ -1,0 +1,12 @@
+<zk>
+
+    <window title="Окно" border="normal" width="600px" sizable="true"
+                     position="center,center" closable="true"
+                     action="show: slideDown;hide: slideUp">
+        <label value="dsf" id="asd"/>
+
+
+    </window>
+
+
+</zk>

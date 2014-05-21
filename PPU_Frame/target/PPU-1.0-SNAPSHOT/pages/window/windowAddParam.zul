@@ -1,0 +1,36 @@
+<zk>
+    <window id="window" title="Окно" border="normal" width="460px"
+            position="center,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+
+        <grid>
+            <columns>
+                <column hflex="1" />
+                <column hflex="1" />
+            </columns>
+            <rows>
+                <row>
+                    <label value="Тип параметра" />
+                    <textbox id="inputTextBox" value="" cols="30" />
+                </row>
+                <row>
+                    <label value="Тип параметра" />
+                    <combobox>
+                        <comboitem label="Строка" />
+                        <comboitem label="Число" />
+                    </combobox>
+                </row>
+            </rows>
+    </grid>
+
+        <hlayout>
+            <button label="ОК" >
+                <attribute name="onClick">
+                    window.onClose();
+                </attribute>
+            </button>
+        </hlayout>
+
+    </window>
+
+</zk>

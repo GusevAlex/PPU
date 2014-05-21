@@ -424,6 +424,10 @@ public class GetMZ implements GetListParam {
             name = MZ.getName();
             startDate = MZ.getStartDate();
             expirationDate = MZ.getExpirationDate();
+
+            if (Calendar.getInstance().getTime().before(expirationDate))
+                Messagebox.show("Задание все еще не закрыто! Дата окончания уже прошла", "Error", Messagebox.OK, Messagebox.ERROR);
+
             description = MZ.getDescription();
             budget = MZ.getBudget();
 
@@ -496,7 +500,7 @@ public class GetMZ implements GetListParam {
                     nameLevel = "Статус МЗ: На согласовании";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
                     break;
-                case 5 : levelName = "";
+                case 5 : levelName = "Завершено";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
                     nameLevel = "Статус МЗ: Выполняется";
                     break;
@@ -825,13 +829,8 @@ public class GetMZ implements GetListParam {
         }
 	}
 
-    @Command
-    public void onClickBtn1(@ContextParam(ContextType.COMPONENT) Component comp)
+    public void saveMZ()
     {
-        if (!checkAllFields()) return;
-
-        Clients.showBusy("Идет сохранение...");
-
         if (level == 1 || level == 0  || level == 5 || level == 6)
         {
             PartnersMZ leaderLocal = (PartnersMZ) leaderMZ1.getObjs()[leaderMZ1.getSelectedIndex()];
@@ -857,6 +856,7 @@ public class GetMZ implements GetListParam {
 
             if (!isFind)
                 try {
+                    com.setWork(true);
                     new WorkWithCommandMz().deleteEntity(com);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -937,7 +937,18 @@ public class GetMZ implements GetListParam {
             }
         }
 
-		compareAndSaveCorrection();
+        compareAndSaveCorrection();
+    }
+
+    @Command
+    public void onClickBtn1(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        if (!checkAllFields()) return;
+
+        Clients.showBusy("Идет сохранение...");
+
+        saveMZ();
+        Executions.sendRedirect("");
 
         Clients.clearBusy();
     }
@@ -971,6 +982,7 @@ public class GetMZ implements GetListParam {
                     NotificationService.addNotifHtmlForAdd(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus());
                 }
         }
+        Executions.sendRedirect("");
 
 //        compareAndSaveCorrection();
     }
@@ -980,8 +992,8 @@ public class GetMZ implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        mz.setStatus(2);
-        onClickBtn1(comp);
+//        mz.setStatus(2);
+//        onClickBtn1(comp);
 
 
 		Map arg = new HashMap<String, Object>(){
@@ -991,6 +1003,14 @@ public class GetMZ implements GetListParam {
                     @Override
                     public void click(Textbox textbox) {
                         NotificationService.revertNotifHtmlForAdd(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                        mz.setStatus(2);
+
+                        try {
+                            new WorkWithMZ().changeEntity(mz);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        Executions.sendRedirect("");
                     }
                 });
 
@@ -1023,6 +1043,7 @@ public class GetMZ implements GetListParam {
                     @Override
                     public void click(Textbox textbox) {
                         NotificationService.addNotifHtmlForRevertComandWork(mz.getLeader(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                        Executions.sendRedirect("");
                     }
                 });
             }
@@ -1044,7 +1065,45 @@ public class GetMZ implements GetListParam {
     @Command
     public void onClickBtn5(@ContextParam(ContextType.COMPONENT) Component comp)
     {
+        mz.setStatus(5);
 
+        try {
+            new WorkWithMZ().changeEntity(mz);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Executions.sendRedirect("");
+    }
+
+    @Command
+    public void onClickBtn6(@ContextParam(ContextType.COMPONENT) Component comp)
+    {
+        Map arg = new HashMap<String, Object>(){
+            {
+                put("mz", mz);
+                put("clickBut", new ButtonClickInterf() {
+                    @Override
+                    public void click(Textbox textbox) {
+                        NotificationService.revertEndNotifHtmlForRevertComandWork(((UsersMunMan)new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login")).get(0)).getPartnerMZ(),
+                                 "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), textbox.getText());
+                        Executions.sendRedirect("");
+                    }
+                });
+            }
+        };
+
+        final Window wind1 = (Window) Executions.createComponents("/pages/window/inputTextDialog.zul", null,arg);
+        wind1.setTitle("Напишите причину возврата");
+        wind1.addEventListener("onClose", new EventListener<Event>() {
+            @Override
+            public void onEvent(Event event) throws Exception {
+//                        String text = ((Textbox) wind1.getChildren().get(0)).getText();
+//
+//                        NotificationService.revertNotifHtmlForRevertComandWork(com.getPartnerMZ(), "/pages/pagesMZ/MZ.zul", mz, mz.getStatus(), text);
+            }
+        });
+
+        wind1.doModal();
     }
 
     @Command
@@ -1387,8 +1446,8 @@ public class GetMZ implements GetListParam {
         {
             if (comandMZ2.equals(com))
             {
-                com.setWork(true);
-                comandMZ2.setWork(true);
+                com.setWork(false);
+                comandMZ2.setWork(false);
 
                 try {
                     new WorkWithCommandMz().changeEntity(comandMZ2);

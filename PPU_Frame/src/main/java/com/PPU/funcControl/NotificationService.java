@@ -45,7 +45,8 @@ public class NotificationService {
                     +adressPage+"?id="+mz.getId()+"\">"+mz.getName()+"</a></div>";
 
             NotificationMU notificationMU = new NotificationMU();
-            notificationMU.setPartners(partnersMZ);
+            notificationMU.setReceiver(partnersMZ.getId());
+//            notificationMU.setPartners(partnersMZ);
             notificationMU.setRead(false);
             notificationMU.setText(ret);
 
@@ -87,7 +88,8 @@ public class NotificationService {
                     +adressPage+"?id="+mz.getId()+"\">"+mz.getName()+"</a>"+".\n Возвращено по причине: "+reason+"</div>";
 
             NotificationMU notificationMU = new NotificationMU();
-            notificationMU.setPartners(partnersMZ);
+            notificationMU.setReceiver(partnersMZ.getId());
+            //notificationMU.setPartners(partnersMZ);
             notificationMU.setRead(false);
             notificationMU.setText(ret);
 
@@ -114,7 +116,8 @@ public class NotificationService {
                     +adressPage+"?id="+mz.getId()+"\">"+mz.getName()+"</a>, "+ partnersMZ.getName()+" была завершена работа"+"</div>";
 
             NotificationMU notificationMU = new NotificationMU();
-            notificationMU.setPartners(partnersMZ);
+            notificationMU.setReceiver(partnersMZ.getId());
+//            notificationMU.setPartners(partnersMZ);
             notificationMU.setRead(false);
             notificationMU.setText(ret);
 
@@ -163,11 +166,76 @@ public class NotificationService {
             String port = ( Executions.getCurrent().getServerPort() == 80 ) ? "" : (":" + Executions.getCurrent().getServerPort());
             String url = Executions.getCurrent().getScheme() + "://" + Executions.getCurrent().getServerName() + port + Executions.getCurrent().getContextPath();
 
-            ret+="<div>Вам на "+levelName+" вернулось Муниципальное задание <a href=\""+url
+            ret+="<div>Вам от \""+partnersMZ.getName()+"\" на "+levelName+" вернулось Муниципальное задание <a href=\""+url
                     +adressPage+"?id="+mz.getId()+"\">"+mz.getName()+"</a>"+".\n Возвращено по причине: "+reason+"</div>";
 
             NotificationMU notificationMU = new NotificationMU();
-            notificationMU.setPartners(partnersMZ);
+            notificationMU.setReceiver(mz.getLeader().getId());
+//            notificationMU.setPartners(mz.getLeader());
+            notificationMU.setRead(false);
+            notificationMU.setText(ret);
+
+            for (ComandMZ com : mz.getComandMZ())
+                if (com.equals(partnersMZ))
+                {
+                    com.setWork(true);
+                    try {
+                        new WorkWithCommandMz().changeEntity(com);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            try {
+                new WorkWithNotificationMU().addEntity((Object)notificationMU);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return ret;
+    }
+
+    public static String revertEndNotifHtmlForRevertComandWork(PartnersMZ partnersMZ, String adressPage, MZ mz, int level, String reason)
+    {
+        String ret = "";
+
+        if (partnersMZ!=null && !adressPage.equals(""))
+        {
+            String levelName = "";
+
+            switch (level)
+            {
+                case 1 : levelName = "Создание";
+                    break;
+                case 2 : levelName = "Планирование";
+                    break;
+                case 3 : levelName = "На согласование";
+                    break;
+                case 4 : levelName = "Выполнение";
+                    break;
+                case 5 : levelName = "";
+                    break;
+            }
+            String port = ( Executions.getCurrent().getServerPort() == 80 ) ? "" : (":" + Executions.getCurrent().getServerPort());
+            String url = Executions.getCurrent().getScheme() + "://" + Executions.getCurrent().getServerName() + port + Executions.getCurrent().getContextPath();
+
+            ret+="<div>Исполнитель \""+partnersMZ.getName()+"\" отклонил Муниципальное задание <a href=\""+url
+                    +adressPage+"?id="+mz.getId()+"\">"+mz.getName()+"</a>"+".\n Возвращено по причине: "+reason+"</div>";
+
+            for (ComandMZ com : mz.getComandMZ())
+                if (com.getPartnerMZ().equals(partnersMZ))
+                {
+                    try {
+                        new WorkWithCommandMz().deleteEntity(com);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            NotificationMU notificationMU = new NotificationMU();
+            notificationMU.setReceiver(mz.getLeader().getId());
+//            notificationMU.setPartners(mz.getLeader());
             notificationMU.setRead(false);
             notificationMU.setText(ret);
 
@@ -222,6 +290,7 @@ public class NotificationService {
                     +adressPage+"?id="+project.getId()+"\">"+project.getName()+"</a></div>";
 
             NotificationCom notificationCom = new NotificationCom();
+            notificationCom.setReceiver(partnerCommercialMan.getId());
             notificationCom.setPartners(partnerCommercialMan);
             notificationCom.setRead(false);
             notificationCom.setText(ret);
@@ -264,7 +333,8 @@ public class NotificationService {
                     +adressPage+"?id="+project.getId()+"\">"+project.getName()+"</a>"+".\n Возвращено по причине: "+reason+"</div>";
 
             NotificationCom notificationCom = new NotificationCom();
-            notificationCom.setPartners(partnerCommercialMan);
+            notificationCom.setReceiver(partnerCommercialMan.getId());
+//            notificationCom.setPartners(partnerCommercialMan);
             notificationCom.setRead(false);
             notificationCom.setText(ret);
 
@@ -291,6 +361,7 @@ public class NotificationService {
                     +adressPage+"?id="+project.getId()+"\">"+project.getName()+"</a>, "+ partnerCommercialMan.getName()+" была завершена работа"+"</div>";
 
             NotificationCom notificationCom = new NotificationCom();
+            notificationCom.setReceiver(partnerCommercialMan.getId());
             notificationCom.setPartners(partnerCommercialMan);
             notificationCom.setRead(false);
             notificationCom.setText(ret);
@@ -340,11 +411,12 @@ public class NotificationService {
             String port = ( Executions.getCurrent().getServerPort() == 80 ) ? "" : (":" + Executions.getCurrent().getServerPort());
             String url = Executions.getCurrent().getScheme() + "://" + Executions.getCurrent().getServerName() + port + Executions.getCurrent().getContextPath();
 
-            ret+="<div>Вам на "+levelName+" вернулся Проект <a href=\""+url
+            ret+="<div>Вам от \""+partnerCommercialMan.getName()+"\" на "+levelName+" вернулся Проект <a href=\""+url
                     +adressPage+"?id="+project.getId()+"\">"+project.getName()+"</a>"+".\n Возвращено по причине: "+reason+"</div>";
 
             NotificationCom notificationCom = new NotificationCom();
-            notificationCom.setPartners(partnerCommercialMan);
+            notificationCom.setReceiver(project.getLeader().getId());
+//            notificationCom.setPartners(project.getLeader());
             notificationCom.setRead(false);
             notificationCom.setText(ret);
 

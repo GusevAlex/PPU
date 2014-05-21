@@ -1,3 +1,4 @@
+<?page title="Вход в систему" contentType="text/html;charset=UTF-8" ?>
 <zk xmlns:c="client">
     <vlayout >
         <window id="loginWin" title="Вход в систему" width="300px" visible="true"

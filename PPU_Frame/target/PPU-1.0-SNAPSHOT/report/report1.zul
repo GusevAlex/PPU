@@ -1,0 +1,8 @@
+<window title="Report" border="normal" width="800px" height="600px" closable="true" mode="modal">
+    <jasperreport id="report" height="600px" xmlns:ca="http://www.zkoss.org/2005/zk/client/attribute"
+                  ca:onreadystatechange ='alert(dfgdfgdfgdfgdfg)' ca:onload ="alert('2')"/>
+
+    <hlayout>
+        Export Report to <button label="PDF"  /><button label="RTF"  />
+    </hlayout>
+</window>

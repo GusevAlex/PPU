@@ -424,6 +424,9 @@ public class GetProject implements GetListParam {
             name = Project.getName();
             startDate = Project.getStartDate();
             expirationDate = Project.getExpirationDate();
+            if (Calendar.getInstance().getTime().before(expirationDate))
+                Messagebox.show("Задание все еще не закрыто! Дата окончания уже прошла", "Error", Messagebox.OK, Messagebox.ERROR);
+
             description = Project.getDescription();
             budget = Project.getBudget();
 
@@ -496,7 +499,7 @@ public class GetProject implements GetListParam {
                     nameLevel = "Статус проекта: На согласовании";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
                     break;
-                case 5 : levelName = "";
+                case 5 : levelName = "Завершено";
                     namePrevisLevel = "Откатить на статус \"Планирование\"";
                     nameLevel = "Статус проекта: Выполняется";
                     break;
@@ -930,6 +933,8 @@ public class GetProject implements GetListParam {
 		compareAndSaveCorrection();
 
         Clients.clearBusy();
+
+        Executions.sendRedirect("");
     }
 
     @Command
@@ -961,6 +966,7 @@ public class GetProject implements GetListParam {
                     NotificationService.addNotifHtmlForAddCom(com.getPartnerProject(), "/pages/pagesProject/Project.zul", project, project.getStatus());
                 }
         }
+        Executions.sendRedirect("");
 
 //        compareAndSaveCorrection();
     }
@@ -970,8 +976,8 @@ public class GetProject implements GetListParam {
     {
         if (!checkAllFields()) return;
 
-        onClickBtn1(comp);
-        project.setStatus(2);
+//        onClickBtn1(comp);
+
 
 		Map arg = new HashMap<String, Object>(){
 			{
@@ -980,6 +986,14 @@ public class GetProject implements GetListParam {
                     @Override
                     public void click(Textbox textbox) {
                         NotificationService.revertNotifHtmlForAddCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), textbox.getText());
+                        project.setStatus(2);
+
+                        try {
+                            new WorkWithProject().changeEntity(project);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        Executions.sendRedirect("");
                     }
                 });
 			}
@@ -998,6 +1012,7 @@ public class GetProject implements GetListParam {
 
         wind1.doModal();
 
+
 //        compareAndSaveCorrection();
     }
 
@@ -1011,6 +1026,7 @@ public class GetProject implements GetListParam {
                     @Override
                     public void click(Textbox textbox) {
                         NotificationService.addNotifHtmlForRevertComandWorkCom(project.getLeader(), "/pages/pagesProject/Project.zul", project, project.getStatus(), textbox.getText());
+                        Executions.sendRedirect("");
                     }
                 });
             }
@@ -1027,12 +1043,20 @@ public class GetProject implements GetListParam {
             }
         });
         wind1.doModal();
+
     }
 
     @Command
     public void onClickBtn5(@ContextParam(ContextType.COMPONENT) Component comp)
     {
+        project.setStatus(5);
 
+        try {
+            new WorkWithProject().changeEntity(project);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Executions.sendRedirect("");
     }
 
     @Command

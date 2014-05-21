@@ -5,4 +5,4 @@
 
 
 <ObjectListBox objs="${window.obj}" header = "${window.header}" listCellContant = "${window.listCellContant}"
-               id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+               id="listboxMun1" mold="paging" pageSize="3" hflex="1" vflex="true" multiple="true" rows="5" load="true"/>

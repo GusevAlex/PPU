@@ -1,0 +1,28 @@
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
+<zk>
+<zscript>
+    <![CDATA[
+                  import com.PPU.composite.*;
+                  DualObjectListBox listObj = self;
+               ]]>
+</zscript>
+
+<hlayout>
+
+<ObjectListBox objs="${listObj.leftList}"
+               id="leftListbox" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="${listObj.rows}" load="true"/>
+
+    <vbox spacing="10px" width="24px">
+        <image style="cursor:pointer" id="chooseAllBtn" src="${imgPath}/pages/composite/img/rightrightarrow_g.png" />
+        <image style="cursor:pointer" id="chooseBtn" src="${imgPath}/pages/composite/img//rightarrow_g.png" />
+        <image style="cursor:pointer" id="removeBtn" src="${imgPath}/pages/composite/img//leftarrow_g.png" />
+        <image style="cursor:pointer" id="removeAllBtn" src="${imgPath}/pages/composite/img//leftleftarrow_g.png" />
+    </vbox>
+
+<ObjectListBox objs="${listObj.rightList}"
+               id="rightListbox" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="${listObj.rows}" load="true"/>
+
+</hlayout>
+</zk>

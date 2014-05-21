@@ -1,0 +1,154 @@
+<?page title="Портал проектного управления" contentType="text/html;charset=UTF-8" ?>
+
+<?component
+		name="Contact"
+		class="com.PPU.composite.Contact" ?>
+<?component
+		name="gridReviewMZ"
+		class="com.PPU.composite.GridReviewMZ" ?>
+
+<zk xmlns:ca="client/attribute">
+	<window
+			id="mainWindow"
+			apply="org.zkoss.bind.BindComposer"
+			viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
+			onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
+			height="100%" width="100%" >
+
+		<style src="../../css/desktop.css.dsp" />
+
+		<style>
+			.contentPanel table.z-caption
+			{
+			width:30%;
+			font-size: 12px;
+			}
+		</style>
+
+		<div
+				sclass="modal"
+				visible="@load(vm.modalShow)"
+				onClick='@command("hideModal")'>
+		</div>
+
+		<div id="handler" style="width : 100; height : 100">
+
+		</div>
+		<!--  -->
+
+		<caption>
+			<include src="/pages/include/titlebar.zul" />
+		</caption>
+
+		<!-- Divide the main layout into Menu Panel and Content Panel -->
+		<borderlayout
+				animationDisabled="true">
+
+			<!-- Menu Panel -->
+			<west
+					sclass="menuPanel"
+					ca:data-swipeable="true"
+					autoscroll="true"
+					collapsible="true"
+					open="@bind(vm.menuOpen)"
+					>
+
+				<!-- Provide a way to access zkdemo -->
+				<caption>
+
+				</caption>
+				<!-- -->
+
+				<include src="/pages/include/navigation.zul" />
+			</west>
+			<!--  -->
+
+			<!-- Content Panel -->
+			<center
+					id="contentPanel"
+					sclass="contentPanel"
+					border="0"
+					hflex="1"
+					onSwipe='@command("contentSwipe", dir=event.swipeDirection)'>
+
+				<!-- Title Bar -->
+
+				<!--  -->
+
+				<!-- Content Area -->
+				<borderlayout>
+					<!-- Newsfeed Panel  -->
+					<center
+							sclass="newsfeedPanel"
+							autoscroll="true" >
+
+						<!-- Toolbar -->
+						<caption>
+							<include src="/pages/include/toolbar.zul" />
+						</caption>
+						<!--  -->
+
+						<!-- Newsfeed Posts -->
+						<div apply="org.zkoss.bind.BindComposer"
+                             viewModel="@id('vm2') @init('com.PPU.windowControllers.PageMZ.TimeLine')">
+							<vlayout>
+								<zk xmlns:n="native">
+
+									<div height="30px"></div>
+									<label value="Временная линия выполнения муниципального задания" style="font-size: 26px;" />
+									<n:hr />
+
+									<div style="margin: 20px 0;
+                                padding: 15px 30px 15px 15px;
+                                border-left: 5px solid #eee;background-color: #f0f7fd;
+                                border-color: #d0e3f0; ">
+										<label value="@load(vm2.discrName)" />
+									</div>
+
+                                    <vlayout>
+                                        <groupbox>
+                                        <caption label="Временная линия проекта" />
+                                            <vbox >
+                                                    <timeline id="timeline" height="400px" width="950px" style="margin-left: 5%;" >
+                                                        <bandinfo width="70%" id="bandinfoMonth" intervalUnit="month" intervalPixels="100" />
+                                                        <bandinfo width="30%" id="bandinfoYear" intervalUnit="year" intervalPixels="200"
+                                                                  syncWith="bandinfoMonth" />
+                                                    </timeline>
+                                            </vbox>
+                                        </groupbox>
+
+                                        <groupbox>
+                                        <caption label="Диаграмма выполнения" />
+                                            <charts id="chart" type="pie" title="Диаграмма выполнения Муниципального задания" style="margin-left: -120px;" />
+                                        </groupbox>
+
+                                    </vlayout>
+
+								</zk>
+							</vlayout>
+
+							<popup
+									id="feedbackPopup"
+									width="250px"
+									height="50%"
+									sclass="feedback"
+									onOpen='@command("hideModal")' >
+								<include src="/pages/include/comment.zul"/>
+							</popup>
+						</div>
+						<!--  -->
+					</center>
+					<!--  -->
+
+					<!-- Contact Panel -->
+
+					<!--  -->
+				</borderlayout>
+				<!--  -->
+			</center>
+			<!--  -->
+		</borderlayout>
+		<!--  -->
+	</window>
+	<!--  -->
+</zk>

@@ -1,0 +1,185 @@
+<?page title="Портал проектного управления" contentType="text/html;charset=UTF-8" ?>
+
+<?component
+        name="Contact"
+        class="com.PPU.composite.Contact" ?>
+<?component
+        name="gridReviewMZ"
+        class="com.PPU.composite.GridReviewMZ" ?>
+<?component
+        name="dualObjectListBox"
+        class="com.PPU.composite.DualObjectListBox" ?>
+<?component
+        name="ObjectListBox"
+        class="com.PPU.composite.ObjectListBox" ?>
+
+<?component
+        name="myTextBox"
+        class="com.PPU.composite.MyTextBox" ?>
+
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
+
+<zk xmlns:ca="client/attribute">
+    <window
+            id="mainWindow"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
+            onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
+            height="100%" width="100%" >
+
+        <style src="../../css/desktop.css.dsp" />
+
+        <style>
+            .contentPanel table.z-caption
+            {
+            width:30%;
+            font-size: 12px;
+            }
+        </style>
+
+        <div
+                sclass="modal"
+                visible="@load(vm.modalShow)"
+                onClick='@command("hideModal")'>
+        </div>
+
+        <div id="handler" style="width : 100; height : 100">
+
+        </div>
+        <!--  -->
+
+        <caption>
+            <include src="/pages/include/titlebar.zul" />
+        </caption>
+
+        <!-- Divide the main layout into Menu Panel and Content Panel -->
+        <borderlayout
+                animationDisabled="true">
+
+            <!-- Menu Panel -->
+            <west
+                    sclass="menuPanel"
+                    ca:data-swipeable="true"
+                    autoscroll="true"
+                    collapsible="true"
+                    open="@bind(vm.menuOpen)"
+                    >
+
+                <!-- Provide a way to access zkdemo -->
+                <caption>
+
+                </caption>
+                <!-- -->
+
+                <include src="/pages/include/navigation.zul" />
+            </west>
+            <!--  -->
+
+            <!-- Content Panel -->
+            <center
+                    id="contentPanel"
+                    sclass="contentPanel"
+                    border="0"
+                    hflex="1"
+                    onSwipe='@command("contentSwipe", dir=event.swipeDirection)'>
+
+                <!-- Title Bar -->
+
+                <!--  -->
+
+                <!-- Content Area -->
+                <borderlayout>
+                    <!-- Newsfeed Panel  -->
+                    <center
+                            sclass="newsfeedPanel"
+                            autoscroll="true" >
+
+                        <!-- Toolbar -->
+                        <caption>
+                            <include src="/pages/include/toolbar.zul" />
+                        </caption>
+                        <!--  -->
+
+                        <!-- Newsfeed Posts -->
+                        <div>
+                            <vlayout>
+                                <zk xmlns:n="native">
+
+                                    <div apply="org.zkoss.bind.BindComposer"
+                                         viewModel="@id('vm') @init('com.PPU.windowControllers.partners.PartnersCommerc')"
+                                         height="100%" width="100%" >
+
+                                        <div height="30px"></div>
+
+                                        <label value="" style="font-size: 26px;" />
+                                        <n:hr />
+
+
+                                        <div style="margin: 20px 0;
+                                    padding: 15px 30px 15px 15px;
+                                    border-left: 5px solid #eee;background-color: #f0f7fd;
+                                    border-color: #d0e3f0; ">
+                                            <label value="" />
+                                        </div>
+
+                                        <grid  id="partnersMU" mold="paging" pageSize="10" model="@load(vm.partnersCommerc)" >
+
+                                            <columns  menupopup="auto" sizable="true">
+                                                <column sort="auto(name)"  label="Цель" width="${gridMZ.width}"></column>
+                                                <column sort="auto(address)"  label="Адрес" width="${gridMZ.width}"></column>
+                                                <column sort="auto(description)"  label="Описание" width="${gridMZ.width}"></column>
+                                                <column label="Просмотр всех программ" width="${gridMZ.width}"></column>
+                                            </columns>
+
+
+                                            <template name="model">
+                                                <row>
+                                                    <label value="${each.name}" />
+
+                                                    <label value="${each.address}" />
+
+                                                    <label value="${each.description}" />
+
+                                                    <buttonOpenList label="Открыть" obj="${each.id}">
+                                                        <attribute name="onClick">   <![CDATA[
+                                                            Executions.sendRedirect("/pages/programs/reviewProgram.zul?part="+self.getObj());
+                                                   ]]>  </attribute>
+                                                    </buttonOpenList>
+                                                </row>
+                                            </template>
+                                            <!--</listbox>-->
+                                        </grid>
+
+
+                                    </div>
+                                </zk>
+                            </vlayout>
+
+                            <popup
+                                    id="feedbackPopup"
+                                    width="250px"
+                                    height="50%"
+                                    sclass="feedback"
+                                    onOpen='@command("hideModal")' >
+                                <include src="/pages/include/comment.zul"/>
+                            </popup>
+
+                        </div>
+                        <!--  -->
+                    </center>
+                    <!--  -->
+
+                    <!-- Contact Panel -->
+
+                    <!--  -->
+                </borderlayout>
+                <!--  -->
+            </center>
+            <!--  -->
+        </borderlayout>
+        <!--  -->
+    </window>
+    <!--  -->
+</zk>

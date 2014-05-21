@@ -2,167 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85846bca-dd19-40bc-a07b-5dff919de4a2" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__asm_asm_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__asm_asm_attrs_1_5_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__c3p0_c3p0_0_9_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__cglib_cglib_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__commons_pool_commons_pool_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__javassist_javassist_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__javax_activation_activation_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__javax_mail_mail_1_4_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__javax_transaction_jta_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__junit_junit_4_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__log4j_log4j_1_2_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__net_sf_ehcache_ehcache_1_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_6_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_hibernate_3_2_1_ga.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_hibernate_annotations_3_3_0_ga.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_hibernate_core_3_6_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_3_6_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_mockito_mockito_core_1_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_objenesis_objenesis_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_security_spring_security_config_3_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_security_spring_security_core_3_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_security_spring_security_crypto_3_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_security_spring_security_web_3_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_aop_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_asm_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_beans_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_context_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_core_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_expression_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_jdbc_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_orm_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_tx_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__org_springframework_spring_web_3_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\.idea\libraries\Maven__postgresql_postgresql_9_1_901_jdbc4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\target\classes\com\PPU\DB\tables\Program.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\1\PPU\PPU_DBlogic\target\classes\com\PPU\DB\workLogic\WorkWithProgram.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/ClassInvokeCall.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/ClassInvokeCall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ComandProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/CorrectionsProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/DefaultParametrsServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/DefaultParametrsServiceMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/LimitsProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/MZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/MZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/PPU_DBlogic-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Parametrs.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Parametrs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnerCommercialMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/PartnersMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDaoInterface.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/DAO/PpuDaoInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Project.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Project.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Providers.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/Providers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ResourcesProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/tollbar/Thumbs.db" afterPath="$PROJECT_DIR$/web/images/tollbar/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeBudgetService.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeBudgetService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeMU.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeMU.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/TypeServiceMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersComMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersComMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersMunMan.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/UsersMunMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/tables/ValuesParametrForProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkCorrectionMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkCorrectionMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithComandProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithComandProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCommandMz.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCommandMz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCorrectionProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithCorrectionProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithDefaultParametrsServiceMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsMz.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsMz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithLimitsProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithParametrs.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithParametrs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerCommerc.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerCommerc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithPartnerMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProviders.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithProviders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithResourcesProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeBudgetService.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeBudgetService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeMU.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeMU.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithTypeServiceMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForMZ.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.class" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/com/PPU/DB/workLogic/WorkWithValuesParametrForProject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/tollbar/graph2.jpg" afterPath="$PROJECT_DIR$/web/images/tollbar/graph2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ComandProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/CorrectionsProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/composite/GridReviewMZ.zul" afterPath="$PROJECT_DIR$/web/pages/composite/GridReviewMZ.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/LimitsProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/MZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/MZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" afterPath="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/vm/MainPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PPU.iml" afterPath="$PROJECT_DIR$/PPU.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/PPU_DBlogic.iml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/PPU_DBlogic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Parametrs.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Parametrs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/DAO/PpuDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramCommerc.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramCommerc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProgramMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Project.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/pagesProject/Project.zul" afterPath="$PROJECT_DIR$/web/pages/pagesProject/Project.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Providers.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/Providers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/TimeLine.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/TimeLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/TimeLine.java" afterPath="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/TimeLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeBudgetService.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeBudgetService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeMU.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeMU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TypeServiceMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersComMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersComMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/UsersMunMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForMZ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ValuesParametrForProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/window/inputTextDialog.zul" afterPath="$PROJECT_DIR$/web/pages/window/inputTextDialog.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/../PPU_DBlogic/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/pom.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/pagesMZ/timeline.zul" afterPath="$PROJECT_DIR$/web/pages/pagesMZ/timeline.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/pagesProject/timeline.zul" afterPath="$PROJECT_DIR$/web/pages/pagesProject/timeline.zul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/include/titlebar.zul" afterPath="$PROJECT_DIR$/web/pages/include/titlebar.zul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PPU_DBlogic/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PPU.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400650273484" ignored="false" />
+    <file path="/Dummy.txt" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400665946796" ignored="false" />
     <file path="/TimeLine.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400585137828" ignored="false" />
     <file path="/timeline.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400586791734" ignored="false" />
-    <file path="/MZ.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400589872625" ignored="false" />
-    <file path="/GetMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400609771500" ignored="false" />
+    <file path="/MZ.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400662456968" ignored="false" />
+    <file path="/GetMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400664514578" ignored="false" />
     <file path="/chartWindow.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400328791703" ignored="false" />
-    <file path="/fragment.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400652382218" ignored="false" />
+    <file path="/fragment.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400660136625" ignored="false" />
     <file path="/userConfigPage.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400442686453" ignored="false" />
     <file path="/UserConfigPage.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400348778750" ignored="false" />
     <file path="/registrAuthoriz.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400340313421" ignored="false" />
     <file path="/Main.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400651579093" ignored="false" />
-    <file path="/a.dummy" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400598578609" ignored="false" />
-    <file path="/UsersMunMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400348721593" ignored="false" />
+    <file path="/a.dummy" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400660556296" ignored="false" />
+    <file path="/UsersMunMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400653238031" ignored="false" />
     <file path="/UsersComMan.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400348811953" ignored="false" />
     <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/MailService/MailSender.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400351774390" ignored="false" />
     <file path="/MailSender.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400351391562" ignored="false" />
     <file path="/PpuDao.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400606005750" ignored="false" />
-    <file path="/MZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400652647921" ignored="false" />
+    <file path="/MZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400657865218" ignored="false" />
     <file path="/Parametrs.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400392935859" ignored="false" />
     <file path="/CorrectionsMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400393618765" ignored="false" />
     <file path="/CorrectionsProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400393690296" ignored="false" />
-    <file path="/NotificationService.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400494685656" ignored="false" />
+    <file path="/NotificationService.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400663992765" ignored="false" />
     <file path="/ComandMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400652658265" ignored="false" />
     <file path="/MainPageController.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400528262515" ignored="false" />
     <file path="/MZDataSource.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400417933640" ignored="false" />
@@ -191,7 +58,7 @@
     <file path="/Program.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400489590156" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400490449625" ignored="false" />
     <file path="/viewProject.zul" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400518193203" ignored="false" />
-    <file path="/GetProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400608050109" ignored="false" />
+    <file path="/GetProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400664673156" ignored="false" />
     <file path="/ComandProjectDataSource.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400494160062" ignored="false" />
     <file path="/ComandProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400602019125" ignored="false" />
     <file path="/LimitsProjectDataSource.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400494194656" ignored="false" />
@@ -218,6 +85,10 @@
     <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/ProjInterf.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400605500468" ignored="false" />
     <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/tables/TableAnnot/FieldType.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400605472015" ignored="false" />
     <file path="/WorkWithProject.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400606665562" ignored="false" />
+    <file path="/NotificationMU.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400653540312" ignored="false" />
+    <file path="/PartnersMZ.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400660328640" ignored="false" />
+    <file path="/WorkWithNotificationMU.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400654739781" ignored="false" />
+    <file path="$PROJECT_DIR$/../PPU_DBlogic/src/main/java/com/PPU/DB/workLogic/WorkWithNotificationMU.java" changelist="85846bca-dd19-40bc-a07b-5dff919de4a2" time="1400654752390" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +196,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" line="1331" class="com.PPU.windowControllers.PageMZ.GetMZ$11" package="com.PPU.windowControllers.PageMZ">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" line="1390" class="com.PPU.windowControllers.PageMZ.GetMZ$13" package="com.PPU.windowControllers.PageMZ">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -353,7 +224,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" line="992" class="com.PPU.windowControllers.PageMZ.GetMZ$1$1" package="com.PPU.windowControllers.PageMZ">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/NotificationService.java" line="311" class="com.PPU.funcControl.NotificationService" package="com.PPU.funcControl">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -367,35 +238,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" line="1024" class="com.PPU.windowControllers.PageMZ.GetMZ$3$1" package="com.PPU.windowControllers.PageMZ">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" line="1018" class="com.PPU.windowControllers.PageMZ.GetMZ" package="com.PPU.windowControllers.PageMZ">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/Main.java" line="28" class="Main" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/NotificationService.java" line="66" class="com.PPU.funcControl.NotificationService" package="com.PPU.funcControl">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -458,7 +301,7 @@
       <file leaf-file-name="MZ.zul" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="72" selection-start="5179" selection-end="5185" vertical-scroll-proportion="0.0">
+            <state line="403" column="139" selection-start="24298" selection-end="24298" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -482,10 +325,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetProject.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GetProject.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="901" column="50" selection-start="28058" selection-end="28058" vertical-scroll-proportion="0.0">
+            <state line="1065" column="102" selection-start="33868" selection-end="33868" vertical-scroll-proportion="0.49635038">
               <folding />
             </state>
           </provider>
@@ -495,24 +338,6 @@
         <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
           <provider selected="true" editor-type-id="text-editor">
             <state line="55" column="67" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timeline.zul" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/timeline.zul">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="153" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeLine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/TimeLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="113" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -530,16 +355,25 @@
       <file leaf-file-name="GetMZ.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="615" column="90" selection-start="17249" selection-end="17249" vertical-scroll-proportion="0.0">
+            <state line="1088" column="52" selection-start="33129" selection-end="33129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NotificationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/NotificationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="198" column="25" selection-start="7597" selection-end="7597" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.46689895">
+            <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -563,7 +397,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/pages/pagesMZ/viewMz.zul" />
         <option value="$PROJECT_DIR$/web/pages/help/help.zul" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/ButtonClickInterf.java" />
         <option value="$PROJECT_DIR$/web/pages/window/inputTextDialog.zul" />
@@ -574,11 +407,12 @@
         <option value="$PROJECT_DIR$/web/pages/pagesMZ/timeline.zul" />
         <option value="$PROJECT_DIR$/web/pages/include/titlebar.zul" />
         <option value="$PROJECT_DIR$/web/pages/composite/GridReviewMZ.zul" />
-        <option value="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
         <option value="$PROJECT_DIR$/web/pages/pagesProject/Project.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul" />
+        <option value="$PROJECT_DIR$/src/main/java/com/PPU/funcControl/NotificationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -654,7 +488,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -665,18 +499,18 @@
     <property name="SearchEverywhereHistory" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PPU_DBlogic" />
     <property name="project.structure.side.proportion" value="0.3017341" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1025,21 +859,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -1056,6 +875,21 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1389,14 +1223,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="746" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7065767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4721754" sideWeight="0.59621215" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4721754" sideWeight="0.59621215" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3153457" sideWeight="0.39848486" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4407796" sideWeight="0.4032258" order="2" side_tool="true" content_ui="tabs" />
@@ -1528,14 +1362,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/selectParamsWindow.zul">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="48" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar!/bsh/BSHMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="392" selection-end="392" vertical-scroll-proportion="0.5965665" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/authoriz/authoriz.zul">
@@ -1550,7 +1381,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/TimeLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="34" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0" />
+        <state line="86" column="34" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesProject/timeline.zul">
@@ -1567,9 +1400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/timeline.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="153" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="121" column="153" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/include/titlebar.zul">
@@ -1593,13 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="72" selection-start="5179" selection-end="5185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/pagesProject/Project.zul">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="84" selection-start="5580" selection-end="5580" vertical-scroll-proportion="0.0">
@@ -1607,23 +1431,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java">
+    <entry file="file://$PROJECT_DIR$/web/pages/pagesMZ/MZ.zul">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="901" column="50" selection-start="28058" selection-end="28058" vertical-scroll-proportion="0.0">
+        <state line="403" column="139" selection-start="24298" selection-end="24298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/funcControl/NotificationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="615" column="90" selection-start="17249" selection-end="17249" vertical-scroll-proportion="0.0">
+        <state line="198" column="25" selection-start="7597" selection-end="7597" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.46689895">
+        <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageMZ/GetMZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1088" column="52" selection-start="33129" selection-end="33129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/PPU/windowControllers/PageProject/GetProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1065" column="102" selection-start="33868" selection-end="33868" vertical-scroll-proportion="0.49635038">
           <folding />
         </state>
       </provider>

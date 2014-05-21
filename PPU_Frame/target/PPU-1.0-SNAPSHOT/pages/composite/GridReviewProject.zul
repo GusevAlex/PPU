@@ -1,0 +1,145 @@
+<?component
+        name="buttonOpenList"
+        class="com.PPU.composite.ButtonOpenList" ?>
+
+<?component
+        name="myListItem"
+        class="com.PPU.composite.ListItem" ?>
+
+<zk>
+    <zscript>
+    <![CDATA[
+                    import com.PPU.composite.*;
+                    GridReviewProject gridProject = self;
+    ]]>
+    </zscript>
+
+
+    <grid  id="gridProject" mold="paging" pageSize="10">
+
+        <columns  menupopup="auto" sizable="true">
+            <column label="Просмотр" width="${gridProject.width}"></column>
+            <column label="Изменить" width="${gridProject.width}"></column>
+            <column sort="auto(name)"  label="Название" width="${gridProject.width}"></column>
+            <column sort="auto(startDate)"  label="Дата начала" width="${gridProject.width}"></column>
+            <column sort="auto(expirationDate)"  label="Дата окончания" width="${gridProject.width}"></column>
+            <column sort="auto(description)"  label="Описание" width="${gridProject.width}"></column>
+            <column sort="auto(budget)"  label="Бюджет" width="${gridProject.width}"></column>
+            <column label="Команда" width="${gridProject.width}"></column>
+            <column label="Программа" width="${gridProject.width}"></column>
+            <column label="Ограничения" width="${gridProject.width}"></column>
+            <column label="Значения параметры" width="${gridProject.width}"></column>
+            <column label="Ресурсы" width="${gridProject.width}"></column>
+            <column label="Корректировки" width="${gridProject.width}"></column>
+            <column label="Учавствую ли я в МЗ?" width="${gridMZ.width}"></column>
+        </columns>
+
+        <template name="model">
+            <custom-attributes objs="${each}"/>
+
+            <zscript>
+                <![CDATA[
+                    import com.PPU.DB.workLogic.*;
+                    import com.PPU.DB.tables.*;
+
+                    String name = objs.getName();
+                    Date startDate = objs.getStartDate();
+                    Date expirationDate = objs.getExpirationDate();
+                    String description = objs.getDescription();
+                    float budget = objs.getBudget();
+
+                    Object comandProject = (Object) objs.getComandProject().toArray();
+                    Object[] program = new Object[1];
+                    program[0] = (Object) objs.getProgram();
+
+                    Object limitsProject = (Object) objs.getLimitsProject().toArray();
+                    Object valuesParametrForProject = (Object) objs.getValuesParametrForProject().toArray();
+                    Object resourcesProject = (Object) objs.getResourcesProject().toArray();
+                    Object correctionsProject = (Object) objs.getCorrectionsProject().toArray();
+
+                    Object obj = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                    int level = new WorkWithProject().getUserRole((Project) objs, (UsersComMan) obj.get(0));
+                ]]>
+            </zscript>
+
+            <row>
+
+                <buttonOpenList label="12" image=""  obj="${objs.getId()}"  >
+                    <attribute name="onClick">   <![CDATA[
+                    Executions.sendRedirect("/pages/pagesProject/Project.zul?id="+self.getObj());
+           ]]>  </attribute>
+                </buttonOpenList>
+
+                <buttonOpenList label="12" image=""  obj="${partnersMZ}"  >
+                    <attribute name="onClick">   <![CDATA[
+                    AddObject add = new AddObject();
+
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
+                    add.setObj(self.getObj());
+                    add.showWindow();
+           ]]>  </attribute>
+                </buttonOpenList>
+
+                <label value="${name}" />
+                <label value="${startDate}" />
+                <label value="${expirationDate}" />
+                <label value="${description}" />
+                <label value="${budget}" />
+
+                <buttonOpenList label="Все значения" obj="${comandProject}" >
+                    <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                ]]> </attribute>
+                </buttonOpenList>
+
+                <buttonOpenList label="Все значения" obj="${program[0]}" >
+                    <attribute name="onClick">   <![CDATA[
+                    AddObject add = new AddObject();
+
+                    add.setWorker(new com.PPU.DB.workLogic.WorkWithProgramCommerc());
+                    add.setObj(self.getObj());
+                    add.showWindow();
+                ]]> </attribute>
+                </buttonOpenList>
+
+
+                <buttonOpenList label="Все значения" obj="${limitsProject}" >
+                    <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                ]]> </attribute>
+                </buttonOpenList>
+
+                <buttonOpenList label="Все значения" obj="${valuesParametrForProject}" >
+                    <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                ]]> </attribute>
+                </buttonOpenList>
+
+                <buttonOpenList label="Все значения" obj="${resourcesProject}" >
+                    <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                ]]> </attribute>
+                </buttonOpenList>
+
+                <buttonOpenList label="Все значения" obj="${correctionsProject}" >
+                    <attribute name="onClick">   <![CDATA[
+                                import com.PPU.composite.ObjectListBox;
+                                 ObjectListBox.showViewObject(self.getObj());
+                ]]> </attribute>
+                </buttonOpenList>
+
+                <label value="Нет" if="${level == 0}" />
+                <label value="Да" if="${level != 0}" />
+
+            </row>
+
+        </template>
+        <!--</listbox>-->
+    </grid>
+
+</zk>

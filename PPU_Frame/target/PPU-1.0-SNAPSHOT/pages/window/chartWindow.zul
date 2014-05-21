@@ -1,0 +1,8 @@
+<zk>
+    <window title="Окно" border="normal" width="600px" sizable="true"
+            position="center,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+        <charts id="chartParam" type="line" title="График параметров"
+                subtitle='Для МЗ: ' model='${arg.get("model")}' />
+    </window>
+</zk>

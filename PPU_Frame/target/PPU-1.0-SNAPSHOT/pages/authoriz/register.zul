@@ -1,6 +1,15 @@
+<?page title="Регистрация" contentType="text/html;charset=UTF-8" ?>
 <?component
         name="ObjectListBox"
         class="com.PPU.composite.ObjectListBox" ?>
+
+<?component
+        name="dualObjectListBox"
+        class="com.PPU.composite.DualObjectListBox" ?>
+
+<?component
+        name="FilterAndSortedObjectList"
+        class="com.PPU.composite.FilterAndSortedObjectList" ?>
 <zk>
 <div class="registerContentDiv" apply="org.zkoss.bind.BindComposer"
         viewModel="@id('vm') @init('com.PPU.registrAuthoriz.registrAuthoriz')">
@@ -9,8 +18,8 @@
     <style src="@load(vm.css)" />
 
         <div class="authorizPanel" >
-          <div style="padding-top: 10%;">
-            <panel id="panel" framable="true" width="800px" height="700px"
+          <div style="padding-top: 3%;">
+            <panel id="panel" framable="true" width="800px" height="1000px"
                    title="Регистрация"
                    maximizable="true" minimizable="true" border="normal"
                    collapsible="true" closable="true" style="margin: 0 auto;">
@@ -37,7 +46,7 @@
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">Фамилия Имя</hlayout> <textbox id="name"/></row>
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">email</hlayout> <textbox id="email"/></row>
 							<row><hlayout style="margin-top: 4px; font-size: 14px;">Логин</hlayout> <textbox id="login"/></row>
-							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password"/></row>
+							<row><hlayout style="margin-top: 4px; font-size: 14px;">Пароль</hlayout> <textbox id="password" type="password"/></row>
 						</rows>
 					</grid>
                 </hlayout>
@@ -50,25 +59,8 @@
                         Выбор вида управления
                     </caption>
 
-                    <hlayout>
-                        <zscript>
-                            classes = new String[] {"College", "Graduate"};
-                            grades = new String[] {"Best", "Better"};
-
-                        </zscript>
-                       <zk forEach="${classes}">
-                           <custom-attributes master="${each}"/>
-
-                           <zk forEach="${grades}">
-                               <label value="${forEachStatus.index}"/>
-                               <label value="${each}"/>
-                           </zk>
-
-                       </zk>
-                    </hlayout>
-
                     <hbox spacing="15px">
-                    <groupbox id="groupboxMZ" width="100%">
+                    <groupbox id="groupboxMZ" width="100%" open="false">
                         <caption width="100%">
                             <radio id="cb"  radiogroup="sv1" />
                             Муниципальное управление
@@ -82,15 +74,93 @@
                         ]]>
                         </zscript>
                         <div>
+
 							<ObjectListBox objs="${objs}"
-										   id="listboxMun1" mold="paging" pageSize="10" hflex="1" vflex="true" multiple="true" rows="8" load="true"/>
+										   id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" multiple="true" rows="8" load="true"/>
+
+
+
+                            <!--<FilterAndSortedObjectList objs="${objs}"-->
+                                           <!--id="listboxMun1" height="200px" mold="paging" pageSize="10" hflex="1"-->
+                                           <!--vflex="true" load="true"/>-->
+
+                            <!--<listbox id="candidateLb" hflex="1" vflex="true" multiple="true" rows="8">-->
+                                <!--<listhead>-->
+                                    <!--<listheader label="First Name" width="80px"></listheader>-->
+                                    <!--<listheader label="Last Name" width="80px"></listheader>-->
+                                    <!--<listheader label="Full Name"></listheader>-->
+                                    <!--<listheader label="Married" width="60px"></listheader>-->
+                                <!--</listhead>-->
+
+                                    <!--<listitem>-->
+                                        <!--<listcell label="1"/>-->
+                                        <!--<listcell label="2"/>-->
+                                        <!--<listcell label="3"/>-->
+                                        <!--<listcell label="4"/>-->
+                                    <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                                <!--<listitem>-->
+                                    <!--<listcell label="1"/>-->
+                                    <!--<listcell label="2"/>-->
+                                    <!--<listcell label="3"/>-->
+                                    <!--<listcell label="4"/>-->
+                                <!--</listitem>-->
+                            <!--</listbox>-->
+
+
+
                         </div>
-                        <button label="Добавить новое муниципальное учреждение"/>
+
+
+
+                        <button id="addMunMan" label="Добавить новое муниципальное учреждение"/>
                     </groupbox>
                     </hbox>
 
                     <hbox spacing="15px">
-                        <groupbox id="groupboxCommerc" width="100%">
+                        <groupbox id="groupboxCommerc" width="100%" open="false">
                             <caption>
                                 <radio id="cb2"  radiogroup="sv1" />
                                 Коммерческое управление
@@ -113,11 +183,26 @@
 								<!--</template>-->
 							<!--</listbox>-->
 
-                            <button label="Добавить новую организацию"/>
+                            <zscript>
+                                <![CDATA[
+                        import com.PPU.DB.workLogic.WorkWithPartnerCommerc;
+                        WorkWithPartnerCommerc work2 = new WorkWithPartnerCommerc();
+                        Object [] objs2 = work2.getListRows().toArray();
+                        ]]>
+                            </zscript>
+                            <div>
+
+                                <ObjectListBox objs="${objs2}"
+                                               id="listboxCom1" height="200px" mold="paging" pageSize="10" hflex="1"
+                                           vflex="true" multiple="true" rows="8" load="true"/>
+                            </div>
+
+                            <button id="addComMan" label="Добавить новую организацию"/>
                         </groupbox>
                     </hbox>
                 </groupbox>
 
+                <button id="registation" label="Регистрация" />
                 </panelchildren>
             </panel>
            </div>

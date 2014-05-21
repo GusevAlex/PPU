@@ -33,9 +33,7 @@
 	-webkit-filter: invert(100%);
 }
 
-.menuPanel .z-west-body {
-	background: #112f37;
-}
+
 
 .menuPanel .z-west-caption {
 	margin: 8px 5px;
@@ -58,3 +56,23 @@
 .like-area > table {
 	margin-top: 9px;
 }
+
+body
+{
+    background: url(../images/background/background.png);
+}
+
+.z-groupbox>.z-groupbox-header
+{
+    border-top: 1px solid #C31B1B;
+    border-left: 1px solid #C31B1B;
+    border-right: 1px solid #C31B1B;
+}
+
+.z-groupbox-content
+{
+    border-bottom: 1px solid #C31B1B;
+    border-left: 1px solid #C31B1B;
+    border-right: 1px solid #C31B1B;
+}
+

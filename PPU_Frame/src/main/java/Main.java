@@ -24,7 +24,7 @@ import java.util.Properties;
  */
 public class Main {
     public static void main(String[] args) {
-        MZ mz = (MZ) new WorkWithMZ().getEntity(1);
+        MZ mz = (MZ) new WorkWithMZ().getEntity(2);
 
         int y = 0;
     }

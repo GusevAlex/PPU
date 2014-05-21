@@ -1,0 +1,29 @@
+<?component
+		name="buttonOpenList"
+		class="com.PPU.composite.ButtonOpenList" ?>
+
+<zk>
+    <window id="revertWind" border="normal" width="460px"
+                position="center,center" closable="true"
+                action="show: slideDown;hide: slideUp">
+
+        <vlayout>
+            <textbox id="inputTextBox" value="" rows="10" cols="50" />
+
+                <buttonOpenList label="ОК" obj='${arg}' >
+                    <attribute name="onClick">
+                        <![CDATA[
+                                import java.util.Map;
+                                import com.PPU.funcControl.*;
+                                import com.PPU.windowControllers.*;
+
+                                ((ButtonClickInterf) self.getObj().get("clickBut")).click(inputTextBox);
+                                revertWind.onClose();
+                                ]]>
+                    </attribute>
+                </buttonOpenList>
+        </vlayout>
+
+    </window>
+
+</zk>

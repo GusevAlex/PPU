@@ -1,25 +1,53 @@
+<?component
+        name="gridReviewProgramMz"
+        class="com.PPU.composite.GridReviewProgramMz" ?>
+
 <window id="addMzWindow" apply="com.PPU.funcControl.reviewListMzController">
-    <grid model = "${$composer.mzs}" id="demoGrid" mold="paging" pageSize="1">
-        <columns menupopup="auto">
-            <column sort="auto(Name)" label="Название" width="150px"/>
-            <column sort="auto(TopNutrients)" label="Цели" hflex="1" />
-            <column sort="auto(DailyPercent)" label="Заказчик" hflex="1" align="center"/>
-            <column sort="auto(Calories)" label="Руководитель" hflex="1" align="center"  />
-            <column sort="auto(Quantity)" label="Статус" />
-        </columns>
+    <!--<grid model = "${$composer.mzs}" id="demoGrid" mold="paging" pageSize="1">-->
+        <!--<columns menupopup="auto">-->
+            <!--<column sort="auto(Name1)" label="Название" width="150px"/>-->
+            <!--<column sort="auto(TopNutrients1)" label="Цели" hflex="1" />-->
+            <!--<column sort="auto(DailyPercent2)" label="Заказчик" hflex="1" align="center"/>-->
+            <!--<column sort="auto(Calories3)" label="Руководитель" hflex="1" align="center"  />-->
+            <!--<column sort="auto(Quantity4)" label="Статус" />-->
+        <!--</columns>-->
 
 
-        <!--<rows>-->
-            <template name="model">
-                <row>
-                    <label value="${each.id}" />
-                    <label value="${each.name}" />
-                    <label value="${each.id}" />
-                    <label value="Руководитель 1" />
-                    <label value="Выполняется" />
-                </row>
-            </template>
+        <!--&lt;!&ndash;<rows>&ndash;&gt;-->
+            <!--<template name="model">-->
+                <!--<row>-->
+                    <!--<label value="${each.id}" />-->
+                    <!--<label value="${each.name}" />-->
+                    <!--<label value="${each.id}" />-->
+                    <!--<label value="Руководитель 1" />-->
+                    <!--<label value="Выполняется" />-->
+                <!--</row>-->
+            <!--</template>-->
 
-        <!--</rows>-->
-    </grid>
+        <!--&lt;!&ndash;</rows>&ndash;&gt;-->
+    <!--</grid>-->
+
+    <zscript>
+        <![CDATA[
+        import com.PPU.vm.*;
+        import com.PPU.DB.tables.*;
+
+        Object obj = new Object();
+
+        Object partn = MainPageController.getPartner();
+
+         if (partn instanceof PartnersMZ)
+            obj = Arrays.asList(((PartnersMZ) partn).getProgramMZs().toArray());
+        else
+        if (partn instanceof PartnerCommercialMan)
+            obj = Arrays.asList(((PartnerCommercialMan) partn).getProgramCommercs().toArray());
+
+
+               ]]>
+    </zscript>
+
+   <gridReviewProgramMz model = "${obj}">
+
+   </gridReviewProgramMz>
+
 </window>

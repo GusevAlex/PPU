@@ -59,7 +59,7 @@ public class TypeMU {
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "typesMU")
-    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<PartnersMZ> getPartners() {
         return partners;
     }

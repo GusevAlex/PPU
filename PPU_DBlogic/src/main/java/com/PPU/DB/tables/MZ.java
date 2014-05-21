@@ -194,8 +194,9 @@ public class MZ {
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
 //        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        System.out.println(this.getId());
 //        comandMZ = new HashSet<ComandMZ>(ppu.findComandMZ("id_mz",""+this.getId()));
-
+//        System.out.println(comandMZ);
         return comandMZ;
     }
 
@@ -205,9 +206,12 @@ public class MZ {
 
 	@FieldType(type = 2, worker = "WorkWithProgramMZ")
 	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Программа")
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_program", insertable = false, updatable = false)
     public ProgramMZ getProgram() {
+        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+        program = ppu.getProgramMZ(getIdProgram());
+        
         return program;
     }
 
@@ -217,9 +221,12 @@ public class MZ {
 
 	@FieldType(type = 2, worker = "WorkWithTypeServiceMZ")
 	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Тип услуги")
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "service_type", insertable = false, updatable = false)
     public TypeServiceMZ getTypeServiceMZ() {
+        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+        typeServiceMZ = ppu.getTypeServiceMz(getService_type());
+        
         return typeServiceMZ;
     }
 
@@ -232,6 +239,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsMZ> getLimitsMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        limitsMZ = new HashSet<LimitsMZ>(ppu.findLimitsMz("id_mz",""+this.getId()));
+        
         return limitsMZ;
     }
 
@@ -244,6 +254,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForMZ> getValuesParametrForMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        valuesParametrForMZ = new HashSet<ValuesParametrForMZ>(ppu.findValuesParametrForMz("id_mz",""+this.getId()));
+        
         return valuesParametrForMZ;
     }
 
@@ -256,6 +269,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesMZ> getResourcesMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        resourcesMZ = new HashSet<ResourcesMZ>(ppu.findResourcesMz("id_mz",""+this.getId()));
+        
         return resourcesMZ;
     }
 
@@ -268,6 +284,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "MZ")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsMZ> getCorrectionsMZ() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        correctionsMZ = new HashSet<CorrectionsMZ>(ppu.findCorrectionsMz("id_mz",""+this.getId()));
+        
         return correctionsMZ;
     }
 
@@ -280,6 +299,9 @@ public class MZ {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_leader", insertable = false, updatable = false)
 	public PartnersMZ getLeader() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        leader = ppu.getPartnersMz(this.getIdLeader());
+        
 		return leader;
 	}
 
@@ -290,6 +312,9 @@ public class MZ {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "mz")
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<FileMZ> getFileMZs() {
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        fileMZs = new HashSet<FileMZ>(ppu.findFileMZ("id_mz",""+this.getId()));
+        
         return fileMZs;
     }
 

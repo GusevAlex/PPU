@@ -1,0 +1,185 @@
+<?page title="Портал проектного управления" contentType="text/html;charset=UTF-8" ?>
+
+<?component
+        name="Contact"
+        class="com.PPU.composite.Contact" ?>
+<?component
+        name="gridReviewProgramMz"
+        class="com.PPU.composite.GridReviewProgramMz" ?>
+
+<?component
+        name="gridReviewProgramCommerc"
+        class="com.PPU.composite.GridReviewProgramCommerc" ?>
+
+<zk xmlns:ca="client/attribute">
+    <window
+            id="mainWindow"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
+            onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
+            height="100%" width="100%" >
+
+		<style src="../../css/desktop.css.dsp" />
+
+        <style>
+            .contentPanel table.z-caption
+            {
+            width:30%;
+            font-size: 12px;
+            }
+        </style>
+
+        <div
+                sclass="modal"
+                visible="@load(vm.modalShow)"
+                onClick='@command("hideModal")'>
+        </div>
+
+        <div id="handler" style="width : 100; height : 100">
+
+        </div>
+        <!--  -->
+
+        <caption>
+            <include src="/pages/include/titlebar.zul" />
+        </caption>
+
+        <!-- Divide the main layout into Menu Panel and Content Panel -->
+        <borderlayout
+                animationDisabled="true">
+
+            <!-- Menu Panel -->
+            <west
+                    sclass="menuPanel"
+                    ca:data-swipeable="true"
+                    autoscroll="true"
+                    collapsible="true"
+                    open="@bind(vm.menuOpen)"
+                    >
+
+                <!-- Provide a way to access zkdemo -->
+                <caption>
+
+                </caption>
+                <!-- -->
+
+                <include src="/pages/include/navigation.zul" />
+            </west>
+            <!--  -->
+
+            <!-- Content Panel -->
+            <center
+                    id="contentPanel"
+                    sclass="contentPanel"
+                    border="0"
+                    hflex="1"
+                    onSwipe='@command("contentSwipe", dir=event.swipeDirection)'>
+
+                <!-- Title Bar -->
+
+                <!--  -->
+
+                <!-- Content Area -->
+                <borderlayout>
+                    <!-- Newsfeed Panel  -->
+                    <center
+                            sclass="newsfeedPanel"
+                            autoscroll="true" >
+
+                        <!-- Toolbar -->
+                        <caption>
+                            <include src="/pages/include/toolbar.zul" />
+                        </caption>
+                        <!--  -->
+
+                        <!-- Newsfeed Posts -->
+                        <div>
+                            <vlayout>
+                             //контент тут
+                                <!--<toolbar>-->
+                                    <!--<toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="New"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_undo.png" tooltiptext="Undo"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_cut.png" tooltiptext="Cut"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_copy.png" tooltiptext="Copy"/>-->
+                                    <!--<toolbarbutton image="/images/tollbar/edit_paste.png" tooltiptext="Paste"/>-->
+                                <!--</toolbar>-->
+                                <zscript>
+                                    <![CDATA[
+                                    import com.PPU.vm.*;
+                                    import com.PPU.DB.tables.*;
+                                    import com.PPU.DB.workLogic.*;
+
+                                    Object obj = new Object();
+
+                                    Object partn = MainPageController.getPartner();
+                                    String loadAll = Executions.getCurrent().getParameter("loadAll");
+                                    boolean mu = true;
+
+                                    if (loadAll == null)
+                                    {
+                                        if (partn instanceof PartnersMZ)
+                                        {
+                                            obj = Arrays.asList(((PartnersMZ) partn).getProgramMZs().toArray());
+                                            mu = true;
+                                        }
+                                        else
+                                        if (partn instanceof PartnerCommercialMan)
+                                        {
+                                            obj = Arrays.asList(((PartnerCommercialMan) partn).getProgramCommercs().toArray());
+                                             mu = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                         if (partn instanceof PartnersMZ)
+                                         {
+                                            obj = new WorkWithProgramMZ().getListRows();
+                                            mu = true;
+                                         }
+                                        else
+                                        if (partn instanceof PartnerCommercialMan)
+                                        {
+                                            obj = new WorkWithProgramCommerc().getListRows();
+                                            mu = false;
+                                        }
+                                    }
+
+
+                             ]]></zscript>
+
+                                <gridReviewProgramMz model = "${obj}" if="${mu}" >
+
+                                </gridReviewProgramMz>
+
+                                <gridReviewProgramCommerc model = "${obj}" if="${!mu}" >
+
+                                </gridReviewProgramCommerc>
+
+                             //
+                            </vlayout>
+
+                            <popup
+                                    id="feedbackPopup"
+                                    width="250px"
+                                    height="50%"
+                                    sclass="feedback"
+                                    onOpen='@command("hideModal")' >
+                                <include src="/pages/include/comment.zul"/>
+                            </popup>
+                        </div>
+                        <!--  -->
+                    </center>
+                    <!--  -->
+
+                    <!-- Contact Panel -->
+
+                    <!--  -->
+                </borderlayout>
+                <!--  -->
+            </center>
+            <!--  -->
+        </borderlayout>
+        <!--  -->
+    </window>
+    <!--  -->
+</zk>

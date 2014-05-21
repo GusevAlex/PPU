@@ -1,0 +1,224 @@
+<?page title="Портал проектного управления" contentType="text/html;charset=UTF-8" ?>
+
+<?component
+        name="Contact"
+        class="com.PPU.composite.Contact" ?>
+<?component
+        name="gridReviewProject"
+        class="com.PPU.composite.gridReviewProject" ?>
+<?component
+        name="gridReviewProject"
+        class="com.PPU.composite.GridReviewProject" ?>
+
+<zk xmlns:ca="client/attribute">
+    <window
+            id="mainWindow"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.PPU.vm.MainPageController')"
+            onClientInfo='@command("updateDeviceStatus", orient=event.orientation, width=event.desktopWidth)'
+            height="100%" width="100%" >
+
+		<style src="../../css/desktop.css.dsp" />
+
+        <style>
+            .contentPanel table.z-caption
+            {
+            width:30%;
+            font-size: 12px;
+            }
+        </style>
+
+        <div
+                sclass="modal"
+                visible="@load(vm.modalShow)"
+                onClick='@command("hideModal")'>
+        </div>
+
+        <div id="handler" style="width : 100; height : 100">
+
+        </div>
+        <!--  -->
+
+        <caption>
+            <include src="/pages/include/titlebar.zul" />
+        </caption>
+
+        <!-- Divide the main layout into Menu Panel and Content Panel -->
+        <borderlayout
+                animationDisabled="true">
+
+            <!-- Menu Panel -->
+            <west
+                    sclass="menuPanel"
+                    ca:data-swipeable="true"
+                    autoscroll="true"
+                    collapsible="true"
+                    open="@bind(vm.menuOpen)"
+                    >
+
+                <!-- Provide a way to access zkdemo -->
+                <caption>
+
+                </caption>
+                <!-- -->
+
+                <include src="/pages/include/navigation.zul" />
+            </west>
+            <!--  -->
+
+            <!-- Content Panel -->
+            <center
+                    id="contentPanel"
+                    sclass="contentPanel"
+                    border="0"
+                    hflex="1"
+                    onSwipe='@command("contentSwipe", dir=event.swipeDirection)'>
+
+                <!-- Title Bar -->
+
+                <!--  -->
+
+                <!-- Content Area -->
+                <borderlayout>
+                    <!-- Newsfeed Panel  -->
+                    <center
+                            sclass="newsfeedPanel"
+                            autoscroll="true" >
+
+                        <!-- Toolbar -->
+                        <caption>
+                            <include src="/pages/include/toolbar.zul" />
+                        </caption>
+                        <!--  -->
+
+                        <!-- Newsfeed Posts -->
+                        <div>
+                            <vlayout>
+                                <zk xmlns:n="native">
+
+                                <div height="30px"></div>
+
+                                <label value="Проекты организации" style="font-size: 26px;" />
+                                    <n:hr />
+                                    <zscript>
+                                        <![CDATA[
+                                      import com.PPU.DB.tables.*;
+                                      import com.PPU.DB.workLogic.*;
+                                      import com.PPU.vm.*;
+
+                                      String name = MainPageController.getPartnerName();
+
+                                      Object obj = MainPageController.getProjectOrMz();
+
+                                      Object obj = MainPageController.getProjectOrMz();
+                                      Object objuser = new WorkWithUser().findAndGetAllRow("login", (String) Sessions.getCurrent().getAttribute("login"));
+
+                                      List list1 = new ArrayList();
+                                      List list2 = new ArrayList();
+                                      List list3 = new ArrayList();
+                                      List list4 = new ArrayList();
+
+                                      for (Object o : obj)
+                                      {
+                                        int level = new WorkWithProject().getUserRole((Project) o, (UsersComMan) objuser.get(0));
+                                        if (level == 1 || level == 3)
+                                            list1.add(o);
+                                        else
+                                        if (level == 2 || level == 3)
+                                            list2.add(o);
+                                        else
+                                        if (level >= 4)
+                                            list3.add(o);
+                                        else
+                                            list4.add(o);
+                                      }
+                                   ]]>
+                                    </zscript>
+
+                                <div style="margin: 20px 0;
+                                padding: 15px 30px 15px 15px;
+                                border-left: 5px solid #eee;background-color: #f0f7fd;
+                                border-color: #d0e3f0; ">
+                                   <label value="Для организации: ${name}" />
+                                </div>
+
+                                        <vlayout>
+                                            <toolbar>
+                                                <toolbarbutton image="/images/tollbar/file_new.png" tooltiptext="Создать новый проект" label="Создать новое МЗ" >
+                                                    <attribute name="onClick">   <![CDATA[
+                                                        Executions.sendRedirect("/pages/pagesProject/Project.zul?id=0");
+                                               ]]>  </attribute>
+                                                </toolbarbutton>
+                                            </toolbar>
+                                            <groupbox if="${list1.size() != 0}" >
+                                                <caption label="Вы я вляетесь заказчиком" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list1}">
+
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
+
+                                            <groupbox if="${list2.size() != 0}" >
+                                                <caption label="Вы я вляетесь руководителем" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list2}">
+
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
+
+                                            <groupbox if="${list3.size() != 0}" >
+                                                <caption label="Вы являетесь исполнителем" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list3}">
+
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
+
+                                            <groupbox if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) != 0}" >
+                                                <caption label="Вы не работате с этими проектами" />
+                                                <hbox>
+                                                    <gridReviewProject model = "${list4}">
+
+                                                    </gridReviewProject>
+                                                </hbox>
+                                            </groupbox>
+
+                                            <gridReviewProject model = "${list4}" if="${list4.size() != 0 &amp;&amp; (list1.size()+list2.size()+list3.size()) == 0}" >
+
+                                            </gridReviewProject>
+                                            
+                                            
+                                        </vlayout>
+
+
+                                </zk>
+                            </vlayout>
+
+                            <popup
+                                    id="feedbackPopup"
+                                    width="250px"
+                                    height="50%"
+                                    sclass="feedback"
+                                    onOpen='@command("hideModal")' >
+                                <include src="/pages/include/comment.zul"/>
+                            </popup>
+                        </div>
+                        <!--  -->
+                    </center>
+                    <!--  -->
+
+                    <!-- Contact Panel -->
+
+                    <!--  -->
+                </borderlayout>
+                <!--  -->
+            </center>
+            <!--  -->
+        </borderlayout>
+        <!--  -->
+    </window>
+    <!--  -->
+</zk>
