@@ -912,7 +912,7 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-//            notificationCom.setReceiver(notificationCom.getPartners().getId());
+            notificationCom.setReceiver(notificationCom.getPartners().getId());
             notificationCom.setDate(Calendar.getInstance().getTime());
 
             for (UsersComMan user : notificationCom.getPartners().getUser())
@@ -934,7 +934,7 @@ public class PpuDao implements PpuDaoInterface {
         try
         {
             Session session = sessionFactory.getCurrentSession();
-//            notificationMU.setReceiver(notificationMU.getPartners().getId());
+            notificationMU.setReceiver(notificationMU.getPartners().getId());
             notificationMU.setDate(Calendar.getInstance().getTime());
 
             for (UsersMunMan user : notificationMU.getPartners().getUser())
@@ -2297,7 +2297,7 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
-            return session.createQuery("from "+NOTIFICATION_COM_TABLE + s).list();
+            return session.createQuery("from "+NOTIFICATION_MU_TABLE + s).list();
         } catch (Exception e)
         {
             System.out.println(e);
@@ -2311,7 +2311,7 @@ public class PpuDao implements PpuDaoInterface {
         {
             Session session = sessionFactory.getCurrentSession();
             String s = getSQLForFindByParam(fields, fieldValue);
-            return session.createQuery(	"from "+NOTIFICATION_MU_TABLE + s).list();
+            return session.createQuery(	"from "+NOTIFICATION_COM_TABLE + s).list();
         } catch (Exception e)
         {
             System.out.println(e);

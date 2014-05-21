@@ -96,7 +96,7 @@ public class ProgramCommerc {
 	@FieldType(type = 3, worker="WorkWithProject")
 	@HeaderName(name = "Проекты")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<Project> getProjects() {
         return projects;
     }

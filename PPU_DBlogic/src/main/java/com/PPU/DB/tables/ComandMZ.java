@@ -88,11 +88,11 @@ public class ComandMZ {
 
 	@FieldType(type = 2, worker = "WorkWithMZ")
 	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Муниципальные задания")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_mz", insertable = false, updatable = false)
     public MZ getMZ() {
-        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
-        MZ = ppu.getMz(this.getIdMZ());
+//        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
+//        MZ = ppu.getMz(this.getIdMZ());
 
         return MZ;
     }

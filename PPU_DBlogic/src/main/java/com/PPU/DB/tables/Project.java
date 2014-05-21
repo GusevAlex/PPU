@@ -175,7 +175,7 @@ public class Project {
 	@FieldType(type = 3, worker="WorkWithComandProject")
 	@HeaderName(name = "Команда проекта")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandProject> getComandProject() {
         return comandProject;
     }
@@ -199,7 +199,7 @@ public class Project {
 	@FieldType(type = 3, worker="WorkWithLimitsProject")
 	@HeaderName(name = "Лимиты")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<LimitsProject> getLimitsProject() {
         return limitsProject;
     }
@@ -211,7 +211,7 @@ public class Project {
 	@FieldType(type = 3, worker="WorkWithValuesParametrForProject")
 	@HeaderName(name = "Параметры")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ValuesParametrForProject> getValuesParametrForProject() {
         return valuesParametrForProject;
     }
@@ -223,7 +223,7 @@ public class Project {
 	@FieldType(type = 3, worker="WorkWithResourcesProject")
 	@HeaderName(name = "Ресурсы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ResourcesProject> getResourcesProject() {
         return resourcesProject;
     }
@@ -235,7 +235,7 @@ public class Project {
 	@FieldType(type = 3, worker="WorkWithCorrectionProject")
 	@HeaderName(name = "Корректировки")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<CorrectionsProject> getCorrectionsProject() {
         return correctionsProject;
     }
@@ -257,7 +257,7 @@ public class Project {
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "project")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<FileProject> getFileProjects() {
         return fileProjects;
     }

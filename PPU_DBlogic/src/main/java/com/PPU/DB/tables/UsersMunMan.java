@@ -1,10 +1,8 @@
 package com.PPU.DB.tables;
 
-import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.security.MD5;
 import com.PPU.DB.tables.TableAnnot.FieldType;
 import com.PPU.DB.workLogic.ClassInvokeCall;
-import com.PPU.DB.workLogic.WorkWithTable;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -120,12 +118,9 @@ public class UsersMunMan {
 
 	@FieldType(type = 2, worker = "WorkWithPartnerMZ")
 	@com.PPU.DB.tables.TableAnnot.HeaderName(name = "Участник коммерчесого управления")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_partner_mz", insertable = false, updatable = false)
     public PartnersMZ getPartnerMZ() {
-        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
-        partnerMZ = ppu.getPartnersMz(this.getIdPartnerMZ());
-
         return partnerMZ;
     }
 

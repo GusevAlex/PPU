@@ -1,9 +1,7 @@
 package com.PPU.DB.tables;
 
-import com.PPU.DB.DAO.PpuDaoInterface;
 import com.PPU.DB.tables.TableAnnot.*;
 import com.PPU.DB.workLogic.ClassInvokeCall;
-import com.PPU.DB.workLogic.WorkWithTable;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -78,12 +76,9 @@ public class NotificationMU {
         this.text = text;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "receiver", insertable = false, updatable = false)
     public PartnersMZ getPartners() {
-        PpuDaoInterface ppu = WorkWithTable.getPpuDao();
-        partners = ppu.getPartnersMz(this.getReceiver());
-
         return partners;
     }
 

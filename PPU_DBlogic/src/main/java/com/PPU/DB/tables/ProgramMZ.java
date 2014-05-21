@@ -94,7 +94,7 @@ public class ProgramMZ {
 	@FieldType(type = 3, worker="WorkWithMZ")
 	@HeaderName(name = "Муниципальные задания")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "program")
-    //@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<MZ> getMZ() {
         return MZ;
     }

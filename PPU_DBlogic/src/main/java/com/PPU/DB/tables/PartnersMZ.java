@@ -101,7 +101,7 @@ public class PartnersMZ {
 //    @FieldType(type = 3, worker="WorkWithCommandMz")
 //    @HeaderName(name = "Команда")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
-//    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ComandMZ> getComandMZ() {
         return ComandMZ;
     }
@@ -111,7 +111,7 @@ public class PartnersMZ {
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnerMZ")
-//    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<UsersMunMan> getUser() {
         return user;
 	}
@@ -123,7 +123,7 @@ public class PartnersMZ {
 //	@FieldType(type = 3, worker="WorkWithProgramMZ")
 //	@HeaderName(name = "Программы")
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partnersMZ")
-//    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<ProgramMZ> getProgramMZs() {
         return programMZs;
     }
@@ -135,7 +135,7 @@ public class PartnersMZ {
 //	@FieldType(type = 3, worker="WorkWithMZ")
 //	@HeaderName(name = "Муниципальные задания")
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "leader")
-//	@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+	@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
 	public Set<MZ> getMzs() {
 		return mzs;
 	}
@@ -145,7 +145,7 @@ public class PartnersMZ {
 	}
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "partners")
-//    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE})
     public Set<NotificationMU> getNotificationMU() {
         return notificationMU;
     }
